@@ -7,6 +7,15 @@
 % Then run: zpo doi inject --artifact <publication-id> --apply
 % With --require-tex-markers, injection fails until this file is \input{} (markers must exist in the resolved .tex).
 %
+% Call \NovaZenodoInAbstract immediately before \end{abstract} (inserted by install_zenodo_doi_placeholders.py
+% or zpo doi inject) to print the archival DOI line only after \NovaZenodoDOI is non-empty.
+%
+\providecommand{\NovaZenodoInAbstract}{%
+  \if\relax\detokenize\expandafter{\NovaZenodoDOI}\relax\else
+  \par\smallskip\noindent
+  \textit{Archival version (Zenodo):} \url{https://doi.org/\NovaZenodoDOI}%
+  \fi}
+%
 % NOVA_ZPO_DOI_BEGIN
-% Placeholder: `zpo doi inject` replaces this region with \providecommand{\NovaZenodoDOI}{...}.
+\providecommand{\NovaZenodoDOI}{}
 % NOVA_ZPO_DOI_END
