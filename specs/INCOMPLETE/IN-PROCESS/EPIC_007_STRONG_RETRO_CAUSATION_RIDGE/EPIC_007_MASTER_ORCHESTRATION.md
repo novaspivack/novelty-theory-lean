@@ -18,14 +18,16 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Core | In Lean | `Core/RetroStructuralTruth` |
-| Summit | In Lean | `Summits/StrongRetroCausationSummit` |
+| Core | **Complete** | `Models/RetroStructuralTruth` — recursive `IsRetroStructural` + `finConj` / `and` / `or` closure |
+| Summit | **Complete** | `Summits/StrongRetroCausationSummit` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1–3 | Definitions + linkage to non-collapse | `SPEC_027_RRS1`–`SPEC_029_RRS3` | Done in Lean (initial) |
+| 1–3 | Definitions + linkage to non-collapse | `SPEC_027_RRS1`–`SPEC_029_RRS3` | **Complete** |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

@@ -19,15 +19,17 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Core structures | In Lean | `Core/Organization` |
-| No-finite packaging | In Lean | `Summits/OrganizationSummit` |
+| Core structures | **Complete** | `Core/Organization` — `adequateNatParity`, `totalFutureOnNat`, `natInternalHierarchy` |
+| No-finite packaging | **Complete** | `Summits/OrganizationSummit` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1–3 | Structures + reflexivity lemmas | `SPEC_020_AO1`–`SPEC_022_AO3` | Done in Lean (initial) |
-| 4 | Summit repackage | `SPEC_023_AO4` | Done in Lean (initial) |
+| 1–3 | Structures + reflexivity lemmas | `SPEC_020_AO1`–`SPEC_022_AO3` | **Complete** |
+| 4 | Summit repackage | `SPEC_023_AO4` | **Complete** |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

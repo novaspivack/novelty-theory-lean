@@ -8,7 +8,7 @@ Sentences that are **history-sensitive** (bounded windows / **historically** fra
 
 ## Acceptance
 
-- **`IsRetroStructural`** (or equivalent) predicate + **closure** under declared constructors.
+- **`IsRetroStructural`** (or equivalent) predicate + **closure** under declared constructors: primitive retro atoms (**`traceEq`**, **`histSeq`**, **`geOutput`**) and **compositional** closure under **`and`**, **`or`**, and **`finConj`** when all subformulas are retro.
 
 ## Lean module
 

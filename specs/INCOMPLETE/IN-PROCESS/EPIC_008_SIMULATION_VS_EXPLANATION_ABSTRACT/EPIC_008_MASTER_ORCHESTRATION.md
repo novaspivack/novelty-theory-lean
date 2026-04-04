@@ -18,14 +18,16 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Abstract layer | In Lean | `Core/SimulationVersusExplanationAbstract`, `Summits/SimulationVersusExplanationAbstractSummit` |
-| Concrete S9 | Existing | `SimulationVersusExplanation.lean` (inventory) |
+| Abstract layer | **Complete** | `Core/SimulationVersusExplanationAbstract`, `Summits/SimulationVersusExplanationAbstractSummit` |
+| Concrete S9 | **Complete** (parallel) | `Models/SimulationVersusExplanation` — not duplicated as obligation per `SPEC_030` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1–3 | Abstract defs + bridge to `trace` / `HoldsAt` | `SPEC_030_SVE1`–`SPEC_032_SVE3` | Done in Lean (initial) |
+| 1–3 | Abstract defs + bridge to `trace` / reach-set coupling | `SPEC_030_SVE1`–`SPEC_032_SVE3` | **Complete** |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

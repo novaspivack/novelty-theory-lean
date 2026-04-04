@@ -18,16 +18,18 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Generator structural layer | In Lean | `Core/GeneratorTruth`, `Core/ExplanatoryOrder` |
-| Ridge + summit re-export | In Lean | `Summits/GeneratorTruthRidge`, `Summits/UnfoldingNecessitySummit` |
+| Generator structural layer | **Complete** | `Core/GeneratorTruth`, `Core/ExplanatoryOrder` (`phaseTag_eq_of_phaseOf_outputSet_eq`) |
+| Ridge + summit re-export | **Complete** | `Summits/GeneratorTruthRidge` (exports singleton / tag `HoldsAt`), `Summits/UnfoldingNecessitySummit` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1 | Structural sentences + holds lemmas | `SPEC_017_UEN1` | Done in Lean (initial) |
-| 2 | Upward necessity packaging | `SPEC_018_UEN2` | Done in Lean (initial) |
-| 3 | Order lemmas | `SPEC_019_UEN3` | Done in Lean (initial) |
+| 1 | Structural sentences + holds lemmas | `SPEC_017_UEN1` | **Complete** |
+| 2 | Upward necessity packaging | `SPEC_018_UEN2` | **Complete** |
+| 3 | Order lemmas | `SPEC_019_UEN3` | **Complete** |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

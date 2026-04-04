@@ -21,16 +21,18 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Sentence + semantics + expressibility + provability | In Lean | `Core.Sentence`, `SentenceSemantics`, `Expressibility`, `Provability`; model in `StratifiedSentenceModel` |
-| Foundation lemmas | In Lean | `SentenceFacts`, `ProvabilityFacts` |
+| Sentence + semantics + expressibility + provability | **Complete** | `Core.Sentence`, `NatPhaseTag`, `SentenceSemantics`, `SentenceExpressibility`, `Models.SentenceProvability`, `StratifiedSentenceModel` |
+| Foundation lemmas | **Complete** | `Foundation.SentenceFacts`, `Foundation.ProvabilityFacts` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1 | Sentence + `HoldsAt` | `SPEC_013_ES1`, `SPEC_014_ES2` | Done in Lean (initial tranche) |
-| 2 | CounterFact embed + coherence | `SPEC_015_ES3` | Done in Lean |
-| 3 | Non-collapse witnesses | `SPEC_016_ES4` | Done in Lean (`StratifiedSentenceModel`) |
+| 1 | Sentence + `HoldsAt` | `SPEC_013_ES1`, `SPEC_014_ES2` | **Complete** — includes `natPhaseTagMem`, `finConj` |
+| 2 | CounterFact embed + coherence | `SPEC_015_ES3` | **Complete** |
+| 3 | Non-collapse witnesses | `SPEC_016_ES4` | **Complete** (`StratifiedSentenceModel`) |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

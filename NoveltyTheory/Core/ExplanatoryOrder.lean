@@ -1,3 +1,4 @@
+import Mathlib.Data.Set.Basic
 import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.GenCertPhase
 
@@ -15,6 +16,11 @@ namespace Core
 namespace ExplanatoryOrder
 
 open Models.CausalExplanatoryOrders Models.GenCertPhase
+
+/-- Equal singleton supports from `phaseOf` force equal tags (support determines the certificate tag). -/
+theorem phaseTag_eq_of_phaseOf_outputSet_eq {c d : GenCert}
+    (h : (phaseOf c).outputSet = (phaseOf d).outputSet) : phaseTag c = phaseTag d := by
+  simpa [phaseOf_output, Set.singleton_eq_singleton_iff] using h
 
 theorem orders_strict_diverge :
     ∃ a b : GenCert, causalStrict a b ∧ explanatoryStrict b a :=

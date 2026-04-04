@@ -27,6 +27,9 @@ theorem self_certification_obstruction (n : ℕ) : SelfCertificationObstruction 
 theorem nat_counter_future_defeat : FutureDefeat natCounter :=
   natCounter_futureDefeat
 
+theorem terminality_natCounter_eq_zero : TerminalityPredicate natCounter fun t => t = 0 :=
+  terminality_eq_zero natCounter
+
 end NecessityStratifiedFinalitySummit
 
 end Summits

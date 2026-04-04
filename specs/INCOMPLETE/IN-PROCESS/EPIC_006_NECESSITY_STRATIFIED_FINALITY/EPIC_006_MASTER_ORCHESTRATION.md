@@ -18,15 +18,17 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Core API | In Lean | `Core/StratifiedFinality` |
-| Summit | In Lean | `Summits/NecessityStratifiedFinalitySummit` |
+| Core API | **Complete** | `Models/StratifiedFinality` — `terminality_eq_zero`, `FutureDefeat`, `terminality_impossible_strict_output_rise` |
+| Summit | **Complete** | `Summits/NecessityStratifiedFinalitySummit` — `terminality_natCounter_eq_zero` |
 
 ## Queue
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1 | Terminality def + examples | `SPEC_024_NSF1` | Done in Lean (initial) |
-| 2–3 | Obstruction repackage | `SPEC_025_NSF2`, `SPEC_026_NSF3` | Done in Lean (initial) |
+| 1 | Terminality def + examples | `SPEC_024_NSF1` | **Complete** |
+| 2–3 | Obstruction repackage | `SPEC_025_NSF2`, `SPEC_026_NSF3` | **Complete** |
+
+**Closure record:** [`../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md).
 
 ## Cross-links
 

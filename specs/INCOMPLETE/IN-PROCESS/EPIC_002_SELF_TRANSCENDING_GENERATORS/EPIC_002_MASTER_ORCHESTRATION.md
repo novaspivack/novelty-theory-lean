@@ -64,6 +64,7 @@
 
 ## Cross-links
 
+- Dependent sentence/strata wave (**`EPIC_003`–`EPIC_008`**) closed under **[`SPEC_033_K7A`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md)** (formal tranche acceptance).
 - Cross-epic queue: [`../../../../QUEUE.md`](../../../../QUEUE.md)
 - Master roll-up: [`../../../MASTER_STATUS.md`](../../../MASTER_STATUS.md)
 - Methodology: [`../../../../NOTES/PROJECT_SEED.md`](../../../../NOTES/PROJECT_SEED.md)

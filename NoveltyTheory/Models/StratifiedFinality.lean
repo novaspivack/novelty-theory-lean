@@ -25,6 +25,14 @@ theorem natCounter_futureDefeat : FutureDefeat natCounter := fun bound =>
 def TerminalityPredicate {S : Type} (_G : GenerativeSystem S ℕ) (pred : ℕ → Prop) : Prop :=
   ∃ last : ℕ, pred last ∧ ∀ t, pred t → t ≤ last
 
+/--
+Verified **satisfiable** terminality: the predicate `t = 0` has maximal witness `0` (independent of
+`G.trace`).
+-/
+theorem terminality_eq_zero {S : Type} (G : GenerativeSystem S ℕ) :
+    TerminalityPredicate G fun t => t = 0 :=
+  ⟨0, rfl, fun t ht => by rw [ht]⟩
+
 theorem terminality_impossible_strict_output_rise {S : Type} (G : GenerativeSystem S ℕ) :
     ¬ TerminalityPredicate G (fun t : ℕ => G.trace t + 1 < G.trace t) := by
   intro h

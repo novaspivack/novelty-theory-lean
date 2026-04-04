@@ -15,7 +15,9 @@ namespace GeneratorTruthRidge
 export NoveltyTheory.Core.GeneratorTruth (
   IsGeneratorStructural
   isGeneratorStructural_traceEq
-  holdsAt_natCounter_traceEq_self)
+  holdsAt_natCounter_traceEq_self
+  holdsAt_natCounter_phaseMem_singleton
+  holdsAt_natCounter_natPhaseTagMem_sing)
 
 end GeneratorTruthRidge
 

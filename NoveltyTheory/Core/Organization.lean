@@ -27,6 +27,15 @@ instance natInternalHierarchy : InternalHierarchy ℕ where
   refines := fun a b => a ≤ b
   refines_transitive := fun _ _ _ => Nat.le_trans
 
+/-- Nontrivial labeling: parity of the index as a `Bool` “stage token” (`SPEC_020_AO1`). -/
+def adequateNatParity : AdequateOrganization Bool ℕ where
+  stage := fun n => n % 2 = 0
+
+/-- `ℕ` carries both stage (`id`) and a strict future relation (`Nat.lt`) (`SPEC_021_AO2`). -/
+def totalFutureOnNat : TotalFutureOrganization ℕ ℕ where
+  stage := id
+  advances := fun i j => i < j
+
 end Core
 
 end NoveltyTheory
