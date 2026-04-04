@@ -9,6 +9,7 @@ import NoveltyTheory.Core.ReducerEnumeration
 import NoveltyTheory.Core.Explains
 import NoveltyTheory.Core.Sentence
 import NoveltyTheory.Core.SentenceSemantics
+import NoveltyTheory.Core.SentenceRegime
 import NoveltyTheory.Core.Expressibility
 import NoveltyTheory.Core.GeneratorTruth
 import NoveltyTheory.Core.Organization

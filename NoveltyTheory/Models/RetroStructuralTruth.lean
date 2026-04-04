@@ -19,6 +19,7 @@ open NoveltyTheory.Core
 def IsRetroStructural (φ : Sentence ℕ) : Prop :=
   match φ with
   | Sentence.traceEq _ _ => True
+  | Sentence.histSeq _ => True
   | Sentence.geOutput _ => True
   | _ => False
 

@@ -38,14 +38,23 @@ theorem proves_sentence_sound {m : ℕ} {φ : Sentence ℕ} (h : ProvesAt m φ) 
   | Sentence.geOutput k =>
       simpa [HoldsAt, factHolds, natCounter_trace] using
         proves_sound (by simpa [ProvesAt] using h)
+  | Sentence.histSeq l =>
+      intro p hp
+      match l with
+      | [] =>
+          cases hp
+      | a :: as =>
+          exact False.elim (h a (List.Mem.head _))
   | Sentence.and φ ψ =>
       rcases h with ⟨hφ, hψ⟩
       exact ⟨proves_sentence_sound hφ, proves_sentence_sound hψ⟩
   | Sentence.or φ ψ =>
-      rcases h with ⟨hφ, hψ⟩
-      exact Or.inl (proves_sentence_sound hφ)
+      rcases h with (⟨hφ, _⟩ | ⟨_, hψ⟩)
+      · exact Or.inl (proves_sentence_sound hφ)
+      · exact Or.inr (proves_sentence_sound hψ)
   | Sentence.phaseMem _ _ => nomatch h
   | Sentence.traceEq _ _ => nomatch h
+  | Sentence.not _ => nomatch h
 
 end ProvabilityFacts
 
