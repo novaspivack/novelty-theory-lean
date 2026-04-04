@@ -7,7 +7,7 @@
 | **Toolchain** | `leanprover/lean4:v4.29.0-rc6` ([`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)); Mathlib pin `v4.29.0-rc6` (see [`lakefile.lean`](lakefile.lean), aligned with `ugp-lean`) |
 | **`sorry` / `admit`** | None in default library |
 | **Axioms** | None beyond Mathlib |
-| **Lake layout** | Root module [`NoveltyTheory.lean`](NoveltyTheory.lean) + `lean_lib «NoveltyTheory»` ([`lakefile.lean`](lakefile.lean)); shim [`NoveltyTheory/Basic.lean`](NoveltyTheory/Basic.lean) imports `All` |
+| **Lake layout** | Root module [`NoveltyTheory.lean`](NoveltyTheory.lean) + `lean_lib «NoveltyTheory»` ([`lakefile.lean`](lakefile.lean)); aggregate [`NoveltyTheory/All.lean`](NoveltyTheory/All.lean); shim [`NoveltyTheory/Basic.lean`](NoveltyTheory/Basic.lean) imports `All` |
 
 ## Module map (theory tranche)
 
