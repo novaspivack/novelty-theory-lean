@@ -10,6 +10,8 @@ import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.GenCertPhase
 import NoveltyTheory.Models.SimulationVersusExplanation
 import NoveltyTheory.Ridge.DiagonalNat
+import NoveltyTheory.Ridge.SignatureAdmissibleBundle
+import NoveltyTheory.Models.RegimeFamilyObstruction
 
 /-!
 # Summit I–IV packaging (`SPEC_011_SPK`)
@@ -26,6 +28,7 @@ namespace Summits
 open Core GenerativeSystem Models SignatureTower InvariantTower Ridge
 open Models.ReducerDiagonal Models.CausalExplanatoryOrders Models.BoundedRegimeDiagonal
 open Models.DupRegimeTower
+open Models.RegimeFamilyObstruction
 open Models.GenCertPhase
 
 private theorem phase_singleton_generated (n : ℕ) : (phaseSingleton n).generatedBy natCounter :=
@@ -117,6 +120,38 @@ theorem summit_nontrivial_modelB_singleton_family :
 theorem no_uniform_row_at_next_stage {υ : Type} (E : Core.AdmissibleInterface ℕ υ ℕ)
     (h : RowSoundForSignature E) (i : ℕ) : ¬ E.rowExplains i (phaseSingleton (i + 1)) :=
   diagonal_stage_defeats_row E h i
+
+/--
+**Bundled “global admissible” (`𝓔_adm`):** row-soundness is **part of the quantified type**, so the
+diagonal requires **no** separate `RowSoundForSignature` hypothesis.
+-/
+theorem summit_diagonal_all_bundled_admissible (υ : Type) (E : SignatureAdmissibleInterface υ) (i : ℕ) :
+    ¬ E.iface.rowExplains i (phaseSingleton (i + 1)) :=
+  diagonal_every_admissible E i
+
+/--
+**Obstruction:** `RegimeFamilySingletonWithin` **does not** imply paradigm chains—empty regimes meet
+the bound vacuously yet **cannot** satisfy `ParadigmShift.later_adequate`.
+-/
+theorem summit_singletonWithin_not_entails_paradigm_steps :
+    RegimeFamilySingletonWithin (fun n => emptyRegime n) ∧
+      ¬ ({ phase := phaseSingleton, regime := fun n => emptyRegime n } :
+          PhaseRegimeTower ℕ).paradigmShiftSteps :=
+  And.intro emptyRegime_family_singletonWithin not_paradigmShiftSteps_empty_tower
+
+/-- **`SPEC_003_NXT` S10:** no finite `regimeUpto k` organizes the **entire** singleton ladder. -/
+theorem summit_finite_signature_not_total_ladder (k : ℕ) : ¬ ExplainsEntireSingletonLadder (regimeUpto k) :=
+  not_explainsEntireSingletonLadder_regimeUpto k
+
+/-- **S7:** semantic facts available before escalated **proof** + separate soundness slot. -/
+theorem summit_retro_revelation_derivability {k n : ℕ} (hk : k < n) :
+    factHolds (CounterFact.geOutput k) ∧
+      provesAtDepth n (CounterFact.geOutput k) ∧
+        Not (provesAtDepth k (CounterFact.geOutput k)) :=
+  retro_revelation_derivability_package hk
+
+theorem summit_retro_revelation_sound {k n : ℕ} (hk : k < n) : factHolds (CounterFact.geOutput k) :=
+  retro_revelation_sound hk
 
 /-- `regimeUpto n` explains stage `n` of the canonical tower on the counter trace (`SPEC_006_ADR`). -/
 theorem canonical_regime_explains_each_stage (n : ℕ) :

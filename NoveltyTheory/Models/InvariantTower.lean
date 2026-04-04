@@ -97,6 +97,21 @@ theorem proves_sound {n : ℕ} {f : CounterFact} (h : provesAtDepth n f) : factH
     subst hk
     exact ⟨n, by rw [natCounter_trace]; exact p.prop⟩
 
+/--
+**S7 packaging (semantic stability vs. licensing):** `factHolds` is automatic on `natCounter`, the
+deeper depth **derives** the same `CounterFact.geOutput k` that shallow depth cannot, and
+`retro_revelation_sound` records that the shallow proof obligation **would** be sound if it existed.
+-/
+theorem retro_revelation_derivability_package {k n : ℕ} (hk : k < n) :
+    factHolds (CounterFact.geOutput k) ∧
+      provesAtDepth n (CounterFact.geOutput k) ∧
+        Not (provesAtDepth k (CounterFact.geOutput k)) :=
+  And.intro (factHolds_geOutput k)
+    (And.intro (retro_derivability hk).1 (retro_derivability hk).2)
+
+theorem retro_revelation_sound {k n : ℕ} (hk : k < n) : factHolds (CounterFact.geOutput k) :=
+  proves_sound (retro_derivability hk).1
+
 /-- No single finite depth proves every sentence `geOutput m` (already at `m` equal to the depth). -/
 theorem no_finite_depth_proves_all (n : ℕ) : ∃ f : CounterFact, ¬ provesAtDepth n f :=
   ⟨_, not_proves_self n⟩

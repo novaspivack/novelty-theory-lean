@@ -16,8 +16,8 @@
 | Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains` |
 | Foundation | `NoveltyTheory/Foundation/` — trajectory and conservative-history lemmas |
 | Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
-| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C), `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
-| Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment` |
+| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C), `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `RegimeFamilyObstruction`, `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
+| Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment`, `SignatureAdmissibleBundle` |
 | Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages` |
 
 **Headline index:** [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md)

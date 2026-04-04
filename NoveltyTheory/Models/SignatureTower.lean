@@ -133,6 +133,15 @@ theorem not_explains_regime_singleton_succ {n : ℕ} :
   have := (regimeUpto_explains_singleton (n := n) (k := n + 1)).mp h
   exact Nat.not_succ_le_self n this
 
+/-- Organizational completeness: the regime explains **every** singleton phase on the counter ladder. -/
+def ExplainsEntireSingletonLadder (R : ExplanatoryRegime ℕ) : Prop :=
+  ∀ k : ℕ, R.explains (phaseSingleton k)
+
+theorem not_explainsEntireSingletonLadder_regimeUpto (k : ℕ) :
+    ¬ ExplainsEntireSingletonLadder (regimeUpto k) := by
+  intro h
+  exact not_explains_regime_singleton_succ (h (k + 1))
+
 theorem mem_history_range {n m : ℕ} (hm : m < n + 1) :
     phaseSingleton m ∈ (List.range (n + 1)).map phaseSingleton := by
   simp [List.mem_map]
@@ -192,6 +201,14 @@ theorem paradigmShift_succ (n : ℕ) :
 theorem tower_phase_not_explained_by_fixed_regime (k : ℕ) :
     ∃ P : Phase ℕ, P.generatedBy natCounter ∧ ¬ (regimeUpto k).explains P :=
   ⟨phaseSingleton (k + 1), And.intro (natCounter_generated (k + 1)) not_explains_regime_singleton_succ⟩
+
+/--
+**`SPEC_003_NXT` S10 (organizational template):** a single finite signature layer cannot **globally**
+explain the whole infinite singleton ladder—already missed at `k + 1` for layer `k`.
+-/
+theorem finite_signature_cannot_organize_full_ladder (k : ℕ) :
+    ∃ ph : Phase ℕ, ph.generatedBy natCounter ∧ ¬ (regimeUpto k).explains ph :=
+  tower_phase_not_explained_by_fixed_regime k
 
 /-- **`SPEC_003_NXT` S6 shape:** strictly later regime step admits a paradigm shift witness. -/
 theorem exists_future_paradigmShift (n : ℕ) :
