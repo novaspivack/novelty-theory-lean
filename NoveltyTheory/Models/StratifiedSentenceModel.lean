@@ -44,20 +44,21 @@ theorem exists_sentence_phase_provable_succ_not_at (n : ℕ) :
     ∃ φ : Sentence ℕ, ProvesAt (n + 1) φ ∧ ¬ ProvesAt n φ := by
   refine ⟨Sentence.phaseMem (singleton n) n, ?_⟩
   constructor
-  · exact And.intro rfl (proves_succ_phase n)
-  · intro ⟨_, hpr⟩
-    exact not_proves_phase n hpr
+  · simp [ProvesAt]
+    exact proves_succ_phase n
+  · intro h
+    simp [ProvesAt] at h
+    exact not_proves_phase n h
 
 theorem exists_histSeq_nonempty_provable_succ_not_at (n : ℕ) :
     ∃ φ : Sentence ℕ, ProvesAt (n + 1) φ ∧ ¬ ProvesAt n φ := by
   refine ⟨Sentence.histSeq [(n, n)], ?_⟩
   constructor
-  · intro p hp
-    rw [List.mem_singleton] at hp
-    subst hp
-    simpa [ProvesAt] using (upward_trace_derivability_gap n).1
-  · refine fun hpr => not_proves_trace_diag n (hpr (n, n) ?_)
-    exact List.mem_singleton_self (α := ℕ × ℕ) (a := (n, n))
+  · simp [ProvesAt]
+    exact (upward_trace_derivability_gap n).1
+  · intro h
+    simp [ProvesAt] at h
+    exact not_proves_trace_diag n h
 
 theorem universal_no_sentence_proof_at_own_bound (n : ℕ) :
     ∃ φ : Sentence ℕ, ¬ ProvesAt n φ :=

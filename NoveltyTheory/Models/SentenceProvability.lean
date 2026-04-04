@@ -1,16 +1,16 @@
 import Mathlib.Data.Nat.Basic
 import Mathlib.Data.Set.Basic
 import NoveltyTheory.Core.Expressibility
+import NoveltyTheory.Core.NatPhaseTag
 import NoveltyTheory.Core.Sentence
 import NoveltyTheory.Models.InvariantTower
 
 /-!
 # Sentence-level derivability (`SPEC_014_ES2`, `SPEC_010_UEN`)
 
-**`ProvesAt m φ`** extends Model C **`provesAtDepth`** on the **`CounterFact`** calculus (**`geOutput`**,
-**`traceEq`**, **singleton `phaseSingletonMem`**) under the same depth inversion; **`histSeq`** is a
-finite **CounterFact trace** bundle; **disjunction** uses genuine **`∨`** with **`mentionBound`**
-guards on the unused disjunct.
+**`ProvesAt m φ`** extends Model C on **`CounterFact`**; **`finConj`** lifts finite proof context; **`natPhaseTagMem`**
+uses the **`sing`** tag with **singleton** Model C atoms; **`initial`** tags are **not** in the fringe
+(semantic-only here).
 -/
 
 namespace NoveltyTheory
@@ -26,6 +26,11 @@ def ProvesAt (m : ℕ) : Sentence ℕ → Prop
   | Sentence.traceEq i v => provesAtDepth m (CounterFact.traceEq i v)
   | Sentence.histSeq l => ∀ p ∈ l, provesAtDepth m (CounterFact.traceEq p.1 p.2)
   | Sentence.phaseMem outs x => outs = singleton x ∧ provesAtDepth m (CounterFact.phaseSingletonMem x)
+  | Sentence.natPhaseTagMem tag x =>
+      match tag with
+      | NatPhaseTag.sing k => x = k ∧ provesAtDepth m (CounterFact.phaseSingletonMem k)
+      | NatPhaseTag.initial _ => False
+  | Sentence.finConj l => ∀ φ ∈ l, ProvesAt m φ
   | Sentence.and φ ψ => ProvesAt m φ ∧ ProvesAt m ψ
   | Sentence.or φ ψ =>
       (ProvesAt m φ ∧ mentionBound ψ ≤ m) ∨ (mentionBound φ ≤ m ∧ ProvesAt m ψ)
@@ -37,28 +42,56 @@ theorem ProvesAt_geOutput_iff {m k : ℕ} :
 
 theorem proves_mono_sentence {m n : ℕ} (hmn : m ≤ n) {φ : Sentence ℕ} (h : ProvesAt m φ) :
     ProvesAt n φ := by
-  match φ with
-  | Sentence.geOutput k =>
-      have h' : provesAtDepth m (CounterFact.geOutput k) := by simpa [ProvesAt] using h
-      simpa [ProvesAt] using proves_mono hmn h'
-  | Sentence.traceEq i v =>
-      have h' : provesAtDepth m (CounterFact.traceEq i v) := by simpa [ProvesAt] using h
-      simpa [ProvesAt] using proves_mono hmn h'
-  | Sentence.histSeq l =>
-      intro p hp
-      exact proves_mono hmn (h p hp)
-  | Sentence.phaseMem outs x =>
+  revert h
+  cases φ with
+  | phaseMem outs x =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with ⟨hout, hpf⟩
+      simp [ProvesAt]
       exact And.intro hout (proves_mono hmn hpf)
-  | Sentence.and φ ψ =>
+  | traceEq i v =>
+      intro h
+      simpa [ProvesAt] using proves_mono hmn (by simpa [ProvesAt] using h)
+  | histSeq l =>
+      intro h
+      simp [ProvesAt] at h
+      simpa [ProvesAt] using fun (p : ℕ × ℕ) hp => proves_mono hmn (h p.1 p.2 hp)
+  | natPhaseTagMem tag x =>
+      cases tag with
+      | sing k =>
+          intro h
+          simp [ProvesAt] at h
+          rcases h with ⟨hxk, hpf⟩
+          simp [ProvesAt]
+          exact And.intro hxk (proves_mono hmn hpf)
+      | initial _ =>
+          intro h
+          simp [ProvesAt] at h
+  | finConj l =>
+      intro h
+      simp [ProvesAt] at h
+      simpa [ProvesAt] using fun ψ hψ => proves_mono_sentence hmn (h ψ hψ)
+  | geOutput k =>
+      intro h
+      simpa [ProvesAt] using proves_mono hmn (by simpa [ProvesAt] using h)
+  | and φ ψ =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with ⟨hφ, hψ⟩
+      simp [ProvesAt]
       exact ⟨proves_mono_sentence hmn hφ, proves_mono_sentence hmn hψ⟩
-  | Sentence.or φ ψ =>
+  | or φ ψ =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with (⟨hφ, hψb⟩ | ⟨hφb, hψ⟩)
-      · exact Or.inl ⟨proves_mono_sentence hmn hφ, Nat.le_trans hψb hmn⟩
-      · exact Or.inr ⟨Nat.le_trans hφb hmn, proves_mono_sentence hmn hψ⟩
-  | Sentence.not _ =>
-      exact False.elim h
+      · simp [ProvesAt]
+        exact Or.inl ⟨proves_mono_sentence hmn hφ, Nat.le_trans hψb hmn⟩
+      · simp [ProvesAt]
+        exact Or.inr ⟨Nat.le_trans hφb hmn, proves_mono_sentence hmn hψ⟩
+  | not _ =>
+      intro h
+      simp [ProvesAt] at h
 
 end SentenceProvability
 

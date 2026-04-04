@@ -1,4 +1,5 @@
 import Mathlib.Data.Set.Basic
+import NoveltyTheory.Core.NatPhaseTag
 import NoveltyTheory.Core.Sentence
 import NoveltyTheory.Core.SentenceSemantics
 import NoveltyTheory.Models.InvariantTower
@@ -49,28 +50,58 @@ theorem sentenceOfCounterFact_holds_iff (f : CounterFact) :
 
 theorem proves_sentence_sound {m : ℕ} {φ : Sentence ℕ} (h : ProvesAt m φ) :
     HoldsAt natCounter φ := by
-  match φ with
-  | Sentence.geOutput k =>
-      simpa [HoldsAt, factHolds, natCounter_trace] using
+  revert h
+  cases φ with
+  | geOutput k =>
+      intro h
+      simpa [HoldsAt, factHolds, natCounter_trace, ProvesAt] using
         proves_sound (by simpa [ProvesAt] using h)
-  | Sentence.traceEq i v =>
-      simpa [HoldsAt, factHolds, natCounter_trace] using
+  | traceEq i v =>
+      intro h
+      simpa [HoldsAt, factHolds, natCounter_trace, ProvesAt] using
         proves_sound (by simpa [ProvesAt] using h)
-  | Sentence.histSeq l =>
-      intro p hp
-      exact proves_sound (h p hp)
-  | Sentence.phaseMem outs x =>
+  | histSeq l =>
+      intro h
+      simp [ProvesAt] at h
+      simpa [HoldsAt, ProvesAt] using fun (p : ℕ × ℕ) hp => proves_sound (h p.1 p.2 hp)
+  | phaseMem outs x =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with ⟨hset, hp⟩
-      rw [hset]
+      rw [HoldsAt, hset]
       exact proves_sound hp
-  | Sentence.and φ ψ =>
+  | natPhaseTagMem tag x =>
+      cases tag with
+      | sing k =>
+          intro h
+          simp [ProvesAt] at h
+          rcases h with ⟨hxk, hp⟩
+          simp [HoldsAt, NatPhaseTag.mem_sing_iff]
+          exact hxk
+      | initial _ =>
+          intro h
+          simp [ProvesAt] at h
+  | finConj l =>
+      intro h
+      simp [ProvesAt] at h
+      simpa [HoldsAt, ProvesAt] using fun ψ hψ => proves_sentence_sound (h ψ hψ)
+  | and φ ψ =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with ⟨hφ, hψ⟩
+      simp [HoldsAt]
       exact ⟨proves_sentence_sound hφ, proves_sentence_sound hψ⟩
-  | Sentence.or φ ψ =>
+  | or φ ψ =>
+      intro h
+      simp [ProvesAt] at h
       rcases h with (⟨hφ, _⟩ | ⟨_, hψ⟩)
-      · exact Or.inl (proves_sentence_sound hφ)
-      · exact Or.inr (proves_sentence_sound hψ)
-  | Sentence.not _ => nomatch h
+      · simp [HoldsAt]
+        exact Or.inl (proves_sentence_sound hφ)
+      · simp [HoldsAt]
+        exact Or.inr (proves_sentence_sound hψ)
+  | not _ =>
+      intro h
+      simp [ProvesAt] at h
 
 end ProvabilityFacts
 

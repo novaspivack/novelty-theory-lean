@@ -13,7 +13,7 @@
 
 | Layer | Path |
 |--------|------|
-| Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains`, `Sentence`, `SentenceSyntax`, `SentenceExpressibility`, `SentenceSemantics`, `SentenceRegime`, `Expressibility`, `GeneratorTruth`, `Organization`, `SimulationVersusExplanationAbstract`, `ExplanatoryOrder` |
+| Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains`, `Sentence`, `NatPhaseTag`, `SentenceSyntax`, `SentenceExpressibility`, `SentenceSemantics`, `SentenceRegime`, `Expressibility`, `GeneratorTruth`, `Organization`, `SimulationVersusExplanationAbstract`, `ExplanatoryOrder` |
 | Foundation | `NoveltyTheory/Foundation/` — trajectory, conservative-history, `SentenceFacts`, `ProvabilityFacts`, `UpwardNecessity` |
 | Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
 | Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C: **`CounterFact`** + inductive **`Pf`**), `SentenceProvability`, `StratifiedSentenceModel`, `StratifiedFinality`, `RetroStructuralTruth`, `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `RegimeFamilyObstruction`, `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |

@@ -1,3 +1,5 @@
+import Mathlib.Data.Set.Basic
+import NoveltyTheory.Core.NatPhaseTag
 import NoveltyTheory.Core.Sentence
 import NoveltyTheory.Core.SentenceSemantics
 import NoveltyTheory.Models.SignatureTower
@@ -13,7 +15,7 @@ namespace NoveltyTheory
 
 namespace Core
 
-open GenerativeSystem NoveltyTheory.Models.SignatureTower
+open GenerativeSystem Set NoveltyTheory.Models.SignatureTower
 
 namespace GeneratorTruth
 
@@ -27,6 +29,14 @@ theorem isGeneratorStructural_traceEq (n : ℕ) : IsGeneratorStructural (Sentenc
 theorem holdsAt_natCounter_traceEq_self (n : ℕ) :
     HoldsAt natCounter (Sentence.traceEq n n) := by
   simp [HoldsAt, natCounter_trace]
+
+theorem holdsAt_natCounter_phaseMem_singleton (n : ℕ) :
+    HoldsAt natCounter (Sentence.phaseMem (singleton n) n) := by
+  simp [HoldsAt, mem_singleton_iff]
+
+theorem holdsAt_natCounter_natPhaseTagMem_sing (k : ℕ) :
+    HoldsAt natCounter (Sentence.natPhaseTagMem (NatPhaseTag.sing k) k) := by
+  simp [HoldsAt, NatPhaseTag.mem_sing_iff]
 
 end GeneratorTruth
 

@@ -8,6 +8,7 @@ import NoveltyTheory.Core.Tower
 import NoveltyTheory.Core.ReducerEnumeration
 import NoveltyTheory.Core.Explains
 import NoveltyTheory.Core.Sentence
+import NoveltyTheory.Core.NatPhaseTag
 import NoveltyTheory.Core.SentenceSemantics
 import NoveltyTheory.Core.SentenceRegime
 import NoveltyTheory.Core.Expressibility
