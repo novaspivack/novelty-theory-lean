@@ -21,6 +21,7 @@ import NoveltyTheory.Foundation.SentenceFacts
 import NoveltyTheory.Foundation.ProvabilityFacts
 import NoveltyTheory.Foundation.UpwardNecessity
 import NoveltyTheory.Foundation.StructuralGeneratorSentence
+import NoveltyTheory.Foundation.StructuralCrownSentence
 import NoveltyTheory.Foundation.AscentRegime
 import NoveltyTheory.Foundation.RichSentenceSyntax
 import NoveltyTheory.Foundation.InitialTagProvability
@@ -29,6 +30,7 @@ import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
 import NoveltyTheory.Models.SentenceProvability
 import NoveltyTheory.Models.StratifiedSentenceModel
+import NoveltyTheory.Models.StructuralCrownFamily
 import NoveltyTheory.Models.StratifiedFinality
 import NoveltyTheory.Models.RetroStructuralTruth
 import NoveltyTheory.Models.BoundedRegimeDiagonal
@@ -52,6 +54,7 @@ import NoveltyTheory.Summits.GeneratorTruthRidge
 import NoveltyTheory.Summits.UnfoldingNecessitySummit
 import NoveltyTheory.Summits.SimulationVersusExplanationAbstractSummit
 import NoveltyTheory.Summits.CrownIteratedAscentSummit
+import NoveltyTheory.Summits.StructuralCrownSummit
 import NoveltyTheory.Summits.OrganizationFrontierSummit
 
 /-!

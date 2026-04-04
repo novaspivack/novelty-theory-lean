@@ -82,11 +82,18 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `ProvabilityFacts.sentenceOfCounterFact_holds_iff` | `Foundation.ProvabilityFacts` | `HoldsAt` ↔ `factHolds` for embed |
 | `ProvabilityFacts.proves_sentence_sound` | `Foundation.ProvabilityFacts` | `ProvesAt` ⇒ `HoldsAt natCounter` |
 | `UpwardNecessity.upward_necessity_geOutput` | `Foundation.UpwardNecessity` | Sentence-level strict gap for `geOutput` |
+| `UpwardNecessity.upward_necessity_traceEq_diag` | `Foundation.UpwardNecessity` | Sentence-level strict gap for diagonal `traceEq` |
 | `StructuralGeneratorSentence.isGeneratorStructural_implies` | `Foundation.StructuralGeneratorSentence` | `SPEC_017` fragment ⊆ structural class |
 | `StructuralGeneratorSentence.geOutput_not_isGeneratorStructural` | `Foundation.StructuralGeneratorSentence` | Output atoms ≠ trace-only ridge |
 | `StructuralGeneratorSentence.natPhaseTagMem_initial_not_structural` | `Foundation.StructuralGeneratorSentence` | `initial` tag outside structural fragment |
 | `StructuralGeneratorSentence.not_structural_finConj_nil` | `Foundation.StructuralGeneratorSentence` | Empty `finConj` excluded |
 | `StructuralGeneratorSentence.mention_bound_neither_implies_structural_nor_nonstructural` | `Foundation.StructuralGeneratorSentence` | Anti-collapse vs `mentionBound` |
+| `StructuralCrownSentence.isStructural_structuralCrownWitness` | `Foundation.StructuralCrownSentence` | `SPEC_042_CG1` — witness is `IsStructuralGeneratorSentence` |
+| `StructuralCrownSentence.structuralCrownWitness_ne_geOutput` | `Foundation.StructuralCrownSentence` | Witness ≠ `geOutput n` |
+| `StructuralCrownSentence.structuralCrownWitness_not_isGeneratorStructural` | `Foundation.StructuralCrownSentence` | Witness ∉ `IsGeneratorStructural` |
+| `StructuralCrownSentence.mentionBound_structuralCrownWitness` | `Foundation.StructuralCrownSentence` | `mentionBound` of witness |
+| `StructuralCrownSentence.structural_crown_not_mentionBound_only` | `Foundation.StructuralCrownSentence` | Same stratum as `geOutput n`, distinct formula |
+| `StructuralCrownSentence.structural_crown_not_traceEq_ridge_only` | `Foundation.StructuralCrownSentence` | Structural but not trace-ridge atom |
 | `AscentRegime.provesInRegime_iff` | `Foundation.AscentRegime` | \(R_m\) = `ProvesAt m` |
 | `AscentRegime.provesInRegime_mono` | `Foundation.AscentRegime` | Regime monotonicity |
 | `AscentRegime.provesInRegime_sound` | `Foundation.AscentRegime` | `ProvesInRegime` ⇒ `HoldsAt natCounter` |
@@ -197,6 +204,9 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `StratifiedSentenceModel.exists_sentence_phase_provable_succ_not_at` | `Models.StratifiedSentenceModel` | Phase provability gap |
 | `StratifiedSentenceModel.exists_histSeq_nonempty_provable_succ_not_at` | `Models.StratifiedSentenceModel` | `histSeq` gap |
 | `StratifiedSentenceModel.universal_no_sentence_proof_at_own_bound` | `Models.StratifiedSentenceModel` | Universal proof-height obstruction |
+| `StructuralCrownFamily.structuralCrownWitness_proves_succ_not_at` | `Models.StructuralCrownFamily` | `SPEC_042_CG1` — strict `ProvesAt` gap |
+| `StructuralCrownFamily.holdsAt_natCounter_structuralCrownWitness` | `Models.StructuralCrownFamily` | `HoldsAt natCounter` for witness |
+| `StructuralCrownFamily.exists_structural_sentence_provable_succ_not_at` | `Models.StructuralCrownFamily` | Exists structural `φ` with gap at `n` |
 | `StratifiedFinality.natCounter_futureDefeat` | `Models.StratifiedFinality` | Unbounded trace |
 | `StratifiedFinality.terminality_eq_zero` | `Models.StratifiedFinality` | Satisfiable terminality |
 | `StratifiedFinality.terminality_impossible_strict_output_rise` | `Models.StratifiedFinality` | Terminality vs strict rise |
@@ -260,6 +270,12 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `CrownIteratedAscentSummit.crown_strict_ascent_sentence_family` | `Summits.CrownIteratedAscentSummit` | ∃ generator, ∃ Φ strict ascent |
 | `CrownIteratedAscentSummit.crown_ascent_refines_existential_provable_gap` | `Summits.CrownIteratedAscentSummit` | Structural witness refines bare gap |
 | `CrownIteratedAscentSummit.geOutput_crown_not_traceEq_ridge_only` | `Summits.CrownIteratedAscentSummit` | Anti-collapse vs `IsGeneratorStructural` |
+| `StructuralCrownSummit.structural_sentence_strict_ascent_at` | `Summits.StructuralCrownSummit` | `SPEC_042_CG1` — strict ascent at `n` |
+| `StructuralCrownSummit.structural_sentence_crown_family` | `Summits.StructuralCrownSummit` | `∃G ∃Φ` strict structural ascent |
+| `StructuralCrownSummit.structural_crown_refines_bare_provable_gap` | `Summits.StructuralCrownSummit` | Refines naked existential gap |
+| `StructuralCrownSummit.structural_crown_not_traceEq_ridge_only` | `Summits.StructuralCrownSummit` | Summit export — not trace-ridge only |
+| `StructuralCrownSummit.structural_crown_not_mentionBound_only` | `Summits.StructuralCrownSummit` | Summit export — stratum non-uniqueness |
+| `StructuralCrownSummit.exists_structural_sentence_provable_succ_not_at` | `Summits.StructuralCrownSummit` | Exists structural gap (packaging) |
 | `SummitPackages.summit_crown_strict_ascent_sentence_family` | `Summits.SummitPackages` | Crown re-export |
 | `OrganizationFrontierSummit.summit_adequateNatParity_separates` | `Summits.OrganizationFrontierSummit` | `SPEC_041` packaging |
 | `OrganizationFrontierSummit.summit_totalFutureOnNat_separates` | `Summits.OrganizationFrontierSummit` | Total-future org separates |
@@ -278,7 +294,7 @@ A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted
 
 ## Still research-grade open (extensions)
 
-Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Further** extensions ( **`ProvesAt`** rules for **`outputEnumMem`**, finset-grade output sets, polymorphic **`Phase`** at sentence level, full modality algebras, **etc.**) remain future specs when normatively scoped.
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Crown completion** (**`SPEC_042_CG1`**–**`SPEC_047_CG6`**) — [`EPIC_011`](../specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); structural non-`geOutput` witness is live under **`SPEC_042`** (`StructuralCrownSummit`). **Remaining** tranche items: **`ProvesAt`** for **`outputEnumMem`**, finset-grade output sets, polymorphic phase layer (**`SPEC_043`**–**`SPEC_044`**), organization V2 (**`SPEC_045`**), retro structural v2 (**`SPEC_046`**), final package (**`SPEC_047`**).
 
 ---
 

@@ -49,8 +49,9 @@
 | 3 | Sentence / strata / Model C packaging (**`SPEC_013_ES1`**–**`SPEC_032_SVE3`**, epics **003**–**008**) + tranche closure **`SPEC_033_K7A`** | `EPIC_003`–`EPIC_008` | [`SPEC_033_K7A`](specs/INCOMPLETE/IN-PROCESS/SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md); Lean under `NoveltyTheory/Core`, `Foundation`, `Models`, `Summits` | **Done** (2026-04-03) |
 | 4 | **Crown iterated ascent** (structural \(\Phi_n\), regimes \(R_n\), strict \(\vdash\) / \(\not\vdash\) ladder) | [`EPIC_009_STRICT_ITERATED_ASCENT`](specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) | **`SPEC_035_GS1`–`SPEC_037_CR1`**; `CrownIteratedAscentSummit.crown_strict_ascent_sentence_family` | **Done** (2026-04-04) |
 | 5 | **Expressive / organization frontier** (richer syntax, `initial` derivability, modalities, stronger org) | [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) | **`SPEC_038_XS1`**–**`SPEC_041_OR1`** | **Done** (2026-04-04) |
+| 6 | **Crown completion** (structural non-`geOutput` witness, enum/finset proof layer, org V2, retro v2, final package) | [`EPIC_011_CROWN_COMPLETION`](specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md) | **`SPEC_042_CG1`**–**`SPEC_047_CG6`**; [`docs/CROWN_POSITIONING.md`](docs/CROWN_POSITIONING.md) | **In progress** (`SPEC_042` landed) |
 
-**Queue clear (v1 program):** rows **1–5** are **Done**. Further expressive work (**`ProvesAt`** on **`outputEnumMem`**, polymorphic phase-at-sentence, **etc.**) needs a **new epic/spec** row if reopened.
+**Queue:** row **6** is the active **post-v1** crown program. Rows **1–5** remain **Done**.
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 

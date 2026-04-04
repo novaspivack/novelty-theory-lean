@@ -4,7 +4,7 @@
 
 | Epic / initiative | Folder | Owner / focus | Next queue item |
 |-------------------|--------|---------------|-----------------|
-| _None — add **`EPIC_011`** (or similar) for post-010 extensions when scoped_ | — | Optional: `ProvesAt` for `outputEnumMem`, richer `Phase` syntax | — |
+| **Crown completion** | [`EPIC_011_CROWN_COMPLETION`](INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/) | `SPEC_042`–`SPEC_047`; anti-collapse, enum layer, org V2, retro v2, final package | **`SPEC_043_CG2`** (`outputEnumMem` / finite witness) after **`SPEC_042`** acceptance |
 
 ## Deferred
 
@@ -24,7 +24,7 @@
 
 **Cross-epic ordering + agent contract:** [`../QUEUE.md`](../QUEUE.md)
 
-**Inventory “open extensions” beyond this v1 close:** richer `ProvesAt` for `outputEnumMem`, **Finset**/output-set atoms, polymorphic phase syntax, **etc.** — track with a **new** epic row when normatively scoped.
+**Crown program:** [`EPIC_011`](INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); [`docs/CROWN_POSITIONING.md`](../docs/CROWN_POSITIONING.md), [`docs/CROWN_DEPENDENCY_MAP.md`](../docs/CROWN_DEPENDENCY_MAP.md).
 
 ---
 

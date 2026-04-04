@@ -20,6 +20,10 @@ theorem upward_necessity_geOutput (n : ℕ) :
     ProvesAt (n + 1) (Sentence.geOutput n) ∧ ¬ ProvesAt n (Sentence.geOutput n) := by
   simpa [ProvesAt] using upward_derivability_gap n
 
+theorem upward_necessity_traceEq_diag (n : ℕ) :
+    ProvesAt (n + 1) (Sentence.traceEq n n) ∧ ¬ ProvesAt n (Sentence.traceEq n n) := by
+  simpa [ProvesAt] using upward_trace_derivability_gap n
+
 end UpwardNecessity
 
 end Foundation

@@ -14,11 +14,11 @@
 | Layer | Path |
 |--------|------|
 | Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains`, `Sentence` (incl. **`outputEnumMem`**), `NatPhaseTag`, `SentenceSyntax`, `SentenceExpressibility`, `SentenceSemantics`, `SentenceRegime`, `Expressibility`, `GeneratorTruth`, `Organization` (incl. **`SeparatesStages`**), `SimulationVersusExplanationAbstract`, `ExplanatoryOrder` |
-| Foundation | `NoveltyTheory/Foundation/` — trajectory, conservative-history, `SentenceFacts`, `ProvabilityFacts`, `UpwardNecessity`, `StructuralGeneratorSentence`, `AscentRegime`, `RichSentenceSyntax` (**038**), `InitialTagProvability` (**039**), `StageModality` (**040**) |
+| Foundation | `NoveltyTheory/Foundation/` — trajectory, conservative-history, `SentenceFacts`, `ProvabilityFacts`, `UpwardNecessity`, `StructuralGeneratorSentence`, `StructuralCrownSentence` (**042**), `AscentRegime`, `RichSentenceSyntax` (**038**), `InitialTagProvability` (**039**), `StageModality` (**040**) |
 | Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
-| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C: **`CounterFact`** + inductive **`Pf`**), `SentenceProvability`, `StratifiedSentenceModel`, `StratifiedFinality`, `RetroStructuralTruth`, `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `RegimeFamilyObstruction`, `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
+| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C: **`CounterFact`** + inductive **`Pf`**), `SentenceProvability`, `StratifiedSentenceModel`, `StructuralCrownFamily` (**042**), `StratifiedFinality`, `RetroStructuralTruth`, `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `RegimeFamilyObstruction`, `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
 | Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment`, `SignatureAdmissibleBundle` |
-| Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages`, `OrganizationSummit`, `OrganizationFrontierSummit`, `NecessityStratifiedFinalitySummit`, `StrongRetroCausationSummit`, `GeneratorTruthRidge`, `UnfoldingNecessitySummit`, `SimulationVersusExplanationAbstractSummit`, `CrownIteratedAscentSummit` |
+| Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages`, `OrganizationSummit`, `OrganizationFrontierSummit`, `NecessityStratifiedFinalitySummit`, `StrongRetroCausationSummit`, `GeneratorTruthRidge`, `UnfoldingNecessitySummit`, `SimulationVersusExplanationAbstractSummit`, `CrownIteratedAscentSummit`, `StructuralCrownSummit` (**042**) |
 
 **Headline index:** [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md)
 
