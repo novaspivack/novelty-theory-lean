@@ -68,7 +68,7 @@ Beyond “a stage fails somewhere”: **terminality** or **self-certification of
 
 **Already defensible (in the formal sense of the library):** a deterministic/fixed generator can generate an infinite tower, defeat every fixed bounded explanatory layer of the relevant class, and exhibit sentence/provability gaps across strata (as listed in the inventory).
 
-**Not yet the strongest conceivable “crown” formulation:** the limit statement where later generated regimes are **necessary for structural truths about the generator itself** in a way that **cannot** be redescribed as merely bounded mention-depth or current stratified proof height. The inventory and [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) still flag richer extensions (stronger organization predicates, further sentence/phase extensions, **etc.**) as open research directions.
+**Not yet the strongest conceivable “crown” formulation:** the limit statement where later generated regimes are **necessary for structural truths about the generator itself** in a way that **cannot** be redescribed as merely bounded mention-depth or current stratified proof height. The inventory and [`SPEC_034_R2B`](https://github.com/novaspivack/novelty-theory/blob/main/specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) still flag richer extensions (stronger organization predicates, further sentence/phase extensions, **etc.**) as open research directions.
 
 ---
 
@@ -112,5 +112,5 @@ The full theorem inventory marks a **major strengthening**: it clears the “not
 
 Normative specs for the **crown** template (§6) and for **inventory extensions** live under:
 
-- [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) — **`SPEC_035_GS1`**–**`SPEC_037_CR1`** (**v1** proved: `Summits/CrownIteratedAscentSummit.lean`)
-- [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) — **`SPEC_038_XS1`**–**`SPEC_041_OR1`** (v1 tranche closed)
+- [`EPIC_009_STRICT_ITERATED_ASCENT`](https://github.com/novaspivack/novelty-theory/blob/main/specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) — **`SPEC_035_GS1`**–**`SPEC_037_CR1`** (**v1** proved: `Summits/CrownIteratedAscentSummit.lean`)
+- [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](https://github.com/novaspivack/novelty-theory/blob/main/specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) — **`SPEC_038_XS1`**–**`SPEC_041_OR1`** (v1 tranche closed)

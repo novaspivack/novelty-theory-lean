@@ -1,6 +1,6 @@
 # Crown positioning (novelty-theory-lean)
 
-**Purpose:** State what **crown** theorems in this library **do** and **do not** claim—without pointing readers at internal spec paths in external prose. For development, normative execution lives under **`EPIC_011_CROWN_COMPLETION`** (`specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/`).
+**Purpose:** State what **crown** theorems in this library **do** and **do not** claim—without pointing readers at internal spec paths in external prose. For development, normative execution lives under **`EPIC_011_CROWN_COMPLETION`** in the **[companion specs tree](https://github.com/novaspivack/novelty-theory/tree/main/specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/)**.
 
 ## What is proved (honest scope)
 

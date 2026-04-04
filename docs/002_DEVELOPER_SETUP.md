@@ -33,6 +33,10 @@ Elan reads **`lean-toolchain`** automatically when you run `lake` from this dire
 2. Run **`lake update`** then **`lake build`**.
 3. Commit **`lake-manifest.json`** with the Lean changes.
 
-## Agent methodology
+## LaTeX paper (`generalized crown`)
 
-See **[`QUEUE.md`](../QUEUE.md)**, **[`NOTES/PROJECT_SEED.md`](../NOTES/PROJECT_SEED.md)**, and **[`CODING_PROTOCOLS.md`](../CODING_PROTOCOLS.md)**.
+The PDF is built from **`paper/Final Draft/`** so BibTeX finds **`refs.bib`**. See **[`paper/Final Draft/COMPILE.md`](../paper/Final%20Draft/COMPILE.md)** (or run **`paper/Final Draft/build-paper.sh`**). Building from the repo root without `latexmk`’s directory change often breaks the bibliography and aux files.
+
+## Maintainers (specs, queue, proof protocols)
+
+Epic queues, `NOTES/PROJECT_SEED.md`, and **`CODING_PROTOCOLS.md`** live in **[novelty-theory](https://github.com/novaspivack/novelty-theory)**. Clone that repo (and its `novelty-theory-lean` submodule) if you need the full internal workflow.

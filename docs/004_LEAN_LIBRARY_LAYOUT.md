@@ -4,7 +4,7 @@
 
 ## Repository role
 
-This repository **is** the **novelty-theory-lean** library. Lean sources, `lakefile.lean`, and `lean-toolchain` live at the **repo root**. A separate prose or paper repository may add this project as a **`git submodule`** ([`NOTES/PROJECT_SEED.md`](../NOTES/PROJECT_SEED.md) — parent/submodule pattern).
+This repository **is** the **novelty-theory-lean** library. Lean sources, `lakefile.lean`, and `lean-toolchain` live at the **repo root**. A separate repository may add this project as a **`git submodule`**; maintainer notes on that pattern live in **[novelty-theory](https://github.com/novaspivack/novelty-theory)** (`NOTES/PROJECT_SEED.md` there).
 
 ## Lake
 
@@ -36,8 +36,8 @@ Extend imports in **`NoveltyTheory/All.lean`**, keep **[`MANIFEST.md`](../MANIFE
 ## Docs and specs (not Lean sources)
 
 - **`docs/`** — developer reference (this file, setup, toolchain pin).
-- **`specs/`** — normative work specs; cite as **`SPEC_NNN_XXX`**.
+- **Companion [`novelty-theory/specs`](https://github.com/novaspivack/novelty-theory/tree/main/specs)** — normative work specs; cite as **`SPEC_NNN_XXX`**.
 
 ---
 
-_Keep this doc aligned with `lakefile.lean` and the active epic in `specs/INCOMPLETE/IN-PROCESS/`._
+_Keep this doc aligned with `lakefile.lean` and the active epic in the companion [`specs/INCOMPLETE/IN-PROCESS/`](https://github.com/novaspivack/novelty-theory/tree/main/specs/INCOMPLETE/IN-PROCESS/) tree._

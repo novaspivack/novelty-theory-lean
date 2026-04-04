@@ -1,4 +1,4 @@
-# See NOTES/PROJECT_SEED.md §7.1–§7.2 (gitignore policy + Git LFS for large files).
+# Git LFS for large binaries when needed; do not blanket-ignore `.pdf` / needed JSON without cause.
 
 # OS
 .DS_Store
@@ -60,6 +60,7 @@ paper/**/*.fls
 paper/**/*.out
 paper/**/*.toc
 paper/**/*.synctex.gz
+paper/**/*.dvi
 
 # Stray LaTeX artifacts at repo root (build cwd mistakes)
 /novelty_theory_generalized_crown.aux

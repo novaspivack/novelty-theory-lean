@@ -2,7 +2,9 @@
 
 ## What this is
 
-**novelty-theory-lean** is a **Lean 4** library for formal developments in **novelty theory**. It uses the agent-oriented structure from Default-repo-stub: **`specs/`** for requirements, **`docs/`** for finished developer reference, and **[`QUEUE.md`](../QUEUE.md)** for cross-epic execution discipline.
+**novelty-theory-lean** is a **Lean 4** library for formal developments in **novelty theory**. This repository is the **public artifact**: library sources, final paper, and developer-facing documentation.
+
+**Normative specs**, epic orchestration, and maintainer queues live in **[novelty-theory](https://github.com/novaspivack/novelty-theory)** (companion repo). Links to `specs/…` elsewhere in `docs/` point at that repository when a path is needed.
 
 ## Toolchain
 
@@ -15,9 +17,9 @@
 |------|------|
 | [`NoveltyTheory/Basic.lean`](../NoveltyTheory/Basic.lean) | Default library root module (scaffold) |
 | [`MANIFEST.md`](../MANIFEST.md) | Proof hygiene and artifact inventory |
-| [`specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/`](../specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/) | Active epic and **SPEC_001_ST1** bootstrap |
-| [`paper/`](../paper/README.md) | LaTeX paper bundle (prologue/preamble aligned with ugp-lean + `\leanref`; prep notes in **008**) |
+| [`docs/THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md) | Theorem/lemma catalog |
+| [`paper/Final Draft/COMPILE.md`](../paper/Final%20Draft/COMPILE.md) | Build the companion paper |
 
-## Parent repositories
+## Consumers
 
-Consumers should depend on this repo via **git submodule** or published artifact per their own specs; this repo does not embed a nested `*-lean` child.
+Depend on this repo via **git submodule**, git dependency, or a published artifact, per your project’s layout. This tree **is** the library root.

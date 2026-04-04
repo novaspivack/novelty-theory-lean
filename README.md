@@ -1,34 +1,36 @@
 # novelty-theory-lean
 
-Lean 4 library for formal work on **novelty theory**: Mathlib **`v4.29.0-rc6`**, toolchain pinned to **`leanprover/lean4:v4.29.0-rc6`** (see [`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)).
+Public **Lean 4** library and **machine-checked companion** to novelty theory, with the **final-draft** crown paper under `paper/Final Draft/`.
+
+- **Lean:** Mathlib **`v4.29.0-rc6`**, toolchain pinned in [`lean-toolchain`](lean-toolchain) — see [`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md).
+- **Paper:** `paper/Final Draft/novelty_theory_generalized_crown.tex` (+ `refs.bib`). Build from that directory; see [`paper/Final Draft/COMPILE.md`](paper/Final%20Draft/COMPILE.md).
+- **Maps / inventory:** [`MANIFEST.md`](MANIFEST.md), [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md), and dependency/positioning docs under [`docs/`](docs/000_INDEX.md).
 
 ## Quick start
 
 ```bash
+lake exe cache get   # optional; Mathlib oleans
 lake build
 ```
 
-Setup details: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
+Details: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
 
-## For agents
+## Normative specs and maintainer workflow
 
-| File | Role |
-|------|------|
-| [`QUEUE.md`](QUEUE.md) | Cross-epic queue + **execution contract** |
-| [`NOTES/PROJECT_SEED.md`](NOTES/PROJECT_SEED.md) | Methodology |
-| [`CODING_PROTOCOLS.md`](CODING_PROTOCOLS.md) | Proof quality + Git/discipline |
-| [`docs/000_INDEX.md`](docs/000_INDEX.md) | Documentation map |
-| [`MANIFEST.md`](MANIFEST.md) | Proof hygiene inventory |
+Epic specs, queues, and agent methodology live in the separate **[novelty-theory](https://github.com/novaspivack/novelty-theory)** repository. This repo tracks only what belongs in a public **library + paper** artifact.
 
-Active epic: **`EPIC_001_NOVELTY_THEORY_LEAN`** — bootstrap spec **`SPEC_001_ST1`**.
-
-This repo **is** the library root; parent projects may add it as a **`git submodule`**.
+To work on both: clone `novelty-theory` and initialize the submodule (see that repo’s README).
 
 ## Layout
 
-- **`NoveltyTheory/`** — main library modules (default root: `Basic.lean`)
-- **`specs/`** — normative specs (`SPEC_NNN_XXX`)
-- **`docs/`** — developer docs (not specs)
+- **`NoveltyTheory/`** — library sources (root module: [`NoveltyTheory.lean`](NoveltyTheory.lean))
+- **`paper/Final Draft/`** — submission-grade LaTeX
+- **`docs/`** — developer and external-facing reference (not normative specs)
+- **`scripts/`** — e.g. optional `\leanref` verification against the TeX source
+
+## Submodule
+
+Parent prose or orchestration projects may embed this repository as a **`git submodule`** at their chosen path; this tree is the **library root**.
 
 ## License
 
