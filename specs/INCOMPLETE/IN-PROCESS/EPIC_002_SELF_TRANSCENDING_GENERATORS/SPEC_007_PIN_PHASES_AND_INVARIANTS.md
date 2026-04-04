@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — definitions to implement under [`SPEC_003_RCT`](SPEC_003_RCT_REPO_CONTRACT.md).
+**Implemented** — [`NoveltyTheory/Core/Phase.lean`](../../../../NoveltyTheory/Core/Phase.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -24,9 +24,11 @@ Phases are **not** mere outputs: they are structurally coherent regions of the g
 
 ## Acceptance criteria
 
-- [ ] `Phase`, invariants, and `GeneratedBy` compile and are used in adequacy (`SPEC_005_EXR`) and reductions (`SPEC_006_ADR`).
-- [ ] Lemmas in `NoveltyTheory/Foundation/` can refer to phases without circular imports (adjust module splits per **`SPEC_003_RCT`** if needed).
-- [ ] No **`sorry`** introduced without `MANIFEST` entry.
+- [x] `Phase`, `generatedBy`, and related API used across adequacy / reductions / models.
+- [x] `NoveltyTheory/Foundation/` lemmas compose with phases without circular imports (**`SPEC_003_RCT`**).
+- [x] Default library: no undocumented `sorry` / stray project `axiom` (per [`MANIFEST.md`](../../../../MANIFEST.md)).
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

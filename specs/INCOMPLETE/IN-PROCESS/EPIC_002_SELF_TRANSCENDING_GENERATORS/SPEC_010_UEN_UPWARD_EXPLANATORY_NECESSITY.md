@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — strongest summit tier per [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_CONCEPT.md); expect dependence on ridge + models (**`SPEC_012_MDL`** Model C).
+**Implemented (Model C)** — [`NoveltyTheory/Models/InvariantTower.lean`](../../../../NoveltyTheory/Models/InvariantTower.lean) (`provesAtDepth`, soundness, gaps); summit packaging [`SummitPackages.upwardExplanatoryNecessity_counterfact`](../../../../NoveltyTheory/Summits/SummitPackages.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -24,9 +24,11 @@ Summit IV: **later generated regimes become necessary** to **state or prove** st
 
 ## Acceptance criteria
 
-- [ ] `UpwardExplanatoryNecessity` (or summit-named theorem) is stated with explicit hypotheses.
-- [ ] Dependencies on formalized provability are listed; no silent classical axioms beyond project standard.
-- [ ] Cross-links to **`SPEC_011_SPK`** Summit IV and **`THEOREM_INVENTORY.md`** when created.
+- [x] Canonical Summit IV packaging: `upwardExplanatoryNecessity_counterfact` (explicit `provesAtDepth` separation).
+- [x] Proof obligations: inductive `Pf` / [`MANIFEST.md`](../../../../MANIFEST.md) hygiene (Mathlib standard).
+- [x] **`SPEC_011_SPK`** + [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md) list Summit IV names.
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — definitions to implement under [`SPEC_003_RCT`](SPEC_003_RCT_REPO_CONTRACT.md).
+**Implemented** — [`NoveltyTheory/Core/GenerativeSystem.lean`](../../../../NoveltyTheory/Core/GenerativeSystem.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -28,9 +28,11 @@ The flagship theorems quantify over a **single finitely specified** generator wh
 
 ## Acceptance criteria
 
-- [ ] `GenerativeSystem` (or equivalent) compiles and supports trajectory lemmas used by phases (`SPEC_007_PIN`).
-- [ ] No proof of “self-transcendence” appears at this layer—only generic dynamical facts.
-- [ ] Module placement per **`SPEC_003_RCT`** (e.g. `NoveltyTheory/Core/GenerativeSystem.lean`).
+- [x] `GenerativeSystem` compiles and supports trajectory / trace lemmas used by phases and models.
+- [x] No “self-transcendence” is proved at this layer—only generic dynamical facts.
+- [x] Module placement per **`SPEC_003_RCT`**: `NoveltyTheory/Core/GenerativeSystem.lean`.
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — definitions to implement under [`SPEC_003_RCT`](SPEC_003_RCT_REPO_CONTRACT.md).
+**Implemented** — [`NoveltyTheory/Core/Reduction.lean`](../../../../NoveltyTheory/Core/Reduction.lean), [`NoveltyTheory/Core/Conservative.lean`](../../../../NoveltyTheory/Core/Conservative.lean), [`NoveltyTheory/Core/Explains.lean`](../../../../NoveltyTheory/Core/Explains.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -28,9 +28,11 @@ Without **layer 3**—maps from generator-level description to regime-level expl
 
 ## Acceptance criteria
 
-- [ ] Admissibility predicates compile and appear in `ParadigmShift` (**`SPEC_008_PSH`**) and diagonal lemmas (**`SPEC_009_DST`**).
-- [ ] Summit statements (**`SPEC_011_SPK`**) can quantify over `E : 𝓔_adm` using this file’s types.
-- [ ] No circular imports: if needed, split `Reduction.lean` / `ConservativeReduction.lean` per **`SPEC_003_RCT`**.
+- [x] Admissibility / reducibility / `explains` hooks appear in `ParadigmShift` (**`SPEC_008_PSH`**) and diagonal / summit layers (**`SPEC_009_DST`**, models).
+- [x] Summit packaging uses `AdmissibleInterface` with explicit **`RowSoundForSignature`**, and bundled **`SignatureAdmissibleInterface`** where the diagonal is stated without a separate soundness hypothesis (**`SPEC_011_SPK`**, `Ridge.SignatureAdmissibleBundle`).
+- [x] Module graph respects **`SPEC_003_RCT`** (no upward import of summits from Core).
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

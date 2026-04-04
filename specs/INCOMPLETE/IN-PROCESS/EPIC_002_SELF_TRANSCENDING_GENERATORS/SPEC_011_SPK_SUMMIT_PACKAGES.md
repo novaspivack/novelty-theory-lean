@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — packages **Summit I–IV** from [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_CONCEPT.md) into stable Lean names and dependency order.
+**Implemented** — [`NoveltyTheory/Summits/SummitPackages.lean`](../../../../NoveltyTheory/Summits/SummitPackages.lean); narrative source [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_CONCEPT.md); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -46,9 +46,9 @@ As in **`SPEC_010_UEN`**: `Φ_n` with provability lift `R_{n+1} ⊢ Φ_n`, `R_n 
 
 ## Acceptance criteria
 
-- [x] Every summit has a **single canonical** Lean declaration — [`NoveltyTheory/Summits/SummitPackages.lean`](../../../NoveltyTheory/Summits/SummitPackages.lean) (`causal_generation_not_uniform_explanation`, `infinite_paradigm_tower`, `noFinalInternalTheory_signature_family`, `upwardExplanatoryNecessity_counterfact`).
+- [x] Every summit has a **single canonical** Lean declaration — [`NoveltyTheory/Summits/SummitPackages.lean`](../../../../NoveltyTheory/Summits/SummitPackages.lean) (`causal_generation_not_uniform_explanation`, `infinite_paradigm_tower`, `noFinalInternalTheory_signature_family`, `upwardExplanatoryNecessity_counterfact`).
 - [x] Summit IV aligns with Model C upward necessity in [`SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md`](SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md) via `InvariantTower` / `provesAtDepth`.
-- [x] CI / `lake build`; inventory row in [`docs/THEOREM_INVENTORY.md`](../../../docs/THEOREM_INVENTORY.md).
+- [x] CI / `lake build`; inventory row in [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md).
 
 **Closure:** [`../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) (**`SPEC_034_R2B`**).
 

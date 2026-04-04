@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — normative structure for Lean modules and artifacts; implementation tracked on [`EPIC_002_MASTER_ORCHESTRATION.md`](EPIC_002_MASTER_ORCHESTRATION.md).
+**Implemented (normative closure)** — [`EPIC_002_MASTER_ORCHESTRATION.md`](EPIC_002_MASTER_ORCHESTRATION.md); roll-up [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -34,6 +34,8 @@ The reference narrative [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_
 - [x] [`MANIFEST.md`](../../../../MANIFEST.md) lists the theory layers and hygiene expectations.
 - [x] [`docs/004_LEAN_LIBRARY_LAYOUT.md`](../../../../docs/004_LEAN_LIBRARY_LAYOUT.md) describes the current module graph.
 - [x] Child specs **`SPEC_004_GSY`**–**`SPEC_012_MDL`** reference **`SPEC_003_RCT`** under **Status** / **Dependencies** (normative module graph for `NoveltyTheory/`).
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

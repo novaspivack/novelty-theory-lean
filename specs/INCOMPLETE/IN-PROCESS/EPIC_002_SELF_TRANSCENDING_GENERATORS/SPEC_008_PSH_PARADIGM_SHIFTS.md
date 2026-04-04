@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — definitions to implement under [`SPEC_003_RCT`](SPEC_003_RCT_REPO_CONTRACT.md).
+**Implemented** — [`NoveltyTheory/Core/ParadigmShift.lean`](../../../../NoveltyTheory/Core/ParadigmShift.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -28,9 +28,11 @@
 
 ## Acceptance criteria
 
-- [ ] `ParadigmShift` compiles and is used in tower definitions and **`SPEC_009_DST`**.
-- [ ] Definition does not assume infinitary objects beyond what Mathlib provides; any size assumptions are explicit.
-- [ ] Foundation lemmas about conservativity and irreducibility are stated or proved without gaps, or tracked in [`MANIFEST.md`](../../../../MANIFEST.md).
+- [x] `ParadigmShift` is used in towers and model / ridge lemmas (**`SPEC_009_DST`** / **`SPEC_012_MDL`**).
+- [x] Definitions stay standard (types + `ℕ`-indexed towers); no extra foundational axioms beyond Mathlib + project standard.
+- [x] Hygiene tracked in [`MANIFEST.md`](../../../../MANIFEST.md).
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

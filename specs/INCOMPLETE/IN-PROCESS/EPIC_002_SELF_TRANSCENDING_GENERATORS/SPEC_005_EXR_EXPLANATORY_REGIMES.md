@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — definitions to implement under [`SPEC_003_RCT`](SPEC_003_RCT_REPO_CONTRACT.md).
+**Implemented** — [`NoveltyTheory/Core/ExplanatoryRegime.lean`](../../../../NoveltyTheory/Core/ExplanatoryRegime.lean); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -24,9 +24,11 @@
 
 ## Acceptance criteria
 
-- [ ] `ExplanatoryRegime` and `Adequate` compile and integrate with `Phase` from **`SPEC_007_PIN`**.
-- [ ] Comments (external-facing only, per [`CODING_PROTOCOLS.md`](../../../../CODING_PROTOCOLS.md)) clarify why adequacy is stronger than raw simulation.
-- [ ] Module placement per **`SPEC_003_RCT`**.
+- [x] `ExplanatoryRegime` / adequacy integrate with `Phase` (**`SPEC_007_PIN`**) across Core / Models.
+- [x] External-facing module comments per [`CODING_PROTOCOLS.md`](../../../../CODING_PROTOCOLS.md).
+- [x] Module placement per **`SPEC_003_RCT`** (`NoveltyTheory/Core/`).
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

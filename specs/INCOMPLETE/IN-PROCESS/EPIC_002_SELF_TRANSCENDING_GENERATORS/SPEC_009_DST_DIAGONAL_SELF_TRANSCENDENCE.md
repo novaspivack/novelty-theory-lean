@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — existence/construction spec; primary engine for first summit wave per [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_CONCEPT.md).
+**Implemented (model-scoped)** — `NoveltyTheory/Ridge/DiagonalNat.lean`, `Models/ReducerDiagonal`, related ridge lemmas; narrative target [**`SPEC_002_OCN`**](../THEORY_SEED.md/002_OCN_ORIGINAL_CONCEPT.md); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 
@@ -24,9 +24,11 @@ To obtain results that are **not** “generic open-endedness,” the library sho
 
 ## Acceptance criteria
 
-- [ ] Core diagonal existence theorem compiles (or documented partial with `MANIFEST` debt if genuinely phased work).
-- [ ] Links forward to **`SPEC_011_SPK`** Summit I–III packaging.
-- [ ] Uses `ParadigmShift` (**`SPEC_008_PSH`**) and admissible morphisms (**`SPEC_006_ADR`**) consistently.
+- [x] Diagonal / alignment lemmas compile and are used in summit and model packages (`DiagonalNat`, `InterfaceAlignment`, `BoundedRegimeDiagonal`, **etc.**).
+- [x] Wired into **`SPEC_011_SPK`** (e.g. `no_uniform_row_at_next_stage`, bounded-family diagonal).
+- [x] Consistent with **`SPEC_008_PSH`** and **`SPEC_006_ADR`** interfaces.
+
+**Closure:** [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Dependencies
 

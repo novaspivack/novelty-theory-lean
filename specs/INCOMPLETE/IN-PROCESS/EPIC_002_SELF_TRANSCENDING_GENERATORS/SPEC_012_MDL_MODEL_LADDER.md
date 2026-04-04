@@ -4,7 +4,7 @@
 
 ## Status
 
-**Draft** — constructive paths for proving ridge and summit theorems without premature philosophical generality.
+**Implemented** — models under `NoveltyTheory/Models/` (SignatureTower, ReducerDiagonal, InvariantTower, DupRegimeTower, **etc.**); closure [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md).
 
 ## Problem
 

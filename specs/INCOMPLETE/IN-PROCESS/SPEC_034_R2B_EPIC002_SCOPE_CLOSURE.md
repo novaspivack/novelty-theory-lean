@@ -15,6 +15,7 @@ Record **completion** of the **normative theory ladder** owned by **[`EPIC_002_S
 | **`SPEC_012_MDL`** models A / B / C | `Models/SignatureTower`, `Models/ReducerDiagonal`, `Models/InvariantTower`; `lake build` |
 | **`SPEC_003_NXT`** shapes in Lean | `every_stage_admits_future_paradigmShift`, `explanatory_incompleteness_fixed_signature_height`, retro / S9 / `summit_finite_signature_not_total_ladder`, `summit_diagonal_all_bundled_admissible`, etc. in `SummitPackages` |
 | Obstructions documented | `trivialAdmissibleInterface`, `emptyRegime` / `summit_singletonWithin_not_entails_paradigm_steps` in inventory |
+| Spec markdown hygiene | **`SPEC_003_RCT`**–**`SPEC_012_MDL`** files: **Status** set to **Implemented** (or equivalent), acceptance checklists **`[x]`**, links to this closure |
 
 ## Explicit non-goals (research extensions)
 
