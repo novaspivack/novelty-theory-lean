@@ -39,3 +39,6 @@ This is **not** an OSI “open source” license (those cannot restrict commerci
 | **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**PolyForm Noncommercial 1.0.0**](LICENSE) — noncommercial use and sharing; **no** commercial sale or packaging **without permission**; **attribution** when distributing |
 | **Companion paper** (`paper/Final Draft/`, TeX/Bib/figures) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) |
 | **Dependencies** (e.g. Mathlib via Lake) | **Upstream licenses** (Mathlib is Apache-2.0) |
+<!-- NOVA_ZPO_ZENODO_PAPER_BEGIN -->
+**Archival paper (Zenodo preprint) (Zenodo):** https://doi.org/10.5281/zenodo.19423547
+<!-- NOVA_ZPO_ZENODO_PAPER_END -->
