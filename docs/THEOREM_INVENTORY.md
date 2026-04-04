@@ -2,7 +2,7 @@
 
 **Purpose:** Catalog of **public `theorem` / `lemma`** declarations under `NoveltyTheory/` (excluding Mathlib). Use this as the theorem index for papers and dependency maps. Proof hygiene defaults: [`MANIFEST.md`](../MANIFEST.md).
 
-**Verification (repo sync):** On **2026-04-04**, `NoveltyTheory/` contains **364** `theorem` declarations (count: lines matching `^\s*theorem\s` in `*.lean` under `NoveltyTheory/`). `lake build` succeeds (815 jobs). Every `\leanref{NoveltyTheory.…}` in [`paper/Final Draft/novelty_theory_generalized_crown.tex`](../paper/Final%20Draft/novelty_theory_generalized_crown.tex) (**94** distinct qualified paths) resolves to an existing `.lean` file and declaration (check: [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py)). This markdown file remains a **curated** catalog—not a line-for-line dump of all 364 theorems.
+**Verification (repo sync):** On **2026-04-04**, `NoveltyTheory/` contains **approximately 378** top-level `theorem` declarations (line-count style audit under `NoveltyTheory/`). `lake build` succeeds (825 jobs). Every `\leanref{NoveltyTheory.…}` in [`paper/Final Draft/novelty_theory_generalized_crown.tex`](../paper/Final%20Draft/novelty_theory_generalized_crown.tex) (**94** distinct qualified paths) resolves to an existing `.lean` file and declaration (check: [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py)). This markdown file remains a **curated** catalog—not a line-for-line dump of all 364 theorems.
 
 **Convention:** Names are given as in Lean (including namespaces where disambiguating, e.g. `CounterFact.geOutput_inj`).
 
@@ -423,6 +423,31 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `NaturalClassExamples.two_carrier_shapes_inhabited` | `Models.NaturalClassExamples` | Two inhabited natural-instance shapes |
 
 `def` / `structure` packaging (not duplicated as `theorem` rows): `BroadTransferStatement`, `CrownEncodingStatement`, `BroadPoint`, `NaturalAdmissibleInstance`, `Core.NaturalOrganization` predicates as used by **SPEC_057**–**058**.
+
+### Canonicality, minimality, closure boundary (`EPIC_014` — `SPEC_060_CMI1`–`SPEC_063_CMI4` partial)
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `MinimalHypotheses.paradigmShift_iff_weak_and_conservative` | `Core.MinimalHypotheses` | `ParadigmShift` ↔ weak step ∧ history conservativity |
+| `ClosureDichotomy.BoundedNumericTrace` | `Core.ClosureDichotomy` | Uniform output bound (collapse predicate fragment) |
+| `ClosureDichotomy.ExistsBoundedNumericTrace` | `Core.ClosureDichotomy` | ∃ bound majorizing all numeric observations |
+| `CanonicalityFacts.weakArchitectureOf` | `Foundation.CanonicalityFacts` | Bundles `GenerativeSystem` + regime family |
+| `CanonicalityFacts.weakArchitecture_eta` | `Foundation.CanonicalityFacts` | Re-bundling is idempotent |
+| `MinimalityCountermodels.trivialUnitGen_trace` | `Ridge.MinimalityCountermodels` | Constant `Unit` trace counter-toy |
+| `MinimalityCountermodels.not_futureDefeat_of_constant_numeric_trace` | `Ridge.MinimalityCountermodels` | Constant numeric trace \(\Rightarrow \neg\) `FutureDefeat` |
+| `MinimalityCountermodels.countermodel_without_nontriviality_of_bounded_trace` | `Ridge.MinimalityCountermodels` | Bounded trace \(\Rightarrow \neg\) `FutureDefeat` |
+| `ClosureCollapseBoundary.not_futureDefeat_iff_existsBoundedNumericTrace` | `Ridge.ClosureCollapseBoundary` | **IFF:** \(\neg\) `FutureDefeat` ↔ bounded numeric trace |
+| `ClosureCollapseBoundary.futureDefeat_or_existsBoundedNumericTrace` | `Ridge.ClosureCollapseBoundary` | **Dichotomy** on numeric observation type |
+| `ClosureCollapseBoundary.collapse_bounded_trace_implies_not_futureDefeat` | `Ridge.ClosureCollapseBoundary` | Collapse \(\Rightarrow \neg\) unbounded-rise predicate |
+| `ClosureCollapseBoundary.noncollapse_futureDefeat_of_unbounded` | `Ridge.ClosureCollapseBoundary` | `FutureDefeat` \(\Rightarrow\) no uniform bound |
+| `ClosureCollapseBoundary.minimal_assumption_barrier_for_crown` | `Ridge.ClosureCollapseBoundary` | **Alias** name for the numeric dichotomy (`SPEC_060` crosswalk) |
+| `ArchitectureRepresentation.sameShape_id` | `Ridge.ArchitectureRepresentation` | Identity on weak architectures (representation hook) |
+| `UniversalUpwardNecessity.exhibited_strict_retro_gap` | `Ridge.UniversalUpwardNecessity` | Navigator to `histSeqUpto` strict gap |
+| `ClosureDichotomySummit.closure_dichotomy_numeric_trace` | `Summits.ClosureDichotomySummit` | Summit re-export: numeric dichotomy |
+| `ClosureDichotomySummit.finality_boundary_iff_bounded` | `Summits.ClosureDichotomySummit` | Summit re-export: \(\neg\) `FutureDefeat` iff bounded |
+| `UniversalUpwardNecessitySummit.exhibited_strict_retro_gap` | `Summits.UniversalUpwardNecessitySummit` | Summit navigator for retro gap |
+
+`def` / `structure`: `Core.WeakParadigmStep`, `Core.WeakExplanatoryArchitecture`, `ArchitectureRepresentation.sameShape`.
 
 ---
 

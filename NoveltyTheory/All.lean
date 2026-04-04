@@ -22,12 +22,16 @@ import NoveltyTheory.Core.NaturalityAxioms
 import NoveltyTheory.Core.StructuralSentenceNaturality
 import NoveltyTheory.Core.NaturalAdmissibleClass
 import NoveltyTheory.Core.NaturalOrganization
+import NoveltyTheory.Core.MinimalHypotheses
+import NoveltyTheory.Core.ClosureDichotomy
+import NoveltyTheory.Core.CanonicalExplanatoryArchitecture
 import NoveltyTheory.Core.OrganizationV2
 import NoveltyTheory.Core.PhaseSyntaxGeneral
 import NoveltyTheory.Core.PhaseSyntaxPoly
 import NoveltyTheory.Core.SimulationVersusExplanationAbstract
 import NoveltyTheory.Foundation.Trajectory
 import NoveltyTheory.Foundation.ConservativeHistory
+import NoveltyTheory.Foundation.CanonicalityFacts
 import NoveltyTheory.Foundation.NaturalityFacts
 import NoveltyTheory.Foundation.StructuralSentenceNaturalityFacts
 import NoveltyTheory.Foundation.SentenceFacts
@@ -79,6 +83,10 @@ import NoveltyTheory.Ridge.AdmissibilityNaturality
 import NoveltyTheory.Ridge.BroadTransfer
 import NoveltyTheory.Ridge.UnboundedOrganization
 import NoveltyTheory.Ridge.NaturalAntiClosure
+import NoveltyTheory.Ridge.MinimalityCountermodels
+import NoveltyTheory.Ridge.ClosureCollapseBoundary
+import NoveltyTheory.Ridge.ArchitectureRepresentation
+import NoveltyTheory.Ridge.UniversalUpwardNecessity
 import NoveltyTheory.Summits.CausalExplanatorySeparation
 import NoveltyTheory.Summits.SummitPackages
 import NoveltyTheory.Summits.OrganizationAbstractSummit
@@ -99,6 +107,8 @@ import NoveltyTheory.Summits.GeneralizedFinalCrownPackage
 import NoveltyTheory.Summits.BroadTransferSummit
 import NoveltyTheory.Summits.UnboundedOrganizationSummit
 import NoveltyTheory.Summits.NaturalAntiClosureSummit
+import NoveltyTheory.Summits.ClosureDichotomySummit
+import NoveltyTheory.Summits.UniversalUpwardNecessitySummit
 import NoveltyTheory.Summits.RetroStructuralCrownSummit
 
 /-!

@@ -6,6 +6,7 @@
 
 | ID | Location | Description | Status |
 |----|----------|-------------|--------|
+| EPIC014-T1 | `EPIC_014` / `Core.MinimalHypotheses` | Concrete conservative counterlayer: inhabited `WeakParadigmStep` without `ConservativeOver`, or a no-go proof — beyond `paradigmShift_iff_weak_and_conservative`. | Open |
 
 ## Resolved
 
