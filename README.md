@@ -28,8 +28,12 @@ Other projects may depend on this repository as a **`git submodule`**; treat thi
 
 ## Contributing
 
-Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings.
+Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing changes to the **Lean sources**, you agree that your contributions are licensed under the same terms as [`LICENSE`](LICENSE) (PolyForm Noncommercial 1.0.0) for distribution with this project.
 
 ## License
 
-_Add a `LICENSE` file when you publish._
+| Material | License |
+|----------|---------|
+| **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/` as original work) | [**PolyForm Noncommercial 1.0.0**](LICENSE) — noncommercial use; you may use, modify, and distribute (noncommercially) subject to the license. **Commercial use is not permitted** for this original work. |
+| **Companion paper** (`paper/Final Draft/`) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — attribution; **no commercial use**; **no sharing of modified versions** of the paper. |
+| **Dependencies** (e.g. Mathlib via Lake) | **Each dependency’s own license** (Mathlib is Apache-2.0). This repository’s licenses apply only to original work here. |
