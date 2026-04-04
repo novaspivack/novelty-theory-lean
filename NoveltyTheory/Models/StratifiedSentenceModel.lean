@@ -1,0 +1,44 @@
+import Mathlib.Data.Nat.Basic
+import NoveltyTheory.Core.Expressibility
+import NoveltyTheory.Core.Sentence
+import NoveltyTheory.Models.InvariantTower
+import NoveltyTheory.Models.SentenceProvability
+
+/-!
+# Stratified sentence model (`SPEC_016_ES4`)
+
+Explicit **non-collapse** witnesses for expressibility strata and for sentence **`ProvesAt`** aligned
+with Model C on `ℕ`.
+-/
+
+namespace NoveltyTheory
+
+namespace Models
+
+namespace StratifiedSentenceModel
+
+open NoveltyTheory.Core InvariantTower SentenceProvability
+
+theorem exists_sentence_expressible_succ_not_at (h : ℕ) :
+    ∃ φ : Sentence ℕ, ExpressibleAtHeight (h + 1) φ ∧ ¬ ExpressibleAtHeight h φ :=
+  ⟨Sentence.traceEq (h + 1) (h + 1), by
+    constructor
+    · simp [ExpressibleAtHeight, mentionBound]
+    · intro he
+      simp [ExpressibleAtHeight, mentionBound] at he
+      exact Nat.not_succ_le_self h he⟩
+
+theorem exists_sentence_provable_succ_not_at (n : ℕ) :
+    ∃ φ : Sentence ℕ, ProvesAt (n + 1) φ ∧ ¬ ProvesAt n φ := by
+  refine ⟨Sentence.geOutput n, ?_⟩
+  simpa [ProvesAt] using upward_derivability_gap n
+
+theorem universal_no_sentence_proof_at_own_bound (n : ℕ) :
+    ∃ φ : Sentence ℕ, ¬ ProvesAt n φ :=
+  ⟨Sentence.geOutput n, by simpa [ProvesAt] using not_proves_self n⟩
+
+end StratifiedSentenceModel
+
+end Models
+
+end NoveltyTheory

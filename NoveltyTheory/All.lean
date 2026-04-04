@@ -7,16 +7,30 @@ import NoveltyTheory.Core.ParadigmShift
 import NoveltyTheory.Core.Tower
 import NoveltyTheory.Core.ReducerEnumeration
 import NoveltyTheory.Core.Explains
+import NoveltyTheory.Core.Sentence
+import NoveltyTheory.Core.SentenceSemantics
+import NoveltyTheory.Core.Expressibility
+import NoveltyTheory.Core.GeneratorTruth
+import NoveltyTheory.Core.Organization
+import NoveltyTheory.Core.SimulationVersusExplanationAbstract
 import NoveltyTheory.Foundation.Trajectory
 import NoveltyTheory.Foundation.ConservativeHistory
+import NoveltyTheory.Foundation.SentenceFacts
+import NoveltyTheory.Foundation.ProvabilityFacts
+import NoveltyTheory.Foundation.UpwardNecessity
 import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
+import NoveltyTheory.Models.SentenceProvability
+import NoveltyTheory.Models.StratifiedSentenceModel
+import NoveltyTheory.Models.StratifiedFinality
+import NoveltyTheory.Models.RetroStructuralTruth
 import NoveltyTheory.Models.BoundedRegimeDiagonal
 import NoveltyTheory.Models.ReducerDiagonal
 import NoveltyTheory.Models.DupRegimeTower
 import NoveltyTheory.Models.RegimeFamilyObstruction
 import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.GenCertPhase
+import NoveltyTheory.Core.ExplanatoryOrder
 import NoveltyTheory.Models.SimulationVersusExplanation
 import NoveltyTheory.Ridge.ShiftWitness
 import NoveltyTheory.Ridge.DiagonalNat
@@ -24,6 +38,12 @@ import NoveltyTheory.Ridge.InterfaceAlignment
 import NoveltyTheory.Ridge.SignatureAdmissibleBundle
 import NoveltyTheory.Summits.CausalExplanatorySeparation
 import NoveltyTheory.Summits.SummitPackages
+import NoveltyTheory.Summits.OrganizationSummit
+import NoveltyTheory.Summits.NecessityStratifiedFinalitySummit
+import NoveltyTheory.Summits.StrongRetroCausationSummit
+import NoveltyTheory.Summits.GeneratorTruthRidge
+import NoveltyTheory.Summits.UnfoldingNecessitySummit
+import NoveltyTheory.Summits.SimulationVersusExplanationAbstractSummit
 
 /-!
 # NoveltyTheory — library root (`SPEC_003_RCT`)
