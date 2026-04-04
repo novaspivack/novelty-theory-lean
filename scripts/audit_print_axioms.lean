@@ -1,0 +1,19 @@
+import NoveltyTheory.All
+
+/-!
+One-off axiom audit: run with `lake env lean scripts/audit_print_axioms.lean`.
+-/
+
+open NoveltyTheory
+
+-- Summits / crown packaging
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_iterated_structural_ascent
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_no_fixed_structural_stratum
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_future_defeat_of_terminality
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_generator_truth_family
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_class_transfer
+#print axioms Summits.GeneralizedFinalCrownPackage.generalized_final_crown_not_model_artifact
+#print axioms Summits.FinalCrownPackage.final_crown_iterated_structural_ascent
+#print axioms Summits.CrownIteratedAscentSummit.crown_strict_ascent_sentence_family
+#print axioms Foundation.ProvabilityFacts.proves_sentence_sound
+#print axioms Summits.infinite_paradigm_tower

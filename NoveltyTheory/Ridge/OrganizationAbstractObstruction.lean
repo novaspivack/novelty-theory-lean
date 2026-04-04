@@ -20,9 +20,6 @@ open NoveltyTheory.Ridge.OrganizationHeightObstruction
 
 variable {X : Type}
 
-theorem abstractOrganization_sound (_A : AdmissibleBoundedOrganization X) : True :=
-  trivial
-
 theorem abstractOrganization_nontrivial (A : AdmissibleBoundedOrganization X) : A.org.org.SeparatesStages :=
   A.separates
 

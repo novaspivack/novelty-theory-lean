@@ -24,9 +24,7 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 
 ### Root
 
-| Declaration | Module | Role |
-|-------------|--------|------|
-| `library_root_import_ok` | `NoveltyTheory.Basic` | Aggregate import smoke test |
+`NoveltyTheory.Basic` is a compatibility shim that imports `NoveltyTheory.All` (no separate theorem exports).
 
 ### Core
 
@@ -349,7 +347,6 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `ModalTemporalFacts.exists_modal_sentence_strict_gap` | `Foundation.ModalTemporalFacts` | Modal-shaped strict gap |
 | `ModalTemporalFacts.future_defeat_modalized` | `Foundation.ModalTemporalFacts` | Necessity packaging |
 | `ModalTemporalFacts.retro_revelation_modalized` | `Foundation.ModalTemporalFacts` | Next-stage retro bundle |
-| `OrganizationAbstractObstruction.abstractOrganization_sound` | `Ridge.OrganizationAbstractObstruction` | `SPEC_051` — trivial soundness anchor |
 | `OrganizationAbstractObstruction.abstractOrganization_nontrivial` | `Ridge.OrganizationAbstractObstruction` | Certified separation |
 | `OrganizationAbstractObstruction.bounded_abstractOrganization_has_obstruction` | `Ridge.OrganizationAbstractObstruction` | Stage separation bound |
 | `OrganizationAbstractObstruction.no_bounded_abstractOrganization_totalizes_future` | `Ridge.OrganizationAbstractObstruction` | ¬ total future map |
