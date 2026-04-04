@@ -19,7 +19,7 @@ Details: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
 
 Epic specs, queues, and agent methodology live in the separate **[novelty-theory](https://github.com/novaspivack/novelty-theory)** repository. This repo tracks only what belongs in a public **library + paper** artifact.
 
-To work on both: clone `novelty-theory` and initialize the submodule (see that repo’s README).
+To work on both: clone **`novelty-theory`** with submodules — see **[Maintainer workflow](https://github.com/novaspivack/novelty-theory/blob/main/MAINTAINERS.md)** in that repo.
 
 ## Layout
 
