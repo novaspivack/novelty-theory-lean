@@ -25,3 +25,7 @@ Deliver the **crown-shaped** existential package aligned with [`docs/007_LIBRARY
 ## Dependencies
 
 - **`SPEC_035_GS1`**, **`SPEC_036_AR1`**.
+
+## Status
+
+**Implemented** — `NoveltyTheory/Summits/CrownIteratedAscentSummit.lean`; `SummitPackages.summit_crown_strict_ascent_sentence_family`.

@@ -25,3 +25,7 @@ The regimes must **connect honestly** to the existing **`ProvesAt`** / Model **C
 ## Dependencies
 
 - **`SPEC_035_GS1`** complete enough to quantify over \(\Phi_n\) in the structural class.
+
+## Status
+
+**Implemented** — `NoveltyTheory/Foundation/AscentRegime.lean` (`ProvesInRegime` aliases `ProvesAt`).

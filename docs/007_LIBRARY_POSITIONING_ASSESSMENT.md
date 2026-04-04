@@ -110,7 +110,7 @@ The full theorem inventory marks a **major strengthening**: it clears the “not
 
 ## Formal program (epics)
 
-Normative specs for the **crown** template (§6) and for **inventory open extensions** live under:
+Normative specs for the **crown** template (§6) and for **inventory extensions** live under:
 
-- [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) — **`SPEC_035_GS1`**–**`SPEC_037_CR1`**
+- [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) — **`SPEC_035_GS1`**–**`SPEC_037_CR1`** (**v1** proved: `Summits/CrownIteratedAscentSummit.lean`)
 - [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) — **`SPEC_038_XS1`**–**`SPEC_041_OR1`**

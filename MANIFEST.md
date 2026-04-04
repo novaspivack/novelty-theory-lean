@@ -14,11 +14,11 @@
 | Layer | Path |
 |--------|------|
 | Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains`, `Sentence`, `NatPhaseTag`, `SentenceSyntax`, `SentenceExpressibility`, `SentenceSemantics`, `SentenceRegime`, `Expressibility`, `GeneratorTruth`, `Organization`, `SimulationVersusExplanationAbstract`, `ExplanatoryOrder` |
-| Foundation | `NoveltyTheory/Foundation/` — trajectory, conservative-history, `SentenceFacts`, `ProvabilityFacts`, `UpwardNecessity` |
+| Foundation | `NoveltyTheory/Foundation/` — trajectory, conservative-history, `SentenceFacts`, `ProvabilityFacts`, `UpwardNecessity`, `StructuralGeneratorSentence` (`SPEC_035_GS1`), `AscentRegime` (`SPEC_036_AR1`) |
 | Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
 | Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C: **`CounterFact`** + inductive **`Pf`**), `SentenceProvability`, `StratifiedSentenceModel`, `StratifiedFinality`, `RetroStructuralTruth`, `ReducerDiagonal` (B), `DupRegimeTower` (B off-axis), `RegimeFamilyObstruction`, `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
 | Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment`, `SignatureAdmissibleBundle` |
-| Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages`, `OrganizationSummit`, `NecessityStratifiedFinalitySummit`, `StrongRetroCausationSummit`, `GeneratorTruthRidge`, `UnfoldingNecessitySummit`, `SimulationVersusExplanationAbstractSummit` |
+| Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages`, `OrganizationSummit`, `NecessityStratifiedFinalitySummit`, `StrongRetroCausationSummit`, `GeneratorTruthRidge`, `UnfoldingNecessitySummit`, `SimulationVersusExplanationAbstractSummit`, `CrownIteratedAscentSummit` (`SPEC_037_CR1`) |
 
 **Headline index:** [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md)
 

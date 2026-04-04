@@ -20,6 +20,8 @@ import NoveltyTheory.Foundation.ConservativeHistory
 import NoveltyTheory.Foundation.SentenceFacts
 import NoveltyTheory.Foundation.ProvabilityFacts
 import NoveltyTheory.Foundation.UpwardNecessity
+import NoveltyTheory.Foundation.StructuralGeneratorSentence
+import NoveltyTheory.Foundation.AscentRegime
 import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
 import NoveltyTheory.Models.SentenceProvability
@@ -46,6 +48,7 @@ import NoveltyTheory.Summits.StrongRetroCausationSummit
 import NoveltyTheory.Summits.GeneratorTruthRidge
 import NoveltyTheory.Summits.UnfoldingNecessitySummit
 import NoveltyTheory.Summits.SimulationVersusExplanationAbstractSummit
+import NoveltyTheory.Summits.CrownIteratedAscentSummit
 
 /-!
 # NoveltyTheory — library root (`SPEC_003_RCT`)

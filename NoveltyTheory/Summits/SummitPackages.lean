@@ -12,6 +12,7 @@ import NoveltyTheory.Models.SimulationVersusExplanation
 import NoveltyTheory.Ridge.DiagonalNat
 import NoveltyTheory.Ridge.SignatureAdmissibleBundle
 import NoveltyTheory.Models.RegimeFamilyObstruction
+import NoveltyTheory.Summits.CrownIteratedAscentSummit
 
 /-!
 # Summit I–IV packaging (`SPEC_011_SPK`)
@@ -30,6 +31,8 @@ open Models.ReducerDiagonal Models.CausalExplanatoryOrders Models.BoundedRegimeD
 open Models.DupRegimeTower
 open Models.RegimeFamilyObstruction
 open Models.GenCertPhase
+open NoveltyTheory.Foundation.StructuralGeneratorSentence
+open NoveltyTheory.Foundation.AscentRegime
 
 private theorem phase_singleton_generated (n : ℕ) : (phaseSingleton n).generatedBy natCounter :=
   natCounter_generated n
@@ -190,6 +193,13 @@ theorem summit_bounded_regime_family_diagonal (c : ℕ → ExplanatoryRegime ℕ
 theorem gen_cert_causal_strict_but_lower_phase_tag :
     ∃ a b : GenCert, causalStrict a b ∧ phaseTag b < phaseTag a :=
   causal_strict_but_tag_decreases
+
+/-- **Crown (`SPEC_037_CR1`):** strict iterated ascent for a **structural** sentence family on **`natCounter`. -/
+theorem summit_crown_strict_ascent_sentence_family :
+    ∃ (_ : GenerativeSystem ℕ ℕ) (Φ : ℕ → Sentence ℕ),
+      (∀ n, IsStructuralGeneratorSentence (Φ n)) ∧
+        ∀ n, ProvesInRegime (n + 1) (Φ n) ∧ ¬ ProvesInRegime n (Φ n) :=
+  CrownIteratedAscentSummit.crown_strict_ascent_sentence_family
 
 end Summits
 

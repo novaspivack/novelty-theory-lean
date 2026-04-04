@@ -8,6 +8,8 @@
 
 **Blocks:** None declared—this epic **extends** the closed tranche.
 
+**Status:** **Complete** (v1 witness: `natCounter`, \(\Phi_n = \text{geOutput}\ n\); see `Summits/CrownIteratedAscentSummit.lean`).
+
 ---
 
 ## Theory specs
@@ -24,9 +26,9 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Structural discipline | **Not started** | `SPEC_035_GS1` |
-| Ascent regimes | **Not started** | `SPEC_036_AR1` — may reuse or generalize `ProvesAt` |
-| Crown summit | **Not started** | `SPEC_037_CR1` |
+| Structural discipline | **Complete** | `Foundation/StructuralGeneratorSentence.lean` |
+| Ascent regimes | **Complete** | `Foundation/AscentRegime.lean` (`ProvesInRegime` = `ProvesAt`) |
+| Crown summit | **Complete** | `Summits/CrownIteratedAscentSummit.lean`; `SummitPackages.summit_crown_strict_ascent_sentence_family` |
 
 ---
 
@@ -34,9 +36,9 @@
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1 | Structural-truth class + honesty obligations | `SPEC_035_GS1` | **Not started** |
-| 2 | Formal \(R_n\) and \(\vdash\) bridge | `SPEC_036_AR1` | **Not started** |
-| 3 | Crown theorem(s) + summit exports | `SPEC_037_CR1` | **Not started** |
+| 1 | Structural-truth class + honesty obligations | `SPEC_035_GS1` | **Complete** |
+| 2 | Formal \(R_n\) and \(\vdash\) bridge | `SPEC_036_AR1` | **Complete** |
+| 3 | Crown theorem(s) + summit exports | `SPEC_037_CR1` | **Complete** |
 
 ---
 

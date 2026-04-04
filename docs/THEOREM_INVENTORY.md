@@ -79,6 +79,14 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `ProvabilityFacts.sentenceOfCounterFact_holds_iff` | `Foundation.ProvabilityFacts` | `HoldsAt` ↔ `factHolds` for embed |
 | `ProvabilityFacts.proves_sentence_sound` | `Foundation.ProvabilityFacts` | `ProvesAt` ⇒ `HoldsAt natCounter` |
 | `UpwardNecessity.upward_necessity_geOutput` | `Foundation.UpwardNecessity` | Sentence-level strict gap for `geOutput` |
+| `StructuralGeneratorSentence.isGeneratorStructural_implies` | `Foundation.StructuralGeneratorSentence` | `SPEC_017` fragment ⊆ structural class |
+| `StructuralGeneratorSentence.geOutput_not_isGeneratorStructural` | `Foundation.StructuralGeneratorSentence` | Output atoms ≠ trace-only ridge |
+| `StructuralGeneratorSentence.natPhaseTagMem_initial_not_structural` | `Foundation.StructuralGeneratorSentence` | `initial` tag outside structural fragment |
+| `StructuralGeneratorSentence.not_structural_finConj_nil` | `Foundation.StructuralGeneratorSentence` | Empty `finConj` excluded |
+| `StructuralGeneratorSentence.mention_bound_neither_implies_structural_nor_nonstructural` | `Foundation.StructuralGeneratorSentence` | Anti-collapse vs `mentionBound` |
+| `AscentRegime.provesInRegime_iff` | `Foundation.AscentRegime` | \(R_m\) = `ProvesAt m` |
+| `AscentRegime.provesInRegime_mono` | `Foundation.AscentRegime` | Regime monotonicity |
+| `AscentRegime.provesInRegime_sound` | `Foundation.AscentRegime` | `ProvesInRegime` ⇒ `HoldsAt natCounter` |
 
 ### Models
 
@@ -237,6 +245,11 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `StrongRetroCausationSummit.retro_strict_expressibility` | `Summits.StrongRetroCausationSummit` | Retro summit |
 | `UnfoldingNecessitySummit.upward_necessity_sentence` | `Summits.UnfoldingNecessitySummit` | Sentence upward necessity |
 | `UnfoldingNecessitySummit.exists_strict_provable_gap` | `Summits.UnfoldingNecessitySummit` | Strict gap packaging |
+| `CrownIteratedAscentSummit.crown_strict_ascent_at` | `Summits.CrownIteratedAscentSummit` | Crown ascent at `n` (`SPEC_037_CR1`) |
+| `CrownIteratedAscentSummit.crown_strict_ascent_sentence_family` | `Summits.CrownIteratedAscentSummit` | ∃ generator, ∃ Φ strict ascent |
+| `CrownIteratedAscentSummit.crown_ascent_refines_existential_provable_gap` | `Summits.CrownIteratedAscentSummit` | Structural witness refines bare gap |
+| `CrownIteratedAscentSummit.geOutput_crown_not_traceEq_ridge_only` | `Summits.CrownIteratedAscentSummit` | Anti-collapse vs `IsGeneratorStructural` |
+| `SummitPackages.summit_crown_strict_ascent_sentence_family` | `Summits.SummitPackages` | Crown re-export |
 
 *(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
 
@@ -250,7 +263,7 @@ A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted
 
 ## Still research-grade open (extensions)
 
-Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Scoped epics: [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) (crown ascent **`SPEC_035_GS1`**–**`SPEC_037_CR1`**), [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**).
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) is **implemented** under [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Remaining extensions: [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**).
 
 ---
 

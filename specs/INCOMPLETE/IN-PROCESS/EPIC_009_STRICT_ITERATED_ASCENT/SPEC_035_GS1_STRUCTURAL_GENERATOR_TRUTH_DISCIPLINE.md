@@ -27,3 +27,7 @@ Existing hooks include generator-facing structural facts (`SPEC_017_UEN1`), coun
 ## Dependencies
 
 - **`SPEC_013_ES1`–`SPEC_018_UEN2`**, **`SPEC_033_K7A`** baseline.
+
+## Status
+
+**Implemented** — `NoveltyTheory/Foundation/StructuralGeneratorSentence.lean`.
