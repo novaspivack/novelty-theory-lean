@@ -24,16 +24,18 @@ More detail: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
 
 ## Submodule
 
-Other projects may depend on this repository as a **`git submodule`**; treat this directory as the **library root**.
+Embedding this repo as a **`git submodule`** still pulls **this** upstream; do not republish or bundle the sources elsewhere except as permitted in [`LICENSE`](LICENSE).
 
 ## Contributing
 
-Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing changes to the **Lean sources**, you agree that your contributions are licensed under the same terms as [`LICENSE`](LICENSE) (PolyForm Noncommercial 1.0.0) for distribution with this project.
+Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing changes to the **Lean sources**, you grant the copyright holder the rights needed to include your contribution in this project under the same [`LICENSE`](LICENSE) terms (the project itself is **not** open redistribution).
 
 ## License
 
-| Material | License |
-|----------|---------|
-| **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/` as original work) | [**PolyForm Noncommercial 1.0.0**](LICENSE) — noncommercial use; you may use, modify, and distribute (noncommercially) subject to the license. **Commercial use is not permitted** for this original work. |
-| **Companion paper** (`paper/Final Draft/`) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — attribution; **no commercial use**; **no sharing of modified versions** of the paper. |
-| **Dependencies** (e.g. Mathlib via Lake) | **Each dependency’s own license** (Mathlib is Apache-2.0). This repository’s licenses apply only to original work here. |
+**MIT and similar OSI licenses allow redistribution.** This library is **not** offered on those terms.
+
+| Material | Terms |
+|----------|--------|
+| **Lean library** (original work: `NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**Proprietary — see `LICENSE`**](LICENSE): you may **use** (clone, build, study, local changes for yourself); you may **not** **redistribute** the code or use it commercially without permission from the copyright holder. **Mathlib and other deps:** their licenses apply to those components only. |
+| **Companion paper** (`paper/Final Draft/`) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — separate terms for the paper only. |
+| **Dependencies** (e.g. Mathlib) | **Upstream licenses** (Mathlib is Apache-2.0). |
