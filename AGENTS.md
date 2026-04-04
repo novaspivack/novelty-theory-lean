@@ -8,7 +8,7 @@ Start here:
 4. [`CODING_PROTOCOLS.md`](CODING_PROTOCOLS.md) — includes **Lean proof quality** and **Python/Node code quality**
 5. [`.cursorrules`](.cursorrules)
 
-Active work lives under `specs/INCOMPLETE/IN-PROCESS/`. Cite specs as **`SPEC_NNN_XXX`** (number + three-character suffix).
+Specs and epic orchestration live under `specs/INCOMPLETE/IN-PROCESS/` (see [`specs/MASTER_STATUS.md`](specs/MASTER_STATUS.md) for completion roll-up). Cite specs as **`SPEC_NNN_XXX`** (number + three-character suffix).
 
 **Execution:** Keep processing the queue yourself until epics are fully closed per specs; **STOP AND ASK** only when truly stuck (see `QUEUE.md` and `NOTES/PROJECT_SEED.md` §5.2).
 

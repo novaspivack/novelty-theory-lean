@@ -44,8 +44,8 @@
 | Phase 0 — Repo contract + primitives | Done in Lean | Core/Foundation; **`SPEC_003_RCT`** acceptance closed |
 | Phase 1 — Admissible reductions + paradigm shifts | Done in Lean | `Reducible`, `ParadigmShift`, `ConservativeOver`, `Core.Explains`, `InterfaceAlignment` |
 | Phase 2 — Diagonal existence + towers | Done in Lean (model graft) | `DiagonalNat`, `ReducerDiagonal`, `InterfaceAlignment`; further abstraction optional |
-| Phase 3 — Upward necessity + summits | Done in Lean (model scope) | Summits I–IV + order witness; global `𝓔_adm` without agreement hypothesis still open |
-| Phase 4 — Models + paper-facing polish | Mostly done | Models A+B+C + `DupRegimeTower` (nontrivial **`RegimeFamilySingletonWithin`** family) + [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md); NXT S6–S9 Lean hooks (`exists_future_paradigmShift`, `tower_phase_not_explained_by_fixed_regime`, `retro_derivability`, `traceCoupled`/`natCounterProd`); global `𝓔_adm` / S10 still optional |
+| Phase 3 — Upward necessity + summits | Done in Lean | Summits I–IV + order witness; **honest** global diagonal uses `SignatureAdmissibleInterface` (soundness in type)—see `SummitPackages.summit_diagonal_all_bundled_admissible` |
+| Phase 4 — Models + NXT packaging | **Complete** | Models A+B+C + `DupRegimeTower`; NXT S6–S10 + bundled `SignatureAdmissibleInterface` in [`SummitPackages`](../../../../NoveltyTheory/Summits/SummitPackages.lean); [`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) |
 
 ## Queue — ordered next steps
 
@@ -60,10 +60,11 @@
 | 7 | Implement **`SPEC_009_DST`** | [`SPEC_009_DST_DIAGONAL_SELF_TRANSCENDENCE.md`](SPEC_009_DST_DIAGONAL_SELF_TRANSCENDENCE.md) | Done (model graft) — `DiagonalNat`, alignment, `ReducerDiagonal` |
 | 8 | Implement **`SPEC_010_UEN`** | [`SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md`](SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md) | Done (Model C) — `InvariantTower` + soundness + `proves_mono` |
 | 9 | Close summit packaging **`SPEC_011_SPK`** | [`SPEC_011_SPK_SUMMIT_PACKAGES.md`](SPEC_011_SPK_SUMMIT_PACKAGES.md) | Done (model scope) — `SummitPackages` + [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md) |
-| 10 | Model ladder **`SPEC_012_MDL`** | [`SPEC_012_MDL_MODEL_LADDER.md`](SPEC_012_MDL_MODEL_LADDER.md) | A+B+C — extend B for nontrivial enumerations as needed |
+| 10 | Model ladder **`SPEC_012_MDL`** | [`SPEC_012_MDL_MODEL_LADDER.md`](SPEC_012_MDL_MODEL_LADDER.md) | **Complete** — A+B+C + B off-axis; acceptance checked in spec |
 
 ## Cross-links
 
+- Normative **EPIC_002** ladder closure: **[`SPEC_034_R2B`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)**.
 - Dependent sentence/strata wave (**`EPIC_003`–`EPIC_008`**) closed under **[`SPEC_033_K7A`](../SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md)** (formal tranche acceptance).
 - Cross-epic queue: [`../../../../QUEUE.md`](../../../../QUEUE.md)
 - Master roll-up: [`../../../MASTER_STATUS.md`](../../../MASTER_STATUS.md)
@@ -72,4 +73,4 @@
 
 ## Completed / dropped
 
-_Fill as phases close._
+- **2026-04-04:** Normative specs **`SPEC_003_RCT`–`SPEC_012_MDL`** + summit/NXT packaging closed per **`SPEC_034_R2B`**. Future work: inventory *Still research-grade open* (new specs).

@@ -45,8 +45,9 @@
 | # | Outcome | Owner / epic | Spec / files | Status |
 |---|---------|----------------|--------------|--------|
 | 1 | Close **SPEC_001_ST1** (Lake manifest, `lake build`, docs) | `EPIC_001_NOVELTY_THEORY_LEAN` | `specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/` | Done |
-| 2 | Research-grade follow-ons beyond current Lean: universal “adequate organization” quantifier, richer retro sentence universe (**`SPEC_003_NXT`**) | `EPIC_002_SELF_TRANSCENDING_GENERATORS` | `specs/INCOMPLETE/IN-PROCESS/EPIC_002_SELF_TRANSCENDING_GENERATORS/`, [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md) | Open (A/B/C + B off-axis + summits + NXT S6–S10 templates; bundled `SignatureAdmissibleInterface`; see inventory *Not achievable* / *Still open*) |
-| 3 | Sentence / strata / Model C packaging (**`SPEC_013_ES1`**–**`SPEC_032_SVE3`**, epics **003**–**008**) + tranche closure **`SPEC_033_K7A`** | `EPIC_003`–`EPIC_008` | [`SPEC_033_K7A`](specs/INCOMPLETE/IN-PROCESS/SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md); Lean under `NoveltyTheory/Core`, `Foundation`, `Models`, `Summits` | **Done** (2026-04-03) — epic master queues **Complete**; `lake build` green |
+| 2 | Normative **`EPIC_002`** ladder (`SPEC_003_RCT`–`SPEC_012_MDL`) + summit / NXT packaging | `EPIC_002_SELF_TRANSCENDING_GENERATORS` | [`SPEC_034_R2B`](specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md); [`SummitPackages.lean`](NoveltyTheory/Summits/SummitPackages.lean) | **Done** (2026-04-04) |
+| 3 | Sentence / strata / Model C packaging (**`SPEC_013_ES1`**–**`SPEC_032_SVE3`**, epics **003**–**008**) + tranche closure **`SPEC_033_K7A`** | `EPIC_003`–`EPIC_008` | [`SPEC_033_K7A`](specs/INCOMPLETE/IN-PROCESS/SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md); Lean under `NoveltyTheory/Core`, `Foundation`, `Models`, `Summits` | **Done** (2026-04-03) |
+| 4 | Inventory *Still research-grade open* (modalities, richer syntax, **etc.**) | _Unscoped_ | New epic + `SPEC_035+` | **Deferred** — not part of normative closure |
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 

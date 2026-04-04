@@ -43,8 +43,10 @@ Phases where a **structural truth** about the trace is **expressible or provable
 
 ## Acceptance criteria
 
-- [ ] All three model folders exist OR deferrals are explicit in [`EPIC_002_MASTER_ORCHESTRATION.md`](EPIC_002_MASTER_ORCHESTRATION.md) with blocker text (**STOP AND ASK** policy in [`NOTES/PROJECT_SEED.md`](../../../../NOTES/PROJECT_SEED.md) §5.2 if the deferral is not owner-approved).
-- [ ] `lake build` passes.
+- [x] All three model folders exist: `NoveltyTheory/Models/SignatureTower`, `ReducerDiagonal`, `InvariantTower` (plus `DupRegimeTower` for B off-axis); tracked in [`EPIC_002_MASTER_ORCHESTRATION.md`](EPIC_002_MASTER_ORCHESTRATION.md).
+- [x] `lake build` passes (see CI / local `lake build`).
+
+**Closure:** [`../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) (**`SPEC_034_R2B`**).
 
 ## Dependencies
 

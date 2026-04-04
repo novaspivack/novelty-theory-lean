@@ -29,5 +29,6 @@ Roll up **acceptance** for the sentence-through-abstract-simulation wave (**`SPE
 
 ## Cross-links
 
+- Companion normative theory closure: [`SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md`](SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)
 - Master roll-up: [`../MASTER_STATUS.md`](../MASTER_STATUS.md)
 - Queue: [`../../../QUEUE.md`](../../../QUEUE.md)

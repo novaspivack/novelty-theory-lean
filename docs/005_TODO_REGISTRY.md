@@ -6,13 +6,12 @@
 
 | ID | Location | Description | Status |
 |----|----------|-------------|--------|
-| _Example_ | `path/to/file` | Replace stub with real behavior | Open |
 
 ## Resolved
 
 | ID | Resolved | Notes |
 |----|----------|--------|
-| | | |
+| — | — | No registered code TODOs |
 
 ---
 

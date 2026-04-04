@@ -46,9 +46,11 @@ As in **`SPEC_010_UEN`**: `Φ_n` with provability lift `R_{n+1} ⊢ Φ_n`, `R_n 
 
 ## Acceptance criteria
 
-- [ ] Every summit has a **single canonical** Lean declaration (no duplicate competing statements).
-- [ ] `SPEC_010_UEN` and this file agree on Summit IV wording.
-- [ ] CI builds; inventory updated in same PR when proofs land.
+- [x] Every summit has a **single canonical** Lean declaration — [`NoveltyTheory/Summits/SummitPackages.lean`](../../../NoveltyTheory/Summits/SummitPackages.lean) (`causal_generation_not_uniform_explanation`, `infinite_paradigm_tower`, `noFinalInternalTheory_signature_family`, `upwardExplanatoryNecessity_counterfact`).
+- [x] Summit IV aligns with Model C upward necessity in [`SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md`](SPEC_010_UEN_UPWARD_EXPLANATORY_NECESSITY.md) via `InvariantTower` / `provesAtDepth`.
+- [x] CI / `lake build`; inventory row in [`docs/THEOREM_INVENTORY.md`](../../../docs/THEOREM_INVENTORY.md).
+
+**Closure:** [`../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md`](../SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md) (**`SPEC_034_R2B`**).
 
 ## Dependencies
 
