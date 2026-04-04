@@ -17,3 +17,13 @@ Scope **modal** extensions (necessity/possibility over **regimes**, **stages**, 
 ## Dependencies
 
 - **`SPEC_014_ES2`**–**`SPEC_018_UEN2`** as semantic baseline; optional dependency on **`SPEC_038_XS1`** if modalities attach to extended atoms.
+
+## Formal choices (record)
+
+- **Modality:** `StageNecessary m φ := ProvesAt (m + 1) φ` (successor of **`ℕ`** as proof depth).
+- **Base logic:** `Sentence ℕ` with **`ProvesAt`** / Model **C**.
+- **Frame properties:** discrete successor; no extra axioms.
+
+## Status
+
+**Implemented (baseline)** — `NoveltyTheory/Foundation/StageModality.lean`.

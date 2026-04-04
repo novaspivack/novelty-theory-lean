@@ -22,6 +22,8 @@ def mentionBound : Sentence ℕ → ℕ
   | Sentence.histSeq l =>
       l.foldl (fun acc p => max acc (max p.1 p.2)) 0
   | Sentence.natPhaseTagMem tag x => max (NatPhaseTag.bound tag) x
+  | Sentence.outputEnumMem l x =>
+      max (l.foldl (fun acc y => max acc y) 0) x
   | Sentence.finConj l =>
       l.foldl (fun acc φ => max acc (mentionBound φ)) 0
   | Sentence.geOutput k => k

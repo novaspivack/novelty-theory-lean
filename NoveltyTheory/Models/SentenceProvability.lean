@@ -8,9 +8,10 @@ import NoveltyTheory.Models.InvariantTower
 /-!
 # Sentence-level derivability (`SPEC_014_ES2`, `SPEC_010_UEN`)
 
-**`ProvesAt m φ`** extends Model C on **`CounterFact`**; **`finConj`** lifts finite proof context; **`natPhaseTagMem`**
-uses the **`sing`** tag with **singleton** Model C atoms; **`initial`** tags are **not** in the fringe
-(semantic-only here).
+**`ProvesAt m φ`** extends Model C on **`CounterFact`**; **`finConj`** lifts finite proof context;
+**`natPhaseTagMem.sing`** uses singleton Model C atoms; **`initial`** tags (**`SPEC_039_DT1`**) require
+**`x ≤ K`**, **`K ≤ m`**, and a matching **`phaseSingletonMem`** proof; **`outputEnumMem`** is
+**unprovable** in the first tranche (**`SPEC_038_XS1`** — semantics only via soundness vacuity).
 -/
 
 namespace NoveltyTheory
@@ -29,7 +30,9 @@ def ProvesAt (m : ℕ) : Sentence ℕ → Prop
   | Sentence.natPhaseTagMem tag x =>
       match tag with
       | NatPhaseTag.sing k => x = k ∧ provesAtDepth m (CounterFact.phaseSingletonMem k)
-      | NatPhaseTag.initial _ => False
+      | NatPhaseTag.initial K =>
+          x ≤ K ∧ K ≤ m ∧ provesAtDepth m (CounterFact.phaseSingletonMem x)
+  | Sentence.outputEnumMem _ _ => False
   | Sentence.finConj l => ∀ φ ∈ l, ProvesAt m φ
   | Sentence.and φ ψ => ProvesAt m φ ∧ ProvesAt m ψ
   | Sentence.or φ ψ =>
@@ -65,9 +68,15 @@ theorem proves_mono_sentence {m n : ℕ} (hmn : m ≤ n) {φ : Sentence ℕ} (h 
           rcases h with ⟨hxk, hpf⟩
           simp [ProvesAt]
           exact And.intro hxk (proves_mono hmn hpf)
-      | initial _ =>
+      | initial K =>
           intro h
           simp [ProvesAt] at h
+          rcases h with ⟨hxK, hKm, hpf⟩
+          simp [ProvesAt]
+          exact ⟨hxK, Nat.le_trans hKm hmn, proves_mono hmn hpf⟩
+  | outputEnumMem _ _ =>
+      intro h
+      simp [ProvesAt] at h
   | finConj l =>
       intro h
       simp [ProvesAt] at h
@@ -92,6 +101,11 @@ theorem proves_mono_sentence {m n : ℕ} (hmn : m ≤ n) {φ : Sentence ℕ} (h 
   | not _ =>
       intro h
       simp [ProvesAt] at h
+
+theorem provesAt_initial_endpoint (K : ℕ) :
+    ProvesAt (K + 1) (Sentence.natPhaseTagMem (NatPhaseTag.initial K) K) := by
+  simp only [ProvesAt]
+  exact And.intro (Nat.le_refl K) (And.intro (Nat.le_succ K) (proves_succ_phase K))
 
 end SentenceProvability
 

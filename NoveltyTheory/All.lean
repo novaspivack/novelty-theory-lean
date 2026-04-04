@@ -22,6 +22,9 @@ import NoveltyTheory.Foundation.ProvabilityFacts
 import NoveltyTheory.Foundation.UpwardNecessity
 import NoveltyTheory.Foundation.StructuralGeneratorSentence
 import NoveltyTheory.Foundation.AscentRegime
+import NoveltyTheory.Foundation.RichSentenceSyntax
+import NoveltyTheory.Foundation.InitialTagProvability
+import NoveltyTheory.Foundation.StageModality
 import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
 import NoveltyTheory.Models.SentenceProvability
@@ -49,6 +52,7 @@ import NoveltyTheory.Summits.GeneratorTruthRidge
 import NoveltyTheory.Summits.UnfoldingNecessitySummit
 import NoveltyTheory.Summits.SimulationVersusExplanationAbstractSummit
 import NoveltyTheory.Summits.CrownIteratedAscentSummit
+import NoveltyTheory.Summits.OrganizationFrontierSummit
 
 /-!
 # NoveltyTheory — library root (`SPEC_003_RCT`)

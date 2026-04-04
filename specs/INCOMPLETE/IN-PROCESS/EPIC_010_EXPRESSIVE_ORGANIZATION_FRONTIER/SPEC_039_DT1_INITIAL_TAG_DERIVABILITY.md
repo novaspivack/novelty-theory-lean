@@ -17,3 +17,7 @@ Close the gap where **`NatPhaseTag.initial`** is **semantic-only** in `HoldsAt` 
 ## Dependencies
 
 - **`SPEC_013_ES1`** (`NatPhaseTag`), **`SPEC_014_ES2`**, **`SPEC_015_ES3`**, **`SPEC_016_ES4`**.
+
+## Status
+
+**Implemented** — `NatPhaseTag.initial` branch of `ProvesAt`: `x ≤ K ∧ K ≤ m ∧ provesAtDepth m (CounterFact.phaseSingletonMem x)`; witness `SentenceProvability.provesAt_initial_endpoint`; `Foundation.InitialTagProvability`; soundness in `ProvabilityFacts.proves_sentence_sound`.

@@ -8,6 +8,8 @@
 
 **Relationship to EPIC_009:** **EPIC_009** targets **depth of theorems** on the existing sentence stack; **EPIC_010** **widens** what the stack can express. Either may land first per dependency graph.
 
+**Status:** **Complete (v1 tranche)** — richer enum atom, initial-tag `ProvesAt`, stage modality scaffolding, organization separation predicates + summit (see specs **038**–**041**).
+
 ---
 
 ## Theory specs
@@ -25,10 +27,10 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Richer syntax | **Not started** | `SPEC_038_XS1` |
-| Initial-tag provability | **Not started** | `SPEC_039_DT1` |
-| Modalities | **Not started** | `SPEC_040_MD1` — likely longest horizon |
-| Organization | **Not started** | `SPEC_041_OR1` |
+| Richer syntax | **Complete** | `outputEnumMem` + `Foundation.RichSentenceSyntax` |
+| Initial-tag provability | **Complete** | `ProvesAt.initial` branch + `provesAt_initial_endpoint` |
+| Modalities | **Complete** | `Foundation.StageModality` (`StageNecessary`) |
+| Organization | **Complete** | `SeparatesStages` + `OrganizationFrontierSummit` |
 
 ---
 
@@ -36,10 +38,12 @@
 
 | # | Task | Spec | Status |
 |---|------|------|--------|
-| 1 | Sentence/phase grammar extensions + honesty checks | `SPEC_038_XS1` | **Not started** |
-| 2 | Close semantic/provable gap for `initial` tag | `SPEC_039_DT1` | **Not started** |
-| 3 | Modality scoping + baseline lemmas | `SPEC_040_MD1` | **Not started** |
-| 4 | Stronger organization predicates | `SPEC_041_OR1` | **Not started** |
+| 1 | Sentence/phase grammar extensions + honesty checks | `SPEC_038_XS1` | **Complete** |
+| 2 | Close semantic/provable gap for `initial` tag | `SPEC_039_DT1` | **Complete** |
+| 3 | Modality scoping + baseline lemmas | `SPEC_040_MD1` | **Complete** |
+| 4 | Stronger organization predicates | `SPEC_041_OR1` | **Complete** |
+
+_Further tranches (e.g. **`ProvesAt`** for **`outputEnumMem`**, polymorphic phase syntax at sentence level) are out of scope for this v1 close; add **`EPIC_011`** or extend specs if needed._
 
 ---
 

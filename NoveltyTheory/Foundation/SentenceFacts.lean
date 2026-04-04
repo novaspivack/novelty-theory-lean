@@ -95,9 +95,16 @@ theorem mentionBound_le_of_proves {m : ℕ} (φ : Sentence ℕ) (h : ProvesAt m 
           rcases h with ⟨hxk, hpf⟩
           rw [hxk, mentionBound, NatPhaseTag.bound]
           simpa using Nat.le_of_lt (provesAtDepth_le_factIndexBound hpf)
-      | initial _ =>
+      | initial K =>
           intro h
           simp [ProvesAt] at h
+          rcases h with ⟨hxK, hKm, _⟩
+          simp only [mentionBound, NatPhaseTag.bound]
+          rw [Nat.max_eq_left hxK]
+          exact hKm
+  | outputEnumMem _ _ =>
+      intro h
+      simp [ProvesAt] at h
   | finConj l =>
       intro h
       simp [ProvesAt] at h

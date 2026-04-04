@@ -19,3 +19,15 @@ This addresses the inventory open item: **richer phase-at-sentence** / **`Phase.
 ## Dependencies
 
 - **`SPEC_013_ES1`**, **`SPEC_014_ES2`**, **`SPEC_016_ES4`**.
+
+## Progress — design (v1)
+
+| Candidate | Role | Conservativity / risk |
+|-----------|------|------------------------|
+| **`outputEnumMem : List X → X → Sentence X`** (landed) | Finite **list-named** carriers; semantics **`x ∈ l`** | **`ProvesAt` = `False`** in tranche 1 avoids premature proof rules; embedding lemmas pair singleton lists with **`phaseMem (singleton x)`** semantics. |
+| Finset / `Phase.outputSet`-valued atoms | Richer finite **output-set** naming | Requires **`Finset`** discipline and synchronized `HoldsAt` / `ProvesAt`; defer to future tranche. |
+| New connectives at top level | e.g. infinitary **`⋀`** | Size / continuity issues; **not** started. |
+
+## Status
+
+**Implemented (semantics + scaffold)** — `Sentence.outputEnumMem`; `Foundation.RichSentenceSyntax`; `StructuralGeneratorSentence.outputEnumMem_singleton`.

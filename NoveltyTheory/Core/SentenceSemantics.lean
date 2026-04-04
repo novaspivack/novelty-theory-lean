@@ -20,6 +20,7 @@ def HoldsAt (G : GenerativeSystem S ℕ) : Sentence ℕ → Prop
   | Sentence.traceEq n x => G.trace n = x
   | Sentence.histSeq l => ∀ p ∈ l, G.trace p.1 = p.2
   | Sentence.natPhaseTagMem tag x => x ∈ NatPhaseTag.toSet tag
+  | Sentence.outputEnumMem l x => x ∈ l
   | Sentence.finConj l => ∀ φ ∈ l, HoldsAt G φ
   | Sentence.geOutput k => ∃ t : ℕ, k < G.trace t
   | Sentence.and φ ψ => HoldsAt G φ ∧ HoldsAt G ψ

@@ -58,6 +58,9 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `SimulationVersusExplanationAbstract.not_traceCoupled_altParity_counterexample` | `Core.SimulationVersusExplanationAbstract` | Same observations, not trace coupled |
 | `SimulationVersusExplanationAbstract.observational_equiv_not_implies_trace_coupled` | `Core.SimulationVersusExplanationAbstract` | Global non-implication (types over `GenerativeSystem`) |
 | `SimulationVersusExplanationAbstract.simulatesTracePrefix_self` | `Core.SimulationVersusExplanationAbstract` | Self-prefix simulation |
+| `AdequateOrganization.not_separatesStages_of_const` | `Core.Organization` | Constant `stage` ⇒ ¬ `SeparatesStages` |
+| `adequateNatParity_separates` | `Core.Organization` | Parity labeling separates stages |
+| `totalFutureOnNat_separates` | `Core.Organization` | Identity stage separates on `ℕ` |
 
 ### Foundation
 
@@ -87,6 +90,13 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `AscentRegime.provesInRegime_iff` | `Foundation.AscentRegime` | \(R_m\) = `ProvesAt m` |
 | `AscentRegime.provesInRegime_mono` | `Foundation.AscentRegime` | Regime monotonicity |
 | `AscentRegime.provesInRegime_sound` | `Foundation.AscentRegime` | `ProvesInRegime` ⇒ `HoldsAt natCounter` |
+| `RichSentenceSyntax.holdsAt_outputEnumMem_iff` | `Foundation.RichSentenceSyntax` | `SPEC_038` — `HoldsAt` for list enum |
+| `RichSentenceSyntax.holdsAt_outputEnumMem_singleton_iff` | `Foundation.RichSentenceSyntax` | Singleton list ↔ `phaseMem` atom |
+| `RichSentenceSyntax.not_provesAt_outputEnumMem` | `Foundation.RichSentenceSyntax` | `outputEnumMem` unprovable (v1 rules) |
+| `InitialTagProvability.initial_endpoint` | `Foundation.InitialTagProvability` | `SPEC_039` — `initial` tag provable at `K+1` |
+| `InitialTagProvability.proves_initial_sound` | `Foundation.InitialTagProvability` | Soundness export |
+| `StageModality.stageNecessary_eq` | `Foundation.StageModality` | `SPEC_040` — modal ↔ `ProvesAt` succ |
+| `StageModality.stageNecessary_geOutput` | `Foundation.StageModality` | Necessity instance for `geOutput` |
 
 ### Models
 
@@ -180,6 +190,7 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `SimulationVersusExplanation.trace_coupled_prod_not_reducible` | `Models.SimulationVersusExplanation` | Trace-coupled + irreducible |
 | `SentenceProvability.ProvesAt_geOutput_iff` | `Models.SentenceProvability` | `ProvesAt` ↔ depth for `geOutput` |
 | `SentenceProvability.proves_mono_sentence` | `Models.SentenceProvability` | Monotonicity of `ProvesAt` |
+| `SentenceProvability.provesAt_initial_endpoint` | `Models.SentenceProvability` | `initial`-tag endpoint witness |
 | `StratifiedSentenceModel.exists_sentence_expressible_succ_not_at` | `Models.StratifiedSentenceModel` | Expressibility gap witness |
 | `StratifiedSentenceModel.exists_sentence_provable_succ_not_at` | `Models.StratifiedSentenceModel` | `geOutput` provability gap |
 | `StratifiedSentenceModel.exists_sentence_trace_provable_succ_not_at` | `Models.StratifiedSentenceModel` | Trace provability gap |
@@ -250,6 +261,10 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `CrownIteratedAscentSummit.crown_ascent_refines_existential_provable_gap` | `Summits.CrownIteratedAscentSummit` | Structural witness refines bare gap |
 | `CrownIteratedAscentSummit.geOutput_crown_not_traceEq_ridge_only` | `Summits.CrownIteratedAscentSummit` | Anti-collapse vs `IsGeneratorStructural` |
 | `SummitPackages.summit_crown_strict_ascent_sentence_family` | `Summits.SummitPackages` | Crown re-export |
+| `OrganizationFrontierSummit.summit_adequateNatParity_separates` | `Summits.OrganizationFrontierSummit` | `SPEC_041` packaging |
+| `OrganizationFrontierSummit.summit_totalFutureOnNat_separates` | `Summits.OrganizationFrontierSummit` | Total-future org separates |
+| `OrganizationFrontierSummit.summit_constant_stage_not_separated` | `Summits.OrganizationFrontierSummit` | Constant-label obstruction |
+| `OrganizationFrontierSummit.summit_diagonal_compatible_family` | `Summits.OrganizationFrontierSummit` | Singleton-family diagonal re-export |
 
 *(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
 
@@ -263,7 +278,7 @@ A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted
 
 ## Still research-grade open (extensions)
 
-Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) is **implemented** under [`EPIC_009_STRICT_ITERATED_ASCENT`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Remaining extensions: [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**).
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Further** extensions ( **`ProvesAt`** rules for **`outputEnumMem`**, finset-grade output sets, polymorphic **`Phase`** at sentence level, full modality algebras, **etc.**) remain future specs when normatively scoped.
 
 ---
 

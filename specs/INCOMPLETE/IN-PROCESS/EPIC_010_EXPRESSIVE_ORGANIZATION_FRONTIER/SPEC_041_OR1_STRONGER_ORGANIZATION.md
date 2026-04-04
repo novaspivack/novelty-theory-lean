@@ -17,3 +17,13 @@ Strengthen **`AdequateOrganization`** / **`TerminalityPredicate`** / **total-fut
 ## Dependencies
 
 - **`SPEC_020_AO1`–`SPEC_023_AO4`**, **`SPEC_011_SPK`** ridge/obstruction literacy.
+
+## Analysis — counterexamples any universal organizer must evade
+
+- **`trivialAdmissibleInterface`**: unsound rows; diagonal packaging must carry **`RowSoundForSignature`** / bundled admissible data.
+- **`emptyRegime` / `RegimeFamilySingletonWithin` vacuity:** empty descriptor families obstruct naive infinite-chain claims (`summit_singletonWithin_not_entails_paradigm_steps`).
+- **Constant `stage` maps:** `AdequateOrganization.not_separatesStages_of_const` — collapsed labeling is disjoint from `SeparatesStages`.
+
+## Status
+
+**Implemented (v1 predicates + summit)** — `NoveltyTheory/Core/Organization.lean` (`SeparatesStages`, witnesses on `adequateNatParity` / `totalFutureOnNat`); `NoveltyTheory/Summits/OrganizationFrontierSummit.lean` (diagonal hook re-export).

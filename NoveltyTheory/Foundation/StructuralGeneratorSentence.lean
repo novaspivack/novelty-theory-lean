@@ -36,7 +36,8 @@ inductive IsStructuralGeneratorSentence : Sentence ℕ → Prop where
       IsStructuralGeneratorSentence (Sentence.phaseMem (singleton x) x)
   | natPhaseTagMem_sing (k : ℕ) :
       IsStructuralGeneratorSentence (Sentence.natPhaseTagMem (NatPhaseTag.sing k) k)
-  | histSeq_diag (n : ℕ) : IsStructuralGeneratorSentence (Sentence.histSeq [(n, n)])
+  | outputEnumMem_singleton (x : ℕ) :
+      IsStructuralGeneratorSentence (Sentence.outputEnumMem [x] x)
   | and {φ ψ : Sentence ℕ} :
       IsStructuralGeneratorSentence φ →
         IsStructuralGeneratorSentence ψ →

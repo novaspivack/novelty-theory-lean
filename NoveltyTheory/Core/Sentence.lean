@@ -27,6 +27,8 @@ inductive Sentence (X : Type u) : Type u
   | histSeq : List (ℕ × X) → Sentence X
   /-- Membership in a **finitely named** subset of `ℕ`, carried at kind `X` for unary reuse. -/
   | natPhaseTagMem : NatPhaseTag → X → Sentence X
+  /-- Explicit **finite enumeration** of values (list-named carrier); `SPEC_038_XS1` fragment. -/
+  | outputEnumMem : List X → X → Sentence X
   /-- Finite conjunction / explicit bounded “∀” over a list of subformulas. -/
   | finConj : List (Sentence X) → Sentence X
   | geOutput : ℕ → Sentence X

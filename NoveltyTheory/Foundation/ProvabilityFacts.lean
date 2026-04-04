@@ -78,9 +78,15 @@ theorem proves_sentence_sound {m : ℕ} {φ : Sentence ℕ} (h : ProvesAt m φ) 
           rcases h with ⟨hxk, hp⟩
           simp [HoldsAt, NatPhaseTag.mem_sing_iff]
           exact hxk
-      | initial _ =>
+      | initial K =>
           intro h
           simp [ProvesAt] at h
+          rcases h with ⟨hxK, _, _⟩
+          simp [HoldsAt, NatPhaseTag.mem_initial_iff]
+          exact hxK
+  | outputEnumMem _ _ =>
+      intro h
+      simp [ProvesAt] at h
   | finConj l =>
       intro h
       simp [ProvesAt] at h
