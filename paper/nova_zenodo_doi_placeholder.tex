@@ -16,7 +16,10 @@
   \if\relax\detokenize\expandafter{\NovaZenodoDOI}\relax
   \textit{Archival version (Zenodo):} \emph{[DOI pending publication]}%
   \else
-  \textit{Archival version (Zenodo):} \url{https://doi.org/\NovaZenodoDOI}%
+  \textit{Archival version (Zenodo):} %
+  \begingroup
+  \edef\NovaZenodo@href{\endgroup\noexpand\href{https://doi.org/\NovaZenodoDOI}{https://doi.org/\NovaZenodoDOI}}%
+  \NovaZenodo@href
   \fi}
 %
 % NOVA_ZPO_DOI_BEGIN
