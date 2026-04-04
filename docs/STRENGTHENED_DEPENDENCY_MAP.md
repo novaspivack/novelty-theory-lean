@@ -1,8 +1,6 @@
-# Strengthened dependency map (`EPIC_013`)
+# Strengthened dependency map (naturality / broad transfer)
 
-**Purpose:** Import-oriented spine for **`SPEC_054_NS1`–`SPEC_058_NS5`** modules and summits. Base crown (`EPIC_012`, `GeneralizedFinalCrownPackage`) is **presupposed**, not replaced.
-
-**Orchestration:** [`../specs/INCOMPLETE/IN-PROCESS/EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING/EPIC_013_MASTER_ORCHESTRATION.md`](https://github.com/novaspivack/novelty-theory/blob/main/specs/INCOMPLETE/IN-PROCESS/EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING/EPIC_013_MASTER_ORCHESTRATION.md).
+**Purpose:** Import-oriented spine for **`Ridge`/`Summits` modules** in the naturality and broad-transfer layer. Base crown **`GeneralizedFinalCrownPackage`** is **presupposed**, not replaced.
 
 **Claim table:** [`STRENGTHENED_CLAIM_SURFACE.md`](STRENGTHENED_CLAIM_SURFACE.md).
 
@@ -12,7 +10,7 @@
 
 ```mermaid
 flowchart TB
-  subgraph Summit["Summits (EPIC_013)"]
+  subgraph Summit["Summits (naturality layer)"]
     BTS[BroadTransferSummit]
     UOS[UnboundedOrganizationSummit]
     NACS[NaturalAntiClosureSummit]

@@ -2,9 +2,7 @@
 
 ## What this is
 
-**novelty-theory-lean** is a **Lean 4** library for formal developments in **novelty theory**. This repository is the **public artifact**: library sources, final paper, and developer-facing documentation.
-
-**Normative specs**, epic orchestration, and maintainer queues live in **[novelty-theory](https://github.com/novaspivack/novelty-theory)** (companion repo). Links to `specs/…` elsewhere in `docs/` point at that repository when a path is needed.
+**novelty-theory-lean** is a **Lean 4** library for formal work on **novelty theory**, together with a **final-draft companion paper** in LaTeX. The repository is intended to be a **citable, buildable artifact**: sources, paper, and documentation needed to reproduce the formal claims.
 
 ## Toolchain
 
@@ -15,11 +13,11 @@
 
 | Path | Role |
 |------|------|
-| [`NoveltyTheory/Basic.lean`](../NoveltyTheory/Basic.lean) | Default library root module (scaffold) |
-| [`MANIFEST.md`](../MANIFEST.md) | Proof hygiene and artifact inventory |
+| [`NoveltyTheory/Basic.lean`](../NoveltyTheory/Basic.lean) | Default entry module (imports the aggregate) |
+| [`MANIFEST.md`](../MANIFEST.md) | Proof hygiene and inventory roll-up |
 | [`docs/THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md) | Theorem/lemma catalog |
 | [`paper/Final Draft/COMPILE.md`](../paper/Final%20Draft/COMPILE.md) | Build the companion paper |
 
 ## Consumers
 
-Depend on this repo via **git submodule**, git dependency, or a published artifact, per your project’s layout. This tree **is** the library root.
+Depend on this tree via **git submodule**, a Lake dependency path, or a published artifact, according to your project. This directory is the **library root**.

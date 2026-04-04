@@ -1,6 +1,6 @@
 # Generalized crown positioning (novelty-theory-lean)
 
-**Purpose:** State what the **`EPIC_012`** (“generalized crown frontier”) layer **adds** on top of **`FinalCrownPackage`** (**`EPIC_011`**), and what remains **out of scope**. Normative execution: **`EPIC_012_GENERALIZED_CROWN_FRONTIER`** in the **[companion repo](https://github.com/novaspivack/novelty-theory/tree/main/specs/INCOMPLETE/IN-PROCESS/EPIC_012_GENERALIZED_CROWN_FRONTIER/)**.
+**Purpose:** State what the **generalized crown** layer **adds** on top of **`FinalCrownPackage`**, and what remains **out of scope**—purely at the level of Lean modules and this library’s claims.
 
 ## What is proved (additive scope)
 
@@ -23,4 +23,4 @@
 
 ---
 
-_Update when **`EPIC_012`** acceptance changes._
+_Update when `Summits/GeneralizedFinalCrownPackage` and related modules change materially._

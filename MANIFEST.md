@@ -1,6 +1,6 @@
 # Artifact manifest — novelty-theory-lean
 
-**Purpose:** Track Lean proof hygiene and known gaps (see [`CODING_PROTOCOLS.md`](https://github.com/novaspivack/novelty-theory/blob/main/CODING_PROTOCOLS.md) — *Proof quality (Lean)*).
+**Purpose:** Track Lean proof hygiene and known gaps. Prefer **no `sorry`**, minimal reliance on custom **`axiom`s**, strong general lemmas, and honest notes when anything is left sharp-but-partial (see module docstrings and this table).
 
 | Item | Status |
 |------|--------|

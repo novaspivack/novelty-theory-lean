@@ -1,6 +1,6 @@
 # Documentation index
 
-**Public map for novelty-theory-lean.** Normative specs and internal orchestration are in the sibling repository **[novelty-theory](https://github.com/novaspivack/novelty-theory)**.
+Documentation shipped **with the library**: setup, toolchain, layout, theorem list, and reader-facing positioning notes. Authoritative mathematical content is in **`NoveltyTheory/`** and in the companion paper under **`paper/Final Draft/`**.
 
 ## Read first
 
@@ -11,33 +11,25 @@
 
 ## CI and paper checks
 
-- [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) — `leanprover/lean-action` (Lean + Lake build)
-- [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py) — optional cross-check of `\leanref{NoveltyTheory…}` in `paper/Final Draft/novelty_theory_generalized_crown.tex`
-- [`paper/Final Draft/COMPILE.md`](../paper/Final%20Draft/COMPILE.md) — LaTeX build (`cwd`, BibTeX)
+- [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) — Lean + Lake CI
+- [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py) — optional `\leanref{NoveltyTheory…}` check for the final-draft TeX
+- [`paper/Final Draft/COMPILE.md`](../paper/Final%20Draft/COMPILE.md) — LaTeX build from the correct working directory
 
-## Numbered and reference docs
+## Reference docs
 
 | Doc | Description |
 |-----|-------------|
-| [001_PROJECT_OVERVIEW.md](001_PROJECT_OVERVIEW.md) | What this library is and how it is organized |
-| [002_DEVELOPER_SETUP.md](002_DEVELOPER_SETUP.md) | Elan, `lake build`, bump process |
-| [003_LEAN_TOOLCHAIN_PIN.md](003_LEAN_TOOLCHAIN_PIN.md) | Canonical Lean 4 RC |
-| [004_LEAN_LIBRARY_LAYOUT.md](004_LEAN_LIBRARY_LAYOUT.md) | Lake, `NoveltyTheory/`, manifest |
-| [THEOREM_INVENTORY.md](THEOREM_INVENTORY.md) | Catalog of `theorem` / `lemma` under `NoveltyTheory/` |
+| [001_PROJECT_OVERVIEW.md](001_PROJECT_OVERVIEW.md) | What this library is |
+| [002_DEVELOPER_SETUP.md](002_DEVELOPER_SETUP.md) | Build and bump process |
+| [003_LEAN_TOOLCHAIN_PIN.md](003_LEAN_TOOLCHAIN_PIN.md) | Pinned Lean / Mathlib |
+| [004_LEAN_LIBRARY_LAYOUT.md](004_LEAN_LIBRARY_LAYOUT.md) | Lake layout, module shape |
+| [THEOREM_INVENTORY.md](THEOREM_INVENTORY.md) | Catalog of main `theorem` / `lemma` declarations |
 | [007_LIBRARY_POSITIONING_ASSESSMENT.md](007_LIBRARY_POSITIONING_ASSESSMENT.md) | How the inventory situates the library |
-| [CROWN_POSITIONING.md](CROWN_POSITIONING.md) | Crown claims / boundaries |
-| [CROWN_DEPENDENCY_MAP.md](CROWN_DEPENDENCY_MAP.md) | Crown-related dependency DAG |
+| [CROWN_POSITIONING.md](CROWN_POSITIONING.md) | Crown claims and boundaries |
+| [CROWN_DEPENDENCY_MAP.md](CROWN_DEPENDENCY_MAP.md) | Crown-related import DAG |
 | [GENERALIZED_CROWN_POSITIONING.md](GENERALIZED_CROWN_POSITIONING.md) | Generalized crown layer |
-| [GENERALIZED_CROWN_DEPENDENCY_MAP.md](GENERALIZED_CROWN_DEPENDENCY_MAP.md) | Dependency DAG for generalized crown |
-| [STRENGTHENED_CLAIM_SURFACE.md](STRENGTHENED_CLAIM_SURFACE.md) | Claim ↔ Lean table (broad transfer) |
-| [STRENGTHENED_DEPENDENCY_MAP.md](STRENGTHENED_DEPENDENCY_MAP.md) | Summit DAG for strengthened layer |
+| [GENERALIZED_CROWN_DEPENDENCY_MAP.md](GENERALIZED_CROWN_DEPENDENCY_MAP.md) | Import DAG for generalized crown |
+| [STRENGTHENED_CLAIM_SURFACE.md](STRENGTHENED_CLAIM_SURFACE.md) | Claim ↔ Lean table (broad transfer layer) |
+| [STRENGTHENED_DEPENDENCY_MAP.md](STRENGTHENED_DEPENDENCY_MAP.md) | Import spine for that layer |
 | [CANONICALITY_POSITIONING.md](CANONICALITY_POSITIONING.md) | Canonicality / minimality ledger |
-| [CLOSURE_DICHOTOMY_MAP.md](CLOSURE_DICHOTOMY_MAP.md) | Boundary / dichotomy map |
-
-## Specs and epics (separate repo)
-
-Orchestration, **`SPEC_NNN_XXX`** files, and theory seeds live under **[github.com/novaspivack/novelty-theory/specs](https://github.com/novaspivack/novelty-theory/tree/main/specs)**.
-
-## Optional reference (maintainer repo)
-
-NEMS / paper-suite notes may live under **`novelty-theory`** (e.g. `NOTES/` there), not in this public tree.
+| [CLOSURE_DICHOTOMY_MAP.md](CLOSURE_DICHOTOMY_MAP.md) | Closure / dichotomy boundary map |

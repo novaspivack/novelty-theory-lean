@@ -1,8 +1,6 @@
-# Strengthened claim surface (`EPIC_013`)
+# Strengthened claim surface (naturality / broad transfer)
 
-**Status:** Active documentation for the naturality / broader-transfer / inevitability layer on top of `GeneralizedFinalCrownPackage`. Quantifiers in prose below must track the formal statements exactly (see [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md)).
-
-**Orchestration:** [`../specs/INCOMPLETE/IN-PROCESS/EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING/EPIC_013_MASTER_ORCHESTRATION.md`](https://github.com/novaspivack/novelty-theory/blob/main/specs/INCOMPLETE/IN-PROCESS/EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING/EPIC_013_MASTER_ORCHESTRATION.md).
+**Status:** Documentation for the naturality / broader-transfer / inevitability layer on top of `GeneralizedFinalCrownPackage`. Quantifiers in prose below must track the formal statements exactly (see [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md)).
 
 **Dependency map:** [`STRENGTHENED_DEPENDENCY_MAP.md`](STRENGTHENED_DEPENDENCY_MAP.md).
 

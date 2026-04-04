@@ -1,6 +1,6 @@
-# Closure / non-closure dependency map (EPIC_014)
+# Closure / non-closure dependency map
 
-**Epic status:** baseline closed — numeric dichotomy, conservative-separation witness, and universal-`FutureDefeat` obstruction are in-tree; **regime-level** lifts remain open below.
+**Layer status:** baseline closed — numeric dichotomy, conservative-separation witness, and universal-`FutureDefeat` obstruction are in-tree; **regime-level** lifts remain open below.
 
 ## Numeric observation layer (landed)
 
@@ -47,4 +47,4 @@ See also [`NoveltyTheory/docs/MINIMALITY_AUDIT.md`](../NoveltyTheory/docs/MINIMA
 
 ---
 
-_Update alongside new lemmas in `Ridge/ClosureCollapseBoundary.lean`, `Ridge/UniversalUpwardNecessity.lean`, `Ridge/ConservativeSeparationCountermodel.lean`, and spec **`SPEC_062_CMI3`** / **`SPEC_063_CMI4`**._
+_Update alongside new lemmas in `Ridge/ClosureCollapseBoundary.lean`, `Ridge/UniversalUpwardNecessity.lean`, `Ridge/ConservativeSeparationCountermodel.lean`, and the minimality / upward-necessity packaging modules they connect to._

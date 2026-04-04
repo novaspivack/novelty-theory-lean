@@ -1,6 +1,6 @@
 # Crown positioning (novelty-theory-lean)
 
-**Purpose:** State what **crown** theorems in this library **do** and **do not** claim—without pointing readers at internal spec paths in external prose. For development, normative execution lives under **`EPIC_011_CROWN_COMPLETION`** in the **[companion specs tree](https://github.com/novaspivack/novelty-theory/tree/main/specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/)**.
+**Purpose:** State what **crown** theorems in this library **do** and **do not** claim, in terms readers can map to **`NoveltyTheory/`** and the companion paper.
 
 ## What is proved (honest scope)
 
@@ -27,8 +27,8 @@ The **`FinalCrownPackage`** summit is **scoped**: it **does not** resurrect bloc
 
 See [`CROWN_DEPENDENCY_MAP.md`](CROWN_DEPENDENCY_MAP.md) and the theorem catalog [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md).
 
-**Post-crown carrier / class transfer (`EPIC_012`):** additive layer documented in [`GENERALIZED_CROWN_POSITIONING.md`](GENERALIZED_CROWN_POSITIONING.md) (does not relax the blocked-universal boundaries above).
+**Post-crown carrier / class transfer:** additive layer documented in [`GENERALIZED_CROWN_POSITIONING.md`](GENERALIZED_CROWN_POSITIONING.md) (does not relax the blocked-universal boundaries above).
 
 ---
 
-_Update this file when **`EPIC_011`** acceptance changes or when final crown theorems land._
+_Update this file when final crown packaging in `Summits/` changes materially._
