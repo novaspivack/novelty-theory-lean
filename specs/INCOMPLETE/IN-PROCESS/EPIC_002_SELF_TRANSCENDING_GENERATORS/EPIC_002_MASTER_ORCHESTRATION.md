@@ -45,7 +45,7 @@
 | Phase 1 — Admissible reductions + paradigm shifts | Done in Lean | `Reducible`, `ParadigmShift`, `ConservativeOver`, `Core.Explains`, `InterfaceAlignment` |
 | Phase 2 — Diagonal existence + towers | Done in Lean (model graft) | `DiagonalNat`, `ReducerDiagonal`, `InterfaceAlignment`; further abstraction optional |
 | Phase 3 — Upward necessity + summits | Done in Lean (model scope) | Summits I–IV + order witness; global `𝓔_adm` without agreement hypothesis still open |
-| Phase 4 — Models + paper-facing polish | Mostly done | Models A+B+C + [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md); **`SPEC_003_NXT`** S7/S9 Lean templates (`retro_derivability`, `observationalEquivalence`, `SimulationVersusExplanation`); richer B variants + deeper NXT still optional |
+| Phase 4 — Models + paper-facing polish | Mostly done | Models A+B+C + `DupRegimeTower` (nontrivial **`RegimeFamilySingletonWithin`** family) + [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md); NXT S6–S9 Lean hooks (`exists_future_paradigmShift`, `tower_phase_not_explained_by_fixed_regime`, `retro_derivability`, `traceCoupled`/`natCounterProd`); global `𝓔_adm` / S10 still optional |
 
 ## Queue — ordered next steps
 

@@ -5,6 +5,7 @@ import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
 import NoveltyTheory.Models.BoundedRegimeDiagonal
 import NoveltyTheory.Models.ReducerDiagonal
+import NoveltyTheory.Models.DupRegimeTower
 import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.GenCertPhase
 import NoveltyTheory.Models.SimulationVersusExplanation
@@ -24,6 +25,7 @@ namespace Summits
 
 open Core GenerativeSystem Models SignatureTower InvariantTower Ridge
 open Models.ReducerDiagonal Models.CausalExplanatoryOrders Models.BoundedRegimeDiagonal
+open Models.DupRegimeTower
 open Models.GenCertPhase
 
 private theorem phase_singleton_generated (n : ℕ) : (phaseSingleton n).generatedBy natCounter :=
@@ -77,6 +79,39 @@ theorem observational_equivalence_but_not_reducible (n : ℕ) :
       NotReducible (regimeUpto (n + 1)) (regimeUpto n)
         (List.map phaseSingleton (List.range (n + 1)) ++ [phaseSingleton (n + 1)]) :=
   SimulationVersusExplanation.observational_eq_but_irreducible n
+
+/--
+**S9 (sharpened):** **trace-coupled** generators on distinct state types, same observations, still
+no regime back-reduction along the strengthened history.
+-/
+theorem trace_coupled_distinct_carrier_not_reducible (n : ℕ) :
+    traceCoupled natCounter natCounterProd ∧
+      observationalEquivalence natCounter natCounterProd ∧
+      NotReducible (regimeUpto (n + 1)) (regimeUpto n)
+        (List.map phaseSingleton (List.range (n + 1)) ++ [phaseSingleton (n + 1)]) :=
+  And.intro traceCoupled_natCounter_prod
+    (And.intro observationalEquiv_natCounter_prod (not_reducible_succ n))
+
+/-- **`SPEC_003_NXT` S6:** from every height, a strictly later signature regime admits a paradigm shift. -/
+theorem every_stage_admits_future_paradigmShift (n : ℕ) :
+    ∃ m : ℕ, n < m ∧
+      ParadigmShift (regimeUpto n) (regimeUpto m)
+        (List.map phaseSingleton (List.range (n + 1))) (phaseSingleton (n + 1)) :=
+  exists_future_paradigmShift n
+
+/-- **`SPEC_003_NXT` S8 (template):** each fixed ladder regime omits some generator-realizable phase. -/
+theorem explanatory_incompleteness_fixed_signature_height (k : ℕ) :
+    ∃ P : Phase ℕ, P.generatedBy natCounter ∧ ¬ (regimeUpto k).explains P :=
+  tower_phase_not_explained_by_fixed_regime k
+
+/-- **Model B off-axis:** `RegimeFamilySingletonWithin` + full package, but not `EnumAgreesUpto`. -/
+theorem summit_nontrivial_modelB_singleton_family :
+    RegimeFamilySingletonWithin dupRegime ∧ ¬ EnumAgreesUpto dupRegime ∧
+    (diagonalTower dupRegime).generatedThroughout natCounter ∧
+      (diagonalTower dupRegime).paradigmShiftSteps ∧
+        ∀ n, ¬ (dupRegime n).explains (phaseSingleton (n + 1)) := by
+  rcases modelB_dup_singleton_bound_package with ⟨g, p, d, hsf, he⟩
+  exact ⟨hsf, he, g, p, d⟩
 
 /-- Interface diagonal: row-wise soundness forces each row to miss the next singleton stage. -/
 theorem no_uniform_row_at_next_stage {υ : Type} (E : Core.AdmissibleInterface ℕ υ ℕ)

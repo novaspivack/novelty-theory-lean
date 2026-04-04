@@ -55,11 +55,35 @@ theorem mem_reachSet_iff (G : GenerativeSystem S X) (x : X) :
     x ∈ G.reachSet ↔ ∃ n : ℕ, G.trace n = x :=
   Set.mem_range
 
+variable {T : Type u}
+
 /--
-Same **set of observable outputs** realized along the trace (comparison layer for **`SPEC_003_NXT`** S9).
+Same **observable output set** (comparison layer for **`SPEC_003_NXT`** S9). State types may differ.
 -/
-abbrev observationalEquivalence (G1 G2 : GenerativeSystem S X) : Prop :=
-  G1.reachSet = G2.reachSet
+abbrev observationalEquivalence {S T : Type u} (G : GenerativeSystem S X) (H : GenerativeSystem T X) :
+    Prop :=
+  G.reachSet = H.reachSet
+
+/--
+**Step-coupled simulation:** identical emitted values at every clock tick (strictest “exact
+simulation” comparison without relating internal state spaces).
+-/
+abbrev traceCoupled (G : GenerativeSystem S X) (H : GenerativeSystem T X) : Prop :=
+  ∀ n : ℕ, G.trace n = H.trace n
+
+theorem reachSet_eq_of_traceCoupled {G : GenerativeSystem S X} {H : GenerativeSystem T X}
+    (h : traceCoupled G H) : G.reachSet = H.reachSet := by
+  ext x
+  simp only [mem_reachSet_iff]
+  constructor
+  · rintro ⟨n, hn⟩
+    exact ⟨n, (h n).symm.trans hn⟩
+  · rintro ⟨n, hn⟩
+    exact ⟨n, (h n).trans hn⟩
+
+theorem observationalEquivalence_of_traceCoupled {G : GenerativeSystem S X} {H : GenerativeSystem T X}
+    (h : traceCoupled G H) : observationalEquivalence G H :=
+  reachSet_eq_of_traceCoupled h
 
 end GenerativeSystem
 

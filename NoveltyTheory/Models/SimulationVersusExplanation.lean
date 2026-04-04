@@ -10,8 +10,9 @@ import NoveltyTheory.Models.SignatureTower
 reducible closure**: two generators may present the same observable set of outputs while adjacent
 regimes on a historical still refuse back-reduction.
 
-Model: a **single** `natCounter` is twin-fold compared to itself, so observational coincidence is
-trivial; the nontrivial content is entirely in the regime layer (`not_reducible_succ`).
+`natCounter` **versus** itself is the minimal observation-identical pair; **`natCounterProd`** uses a
+distinct state type while staying **trace-coupled**, sharpening the simulation layer before the
+regime diagonal (`not_reducible_succ`).
 -/
 
 namespace NoveltyTheory
@@ -31,6 +32,18 @@ theorem observational_eq_but_irreducible (n : ℕ) :
       NotReducible (regimeUpto (n + 1)) (regimeUpto n)
         (List.map phaseSingleton (List.range (n + 1)) ++ [phaseSingleton (n + 1)]) :=
   And.intro rfl (not_reducible_succ n)
+
+/--
+**Distinct state carrier** with **tick-by-tick** trace agreement—strong “exact simulation” at the
+observation level—still does not force back-reduction (**`SPEC_003_NXT` S9**).
+-/
+theorem trace_coupled_prod_not_reducible (n : ℕ) :
+    traceCoupled natCounter natCounterProd ∧
+      observationalEquivalence natCounter natCounterProd ∧
+      NotReducible (regimeUpto (n + 1)) (regimeUpto n)
+        (List.map phaseSingleton (List.range (n + 1)) ++ [phaseSingleton (n + 1)]) :=
+  And.intro traceCoupled_natCounter_prod
+    (And.intro observationalEquiv_natCounter_prod (not_reducible_succ n))
 
 end SimulationVersusExplanation
 

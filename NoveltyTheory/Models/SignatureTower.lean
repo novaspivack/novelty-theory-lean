@@ -20,7 +20,7 @@ namespace Models
 
 namespace SignatureTower
 
-open Core
+open Core GenerativeSystem
 
 /-- Phase carried by the singleton output `{k}`. -/
 def phaseSingleton (k : ℕ) : Phase ℕ where
@@ -65,6 +65,42 @@ theorem natCounter_mem_reachSet (x : ℕ) : x ∈ natCounter.reachSet := by
 
 theorem natCounter_reachSet_univ : natCounter.reachSet = (Set.univ : Set ℕ) :=
   Set.eq_univ_iff_forall.2 natCounter_mem_reachSet
+
+/-! ## Product-state twin (distinct carrier, identical trace) -/
+
+/-- Same tick/output pattern as `natCounter`, but state space **`ℕ × Unit`** (distinct type). -/
+def natCounterProd : GenerativeSystem (ℕ × Unit) ℕ where
+  s0 := (0, ())
+  tau := fun p => (p.1 + 1, ())
+  out := fun p => p.1
+
+theorem natCounterProd_step (n : ℕ) : natCounterProd.step n = (n, ()) := by
+  induction n with
+  | zero => simp [step, natCounterProd]
+  | succ n ih =>
+    rw [step_succ, ih]
+    rfl
+
+theorem natCounterProd_trace_eq (n : ℕ) : natCounterProd.trace n = n := by
+  induction n with
+  | zero => rfl
+  | succ n _ =>
+    have hs : natCounterProd.step n = (n, ()) := natCounterProd_step n
+    calc
+      natCounterProd.trace (n + 1)
+          = natCounterProd.out (natCounterProd.tau (natCounterProd.step n)) := by rw [trace_succ]
+      _ = natCounterProd.out (natCounterProd.tau (n, ())) := by rw [hs]
+      _ = (natCounterProd.tau (n, ())).1 := rfl
+      _ = n + 1 := rfl
+
+theorem natCounterProd_trace (n : ℕ) : natCounterProd.trace n = natCounter.trace n := by
+  rw [natCounterProd_trace_eq, natCounter_trace]
+
+theorem traceCoupled_natCounter_prod : traceCoupled natCounter natCounterProd :=
+  fun n => (natCounterProd_trace n).symm
+
+theorem observationalEquiv_natCounter_prod : observationalEquivalence natCounter natCounterProd :=
+  observationalEquivalence_of_traceCoupled traceCoupled_natCounter_prod
 
 /-- Regime that **exactly** names outputs `0 … n` via `Fin (n + 1)`. -/
 def regimeUpto (n : ℕ) : ExplanatoryRegime ℕ where
@@ -151,6 +187,18 @@ theorem paradigmShift_succ (n : ℕ) :
   prior_inadequate := not_explains_regime_singleton_succ
   later_adequate := later_explains_witness n
   not_reducible_back := not_reducible_succ n
+
+/-- No regime at height `k` explains every singleton phase along `natCounter` (**`SPEC_003_NXT` S8 template). -/
+theorem tower_phase_not_explained_by_fixed_regime (k : ℕ) :
+    ∃ P : Phase ℕ, P.generatedBy natCounter ∧ ¬ (regimeUpto k).explains P :=
+  ⟨phaseSingleton (k + 1), And.intro (natCounter_generated (k + 1)) not_explains_regime_singleton_succ⟩
+
+/-- **`SPEC_003_NXT` S6 shape:** strictly later regime step admits a paradigm shift witness. -/
+theorem exists_future_paradigmShift (n : ℕ) :
+    ∃ m : ℕ, n < m ∧
+      ParadigmShift (regimeUpto n) (regimeUpto m)
+        ((List.range (n + 1)).map phaseSingleton) (phaseSingleton (n + 1)) :=
+  ⟨n + 1, Nat.lt_succ_self n, paradigmShift_succ n⟩
 
 /-- Canonical tower on `ℕ`. -/
 def canonicalTower : PhaseRegimeTower ℕ where
