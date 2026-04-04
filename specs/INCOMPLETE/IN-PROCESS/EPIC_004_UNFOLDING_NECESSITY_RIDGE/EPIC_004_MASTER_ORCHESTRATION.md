@@ -33,5 +33,5 @@
 
 ## Cross-links
 
-- [`../../MASTER_STATUS.md`](../../MASTER_STATUS.md)
+- [`../../../MASTER_STATUS.md`](../../../MASTER_STATUS.md)
 - [`../../../../QUEUE.md`](../../../../QUEUE.md)

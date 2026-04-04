@@ -4,7 +4,8 @@
 
 | Epic / initiative | Folder | Owner / focus | Next queue item |
 |-------------------|--------|---------------|-----------------|
-| _None — normative waves closed_ | — | New work: add an epic + specs for items under *Still research-grade open* in [`docs/THEOREM_INVENTORY.md`](../docs/THEOREM_INVENTORY.md) | — |
+| **Strict iterated ascent (crown)** | [`EPIC_009_STRICT_ITERATED_ASCENT`](INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) | **`SPEC_035_GS1`**–**`SPEC_037_CR1`**: structural-truth discipline, ascent regimes, crown ∃∃∀ summit | Start **`SPEC_035_GS1`** |
+| **Expressive / organization frontier** | [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) | **`SPEC_038_XS1`**–**`SPEC_041_OR1`**: richer syntax, initial-tag `ProvesAt`, modalities, stronger org | Start **`SPEC_038_XS1`** or **`SPEC_039_DT1`** |
 
 ## Deferred
 

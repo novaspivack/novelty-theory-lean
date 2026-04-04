@@ -23,5 +23,5 @@ Items under **Still research-grade open** in [`docs/THEOREM_INVENTORY.md`](../..
 
 ## Cross-links
 
-- Roll-up: [`../MASTER_STATUS.md`](../MASTER_STATUS.md)
+- Roll-up: [`../../MASTER_STATUS.md`](../../MASTER_STATUS.md)
 - Queue: [`../../../QUEUE.md`](../../../QUEUE.md)

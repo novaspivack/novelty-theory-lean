@@ -36,6 +36,6 @@
 
 ## Cross-links
 
-- Master roll-up: [`../../MASTER_STATUS.md`](../../MASTER_STATUS.md)
+- Master roll-up: [`../../../MASTER_STATUS.md`](../../../MASTER_STATUS.md)
 - Queue: [`../../../../QUEUE.md`](../../../../QUEUE.md)
 - Theorem inventory: [`../../../../docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md)

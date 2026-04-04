@@ -14,7 +14,7 @@ Roll up **acceptance** for the sentence-through-abstract-simulation wave (**`SPE
 ## Acceptance
 
 - `lake build` succeeds on the library root (`NoveltyTheory`).
-- [`MASTER_STATUS.md`](../MASTER_STATUS.md) lists this wave as **complete**; only **`EPIC_002`** remains **active** for ongoing theory.
+- [`MASTER_STATUS.md`](../../MASTER_STATUS.md) lists this wave as **complete**; only **`EPIC_002`** remains **active** for ongoing theory.
 - [`QUEUE.md`](../../../QUEUE.md) cross-epic row for the sentence/strata wave is **Done** with closure date.
 
 ## Evidence (this pass)
@@ -30,5 +30,5 @@ Roll up **acceptance** for the sentence-through-abstract-simulation wave (**`SPE
 ## Cross-links
 
 - Companion normative theory closure: [`SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md`](SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)
-- Master roll-up: [`../MASTER_STATUS.md`](../MASTER_STATUS.md)
+- Master roll-up: [`../../MASTER_STATUS.md`](../../MASTER_STATUS.md)
 - Queue: [`../../../QUEUE.md`](../../../QUEUE.md)
