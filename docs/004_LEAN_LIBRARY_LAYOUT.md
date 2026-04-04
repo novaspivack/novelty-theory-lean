@@ -26,8 +26,8 @@ NoveltyTheory/
   Core/                    # definitions (generative system, phase, regime, reduction, shift, tower)
   Foundation/              # small lemmas
   Models/                  # SignatureTower, InvariantTower, ReducerDiagonal, DupRegimeTower, BoundedRegimeDiagonal, SimulationVersusExplanation, …
-  Ridge/                   # ShiftWitness, DiagonalNat, InterfaceAlignment, SignatureAdmissibleBundle
-  Summits/                 # summit packaging
+  Ridge/                   # ShiftWitness, DiagonalNat, InterfaceAlignment, SignatureAdmissibleBundle, OrganizationHeightObstruction, RetroStructuralGap, …
+  Summits/                 # summit packaging (incl. crown completion summits)
 MANIFEST.md                # proof hygiene + module roll-up
 ```
 

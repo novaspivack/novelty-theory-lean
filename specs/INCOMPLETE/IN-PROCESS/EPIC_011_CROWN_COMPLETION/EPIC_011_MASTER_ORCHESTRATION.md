@@ -8,7 +8,7 @@
 
 **Depends on:** **`EPIC_003`**–**`EPIC_010`** complete; baseline summit and crown v1 theorems listed under each **`SPEC_042`**–**`SPEC_047`**.
 
-**Status:** **In progress** — **`SPEC_042_CG1`** Lean + docs landed; **`SPEC_043_CG2`**–**`SPEC_047_CG6`** remain.
+**Status:** **Complete** — **`SPEC_042_CG1`**–**`SPEC_047_CG6`** Lean + inventory + crown docs landed (`lake build` green).
 
 ---
 
@@ -90,12 +90,12 @@ The final package must **not** be reasonably dismissible as **only**:
 
 | Phase | Spec | Status |
 |------:|------|--------|
-| 1 | `SPEC_042_CG1` | **Phase 1 complete** (structural conjunction witness + summit; inventory + crown docs) |
-| 2 | `SPEC_043_CG2` | **Not started** |
-| 3 | `SPEC_044_CG3` | **Not started** |
-| 4 | `SPEC_045_CG4` | **Not started** |
-| 5 | `SPEC_046_CG5` | **Not started** |
-| 6 | `SPEC_047_CG6` | **Not started** |
+| 1 | `SPEC_042_CG1` | **Complete** |
+| 2 | `SPEC_043_CG2` | **Complete** |
+| 3 | `SPEC_044_CG3` | **Complete** |
+| 4 | `SPEC_045_CG4` | **Complete** |
+| 5 | `SPEC_046_CG5` | **Complete** |
+| 6 | `SPEC_047_CG6` | **Complete** |
 
 ---
 

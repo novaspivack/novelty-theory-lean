@@ -83,4 +83,4 @@ If **any** “yes” remains **honest**, **iterate** **`042`–`046`** or **narr
 
 ## Status
 
-**Not started**.
+**Complete** — `Summits.FinalCrownPackage`; crown docs + inventory updated in-repo.

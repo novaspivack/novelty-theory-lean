@@ -57,4 +57,4 @@ Upgrade **retro** machinery from **same-calculus depth shift** (v1 **`IsRetroStr
 
 ## Status
 
-**Not started**.
+**Complete** — `Foundation.RetroStructuralTruthV2`, `Ridge.RetroStructuralGap`, `Summits.RetroStructuralCrownSummit`; see `docs/THEOREM_INVENTORY.md`.

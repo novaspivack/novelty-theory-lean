@@ -53,6 +53,22 @@ theorem list_fold_mention_bound {m : ℕ} {l : List (Sentence ℕ)}
     (l.foldl (fun acc φ => max acc (mentionBound φ)) 0) ≤ m :=
   list_fold_mention_bound_aux (Nat.zero_le m) h
 
+theorem list_fold_max_le_of_forall_mem_le_aux {l : List ℕ} {m acc : ℕ}
+    (hacc : acc ≤ m) (h : ∀ y ∈ l, y ≤ m) :
+    l.foldl (fun a y => max a y) acc ≤ m := by
+  induction l generalizing acc with
+  | nil =>
+      simpa using hacc
+  | cons a as ih =>
+      simp only [List.mem_cons, forall_eq_or_imp] at h
+      rcases h with ⟨ha, has⟩
+      simp only [List.foldl_cons]
+      exact ih (Nat.max_le.mpr ⟨hacc, ha⟩) has
+
+theorem list_fold_max_le_of_forall_mem_le {l : List ℕ} {m : ℕ}
+    (h : ∀ y ∈ l, y ≤ m) : l.foldl (fun acc y => max acc y) 0 ≤ m :=
+  list_fold_max_le_of_forall_mem_le_aux (Nat.zero_le m) h
+
 theorem expressible_mono {h₁ h₂ : ℕ} (hle : h₁ ≤ h₂) (φ : Sentence ℕ) :
     ExpressibleAtHeight h₁ φ → ExpressibleAtHeight h₂ φ := fun h =>
   Nat.le_trans h hle
@@ -102,9 +118,13 @@ theorem mentionBound_le_of_proves {m : ℕ} (φ : Sentence ℕ) (h : ProvesAt m 
           simp only [mentionBound, NatPhaseTag.bound]
           rw [Nat.max_eq_left hxK]
           exact hKm
-  | outputEnumMem _ _ =>
+  | outputEnumMem l x =>
       intro h
       simp [ProvesAt] at h
+      rcases h with ⟨hxmem, hle, _⟩
+      simp only [mentionBound]
+      rw [Nat.max_le]
+      exact ⟨list_fold_max_le_of_forall_mem_le hle, hle x hxmem⟩
   | finConj l =>
       intro h
       simp [ProvesAt] at h

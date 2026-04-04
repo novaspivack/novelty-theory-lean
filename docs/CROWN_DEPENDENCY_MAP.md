@@ -41,16 +41,53 @@ StratifiedSentenceModel.exists_sentence_provable_succ_not_at
 - **`SignatureAdmissibleBundle` / trivial interface** — no uniform raw-interface diagonal
 - **`RegimeFamilyObstruction` / empty regime** — no universal infinite paradigm chain
 
-## Planned (`EPIC_011` remainder)
+## Crown completion (`EPIC_011` — `SPEC_043`–`SPEC_047`)
 
-| Phase | Spec | Planned modules (per spec) |
-|------|------|----------------------------|
-| Enum / finite output | `SPEC_043_CG2` | `Foundation.OutputEnumProvability`, `Models.OutputEnumCrownFamily` |
-| Polymorphic / finset phase | `SPEC_044_CG3` | `Core.PhaseSyntaxPoly`, `Foundation.PhaseSyntaxPolyFacts`, `Models.PolymorphicPhaseCrown` |
-| Organization V2 | `SPEC_045_CG4` | `Core.OrganizationV2`, `Ridge.OrganizationHeightObstruction`, `Summits.OrganizationCrownSummit` |
-| Retro structural v2 | `SPEC_046_CG5` | `Foundation.RetroStructuralTruthV2`, `Ridge.RetroStructuralGap`, `Summits.RetroStructuralCrownSummit` |
-| Final package | `SPEC_047_CG6` | `Summits.FinalCrownPackage` |
+### Enum / finite-output layer (`SPEC_043_CG2`)
+
+```
+Foundation.OutputEnumProvability (+ SentenceProvability / SentenceFacts hooks)
+  → Models.OutputEnumCrownFamily.outputEnumCrownWitness_proves_succ_not_at
+  → strict `ProvesAt` ascent (non-`geOutput` witness path)
+```
+
+### Polymorphic carrier (`SPEC_044_CG3`)
+
+```
+Core.PhaseSyntaxPoly.sentencePolyEmbed
+  → Foundation.PhaseSyntaxPolyFacts.phaseSyntaxPoly_embed_nat_faithful (semantic iff on `Unit × ℕ`)
+  → provesAt_poly_phase_sound, poly_phase_crown_family
+  → Models.PolymorphicPhaseCrown (re-export boundary)
+```
+
+### Organization V2 + height (`SPEC_045_CG4`)
+
+```
+Core.OrganizationV2 (+ IsFiniteHeight)
+  → Ridge.OrganizationHeightObstruction.no_finite_adequate_organization_totalizes_future
+  → Ridge.OrganizationHeightObstruction.organization_height_obstruction
+     (pairs `finite_signature_cannot_organize_full_ladder` with abstract future-totalization block)
+  → Summits.OrganizationCrownSummit.organization_crown_supports_strict_ascent
+```
+
+### Retro structural v2 (`SPEC_046_CG5`)
+
+```
+Foundation.RetroStructuralTruthV2 (IsRetroStructuralV2, histSeqUpto)
+  → Ridge.RetroStructuralGap.histSeqUpto_proves_succ_not_at
+  → Summits.RetroStructuralCrownSummit.retro_truth_feeds_crown_family
+```
+
+### Final integrative package (`SPEC_047_CG6`)
+
+```
+Summits.FinalCrownPackage
+  ← StructuralCrownSummit / StructuralCrownFamily
+  ← SignatureTower / StratifiedFinality
+  ← OrganizationHeightObstruction
+  ← OutputEnumCrownFamily (extra `ProvesAt` gap export)
+```
 
 ---
 
-_Reconcile this DAG when new crown phases land; keep it honest about **direct** mathematical dependencies, not PR narrative._
+_Reconcile this DAG when crown phases change; keep it honest about **direct** mathematical dependencies, not PR narrative._

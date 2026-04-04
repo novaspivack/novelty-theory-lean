@@ -26,7 +26,7 @@
 | [THEOREM_INVENTORY.md](THEOREM_INVENTORY.md) | Full catalog of public `theorem` / `lemma` under `NoveltyTheory/` |
 | [007_LIBRARY_POSITIONING_ASSESSMENT.md](007_LIBRARY_POSITIONING_ASSESSMENT.md) | How the inventory reframes the library (Wave 2, beyond genotype/phenotype, crown targets) |
 | [CROWN_POSITIONING.md](CROWN_POSITIONING.md) | What crown theorems claim / do not claim (boundaries vs universals) |
-| [CROWN_DEPENDENCY_MAP.md](CROWN_DEPENDENCY_MAP.md) | Crown-related dependency DAG + planned `EPIC_011` modules |
+| [CROWN_DEPENDENCY_MAP.md](CROWN_DEPENDENCY_MAP.md) | Crown-related dependency DAG (includes landed `EPIC_011` modules) |
 | [000.1_AI_CODING_BEST_PRACTICES.md](000.1_AI_CODING_BEST_PRACTICES.md) | Optional AI/agent workflow notes |
 | [005_TODO_REGISTRY.md](005_TODO_REGISTRY.md) | Discrete TODOs tied to code locations |
 | [006_TECHNICAL_DEBT_REGISTRY.md](006_TECHNICAL_DEBT_REGISTRY.md) | Larger follow-ups |

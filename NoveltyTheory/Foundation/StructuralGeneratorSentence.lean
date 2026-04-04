@@ -36,8 +36,9 @@ inductive IsStructuralGeneratorSentence : Sentence ℕ → Prop where
       IsStructuralGeneratorSentence (Sentence.phaseMem (singleton x) x)
   | natPhaseTagMem_sing (k : ℕ) :
       IsStructuralGeneratorSentence (Sentence.natPhaseTagMem (NatPhaseTag.sing k) k)
-  | outputEnumMem_singleton (x : ℕ) :
-      IsStructuralGeneratorSentence (Sentence.outputEnumMem [x] x)
+  /-- Any **syntactic** list occurrence with **`x ∈ l`** (`SPEC_043_CG2`). -/
+  | outputEnumMem_of_mem {l : List ℕ} {x : ℕ} (_hx : x ∈ l) :
+      IsStructuralGeneratorSentence (Sentence.outputEnumMem l x)
   | and {φ ψ : Sentence ℕ} :
       IsStructuralGeneratorSentence φ →
         IsStructuralGeneratorSentence ψ →
@@ -45,6 +46,10 @@ inductive IsStructuralGeneratorSentence : Sentence ℕ → Prop where
   | finConj {l : List (Sentence ℕ)} (hl : l ≠ [])
       (h : ∀ φ ∈ l, IsStructuralGeneratorSentence φ) :
       IsStructuralGeneratorSentence (Sentence.finConj l)
+
+theorem outputEnumMem_singleton (x : ℕ) :
+    IsStructuralGeneratorSentence (Sentence.outputEnumMem [x] x) :=
+  .outputEnumMem_of_mem (by simp)
 
 theorem isGeneratorStructural_implies {φ : Sentence ℕ} (h : IsGeneratorStructural φ) :
     IsStructuralGeneratorSentence φ := by

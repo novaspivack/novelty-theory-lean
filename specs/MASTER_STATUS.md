@@ -4,7 +4,7 @@
 
 | Epic / initiative | Folder | Owner / focus | Next queue item |
 |-------------------|--------|---------------|-----------------|
-| **Crown completion** | [`EPIC_011_CROWN_COMPLETION`](INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/) | `SPEC_042`–`SPEC_047`; anti-collapse, enum layer, org V2, retro v2, final package | **`SPEC_043_CG2`** (`outputEnumMem` / finite witness) after **`SPEC_042`** acceptance |
+| — | — | *(no active epics in this roll-up)* | — |
 
 ## Deferred
 
@@ -21,10 +21,9 @@
 | **Formal tranche `SPEC_013`–`SPEC_032` + closure `SPEC_033_K7A`** | Sentence universe through abstract simulation vs explanation (**`EPIC_003`–`EPIC_008`**) | **[`SPEC_033_K7A`](INCOMPLETE/IN-PROCESS/SPEC_033_K7A_FORMAL_TRANCHE_CLOSURE.md)**; `lake build` |
 | **Strict iterated ascent (crown)** | **`SPEC_035_GS1`–`SPEC_037_CR1`** — structural class, `ProvesInRegime`, ∃∃∀ summit on `natCounter` / `geOutput` | **[`EPIC_009_MASTER_ORCHESTRATION.md`](INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md)**; [`CrownIteratedAscentSummit.lean`](../NoveltyTheory/Summits/CrownIteratedAscentSummit.lean); [`THEOREM_INVENTORY.md`](../docs/THEOREM_INVENTORY.md) |
 | **Expressive / organization frontier** | **`SPEC_038_XS1`–`SPEC_041_OR1`** — `outputEnumMem`, initial `ProvesAt`, `StageNecessary`, `SeparatesStages` | **[`EPIC_010_MASTER_ORCHESTRATION.md`](INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md)**; `Foundation.RichSentenceSyntax`, `InitialTagProvability`, `StageModality`; `OrganizationFrontierSummit` |
+| **Crown completion v2** | **`SPEC_042_CG1`–`SPEC_047_CG6`** — structural / enum / poly / org V2 / retro v2 / final package | **[`EPIC_011_MASTER_ORCHESTRATION.md`](INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md)**; [`FinalCrownPackage.lean`](../NoveltyTheory/Summits/FinalCrownPackage.lean); [`docs/THEOREM_INVENTORY.md`](../docs/THEOREM_INVENTORY.md); [`docs/CROWN_POSITIONING.md`](../docs/CROWN_POSITIONING.md); [`docs/CROWN_DEPENDENCY_MAP.md`](../docs/CROWN_DEPENDENCY_MAP.md); `lake build` |
 
 **Cross-epic ordering + agent contract:** [`../QUEUE.md`](../QUEUE.md)
-
-**Crown program:** [`EPIC_011`](INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); [`docs/CROWN_POSITIONING.md`](../docs/CROWN_POSITIONING.md), [`docs/CROWN_DEPENDENCY_MAP.md`](../docs/CROWN_DEPENDENCY_MAP.md).
 
 ---
 

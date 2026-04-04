@@ -281,6 +281,36 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `OrganizationFrontierSummit.summit_totalFutureOnNat_separates` | `Summits.OrganizationFrontierSummit` | Total-future org separates |
 | `OrganizationFrontierSummit.summit_constant_stage_not_separated` | `Summits.OrganizationFrontierSummit` | Constant-label obstruction |
 | `OrganizationFrontierSummit.summit_diagonal_compatible_family` | `Summits.OrganizationFrontierSummit` | Singleton-family diagonal re-export |
+| `OutputEnumProvability.provesAt_outputEnumMem_sound` | `Foundation.OutputEnumProvability` | `SPEC_043` — soundness export for enum layer |
+| `OutputEnumProvability.provesAt_outputEnumMem_mono` | `Foundation.OutputEnumProvability` | `SPEC_043` — monotone depth for `outputEnumMem` |
+| `OutputEnumCrownFamily.outputEnumCrownWitness_proves_succ_not_at` | `Models.OutputEnumCrownFamily` | `SPEC_043` — enum crown strict gap |
+| `OutputEnumCrownFamily.outputEnumMem_crown_family` | `Models.OutputEnumCrownFamily` | `SPEC_043` — `∃G, ∃Φ` enum packaging |
+| `PhaseSyntaxPolyFacts.phaseSyntaxPoly_embed_fwd` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — forward semantic map (`mutual` block) |
+| `PhaseSyntaxPolyFacts.phaseSyntaxPoly_embed_rev` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — reverse semantic map (`mutual` block) |
+| `PhaseSyntaxPolyFacts.phaseSyntaxPoly_embed_nat_faithful` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — `HoldsAt` iff on conservative embed (`Unit × ℕ`) |
+| `PhaseSyntaxPolyFacts.provesAt_poly_phase_sound` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — poly soundness from `ProvesAt` |
+| `PhaseSyntaxPolyFacts.exists_poly_phase_provable_gap` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — strict `ProvesAtPoly` gap |
+| `PhaseSyntaxPolyFacts.poly_phase_crown_family` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — `∃G, ∃Φ` poly-phase packaging |
+| `OrganizationV2.IsFiniteHeight` | `Core.OrganizationV2` | `SPEC_045` — finite-height organization predicate |
+| `OrganizationHeightObstruction.finite_adequate_organization_has_bounded_stage_separation` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — two separated stages within bound |
+| `OrganizationHeightObstruction.no_finite_adequate_organization_totalizes_future` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — bounded org cannot realize all strict `ℕ` pairs |
+| `OrganizationHeightObstruction.organization_cannot_self_certify_total_future` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — no self-certifying total future package |
+| `OrganizationHeightObstruction.organization_height_obstruction` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — ladder miss + abstract org block |
+| `OrganizationCrownSummit.organization_crown_supports_strict_ascent` | `Summits.OrganizationCrownSummit` | `SPEC_045` — org obstruction + structural gap |
+| `RetroStructuralTruthV2.IsRetroStructuralV2` | `Foundation.RetroStructuralTruthV2` | `SPEC_046` — retro v2 classifier |
+| `RetroStructuralTruthV2.histSeqUpto` | `Foundation.RetroStructuralTruthV2` | `SPEC_046` — initial-segment diagonal history |
+| `RetroStructuralTruthV2.isRetroStructuralV2_histSeqUpto` | `Foundation.RetroStructuralTruthV2` | `SPEC_046` — witness classification |
+| `RetroStructuralGap.histSeqUpto_proves_succ_not_at` | `Ridge.RetroStructuralGap` | `SPEC_046` — strict retro gap |
+| `RetroStructuralGap.exists_structural_retro_truth_gap` | `Ridge.RetroStructuralGap` | `SPEC_046` — ∃ classified retro φ |
+| `RetroStructuralGap.later_regime_proves_earlier_history_truth` | `Ridge.RetroStructuralGap` | `SPEC_046` — later-depth proves earlier-segment bundle |
+| `RetroStructuralGap.retro_truth_sound_about_earlier_segment` | `Ridge.RetroStructuralGap` | `SPEC_046` — soundness + earlier-segment guard |
+| `RetroStructuralGap.retro_truth_not_mentionBound_only` | `Ridge.RetroStructuralGap` | `SPEC_046` — anti-collapse vs mention stratum |
+| `RetroStructuralCrownSummit.retro_truth_feeds_crown_family` | `Summits.RetroStructuralCrownSummit` | `SPEC_046` — retro + structural packaging |
+| `FinalCrownPackage.final_crown_iterated_structural_ascent` | `Summits.FinalCrownPackage` | `SPEC_047` — `∃G, ∃Φ, ∀n` structural strict gap |
+| `FinalCrownPackage.final_crown_no_fixed_structural_stratum` | `Summits.FinalCrownPackage` | `SPEC_047` — scoped non-final stratum + org height |
+| `FinalCrownPackage.final_crown_future_defeat_of_terminality` | `Summits.FinalCrownPackage` | `SPEC_047` — `FutureDefeat` on `natCounter` |
+| `FinalCrownPackage.final_crown_generator_truth_family` | `Summits.FinalCrownPackage` | `SPEC_047` — generator-truth + structural family |
+| `FinalCrownPackage.final_crown_enum_output_layer_gap` | `Summits.FinalCrownPackage` | `SPEC_047` — enum-layer `ProvesAt` gap export |
 
 *(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
 
@@ -294,7 +324,7 @@ A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted
 
 ## Still research-grade open (extensions)
 
-Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Crown completion** (**`SPEC_042_CG1`**–**`SPEC_047_CG6`**) — [`EPIC_011`](../specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); structural non-`geOutput` witness is live under **`SPEC_042`** (`StructuralCrownSummit`). **Remaining** tranche items: **`ProvesAt`** for **`outputEnumMem`**, finset-grade output sets, polymorphic phase layer (**`SPEC_043`**–**`SPEC_044`**), organization V2 (**`SPEC_045`**), retro structural v2 (**`SPEC_046`**), final package (**`SPEC_047`**).
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; extra modalities; carriers beyond the current conservative poly embed pattern; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Crown completion** (**`SPEC_042_CG1`**–**`SPEC_047_CG6`**) — [`EPIC_011`](../specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); Lean packaging includes structural crown (**042**), enum / poly / org V2 / retro v2 / final package rows above.
 
 ---
 

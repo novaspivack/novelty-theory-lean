@@ -53,4 +53,4 @@ A **hostile** reader sees **non-trivial** proof rules **or** a **formal no-go** 
 
 ## Status
 
-**Not started** — execute after **`SPEC_042_CG1`** unless a documented dependency forces partial overlap (reconcile in orchestration).
+**Complete** — `Foundation.OutputEnumProvability`, `Models.OutputEnumCrownFamily`; see `docs/THEOREM_INVENTORY.md`.

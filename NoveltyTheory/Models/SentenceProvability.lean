@@ -10,8 +10,9 @@ import NoveltyTheory.Models.InvariantTower
 
 **`ProvesAt m φ`** extends Model C on **`CounterFact`**; **`finConj`** lifts finite proof context;
 **`natPhaseTagMem.sing`** uses singleton Model C atoms; **`initial`** tags (**`SPEC_039_DT1`**) require
-**`x ≤ K`**, **`K ≤ m`**, and a matching **`phaseSingletonMem`** proof; **`outputEnumMem`** is
-**unprovable** in the first tranche (**`SPEC_038_XS1`** — semantics only via soundness vacuity).
+**`x ≤ K`**, **`K ≤ m`**, and a matching **`phaseSingletonMem`** proof; **`outputEnumMem l x`**
+(**`SPEC_043_CG2`**) is **`x ∈ l`**, all list entries **`≤ m`**, and a Model **C** proof of
+**`phaseSingletonMem x`** at depth **`m`** (finite enumeration tied to phase depth).
 -/
 
 namespace NoveltyTheory
@@ -32,7 +33,8 @@ def ProvesAt (m : ℕ) : Sentence ℕ → Prop
       | NatPhaseTag.sing k => x = k ∧ provesAtDepth m (CounterFact.phaseSingletonMem k)
       | NatPhaseTag.initial K =>
           x ≤ K ∧ K ≤ m ∧ provesAtDepth m (CounterFact.phaseSingletonMem x)
-  | Sentence.outputEnumMem _ _ => False
+  | Sentence.outputEnumMem l x =>
+      x ∈ l ∧ (∀ y ∈ l, y ≤ m) ∧ provesAtDepth m (CounterFact.phaseSingletonMem x)
   | Sentence.finConj l => ∀ φ ∈ l, ProvesAt m φ
   | Sentence.and φ ψ => ProvesAt m φ ∧ ProvesAt m ψ
   | Sentence.or φ ψ =>
@@ -74,9 +76,12 @@ theorem proves_mono_sentence {m n : ℕ} (hmn : m ≤ n) {φ : Sentence ℕ} (h 
           rcases h with ⟨hxK, hKm, hpf⟩
           simp [ProvesAt]
           exact ⟨hxK, Nat.le_trans hKm hmn, proves_mono hmn hpf⟩
-  | outputEnumMem _ _ =>
+  | outputEnumMem l x =>
       intro h
       simp [ProvesAt] at h
+      rcases h with ⟨hx, hle, hpf⟩
+      simp [ProvesAt]
+      exact ⟨hx, fun y hy => Nat.le_trans (hle y hy) hmn, proves_mono hmn hpf⟩
   | finConj l =>
       intro h
       simp [ProvesAt] at h

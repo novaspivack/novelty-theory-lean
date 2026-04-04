@@ -14,6 +14,8 @@ import NoveltyTheory.Core.SentenceRegime
 import NoveltyTheory.Core.Expressibility
 import NoveltyTheory.Core.GeneratorTruth
 import NoveltyTheory.Core.Organization
+import NoveltyTheory.Core.OrganizationV2
+import NoveltyTheory.Core.PhaseSyntaxPoly
 import NoveltyTheory.Core.SimulationVersusExplanationAbstract
 import NoveltyTheory.Foundation.Trajectory
 import NoveltyTheory.Foundation.ConservativeHistory
@@ -23,6 +25,9 @@ import NoveltyTheory.Foundation.UpwardNecessity
 import NoveltyTheory.Foundation.StructuralGeneratorSentence
 import NoveltyTheory.Foundation.StructuralCrownSentence
 import NoveltyTheory.Foundation.AscentRegime
+import NoveltyTheory.Foundation.OutputEnumProvability
+import NoveltyTheory.Foundation.PhaseSyntaxPolyFacts
+import NoveltyTheory.Foundation.RetroStructuralTruthV2
 import NoveltyTheory.Foundation.RichSentenceSyntax
 import NoveltyTheory.Foundation.InitialTagProvability
 import NoveltyTheory.Foundation.StageModality
@@ -30,6 +35,8 @@ import NoveltyTheory.Models.SignatureTower
 import NoveltyTheory.Models.InvariantTower
 import NoveltyTheory.Models.SentenceProvability
 import NoveltyTheory.Models.StratifiedSentenceModel
+import NoveltyTheory.Models.OutputEnumCrownFamily
+import NoveltyTheory.Models.PolymorphicPhaseCrown
 import NoveltyTheory.Models.StructuralCrownFamily
 import NoveltyTheory.Models.StratifiedFinality
 import NoveltyTheory.Models.RetroStructuralTruth
@@ -44,6 +51,8 @@ import NoveltyTheory.Models.SimulationVersusExplanation
 import NoveltyTheory.Ridge.ShiftWitness
 import NoveltyTheory.Ridge.DiagonalNat
 import NoveltyTheory.Ridge.InterfaceAlignment
+import NoveltyTheory.Ridge.OrganizationHeightObstruction
+import NoveltyTheory.Ridge.RetroStructuralGap
 import NoveltyTheory.Ridge.SignatureAdmissibleBundle
 import NoveltyTheory.Summits.CausalExplanatorySeparation
 import NoveltyTheory.Summits.SummitPackages
@@ -55,7 +64,10 @@ import NoveltyTheory.Summits.UnfoldingNecessitySummit
 import NoveltyTheory.Summits.SimulationVersusExplanationAbstractSummit
 import NoveltyTheory.Summits.CrownIteratedAscentSummit
 import NoveltyTheory.Summits.StructuralCrownSummit
+import NoveltyTheory.Summits.OrganizationCrownSummit
 import NoveltyTheory.Summits.OrganizationFrontierSummit
+import NoveltyTheory.Summits.FinalCrownPackage
+import NoveltyTheory.Summits.RetroStructuralCrownSummit
 
 /-!
 # NoveltyTheory — library root (`SPEC_003_RCT`)

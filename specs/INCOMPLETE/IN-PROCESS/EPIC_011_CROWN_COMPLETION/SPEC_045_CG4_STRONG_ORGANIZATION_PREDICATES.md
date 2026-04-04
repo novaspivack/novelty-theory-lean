@@ -54,4 +54,4 @@ Upgrade organization from **v1 separation** (`SeparatesStages`, parity / identit
 
 ## Status
 
-**Not started**.
+**Complete** — `Core.OrganizationV2`, `Ridge.OrganizationHeightObstruction`, `Summits.OrganizationCrownSummit`; see `docs/THEOREM_INVENTORY.md`.

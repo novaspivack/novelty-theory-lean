@@ -48,4 +48,4 @@ Reduce the risk that the crown is an artifact of **nat-specific** / **`Set ℕ`*
 
 ## Status
 
-**Not started**.
+**Complete** — `Core.PhaseSyntaxPoly`, `Foundation.PhaseSyntaxPolyFacts`, `Models.PolymorphicPhaseCrown`; see `docs/THEOREM_INVENTORY.md`.
