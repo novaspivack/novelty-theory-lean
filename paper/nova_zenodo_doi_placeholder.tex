@@ -8,11 +8,14 @@
 % With --require-tex-markers, injection fails until this file is \input{} (markers must exist in the resolved .tex).
 %
 % Call \NovaZenodoInAbstract immediately before \end{abstract} (inserted by install_zenodo_doi_placeholders.py
-% or zpo doi inject) to print the archival DOI line only after \NovaZenodoDOI is non-empty.
+% or zpo doi inject). While \NovaZenodoDOI is empty, the PDF shows an explicit pending line; after
+% ``zpo doi inject --apply``, recompile to replace it with the real DOI URL.
 %
 \providecommand{\NovaZenodoInAbstract}{%
-  \if\relax\detokenize\expandafter{\NovaZenodoDOI}\relax\else
   \par\smallskip\noindent
+  \if\relax\detokenize\expandafter{\NovaZenodoDOI}\relax
+  \textit{Archival version (Zenodo):} \emph{[DOI pending publication]}%
+  \else
   \textit{Archival version (Zenodo):} \url{https://doi.org/\NovaZenodoDOI}%
   \fi}
 %
