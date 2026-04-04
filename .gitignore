@@ -1,0 +1,43 @@
+# See NOTES/PROJECT_SEED.md §7.1–§7.2 (gitignore policy + Git LFS for large files).
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Private keys (do not commit)
+*.pem
+
+# Logs
+*.log
+logs/
+
+# Caches (exclude noisy cache dirs; do not blanket-ignore *.json — see PROJECT_SEED §7.1)
+.cache/
+
+# Python (if used later)
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Node (if used later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build outputs (stack-specific — extend per project)
+dist/
+build/
+*.egg-info/
+
+# Lean / Lake
+.lake/
+lake-packages/
