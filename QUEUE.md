@@ -51,8 +51,9 @@
 | 5 | **Expressive / organization frontier** (richer syntax, `initial` derivability, modalities, stronger org) | [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) | **`SPEC_038_XS1`**–**`SPEC_041_OR1`** | **Done** (2026-04-04) |
 | 6 | **Crown completion** (structural non-`geOutput` witness, enum/finset proof layer, org V2, retro v2, final package) | [`EPIC_011_CROWN_COMPLETION`](specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md) | **`SPEC_042_CG1`**–**`SPEC_047_CG6`**; [`Summits/FinalCrownPackage.lean`](NoveltyTheory/Summits/FinalCrownPackage.lean); crown docs | **Done** (2026-04-03) |
 | 7 | **Generalized crown frontier** (carrier-phase, structural v2, modal scaffold, abstract org, `Bool × ℕ` class transfer, generalized final package) | [`EPIC_012_GENERALIZED_CROWN_FRONTIER`](specs/INCOMPLETE/IN-PROCESS/EPIC_012_GENERALIZED_CROWN_FRONTIER/EPIC_012_MASTER_ORCHESTRATION.md) | **`SPEC_048_GC1`**–**`SPEC_053_GC6`**; [`Summits/GeneralizedFinalCrownPackage.lean`](NoveltyTheory/Summits/GeneralizedFinalCrownPackage.lean); generalized crown docs | **Done** (2026-04-04) |
+| 8 | **Naturality + inevitability** (weak naturality axioms, sentence hierarchy naturality, broader admissible class, unbounded org, natural anti-closure summit; paper + tables + inventory + strengthened docs) | [`EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING`](specs/INCOMPLETE/IN-PROCESS/EPIC_013_NATURALITY_AND_INEVITABILITY_STRENGTHENING/EPIC_013_MASTER_ORCHESTRATION.md) | **`SPEC_054_NS1`**–**`SPEC_059_NS6`**; [`docs/STRENGTHENED_CLAIM_SURFACE.md`](docs/STRENGTHENED_CLAIM_SURFACE.md), [`docs/STRENGTHENED_DEPENDENCY_MAP.md`](docs/STRENGTHENED_DEPENDENCY_MAP.md) | **Done** (2026-04-04) |
 
-**Queue:** rows **1–7** are **Done** in this roll-up.
+**Queue:** rows **1–8** are **Done** in this roll-up.
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 

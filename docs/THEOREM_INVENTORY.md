@@ -380,6 +380,51 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 
 *(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
 
+### Naturality and inevitability (`EPIC_013` — `SPEC_054_NS1`–`SPEC_058_NS5`)
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `NaturalityAxioms.weakDiagonalNaturality_of_isWeak` | `Core.NaturalityAxioms` | Weak diagonal naturality from `IsWeakDiagonalNatural` |
+| `NaturalityAxioms.weakMultiscaleNaturality_iff_exists_separated` | `Core.NaturalityAxioms` | Multiscale naturality ↔ separated scales |
+| `NaturalityAxioms.weakNaturality_of_organizationAbstract` | `Core.NaturalityAxioms` | Naturality from abstract org separation |
+| `NaturalityFacts.naturality_adequacy_transport` | `Foundation.NaturalityFacts` | Adequacy transports along history maps |
+| `NaturalityFacts.naturality_phase_certificates_preserved` | `Foundation.NaturalityFacts` | Phase certificates preserved under weak naturality |
+| `StructuralSentenceNaturality.isStructuralV2_satisfies_weakPrinciples` | `Core.StructuralSentenceNaturality` | **v2** sentences satisfy weak sentence principles |
+| `StructuralSentenceNaturality.structuralV2_of_weakPrinciples` | `Core.StructuralSentenceNaturality` | Reverse: weak principles carve **v2** |
+| `StructuralSentenceNaturalityFacts.not_isRetroStructuralV2_natPhaseTagMem_initial` | `Foundation.StructuralSentenceNaturalityFacts` | `natPhaseTagMem initial` not retro-**v2** |
+| `StructuralSentenceNaturalityFacts.structuralV2_satisfies_weak_sentence_naturality` | `Foundation.StructuralSentenceNaturalityFacts` | Structural **v2** class satisfies weak naturality |
+| `StructuralSentenceNaturalityFacts.retroStructuralV2_satisfies_weak_sentence_naturality` | `Foundation.StructuralSentenceNaturalityFacts` | Retro **v2** instance satisfies weak naturality |
+| `StructuralSentenceNaturalityFacts.naturality_does_not_collapse_to_mentionBound` | `Foundation.StructuralSentenceNaturalityFacts` | Weak naturality ≠ mention-bound collapse |
+| `StructuralSentenceNaturalityFacts.naturality_preserves_strict_ascent_family` | `Foundation.StructuralSentenceNaturalityFacts` | Naturality-compatible families keep strict ascent |
+| `AdmissibilityNaturality.weakNaturality_of_signatureAdmissibleInterface` | `Ridge.AdmissibilityNaturality` | Signature-admissible ⇒ weak interface naturality |
+| `AdmissibilityNaturality.weakNaturality_preserves_crown_relevance` | `Ridge.AdmissibilityNaturality` | Weak naturality preserves crown-relevance linkage |
+| `AdmissibilityNaturality.weakNaturality_excludes_trivial_interface` | `Ridge.AdmissibilityNaturality` | Weak naturality forbids trivializing interfaces |
+| `AdmissibilityNaturality.not_rowSound_trivialAdmissibleInterface` | `Ridge.AdmissibilityNaturality` | Trivial interface not row-sound for signature |
+| `BroadTransfer.naturalClass_preserves_soundness` | `Ridge.BroadTransfer` | `ProvesAt` soundness on any natural instance |
+| `BroadTransfer.naturalClass_preserves_structural_ascent` | `Ridge.BroadTransfer` | Output-enum gap at `n` on aligned instances |
+| `BroadTransfer.naturalClass_preserves_future_defeat` | `Ridge.BroadTransfer` | Same as structural ascent (alias name) |
+| `BroadTransfer.naturalClass_preserves_nonfinality` | `Ridge.BroadTransfer` | `FutureDefeat` on numeric natural instance |
+| `BroadTransfer.futureDefeatAt` | `Ridge.BroadTransfer` | Stage-indexed strict gap packaging |
+| `BroadTransfer.futureDefeatBroadPoint` | `Ridge.BroadTransfer` | `BroadPoint` packaging for stage + instance |
+| `BroadTransfer.futureDefeatBroadPoint_eq` | `Ridge.BroadTransfer` | `futureDefeatBroadPoint` = `futureDefeatAt` |
+| `BroadTransfer.broad_transfer_of_generalized_crown` | `Ridge.BroadTransfer` | Broad transfer at every stage (two observation types) |
+| `BroadTransfer.multiple_nontrivially_distinct_instances` | `Ridge.BroadTransfer` | Distinct traces + nonempty natural class |
+| `BroadTransfer.crown_not_encoding_artifact_in_natural_class` | `Ridge.BroadTransfer` | Bool twins + gaps in natural class |
+| `UnboundedOrganization.weakNaturalOrganization_bounded_obstruction` | `Ridge.UnboundedOrganization` | Bounded natural org hits obstruction |
+| `UnboundedOrganization.finite_height_not_final_under_natural_conditions` | `Ridge.UnboundedOrganization` | Finite height ⇒ not final under naturality |
+| `UnboundedOrganization.unbounded_organization_required_for_full_future` | `Ridge.UnboundedOrganization` | Totality of future forces unbounded org |
+| `UnboundedOrganization.natural_no_final_organization_theorem` | `Ridge.UnboundedOrganization` | No final org package under natural bounds |
+| `UnboundedOrganization.forall_bounded_natural_orgs_fail_totality` | `Ridge.UnboundedOrganization` | All bounded heights fail totality |
+| `NaturalAntiClosure.weak_natural_conditions_imply_nonfinality_or_ascent` | `Ridge.NaturalAntiClosure` | Disjunctive inevitability under weak conditions |
+| `NaturalAntiClosure.sufficient_generativity_forces_no_final_closure` | `Ridge.NaturalAntiClosure` | Stronger generativity ⇒ no final closure |
+| `NaturalAntiClosure.natural_anti_closure_theorem` | `Ridge.NaturalAntiClosure` | Packaged anti-closure on natural numeric systems |
+| `NaturalAntiClosure.weak_natural_interface_obstruction` | `Ridge.NaturalAntiClosure` | Interface-level obstruction |
+| `NaturalAntiClosure.setup_dependence_alignments_bundled` | `Ridge.NaturalAntiClosure` | Alignment constraints bundled for transport |
+| `NaturalClassExamples.bool_true_false_trace_differ` | `Models.NaturalClassExamples` | Concrete `Bool` trace separation |
+| `NaturalClassExamples.two_carrier_shapes_inhabited` | `Models.NaturalClassExamples` | Two inhabited natural-instance shapes |
+
+`def` / `structure` packaging (not duplicated as `theorem` rows): `BroadTransferStatement`, `CrownEncodingStatement`, `BroadPoint`, `NaturalAdmissibleInstance`, `Core.NaturalOrganization` predicates as used by **SPEC_057**–**058**.
+
 ---
 
 ## Not achievable (literal universal forms)

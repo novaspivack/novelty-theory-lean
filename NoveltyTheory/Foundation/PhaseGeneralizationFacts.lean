@@ -220,16 +220,25 @@ theorem output_enum_carrier_embed_eq (C : CarrierSection X) (n : ℕ) (ψ : Sent
     subst hnx hL
     rfl
 
+/--
+Output-enum crown witness carries the same **strict `ProvesAt` step** across **every** numeric
+`CarrierSection` (`SPEC_056_NS3`): the proof is unchanged from the **`Bool × ℕ`** specialization.
+-/
+theorem carrier_outputEnum_gap_at (X : Type) (C : CarrierSection X) (n : ℕ) :
+    ProvesAtCarrier C (Nat.succ n) (sentenceCarrierEmbed C.embed (outputEnumCrownWitness n)) ∧
+      ¬ ProvesAtCarrier C n (sentenceCarrierEmbed C.embed (outputEnumCrownWitness n)) := by
+  refine And.intro ?_ ?_
+  · exact ⟨outputEnumCrownWitness n, rfl, (outputEnumCrownWitness_proves_succ_not_at n).1⟩
+  · rintro ⟨ψ, heq, hp⟩
+    rw [output_enum_carrier_embed_eq C n ψ heq] at hp
+    exact (outputEnumCrownWitness_proves_succ_not_at n).2 hp
+
 theorem general_phase_gap_at (n : ℕ) :
     ProvesAtCarrier (prodCarrierSection Bool) (Nat.succ n)
         (sentenceCarrierEmbed (prodCarrierSection Bool).embed (outputEnumCrownWitness n)) ∧
       ¬ ProvesAtCarrier (prodCarrierSection Bool) n
-        (sentenceCarrierEmbed (prodCarrierSection Bool).embed (outputEnumCrownWitness n)) := by
-  refine And.intro ?_ ?_
-  · exact ⟨outputEnumCrownWitness n, rfl, (outputEnumCrownWitness_proves_succ_not_at n).1⟩
-  · rintro ⟨ψ, heq, hp⟩
-    rw [output_enum_carrier_embed_eq (prodCarrierSection Bool) n ψ heq] at hp
-    exact (outputEnumCrownWitness_proves_succ_not_at n).2 hp
+        (sentenceCarrierEmbed (prodCarrierSection Bool).embed (outputEnumCrownWitness n)) :=
+  carrier_outputEnum_gap_at _ (prodCarrierSection Bool) n
 
 theorem exists_general_phase_provable_gap (n : ℕ) :
     ∃ φ : Sentence (Bool × ℕ),

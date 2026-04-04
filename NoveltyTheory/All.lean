@@ -18,12 +18,18 @@ import NoveltyTheory.Core.GeneralizedCarrier
 import NoveltyTheory.Core.ModalTemporalSyntax
 import NoveltyTheory.Core.Organization
 import NoveltyTheory.Core.OrganizationAbstract
+import NoveltyTheory.Core.NaturalityAxioms
+import NoveltyTheory.Core.StructuralSentenceNaturality
+import NoveltyTheory.Core.NaturalAdmissibleClass
+import NoveltyTheory.Core.NaturalOrganization
 import NoveltyTheory.Core.OrganizationV2
 import NoveltyTheory.Core.PhaseSyntaxGeneral
 import NoveltyTheory.Core.PhaseSyntaxPoly
 import NoveltyTheory.Core.SimulationVersusExplanationAbstract
 import NoveltyTheory.Foundation.Trajectory
 import NoveltyTheory.Foundation.ConservativeHistory
+import NoveltyTheory.Foundation.NaturalityFacts
+import NoveltyTheory.Foundation.StructuralSentenceNaturalityFacts
 import NoveltyTheory.Foundation.SentenceFacts
 import NoveltyTheory.Foundation.ProvabilityFacts
 import NoveltyTheory.Foundation.UpwardNecessity
@@ -43,6 +49,7 @@ import NoveltyTheory.Models.BoundedRegimeDiagonal
 import NoveltyTheory.Models.CarrierGeneralCrown
 import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.ClassTransferExamples
+import NoveltyTheory.Models.NaturalClassExamples
 import NoveltyTheory.Models.DupRegimeTower
 import NoveltyTheory.Models.GenCertPhase
 import NoveltyTheory.Models.InvariantTower
@@ -68,6 +75,10 @@ import NoveltyTheory.Ridge.OrganizationAbstractObstruction
 import NoveltyTheory.Ridge.OrganizationHeightObstruction
 import NoveltyTheory.Ridge.RetroStructuralGap
 import NoveltyTheory.Ridge.SignatureAdmissibleBundle
+import NoveltyTheory.Ridge.AdmissibilityNaturality
+import NoveltyTheory.Ridge.BroadTransfer
+import NoveltyTheory.Ridge.UnboundedOrganization
+import NoveltyTheory.Ridge.NaturalAntiClosure
 import NoveltyTheory.Summits.CausalExplanatorySeparation
 import NoveltyTheory.Summits.SummitPackages
 import NoveltyTheory.Summits.OrganizationAbstractSummit
@@ -85,6 +96,9 @@ import NoveltyTheory.Summits.OrganizationFrontierSummit
 import NoveltyTheory.Summits.FinalCrownPackage
 import NoveltyTheory.Summits.GeneralizedCrownTransferSummit
 import NoveltyTheory.Summits.GeneralizedFinalCrownPackage
+import NoveltyTheory.Summits.BroadTransferSummit
+import NoveltyTheory.Summits.UnboundedOrganizationSummit
+import NoveltyTheory.Summits.NaturalAntiClosureSummit
 import NoveltyTheory.Summits.RetroStructuralCrownSummit
 
 /-!

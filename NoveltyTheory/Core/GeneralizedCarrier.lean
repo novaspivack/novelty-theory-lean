@@ -34,6 +34,13 @@ def prodCarrierSection (α : Type) [Inhabited α] : CarrierSection (α × ℕ) w
   observe_embed := fun _ => rfl
   embed_injective := fun _ _ h => congr_arg Prod.snd h
 
+/-- Identity section on **`ℕ`**: embeddings are plain numerals (`SPEC_056_NS3`). -/
+def natIdentitySection : CarrierSection ℕ where
+  embed := id
+  observe := id
+  observe_embed := fun _ => rfl
+  embed_injective := Function.injective_id
+
 /-- Explicit **`true`** tag section (`SPEC_052` — avoids relying on `default : Bool`). -/
 def trueBoolPairSection : CarrierSection (Bool × ℕ) where
   embed n := (true, n)
