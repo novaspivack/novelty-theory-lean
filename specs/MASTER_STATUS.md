@@ -23,6 +23,8 @@
 
 **Cross-epic ordering + agent contract:** [`../QUEUE.md`](../QUEUE.md)
 
+**Crown deliverable:** **`SPEC_037_CR1`** (**`EPIC_009`**). **`EPIC_010`** is active in parallel for expressive/org extensions; see [`QUEUE.md`](../QUEUE.md) crown-milestone note for ordering.
+
 ---
 
 _Update this table when epic status changes; keep epic queues and **`QUEUE.md`** aligned._
