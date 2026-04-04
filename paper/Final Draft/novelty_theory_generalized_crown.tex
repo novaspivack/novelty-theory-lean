@@ -147,7 +147,7 @@ Fixed Causal Laws Without Final Explanatory Closure}
 
 \smallskip
 \noindent
-\textbf{Formal verification.} The mathematical claims reported here are backed by a Lean~4 library (\texttt{NoveltyTheory/}) containing \textbf{364} proved \texttt{theorem} declarations, with \textbf{zero} uses of \texttt{sorry} or \texttt{admit}. The library adds no ad hoc axioms; proofs rely on Lean's usual foundations (including propositional extensionality and quotient soundness, as in standard Mathlib-based mathematics) together with Mathlib imports.
+\textbf{Formal verification.} The theorem statements discussed here are machine-checked in a companion Lean~4 development. The scope of every formal claim is fixed by the cited declarations and their explicit hypotheses.
 
 \smallskip
 \noindent
@@ -165,12 +165,10 @@ Fixed Causal Laws Without Final Explanatory Closure}
 
 \noindent\textbf{MSC 2020:} 03B70, 03F30, 03A05, 68T27.
 
-\noindent\textbf{Code availability:} Lean~4 library \texttt{novelty-theory-lean} (\path{NoveltyTheory/}). Build: \texttt{lake build}. Summit certificates cited in the text are \texttt{sorry}-free in that source; \Cref{sec:witnesses-proofs} and \Cref{tab:crown-lean}--\Cref{tab:theorem-inventory} index statements and \lean{} names.
-
 \section{Premises, disagreement coordinates, and trust boundary}\label{sec:premises-novelty-crown}
 \begin{keybox}{Where disagreement can (and cannot) live}
 \textbf{Formal spine.}
-The generalized final crown package (six coordinated clauses), lower summits, obstructions, and naturality-aware transport are proved in \texttt{NoveltyTheory/} as cited; the development comprises \textbf{364} \texttt{theorem} declarations with \textbf{zero} \texttt{sorry} / \texttt{admit}, on Lean's standard foundations plus Mathlib (cf.\ abstract).
+The generalized final crown package (six coordinated clauses), lower summits, obstructions, and naturality-aware transport are proved in \texttt{NoveltyTheory/} as cited; for a full machine-checked audit trail see \Cref{tab:crown-lean}--\Cref{tab:theorem-inventory} and \Cref{sec:witnesses-proofs}.
 
 \medskip
 \textbf{Premise coordinates (for external readers).}
@@ -202,7 +200,7 @@ The thesis is not that laws fail, that causation fails, or that later phases are
 
 \smallskip
 \noindent
-\textbf{Lean backbone.} The formal counterpart is a single public library (import-closure under \texttt{NoveltyTheory/}) with \textbf{364} machine-checked theorems and \textbf{no proof gaps} (\texttt{sorry} / \texttt{admit} absent). Dependency is on Lean's standard logical infrastructure and Mathlib, not on project-local axioms.
+\textbf{Formal backbone.} The argument is paired with a machine-checked Lean~4 development whose cited declarations fix the exact formal scope of the claims proved here.
 
 \begin{center}
 \fbox{\begin{minipage}{0.92\linewidth}
@@ -304,7 +302,7 @@ What would be unsurprising is a world in which outputs merely outstrip a fixed v
 \textbf{4. Lawful self-transcendence with generalized transfer.} The architecture is neither anti-determinist nor merely rhetorical `emergence'; the flagship pattern survives transport beyond a single distinguished witness model.
 
 \medskip
-\textbf{5. Explicit quantifiers, wide transport.} Under the natural-admissibility predicates stated in \Cref{tab:strengthened-lean}, the same output-enum strict-gap architecture lifts to every aligned carrier in that class---not only the classical $\texttt{Bool}{\times}\mathbb{N}$ twin witness. Bounded natural organization cannot certify the full standard future ordering internally; packaged anti-closure holds on \texttt{NaturalNumericSystem} under the hypotheses named there (\Cref{sec:generalized-crown}). None of this universalizes baldly over all deterministic systems or raw interfaces.
+\textbf{5. Generalized transport under explicit natural hypotheses.} Beyond the witness-level crown, the same strict-gap architecture extends across aligned admissible carriers and supports bounded-organization obstruction and anti-closure results under the stated naturality predicates.
 \end{keybox}
 
 \noindent
@@ -336,7 +334,7 @@ The actual target is a much stronger conjunction. We want a finitely specified g
 
 It is not a theorem of mere output richness, brute infinitude, or observational unpredictability alone. It is a theorem of \emph{non-final explanation under fixed law}.
 
-That is why the project must be read as a theory of lawful self-transcendence. The center of gravity is not ``more happens than we can compress cheaply.'' It is: ``fixed lawful generation does not guarantee fixed final explanation.'' A single fixed generator can causally produce an infinite tower of phases and regimes such that none are uniformly collapsible into a fixed admissible interface, and later regimes can become necessary for truths about the generator itself.
+That is why the project must be read as a theory of lawful self-transcendence. The center of gravity is not ``more happens than we can compress cheaply.'' It is: ``fixed lawful generation does not guarantee fixed final explanation.'' A single fixed generator can causally produce an infinite tower of phases and regimes such that none are uniformly collapsible into a fixed explanatory interface of the relevant kind, and later regimes can become necessary for truths about the generator itself.
 
 \section{Causal generation versus explanatory reducibility}\label{sec:causal-vs-explanatory}
 
@@ -352,7 +350,7 @@ These are not the same relation---and treating them as identical is exactly how 
 To say that a phase is generated is a constructive or causal claim. To say that it is reducible to a fixed admissible regime is stronger: it requires structural adequacy without loss of the certified distinctions the theory cares about.
 
 \begin{definition}[Informal self-transcendence schema]
-A generator $G$ is self-transcending, in the core sense of the present framework, if there exists a sequence $(P_n,R_n)_{n\in\mathbb{N}}$ such that:
+A generator $G$ is self-transcending, in the core sense used here, if there exists a sequence $(P_n,R_n)_{n\in\mathbb{N}}$ such that:
 \[
 \forall n,\; \GeneratedBy(G,P_n),
 \quad
@@ -419,7 +417,7 @@ The successor regime $R_{n+1}$ must respect what $R_n$ already secured on the av
 
 \subsection{Irreducibility}
 
-At the same time, $R_{n+1}$ must not be a notational variant of $R_n$ for the new work at stake. There must be generated structure that $R_n$ cannot adequately treat while $R_{n+1}$ can. Irreducibility is the mathematical content of ``genuinely new explanatory structure'': not convenience, but loss of collapse into the prior admissible basis for the relevant claims.
+At the same time, $R_{n+1}$ must not be a notational variant of $R_n$ for the new work at stake. There must be generated structure that $R_n$ cannot adequately treat while $R_{n+1}$ can. Irreducibility is the mathematical content of ``genuinely new explanatory structure'': not convenience, but loss of collapse into the prior explanatory basis for the relevant claims.
 
 \subsection{Why this is paradigm shift, not metaphor}
 
@@ -440,7 +438,7 @@ Formally, a paradigm shift here is a transition from $R_n$ to $R_{n+1}$ over $H_
 
 \section{The first summit: fixed generation without fixed final explanation}\label{sec:first-summit}
 
-The first summit proves that the explanatory tower is never uniformly absorbed by a fixed admissible interface.
+The first summit proves that the explanatory tower is never uniformly absorbed by a fixed explanatory interface.
 
 \[
 \exists G\,\exists (P_n,R_n)_{n\in\mathbb{N}}\,
@@ -477,7 +475,7 @@ The significance of this theorem is not merely technical. It blocks a familiar e
 
 \section{The generalized final crown package}\label{sec:generalized-crown}
 
-The flagship mathematical export is not a scattered list of curiosities. It is the \textbf{generalized final crown}: a single articulated package in which the philosophical inversion is backed by a coordinated family of results. The generalized final crown package is the point at which the central philosophical thesis becomes fully theoremic. The earlier summit stack already establishes non-finality and ascent. The generalized crown shows that this is not a quirk of one witness, one encoding, or one carrier, but a transferable structural phenomenon. Read as one backbone rather than as isolated peaks, the package includes, in order of conceptual dependence:
+The flagship mathematical export is the \textbf{generalized final crown}: a coordinated theorem package in which the central philosophical inversion becomes fully formal. What the earlier summit stack establishes existentially, the generalized crown stabilizes across disciplined transport and scoped admissible structure. Read as one backbone rather than as isolated peaks, the package includes, in order of conceptual dependence:
 
 \begin{enumerate}[leftmargin=2em]
 \item \textbf{Generalized iterated structural ascent.} Strict proof-theoretic ascent for structurally certified sentences along the packaged regimes.
@@ -560,7 +558,7 @@ For witness systems, proof sketches, and \lean{} theorem anchors keyed to the cr
 
 If there is a single theoremic-philosophical center of gravity, it is here. The earlier summits establish that fixed lawful generation need not yield fixed final explanation. The present summit goes further: it shows that later generated regimes can become necessary, not merely for later phases, but for structural truths about the generator itself. \textbf{This is the inversion theorem.}
 
-The prior summits establish non-finality: no fixed admissible reducer closes the tower; no final internal theory of the relevant type settles the future story. What follows is the deeper inversion. Later generated explanatory regimes can become \emph{necessary} for structural truths about the generator itself. The causal order remains unchanged; what changes is explanatory dependence.
+The prior summits establish non-finality: no fixed reducer in the relevant class closes the tower; no final internal theory of the relevant type settles the future story. What follows is the deeper inversion. Later generated explanatory regimes can become \emph{necessary} for structural truths about the generator itself. The causal order remains unchanged; what changes is explanatory dependence.
 
 \medskip
 \noindent
@@ -601,14 +599,7 @@ Read verbally, the theorem says: for each stage there is a structural truth abou
 
 The claim is not about later outputs alone. It is about structural truths of the source process: the derivative becomes necessary for understanding the source.
 
-In the formalization, the schematic $\Phi_n$ can be taken concretely from the retro-structural family \texttt{histSeqUpto}\,$n$---a finite diagonal history of trace-equalities $(i,i)$ for $i<n+1$---which is \texttt{IsStructuralSentenceV2} and satisfies $\texttt{ProvesAt}\,(n{+}1)\,\Phi_n \land \neg\texttt{ProvesAt}\,n\,\Phi_n$, with certificates:
-\begin{itemize}[leftmargin=2em,itemsep=0.25em]
-\item \leanref{NoveltyTheory.Foundation.RetroStructuralTruthV2.histSeqUpto}
-\item \leanref{NoveltyTheory.Ridge.RetroStructuralGap.histSeqUpto\_proves\_succ\_not\_at}
-\end{itemize}
-Generator-anchored sentences such as \texttt{traceEq}\,$n\,n$ supply the ``truth about the counter'' side of the package alongside that ascent via
-
-\leanref{NoveltyTheory.Summits.GeneralizedFinalCrownPackage.generalized\_final\_crown\_generator\_truth\_family}.
+In the formalization, the schematic $\Phi_n$ can be taken concretely from the retro-structural family \texttt{histSeqUpto}\,$n$---a finite diagonal history of trace-equalities $(i,i)$ for $i<n+1$---which is \texttt{IsStructuralSentenceV2} and satisfies $\texttt{ProvesAt}\,(n{+}1)\,\Phi_n \land \neg\texttt{ProvesAt}\,n\,\Phi_n$. The named certificates for this family and for generator-anchored sentences such as \texttt{traceEq}\,$n\,n$ are recorded in \Cref{tab:crown-lean} and \Cref{sec:witnesses-proofs} (retro-structural family, strict gap at successor depth, generator-truth packaging).
 
 \begin{keybox}{The crown inversion}
 \textbf{Later generated explanatory regimes can become necessary for structural truths about the generator itself.}
@@ -625,7 +616,7 @@ Causal order is the forward structure of lawful production:
 \[
 s_0 \mapsto s_1 \mapsto s_2 \mapsto \cdots
 \]
-Explanatory order tracks where structural truths become expressible, adequate, or provable within admissible regimes. The two orders can diverge: a fact can be causally ``early'' while remaining explanatorily ``late.''
+Explanatory order tracks where structural truths become expressible, adequate, or provable within the theory's fixed explanatory regimes. The two orders can diverge: a fact can be causally ``early'' while remaining explanatorily ``late.''
 
 \medskip
 \noindent
@@ -656,11 +647,7 @@ R_n \not\vdash \Psi(P_{\le n})
 \Bigr].
 \]
 
-Retroactive structural revelation is therefore not an incidental byproduct of the theory. It is one of its deepest consequences. Explanation grows not only by extending into the future but by reorganizing the intelligibility of the past. Later regimes do not merely forecast what comes next; they can disclose what had already been there without yet being structurally sayable. The certified template sentences \texttt{histSeqUpto}\,$n$ are exactly of this ``initial segment made explicit'' form:
-\begin{itemize}[leftmargin=2em,itemsep=0.25em]
-\item \leanref{NoveltyTheory.Foundation.RetroStructuralTruthV2.histSeqUpto}
-\item \leanref{NoveltyTheory.Ridge.RetroStructuralGap.histSeqUpto\_proves\_succ\_not\_at}
-\end{itemize}
+Retroactive structural revelation is therefore not an incidental byproduct of the theory. It is one of its deepest consequences. Explanation grows not only by extending into the future but by reorganizing the intelligibility of the past. Later regimes do not merely forecast what comes next; they can disclose what had already been there without yet being structurally sayable. The certified template sentences \texttt{histSeqUpto}\,$n$ are exactly of this ``initial segment made explicit'' form; see \Cref{tab:crown-lean} and the retro discussion in \Cref{sec:witnesses-proofs}.
 
 \section{Why this is not chaos, not computational irreducibility, not emergence rhetoric, and not mere bookkeeping}\label{sec:comparisons}
 
@@ -684,7 +671,7 @@ Computational irreducibility concerns the absence of substantial shortcuts for c
 
 \subsection{Not generic emergence rhetoric}
 
-The framework does not rest on loose ``emergence,'' ``levels,'' or ``useful descriptions.'' It rests on admissible reductions, adequacy, conservative shifts, generator-anchored truths, and proof-theoretic ascent---where later structure can be mathematically necessary and not uniformly collapsible to any fixed prior admissible stance.
+The framework does not rest on loose ``emergence,'' ``levels,'' or ``useful descriptions.'' It rests on admissible reductions, adequacy, conservative shifts, generator-anchored truths, and proof-theoretic ascent---where later structure can be mathematically necessary and not uniformly collapsible to any fixed prior explanatory stance of the relevant class.
 
 \subsection{Not ``merely engineered'' admissibility}
 
@@ -733,7 +720,7 @@ A \textbf{naturality-aware} extension fixes weak principles linking adequacy acr
 \textbf{Audit habit.} Match any informal headline to a row in \Cref{tab:crown-lean}, \Cref{tab:strengthened-lean}, or \Cref{tab:theorem-inventory}.
 \end{keybox}
 
-The paper's mathematical claims are strong but sharply scoped. In the formalized models, there exist lawful generators with iterated structural ascent, failure of fixed final admissible explanatory closure, future defeat of terminality in the packaged sense, generator-anchored truth families, class transfer across a nontrivial admissible class (including concrete $\texttt{Bool}{\times}\mathbb{N}$ witnesses), and non-single-model-artifact results.
+The paper's mathematical claims are strong but sharply scoped. In the formalized models, there exist lawful generators with iterated structural ascent, failure of fixed final explanatory closure relative to the admissible class, future defeat of terminality in the packaged sense, generator-anchored truth families, class transfer across a nontrivial family of aligned carriers (including concrete $\texttt{Bool}{\times}\mathbb{N}$ witnesses), and non-single-model-artifact results.
 
 A further family of theorems (summarized in \Cref{tab:strengthened-lean}) gives \textbf{broad transfer} of the output-enum carrier gap for all aligned \texttt{NaturalAdmissibleInstance} values, \textbf{bounded natural organization} obstructions for the standard future predicate, and \textbf{natural anti-closure} on \texttt{NaturalNumericSystem}---each under the hypotheses named in the corresponding \lean{} declarations.
 
@@ -756,18 +743,18 @@ This boundary is not a retreat. It is the condition of the theory's strength. Th
 \textbf{4. Transfer, not a single encoding.} Class transfer and the naturality-aware block show the flagship gap pattern and companion obstructions are stable across aligned carriers and explicit natural hypotheses---not a trick of one hand-picked model (\Cref{sec:generalized-crown}, \Cref{tab:strengthened-lean}).
 
 \medskip
-\textbf{5. Honest quantifiers + machine proof.} Scope is exactly what the formal statements assert; the companion library supplies \textbf{364} \texttt{sorry}-free theorems for readers who audit claims against code (\Cref{tab:crown-lean}--\Cref{tab:theorem-inventory}).
+\textbf{5. Honest quantifiers + machine proof.} Scope is exactly what the formal statements assert; the companion development is machine-checked for readers who audit claims against code (\Cref{tab:crown-lean}--\Cref{tab:theorem-inventory}, \Cref{sec:witnesses-proofs}).
 \end{keybox}
 
 The hidden creed with which the argument began can no longer be treated as self-evident. Fixed law does not imply fixed final explanation.
 
 In the proved models, a single lawful generator can produce an infinite tower of phases and explanatory regimes while defeating every fixed admissible explanatory interface of the relevant class. The succession can be conservative without being reducible, historically preserving what came before while forcing genuinely new explanatory structure. At the crown, later generated regimes can become necessary for structural truths about the generator itself.
 
-That conjunction is the real result. It is stronger than complexity growth, stronger than mere unpredictability, stronger than loose emergence talk, and stronger than a one-step manifestation gap. It identifies a new structural possibility: exact generation without final explanatory closure.
+That conjunction is the paper's real theoremic contribution. It is stronger than complexity growth, stronger than mere unpredictability, stronger than loose emergence talk, and stronger than a one-step manifestation gap. It identifies a new structural possibility: exact generation without final explanatory closure.
 
 The philosophical consequence is equally clear. Explanation need not bottom out where causation bottoms out. A system may be fully lawful and fully generative without being finitely explanation-closed.
 
-If that possibility is genuinely formal, then a new mathematics begins here: not merely a mathematics of what fixed laws generate, but a mathematics of when fixed laws fail to be explanatorily final for what they themselves produce.
+If that possibility is genuinely formal, then a new mathematics begins here: not merely a mathematics of what fixed laws generate, but a mathematics of non-final explanation under fixed law.
 
 \medskip
 \noindent
@@ -777,6 +764,10 @@ Under the natural-admissibility hypotheses of \Cref{tab:strengthened-lean}, the 
 
 \section{Witness systems, proof sketches, and \lean{} anchors}\label{sec:witnesses-proofs}
 
+\medskip
+\noindent\textbf{Code availability.} Lean~4 library \texttt{novelty-theory-lean} (\path{NoveltyTheory/}). Build: \texttt{lake build}. Summit certificates cited in the main text are checked in that source (see tables below for declarations and \lean{} names).
+
+\medskip
 This appendix lists formal witnesses, the principal \lean{} certificates, and compact proof sketches. Gray \textbf{At a glance} blocks summarize each witness; blue \textbf{Proof sketch} boxes isolate one-line arguments where useful.
 
 \subsection{Generative systems and the canonical counter}
@@ -900,7 +891,7 @@ At $n{+}1$, every pair in the finite \texttt{histSeq} list has time index $<n{+}
   \leanref{NoveltyTheory.Ridge.OrganizationHeightObstruction.no\_finite\_adequate\_organization\_totalizes\_future}
 \end{itemize}
 
-\subsection{Historic $\texttt{Bool}{\times}\mathbb{N}$ carriers, alignment, and class transfer}
+\subsection{$\texttt{Bool}{\times}\mathbb{N}$ carriers, alignment, and class transfer}
 
 \begin{witnessmeta}
 \textbf{At a glance.}\quad Twin laws disagree on a \texttt{Bool} tag at every time, yet each twins the counter after embedding. The same output-enumeration gap survives on the carrier calculus (\texttt{ProvesAtCarrier}). This symmetric pair is the historic \emph{existential} witness for \textbf{class transfer} in \texttt{GeneralizedFinalCrownPackage}; broad transfer across \texttt{NaturalAdmissibleInstance} is the natural-class extension recorded below.
