@@ -2,7 +2,7 @@
 
 **Purpose:** Catalog of **public `theorem` / `lemma`** declarations under `NoveltyTheory/` (excluding Mathlib). Use this as the theorem index for papers and dependency maps. Proof hygiene defaults: [`MANIFEST.md`](../MANIFEST.md).
 
-**Verification (repo sync):** On **2026-04-04**, `NoveltyTheory/` contains **approximately 378** top-level `theorem` declarations (line-count style audit under `NoveltyTheory/`). `lake build` succeeds (825 jobs). Every `\leanref{NoveltyTheory.…}` in [`paper/Final Draft/novelty_theory_generalized_crown.tex`](../paper/Final%20Draft/novelty_theory_generalized_crown.tex) (**94** distinct qualified paths) resolves to an existing `.lean` file and declaration (check: [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py)). This markdown file remains a **curated** catalog—not a line-for-line dump of all 364 theorems.
+**Verification (repo sync):** On **2026-04-03**, `NoveltyTheory/` contains **422** `theorem` / `lemma` declarations by automated line parse (optional leading attributes; optional `private` / `protected`; see [`MANIFEST.md`](../MANIFEST.md)). `lake build` succeeds (**826** jobs). `sorry` / `admit`: **none**. Every `\leanref{NoveltyTheory.…}` in [`paper/Final Draft/novelty_theory_generalized_crown.tex`](../paper/Final%20Draft/novelty_theory_generalized_crown.tex) (**107** distinct qualified paths) resolves to an existing `.lean` file and declaration (check: [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py)). This markdown file remains a **curated** catalog—not an exhaustive listing of all 422 declarations.
 
 **Convention:** Names are given as in Lean (including namespaces where disambiguating, e.g. `CounterFact.geOutput_inj`).
 

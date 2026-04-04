@@ -61,4 +61,23 @@ Summits.GeneralizedFinalCrownPackage
 
 ---
 
-_Keep this DAG aligned with `NoveltyTheory/All.lean` and the **`EPIC_012`** spec table._
+## Minimality and numeric boundaries (post-`EPIC_014`)
+
+These lemmas **do not** extend the six-clause `GeneralizedFinalCrownPackage` chain; they **sharpen trust boundaries** (paradigm packaging, numeric trace, universal-quantifier failures):
+
+```
+Core.MinimalHypotheses (paradigmShift_iff_weak_and_conservative)
+  → Ridge.ConservativeSeparationCountermodel (countermodel_without_history_conservativity)
+Models.StratifiedFinality.FutureDefeat + Core.ClosureDichotomy.ExistsBoundedNumericTrace
+  ⇕ Ridge.ClosureCollapseBoundary.not_futureDefeat_iff_existsBoundedNumericTrace
+  → Ridge.ClosureCollapseBoundary.futureDefeat_or_existsBoundedNumericTrace
+Ridge.MinimalityCountermodels + Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction
+  → Summits.UniversalUpwardNecessitySummit (re-export)
+Summits.ClosureDichotomySummit (numeric packaging)
+```
+
+_For prose and inventory rows see [`docs/CLOSURE_DICHOTOMY_MAP.md`](CLOSURE_DICHOTOMY_MAP.md), [`docs/CANONICALITY_POSITIONING.md`](CANONICALITY_POSITIONING.md), [`docs/THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md)._
+
+---
+
+_Keep this DAG aligned with `NoveltyTheory/All.lean` and the **`EPIC_012`** spec table; add boundary arcs above when the minimality slice changes._

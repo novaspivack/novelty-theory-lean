@@ -7,6 +7,8 @@
 | **Toolchain** | `leanprover/lean4:v4.29.0-rc6` ([`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)); Mathlib pin `v4.29.0-rc6` (see [`lakefile.lean`](lakefile.lean), aligned with `ugp-lean`) |
 | **`sorry` / `admit`** | None in default library |
 | **Axioms** | None beyond Mathlib |
+| **Theorem / lemma count** | **422** declarations in [`NoveltyTheory/`](NoveltyTheory/) (line parse: optional attributes, optional `private`/`protected`, leading `theorem`/`lemma`); audited **2026-04-03** |
+| **Vacuity / strength audit** | **Separation / obstructions:** `Ridge.ConservativeSeparationCountermodel`, `Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction`, `Ridge.ClosureCollapseBoundary` (numeric dichotomy) are **substantive** counterwitnesses or equivalences. **Intentionally vacuous corners** (documented in-module): `Core.Reduction.reducible_of_isEmpty` (empty later description type); definitional normal forms in `Ridge.ArchitectureRepresentation` (`rfl`-level). *Note:* many summit lemmas are `rfl` re-exports of deeper strict-gap theorems; the non-trivial mathematics remains in the Models/Foundation/Ridge proof layers cited by those exports. |
 | **Lake layout** | Root module [`NoveltyTheory.lean`](NoveltyTheory.lean) + `lean_lib «NoveltyTheory»` ([`lakefile.lean`](lakefile.lean)); aggregate [`NoveltyTheory/All.lean`](NoveltyTheory/All.lean); shim [`NoveltyTheory/Basic.lean`](NoveltyTheory/Basic.lean) imports `All` |
 
 ## Module map (theory tranche)

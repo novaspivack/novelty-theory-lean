@@ -46,6 +46,10 @@ State **near the front** (the skeleton already has Section “Premises / trust b
 
 Positive theorems quantify over **scoped** predicates and **constructed** classes (`Bool` tag pair, bounded admissible organization, …).
 
+- Universal `FutureDefeat` over **all** `GenerativeSystem S ℕ`: **false** (`Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction`).
+- Packaged `ParadigmShift` without `ConservativeOver` on the same history: **not** implied by weak-step conjuncts alone; equivalence and separation witness in `Core.MinimalHypotheses` / `Ridge.ConservativeSeparationCountermodel`.
+- On numeric observation type, ¬`FutureDefeat` ↔ uniformly bounded trace (`Ridge.ClosureCollapseBoundary`).
+
 ---
 
 ## 4. Three levels (must stay separated in prose)
