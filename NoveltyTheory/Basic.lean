@@ -1,10 +1,10 @@
-import Mathlib.Tactic
+import NoveltyTheory.All
 
 /-!
-# Novelty theory — Basic
+# Basic — compatibility shim
 
-Lean 4 library scaffold for formal work on novelty theory. Extend modules and
-proofs per active specs under `specs/INCOMPLETE/IN-PROCESS/`.
+The default Lake root is [`NoveltyTheory.All`](NoveltyTheory/All.lean). This module re-exports it
+for older links and smoke tests.
 -/
 
-theorem scaffold_truth : True := trivial
+theorem library_root_import_ok : True := trivial

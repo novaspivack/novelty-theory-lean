@@ -7,10 +7,18 @@
 
 ## Clone and build
 
+**Prefer Mathlib oleans** (avoids compiling Mathlib locally):
+
 ```bash
 cd /path/to/novelty-theory-lean
+lake exe cache get   # Azure Mathlib cache; re-run after `lake update` / toolchain bump
 lake build
 ```
+
+If you skip `cache get` and have never built Mathlib here, `lake build` may compile Mathlib for a long time and heat the machine.
+Do **not** run `lake clean` unless you intend to wipe caches and pay that cost again.
+
+Layout note: the Lake root module is **`NoveltyTheory.lean`** at the repo root (same idea as `UgpLean.lean` in **`ugp-lean`**); the library body is under **`NoveltyTheory/`**.
 
 Elan reads **`lean-toolchain`** automatically when you run `lake` from this directory.
 

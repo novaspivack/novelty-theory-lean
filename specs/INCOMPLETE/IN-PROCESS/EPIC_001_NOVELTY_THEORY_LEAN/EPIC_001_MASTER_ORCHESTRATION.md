@@ -20,14 +20,14 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | Phase 0 — Repository bootstrap | ✅ | **SPEC_001_ST1** (initial commit) |
-| Phase 1 — Core theory modules | ⬜ | _Add specs as domains are defined_ |
+| Phase 1 — Core theory modules | ⬜ | Owned by [`EPIC_002_SELF_TRANSCENDING_GENERATORS`](../EPIC_002_SELF_TRANSCENDING_GENERATORS/EPIC_002_MASTER_ORCHESTRATION.md); bootstrap epic stays toolchain + manifest |
 
 ## Queue — ordered next steps
 
 | # | Task | Spec / pointers | Status |
 |---|------|------------------|--------|
 | 1 | Satisfy **SPEC_001_ST1** (Lake, manifest, docs) | [SPEC_001_ST1_REPOSITORY_BOOTSTRAP.md](SPEC_001_ST1_REPOSITORY_BOOTSTRAP.md) | Done |
-| 2 | Add first mathematical specs and modules for novelty theory | _TBD `SPEC_002_*`_ | Open |
+| 2 | Mathematical development | [EPIC_002_MASTER_ORCHESTRATION.md](../EPIC_002_SELF_TRANSCENDING_GENERATORS/EPIC_002_MASTER_ORCHESTRATION.md) — **`SPEC_003_RCT`** onward | Open |
 
 ## Cross-links
 

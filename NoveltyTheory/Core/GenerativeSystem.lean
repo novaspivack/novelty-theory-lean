@@ -1,0 +1,62 @@
+import Mathlib.Data.Set.Basic
+import Mathlib.Logic.Function.Iterate
+
+/-!
+# Generative systems (`SPEC_004_GSY`)
+
+Deterministic discrete-time generator `G = (S, s₀, τ, out)` and emitted trace.
+-/
+
+namespace NoveltyTheory
+
+namespace Core
+
+universe u v
+
+structure GenerativeSystem (S X : Type u) where
+  /-- Initial state. -/
+  s0 : S
+  /-- Single-step transition. -/
+  tau : S → S
+  /-- Observable output. -/
+  out : S → X
+
+namespace GenerativeSystem
+
+variable {S X : Type u}
+
+/-- State after `n` steps. -/
+def step (G : GenerativeSystem S X) (n : ℕ) : S :=
+  (G.tau)^[n] G.s0
+
+/-- Observed output at time `n`. -/
+def trace (G : GenerativeSystem S X) (n : ℕ) : X :=
+  G.out (G.step n)
+
+/-- Outputs that appear somewhere on the trajectory. -/
+def reachSet (G : GenerativeSystem S X) : Set X :=
+  Set.range (G.trace)
+
+@[simp] theorem step_zero (G : GenerativeSystem S X) : G.step 0 = G.s0 := by
+  simp [step]
+
+theorem step_succ (G : GenerativeSystem S X) (n : ℕ) :
+    G.step (n + 1) = G.tau (G.step n) := by
+  simp [step, Function.iterate_succ_apply']
+
+@[simp] theorem trace_zero (G : GenerativeSystem S X) : G.trace 0 = G.out G.s0 := by
+  simp [trace, step_zero]
+
+theorem trace_succ (G : GenerativeSystem S X) (n : ℕ) :
+    G.trace (n + 1) = G.out (G.tau (G.step n)) := by
+  simp [trace, step_succ]
+
+theorem mem_reachSet_iff (G : GenerativeSystem S X) (x : X) :
+    x ∈ G.reachSet ↔ ∃ n : ℕ, G.trace n = x :=
+  Set.mem_range
+
+end GenerativeSystem
+
+end Core
+
+end NoveltyTheory

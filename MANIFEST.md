@@ -1,12 +1,25 @@
 # Artifact manifest — novelty-theory-lean
 
-**Purpose:** Track proof hygiene and known gaps for this library (see [`CODING_PROTOCOLS.md`](CODING_PROTOCOLS.md) — *Proof quality (Lean)*).
+**Purpose:** Track Lean proof hygiene and known gaps (see [`CODING_PROTOCOLS.md`](CODING_PROTOCOLS.md) — *Proof quality (Lean)*).
 
 | Item | Status |
 |------|--------|
-| **Toolchain** | `leanprover/lean4:v4.29.0-rc6` — see [`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md) |
-| **`sorry` / `admit`** | None intended in committed code; search before release |
+| **Toolchain** | `leanprover/lean4:v4.29.0-rc6` ([`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)); Mathlib pin `v4.29.0-rc6` (see [`lakefile.lean`](lakefile.lean), aligned with `ugp-lean`) |
+| **`sorry` / `admit`** | None in default library |
 | **Axioms** | None beyond Mathlib |
-| **Default target** | Lake library `NoveltyTheory` (`NoveltyTheory/Basic.lean`) |
+| **Lake layout** | Root module [`NoveltyTheory.lean`](NoveltyTheory.lean) + `lean_lib «NoveltyTheory»` ([`lakefile.lean`](lakefile.lean)); shim [`NoveltyTheory/Basic.lean`](NoveltyTheory/Basic.lean) imports `All` |
 
-_Update this file whenever the proof footprint or known gaps change._
+## Module map (theory tranche)
+
+| Layer | Path |
+|--------|------|
+| Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains` |
+| Foundation | `NoveltyTheory/Foundation/` — trajectory and conservative-history lemmas |
+| Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
+| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C), `ReducerDiagonal` (B), `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase` |
+| Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment` |
+| Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages` |
+
+**Headline index:** [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md)
+
+_Update this file whenever the proof footprint, axioms, or module graph changes._
