@@ -30,7 +30,7 @@ Separate systems that admit **final explanatory closure** from those that cannot
 - `noncollapse_forces_nonfinality`
 - `closure_dichotomy_for_natural_class`
 
-## First landed lemma (numeric trace; `EPIC_014` open)
+## First landed lemma (numeric trace; epic scope for `SPEC_062`)
 
 `FutureDefeat G ∨ (∃ B, ∀ t, G.trace t ≤ B)` — **unbounded output recurrence** vs **uniformly bounded observable trace** (`Ridge/ClosureCollapseBoundary.lean`). This is a **sharp boundary** at the **numeric trace** layer, not the full crown package.
 
@@ -41,4 +41,4 @@ Separate systems that admit **final explanatory closure** from those that cannot
 
 ## Status
 
-**In progress** — `Ridge.ClosureCollapseBoundary` proves `not_futureDefeat_iff_existsBoundedNumericTrace` and `futureDefeat_or_existsBoundedNumericTrace` (summit: `Summits.ClosureDichotomySummit`). Full **regime-level** closure \(\leftrightarrow\) collapse for packaged explanatory finality **open**.
+**Closed for epic scope (numeric trace boundary)** — `Ridge.ClosureCollapseBoundary` proves `not_futureDefeat_iff_existsBoundedNumericTrace` and `futureDefeat_or_existsBoundedNumericTrace` (summit: `Summits.ClosureDichotomySummit`). **Regime-level** packaged finality \(\leftrightarrow\) collapse (**not** claimed); further lift is outside **`EPIC_014`** unless a new spec is opened.

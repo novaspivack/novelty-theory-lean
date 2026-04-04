@@ -6,7 +6,7 @@
 
 **Depends on:** **`EPIC_011`–`EPIC_013` complete** (crown completion, generalized crown, naturality / broad transfer / anti-closure); base theorems remain the floor.
 
-**Status:** **In progress** — **`SPEC_060_CMI1`** opened (minimality audit + countermodel layer); **`SPEC_061`–`SPEC_064`** queued.
+**Status:** **Complete** — **`SPEC_060_CMI1`–`SPEC_064_CMI5`** closed at stated boundaries (numeric dichotomy + conservative separation + universal `FutureDefeat` obstruction + earned paper/inventory rows).
 
 ---
 
@@ -75,4 +75,4 @@ Prefer **C** when full **A** is unreachable.
 
 ---
 
-_Last updated: EPIC_014 scaffold + Phase A open (2026-04-04)._
+_Last updated: EPIC_014 closed (2026-04-04)._

@@ -1,21 +1,19 @@
 # Canonicality and inevitability — positioning (EPIC_014)
 
-**Status:** **In progress** — do **not** upgrade public paper headlines on this document alone.
+**Status:** **`EPIC_014` closed** at the boundaries recorded here and in [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md).
 
-## What is landed (initial pass)
+## What is landed (`EPIC_014`)
 
-- **Minimality / weak vs packaged paradigm step:** `Core.MinimalHypotheses` — conservativity is **definitionally** equivalent to the extra field in `ParadigmShift` once weak witness conjuncts are fixed.
-- **Numeric collapse boundary:** `Ridge.ClosureCollapseBoundary` — `FutureDefeat` is **equivalent** to **non-**uniform boundedness of the numeric trace; hence a **true disjunction** `FutureDefeat ∨ ExistsBoundedNumericTrace` on `X = ℕ`.
+- **Minimality / weak vs packaged paradigm step:** `Core.MinimalHypotheses` — `ParadigmShift` ↔ `WeakParadigmStep` ∧ `ConservativeOver`. **Separation witness:** `Ridge.ConservativeSeparationCountermodel`.
+- **Numeric collapse boundary:** `Ridge.ClosureCollapseBoundary` — `FutureDefeat` ↔ **non-**uniform boundedness of the numeric trace; disjunction on `X = ℕ`.
 - **Counter-toys:** `Ridge.MinimalityCountermodels` — constant / bounded traces obstruct `FutureDefeat`.
-- **Architecture hook:** `Core.WeakExplanatoryArchitecture` + `Foundation.CanonicalityFacts` — minimal generator–regime bundle; representation theorems are **queued** under **`SPEC_061_CMI2`**.
-- **Upward necessity:** witness-level strict gap remains in `RetroStructuralGap`; universal `∀ G` form is **not** claimed — see `Ridge.UniversalUpwardNecessity`.
+- **Architecture normal form:** `Ridge.ArchitectureRepresentation` — `WeakExplanatoryArchitecture` is definitionally `weakArchitectureOf G R`; vacuous `Reducible` when later `Desc` is empty (`Core.Reduction.reducible_of_isEmpty`).
+- **Universal upward necessity:** **refuted** at the numeric layer — `Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction`. Witness-level retro gap still navigated by `exhibited_strict_retro_gap`.
 
-## What remains (honest queue)
+## What remains (outside this epic)
 
-- **`SPEC_061`:** Non-trivial representation / embedding into the structural sentence and admissibility tower (not `sameShape` identity).
-- **`SPEC_062`:** Lift numeric dichotomy to **full explanatory finality** predicates without tautological collapse conditions.
-- **`SPEC_063`:** Universal upward necessity **or** formal obstruction certificate.
-- **`SPEC_064`:** Paper / companion LaTeX — **blocked** until the above sharpenings exist.
+- **Richer representation:** non-vacuous embedding of general weak architectures into the full structural-sentence / admissibility tower (open research track).
+- **Lifted closure dichotomy:** packaged explanatory finality ↔ collapse beyond the numeric trace fragment (`SPEC_062` scope note in spec).
 
 ## Trust boundary
 

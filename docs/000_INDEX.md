@@ -32,7 +32,7 @@
 | [GENERALIZED_CROWN_DEPENDENCY_MAP.md](GENERALIZED_CROWN_DEPENDENCY_MAP.md) | Dependency DAG for **`EPIC_012`** (`SPEC_048_GC1`–`SPEC_053_GC6`) |
 | [STRENGTHENED_CLAIM_SURFACE.md](STRENGTHENED_CLAIM_SURFACE.md) | Claim ↔ Lean table + trust boundary for **`EPIC_013`** (naturality / broad transfer / anti-closure) |
 | [STRENGTHENED_DEPENDENCY_MAP.md](STRENGTHENED_DEPENDENCY_MAP.md) | Import / summit DAG for **`EPIC_013`** modules |
-| [CANONICALITY_POSITIONING.md](CANONICALITY_POSITIONING.md) | Claim ledger for **`EPIC_014`** (canonicality / minimality / inevitability; in progress) |
+| [CANONICALITY_POSITIONING.md](CANONICALITY_POSITIONING.md) | Claim ledger for **`EPIC_014`** (canonicality / minimality / inevitability; epic complete) |
 | [CLOSURE_DICHOTOMY_MAP.md](CLOSURE_DICHOTOMY_MAP.md) | Numeric `FutureDefeat` ↔ bounded-trace boundary + open lifts (**`EPIC_014`**) |
 | [000.1_AI_CODING_BEST_PRACTICES.md](000.1_AI_CODING_BEST_PRACTICES.md) | Optional AI/agent workflow notes |
 | [005_TODO_REGISTRY.md](005_TODO_REGISTRY.md) | Discrete TODOs tied to code locations |

@@ -84,6 +84,7 @@ import NoveltyTheory.Ridge.BroadTransfer
 import NoveltyTheory.Ridge.UnboundedOrganization
 import NoveltyTheory.Ridge.NaturalAntiClosure
 import NoveltyTheory.Ridge.MinimalityCountermodels
+import NoveltyTheory.Ridge.ConservativeSeparationCountermodel
 import NoveltyTheory.Ridge.ClosureCollapseBoundary
 import NoveltyTheory.Ridge.ArchitectureRepresentation
 import NoveltyTheory.Ridge.UniversalUpwardNecessity

@@ -23,7 +23,7 @@ This document tracks **which assumptions are load-bearing** for flagship theorem
 
 | Component | Role | Evidence |
 |-----------|------|----------|
-| `ConservativeOver H R R'` | **N** for **this** packaged definition | `MinimalHypotheses.paradigmShift_iff_weak_and_conservative`: `ParadigmShift` \(\Leftrightarrow\) `WeakParadigmStep` \(\land\) conservativity. Dropping conservativity leaves a **distinct** weak notion not equivalent to `ParadigmShift`. |
+| `ConservativeOver H R R'` | **N** for **this** packaged definition | `MinimalHypotheses.paradigmShift_iff_weak_and_conservative`: `ParadigmShift` \(\Leftrightarrow\) `WeakParadigmStep` \(\land\) conservativity. **Concrete witness:** `Ridge.ConservativeSeparationCountermodel.countermodel_without_history_conservativity` — inhabited `WeakParadigmStep` with **no** `ConservativeOver` on the same history (singleton regimes on `phaseSingleton 0/1`). |
 | `prior_inadequate` / `later_adequate` / `not_reducible_back` | **N** for shift **content** | These are **primitive** conjuncts in both weak and strong packages; trivializing them collapses the phenomenon in the intended reading. |
 
 ## Output-enumeration / crown witness (`Models.OutputEnumCrownFamily`)
@@ -46,4 +46,4 @@ When this file lists **N** or **W**, the same change must add or update a **Lean
 
 ---
 
-_Last updated: EPIC_014 Phase A start._
+_Last updated: EPIC_014 — conservative separation countermodel recorded (`ConservativeSeparationCountermodel`)._

@@ -4,7 +4,7 @@
 
 | Epic / initiative | Folder | Owner / focus | Next queue item |
 |-------------------|--------|---------------|-----------------|
-| Canonicality / minimality / inevitability | [`EPIC_014_...`](INCOMPLETE/IN-PROCESS/EPIC_014_CANONICALITY_MINIMALITY_AND_INEVITABILITY/EPIC_014_MASTER_ORCHESTRATION.md) | Near-necessity, representation, closure dichotomy, universal upward attempt | **`SPEC_060_CMI1`** extended → **`SPEC_061`–`SPEC_063`** |
+| Canonicality / minimality / inevitability | [`EPIC_014_...`](INCOMPLETE/IN-PROCESS/EPIC_014_CANONICALITY_MINIMALITY_AND_INEVITABILITY/EPIC_014_MASTER_ORCHESTRATION.md) | Numeric dichotomy, conservative separation, `FutureDefeat` obstruction, paper/inventory | **`SPEC_060_CMI1`–`SPEC_064_CMI5` complete** |
 
 ## Deferred
 

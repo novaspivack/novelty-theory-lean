@@ -424,11 +424,14 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 
 `def` / `structure` packaging (not duplicated as `theorem` rows): `BroadTransferStatement`, `CrownEncodingStatement`, `BroadPoint`, `NaturalAdmissibleInstance`, `Core.NaturalOrganization` predicates as used by **SPEC_057**–**058**.
 
-### Canonicality, minimality, closure boundary (`EPIC_014` — `SPEC_060_CMI1`–`SPEC_063_CMI4` partial)
+### Canonicality, minimality, closure boundary (`EPIC_014` — `SPEC_060_CMI1`–`SPEC_063_CMI4`)
 
 | Declaration | Module | Role |
 |-------------|--------|------|
 | `MinimalHypotheses.paradigmShift_iff_weak_and_conservative` | `Core.MinimalHypotheses` | `ParadigmShift` ↔ weak step ∧ history conservativity |
+| `ConservativeSeparationCountermodel.countermodel_without_history_conservativity` | `Ridge.ConservativeSeparationCountermodel` | Weak paradigm step without `ConservativeOver` (numeric singleton phases) |
+| `ConservativeSeparationCountermodel.countermodel_without_packaged_paradigmShift` | `Ridge.ConservativeSeparationCountermodel` | Same witness: not a packaged `ParadigmShift` |
+| `Reduction.reducible_of_isEmpty` | `Core.Reduction` | Later regime with `IsEmpty Desc` ⇒ vacuous backward `Reducible` |
 | `ClosureDichotomy.BoundedNumericTrace` | `Core.ClosureDichotomy` | Uniform output bound (collapse predicate fragment) |
 | `ClosureDichotomy.ExistsBoundedNumericTrace` | `Core.ClosureDichotomy` | ∃ bound majorizing all numeric observations |
 | `CanonicalityFacts.weakArchitectureOf` | `Foundation.CanonicalityFacts` | Bundles `GenerativeSystem` + regime family |
@@ -441,11 +444,16 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `ClosureCollapseBoundary.collapse_bounded_trace_implies_not_futureDefeat` | `Ridge.ClosureCollapseBoundary` | Collapse \(\Rightarrow \neg\) unbounded-rise predicate |
 | `ClosureCollapseBoundary.noncollapse_futureDefeat_of_unbounded` | `Ridge.ClosureCollapseBoundary` | `FutureDefeat` \(\Rightarrow\) no uniform bound |
 | `ClosureCollapseBoundary.minimal_assumption_barrier_for_crown` | `Ridge.ClosureCollapseBoundary` | **Alias** name for the numeric dichotomy (`SPEC_060` crosswalk) |
+| `ArchitectureRepresentation.weak_explanatory_architecture_induces_generator_regime_scheme` | `Ridge.ArchitectureRepresentation` | Weak architecture = `weakArchitectureOf G R` (existential witness) |
+| `ArchitectureRepresentation.canonical_representation_of_explanatory_architecture` | `Ridge.ArchitectureRepresentation` | Definitional normal form for `WeakExplanatoryArchitecture` |
+| `ArchitectureRepresentation.every_adequate_account_instantiates_reduction_layer_on_empty_later_desc` | `Ridge.ArchitectureRepresentation` | Vacuous `Reducible` when later `Desc` is empty |
 | `ArchitectureRepresentation.sameShape_id` | `Ridge.ArchitectureRepresentation` | Identity on weak architectures (representation hook) |
+| `UniversalUpwardNecessity.upward_necessity_universal_obstruction` | `Ridge.UniversalUpwardNecessity` | \(\neg\forall G,\) `FutureDefeat G` (constant numeric trace counterexample) |
 | `UniversalUpwardNecessity.exhibited_strict_retro_gap` | `Ridge.UniversalUpwardNecessity` | Navigator to `histSeqUpto` strict gap |
 | `ClosureDichotomySummit.closure_dichotomy_numeric_trace` | `Summits.ClosureDichotomySummit` | Summit re-export: numeric dichotomy |
 | `ClosureDichotomySummit.finality_boundary_iff_bounded` | `Summits.ClosureDichotomySummit` | Summit re-export: \(\neg\) `FutureDefeat` iff bounded |
 | `UniversalUpwardNecessitySummit.exhibited_strict_retro_gap` | `Summits.UniversalUpwardNecessitySummit` | Summit navigator for retro gap |
+| `UniversalUpwardNecessitySummit.upward_necessity_universal_obstruction` | `Summits.UniversalUpwardNecessitySummit` | Summit: numeric universal `FutureDefeat` obstruction |
 
 `def` / `structure`: `Core.WeakParadigmStep`, `Core.WeakExplanatoryArchitecture`, `ArchitectureRepresentation.sameShape`.
 
@@ -454,6 +462,8 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 ## Not achievable (literal universal forms)
 
 A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted** by `trivialAdmissibleInterface` / `trivialInterface_rows_claim_everything`. An **infinite paradigm chain** for **every** `RegimeFamilySingletonWithin` family is **refuted** by `emptyRegime` / `not_paradigmShiftSteps_empty_tower`. Honest quantification uses **`SignatureAdmissibleInterface`** or explicit **`RowSoundForSignature`**.
+
+Universal **`FutureDefeat`** over **all** `GenerativeSystem S ℕ` is **refuted** by `UniversalUpwardNecessity.upward_necessity_universal_obstruction` (constant observable trace).
 
 ---
 

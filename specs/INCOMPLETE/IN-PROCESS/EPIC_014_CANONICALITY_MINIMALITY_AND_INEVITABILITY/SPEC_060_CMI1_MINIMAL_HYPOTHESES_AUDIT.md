@@ -37,4 +37,4 @@ Prose-only “minimality” without `theorem` / `lemma` or explicit counterexamp
 
 ## Status
 
-**In progress (Phase A v1 shipped)** — [`MINIMALITY_AUDIT.md`](../../../../NoveltyTheory/docs/MINIMALITY_AUDIT.md), `WeakParadigmStep`, `paradigmShift_iff_weak_and_conservative`, numeric countermodels (`FutureDefeat` failure), and `minimal_assumption_barrier_for_crown` (numeric dichotomy) are in-tree. Remaining: additional summit-specific weakenings; concrete **`countermodel_without_history_conservativity`** witness (see [`docs/005_TODO_REGISTRY.md`](../../../../docs/005_TODO_REGISTRY.md) **EPIC014-T1**).
+**Complete (Phase A v2)** — [`MINIMALITY_AUDIT.md`](../../../../NoveltyTheory/docs/MINIMALITY_AUDIT.md), `WeakParadigmStep`, `paradigmShift_iff_weak_and_conservative`, numeric countermodels (`FutureDefeat` failure), `minimal_assumption_barrier_for_crown` (numeric dichotomy), and concrete **`Ridge.ConservativeSeparationCountermodel.countermodel_without_history_conservativity`**. Optional stretch: named summit-specific weakenings (`summit_nonfinality_under_weakened_assumptions`, `crown_ascent_under_weakened_ascent`).

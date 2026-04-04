@@ -433,6 +433,13 @@ Formally, a paradigm shift here is a transition from $R_n$ to $R_{n+1}$ over $H_
 \item the new regime is not reducible to the old one with respect to the relevant structural content.
 \end{enumerate}
 
+\begin{remark}[Minimality of conservativity in the packaged definition]
+In the library, the sealed \texttt{ParadigmShift} record is equivalent to a \emph{weak} paradigm step together with
+\texttt{ConservativeOver} on the same history (\leanref{NoveltyTheory.Core.MinimalHypotheses.paradigmShift\_iff\_weak\_and\_conservative}).
+There are regimes and histories with the weak conjuncts but \emph{without} conservativity, hence without a packaged shift
+(\leanref{NoveltyTheory.Ridge.ConservativeSeparationCountermodel.countermodel\_without\_history\_conservativity}).
+\end{remark}
+
 \section{The first summit: fixed generation without explanatory terminality}\label{sec:first-summit}
 
 The first summit proves that the explanatory tower is never uniformly absorbed by any fixed admissible explanatory interface.
@@ -711,7 +718,7 @@ A \textbf{naturality-aware} extension fixes weak principles linking adequacy acr
 \textbf{Inside scope (formal).} Packaged lawful generators with iterated structural ascent, failure of fixed final admissible closure, class transfer, generator-truth alignment, naturality-aware transport under the predicates named in \Cref{tab:strengthened-lean}.
 
 \medskip
-\textbf{Outside scope.} ``Every deterministic system,'' backward causation, universal raw-interface diagonal, infinite paradigm tower for every regime family---unless a cited lemma states otherwise.
+\textbf{Outside scope.} ``Every deterministic system,'' backward causation, universal raw-interface diagonal, infinite paradigm tower for every regime family, universal \texttt{FutureDefeat} over all lawful numeric generators---unless a cited lemma states otherwise (\leanref{NoveltyTheory.Ridge.UniversalUpwardNecessity.upward\_necessity\_universal\_obstruction}).
 
 \medskip
 \textbf{Audit habit.} Match any informal headline to a row in \Cref{tab:crown-lean}, \Cref{tab:strengthened-lean}, or \Cref{tab:theorem-inventory}.
@@ -873,6 +880,12 @@ At $n{+}1$, every pair in the finite \texttt{histSeq} list has time index $<n{+}
   \item \leanref{NoveltyTheory.Models.StratifiedFinality.natCounter\_futureDefeat}
   \item Uses trace: \leanref{NoveltyTheory.Models.SignatureTower.natCounter\_trace}
   \end{itemize}
+\item \textbf{Sharp numeric boundary (no extra crown assumptions).}\quad
+  On observation type $\mathbb{N}$, failure of \texttt{FutureDefeat} is equivalent to a uniformly bounded numeric trace; dichotomy:
+  \leanref{NoveltyTheory.Ridge.ClosureCollapseBoundary.futureDefeat\_or\_existsBoundedNumericTrace}.
+\item \textbf{Not universal over all generators.}\quad
+  Constant observable output obstructs \texttt{FutureDefeat} for a lawful system on $\mathbb{N}$; hence
+  \leanref{NoveltyTheory.Ridge.UniversalUpwardNecessity.upward\_necessity\_universal\_obstruction}.
 \end{itemize}
 
 \subsection{No fixed structural stratum (organization height)}

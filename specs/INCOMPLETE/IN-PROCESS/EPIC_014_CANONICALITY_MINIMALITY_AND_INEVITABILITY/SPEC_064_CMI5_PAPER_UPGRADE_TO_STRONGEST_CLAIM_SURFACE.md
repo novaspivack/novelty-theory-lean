@@ -11,11 +11,9 @@
 
 | Path | Role |
 |------|------|
-| [`paper/Self_Transcending_Generators_Canonicality.tex`](../../../../paper/Self_Transcending_Generators_Canonicality.tex) | Draft or companion to generalized crown paper |
+| [`paper/Self_Transcending_Generators_Canonicality.tex`](../../../../paper/Self_Transcending_Generators_Canonicality.tex) | Companion shell + crosswalk to Final Draft |
 | [`docs/CANONICALITY_POSITIONING.md`](../../../../docs/CANONICALITY_POSITIONING.md) | Claim ledger vs Lean |
 | [`docs/CLOSURE_DICHOTOMY_MAP.md`](../../../../docs/CLOSURE_DICHOTOMY_MAP.md) | Boundary theorem dependency map |
-
-*(Fix paths: use `docs/CANONICALITY_POSITIONING.md` not images - I'll fix typo in implementation)*
 
 ## Paper deltas (when earned)
 
@@ -32,4 +30,4 @@
 
 ## Status
 
-**Blocked on `SPEC_060`–`SPEC_063`** — placeholder LaTeX + positioning docs may exist early as **draft not for submission**.
+**Material upgrade shipped** — `paper/Final Draft/novelty_theory_generalized_crown.tex` earns minimality / obstruction bullets (`ClosureCollapseBoundary`, `ConservativeSeparationCountermodel`, `UniversalUpwardNecessity`); companion `paper/Self_Transcending_Generators_Canonicality.tex` updated; see [`docs/THEOREM_INVENTORY.md`](../../../../docs/THEOREM_INVENTORY.md).

@@ -1,13 +1,33 @@
-% Draft placeholder — SPEC_064_CMI5 (EPIC_014).
-% Do not use for submission until headline claims are backed by cited theorems.
+% Companion note — canonicality / minimality / inevitability (earned claims only).
+% Primary submission draft: paper/Final Draft/novelty_theory_generalized_crown.tex
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{url}
 \begin{document}
-\section*{Draft shell (inactive)}
+\section*{Companion: minimality and inevitability boundaries}
 
-This file is reserved for a companion or successor note on \textbf{canonicality, minimality, and inevitability}
-once \texttt{SPEC\_060}--\texttt{SPEC\_063} close in Lean.
+This note records \textbf{crosswalks only}; it is not a standalone submission draft.
+The main paper's trust boundary (\texttt{sec:boundaries}) should be read first.
 
-The active submission draft remains \texttt{paper/Final\ Draft/novelty\_theory\_generalized\_crown.tex}.
+\paragraph{Conservative extension in packaged paradigm shifts.}
+\texttt{ParadigmShift} \(\leftrightarrow\) weak step \(\land\) \texttt{ConservativeOver}:
+\path{NoveltyTheory/Core/MinimalHypotheses.lean} (\texttt{paradigmShift\_iff\_weak\_and\_conservative}).
+Separation witness without conservativity:
+\path{NoveltyTheory/Ridge/ConservativeSeparationCountermodel.lean}.
+
+\paragraph{Numeric trace dichotomy.}
+\texttt{FutureDefeat} versus uniformly bounded numeric trace:
+\path{NoveltyTheory/Ridge/ClosureCollapseBoundary.lean}.
+
+\paragraph{Non-universality of \texttt{FutureDefeat}.}
+Obstruction over all \texttt{GenerativeSystem S ℕ}:
+\path{NoveltyTheory/Ridge/UniversalUpwardNecessity.lean}
+(\texttt{upward\_necessity\_universal\_obstruction}).
+
+\paragraph{Weak explanatory architecture normal form.}
+Definitional reconstruction as \texttt{weakArchitectureOf}:
+\path{NoveltyTheory/Ridge/ArchitectureRepresentation.lean}.
+Vacuous backward \texttt{Reducible} when the later description type is empty:
+\path{NoveltyTheory/Core/Reduction.lean} (\texttt{reducible\_of\_isEmpty}).
 
 \end{document}

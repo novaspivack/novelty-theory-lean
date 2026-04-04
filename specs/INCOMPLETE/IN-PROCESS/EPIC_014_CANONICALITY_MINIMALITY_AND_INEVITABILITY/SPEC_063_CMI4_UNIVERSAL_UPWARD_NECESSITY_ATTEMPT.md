@@ -45,4 +45,4 @@ Hiding impossibility of the universal statement without a formal obstruction.
 
 ## Status
 
-**In progress** — `Ridge.UniversalUpwardNecessity` / `Summits.UniversalUpwardNecessitySummit` navigate to `histSeqUpto` strict gap; **universal** `∀ G` claim or obstruction **open**.
+**Closed via obstruction** — `Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction` / `Summits.UniversalUpwardNecessitySummit.upward_necessity_universal_obstruction` refute universal `FutureDefeat` over all `GenerativeSystem S ℕ`. Witness-level `histSeqUpto` strict gap remains available as `exhibited_strict_retro_gap`.

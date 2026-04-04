@@ -4,15 +4,13 @@
 
 ## Active
 
-| ID | Location | Description | Status |
-|----|----------|-------------|--------|
-| EPIC014-T1 | `EPIC_014` / `Core.MinimalHypotheses` | Concrete conservative counterlayer: inhabited `WeakParadigmStep` without `ConservativeOver`, or a no-go proof — beyond `paradigmShift_iff_weak_and_conservative`. | Open |
+No operational items at this time.
 
 ## Resolved
 
 | ID | Resolved | Notes |
 |----|----------|--------|
-| — | — | No registered code TODOs |
+| EPIC014-T1 | 2026-04-04 | `Ridge.ConservativeSeparationCountermodel`: `countermodel_without_history_conservativity`, `countermodel_without_packaged_paradigmShift`. |
 
 ---
 

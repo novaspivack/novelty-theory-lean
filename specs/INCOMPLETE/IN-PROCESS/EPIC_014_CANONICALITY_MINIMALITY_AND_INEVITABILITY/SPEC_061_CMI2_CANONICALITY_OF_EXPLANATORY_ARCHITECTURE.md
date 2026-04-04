@@ -34,4 +34,4 @@ Claiming **global uniqueness** when only **faithful embedding up to equivalence*
 
 ## Status
 
-**In progress** — `WeakExplanatoryArchitecture`, `Foundation.CanonicalityFacts`, and `ArchitectureRepresentation.sameShape` are in-tree; non-trivial representation theorems **open**.
+**Closed at honest baseline** — definitional **`weakArchitectureOf`** normal form (`ArchitectureRepresentation.weak_explanatory_architecture_induces_generator_regime_scheme`, `canonical_representation_of_explanatory_architecture`) and vacuous backward reduction (`Reduction.reducible_of_isEmpty` / `every_adequate_account_instantiates_reduction_layer_on_empty_later_desc`). **Non-vacuous** embedding into full structural-sentence / admissibility tower remains future work (quantify separately if pursued).
