@@ -1,0 +1,12 @@
+% nova-publishing / zpo doi inject — standard anchor for Zenodo paper DOI (NEMS and other suites).
+% Add once to the paper preamble (after \documentclass), e.g.:
+%   \input{nova_zenodo_doi_placeholder}
+% or with a path if this file lives with your suite preamble:
+%   \input{path/to/nova_zenodo_doi_placeholder}
+%
+% Then run: zpo doi inject --artifact <publication-id> --apply
+% With --require-tex-markers, injection fails until this file is \input{} (markers must exist in the resolved .tex).
+%
+% NOVA_ZPO_DOI_BEGIN
+% Placeholder: `zpo doi inject` replaces this region with \providecommand{\NovaZenodoDOI}{...}.
+% NOVA_ZPO_DOI_END
