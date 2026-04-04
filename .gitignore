@@ -41,3 +41,32 @@ build/
 # Lean / Lake
 .lake/
 lake-packages/
+
+# LaTeX auxiliary (paper bundle — keep sources; PDF optional per repo policy)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.out
+paper/**/*.toc
+paper/**/*.synctex.gz
+
+# Stray LaTeX artifacts at repo root (build cwd mistakes)
+/novelty_theory_generalized_crown.aux
+/novelty_theory_generalized_crown.bbl
+/novelty_theory_generalized_crown.blg
+/novelty_theory_generalized_crown.fdb_latexmk
+/novelty_theory_generalized_crown.fls
+/novelty_theory_generalized_crown.out
+/novelty_theory_generalized_crown.toc
+/novelty_theory_generalized_crown.pdf

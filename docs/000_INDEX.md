@@ -9,7 +9,7 @@
 3. [`NOTES/PROJECT_SEED.md`](../NOTES/PROJECT_SEED.md)
 4. [`CODING_PROTOCOLS.md`](../CODING_PROTOCOLS.md) — Lean proof quality + execution discipline
 5. [`.cursorrules`](../.cursorrules) / [`.cursor/rules/stub-agent-contract.mdc`](../.cursor/rules/stub-agent-contract.mdc)
-6. This index — **001** overview, **002** setup, **004** layout, **007** positioning vs inventory
+6. This index — **001** overview, **002** setup, **004** layout, **007**–**008** positioning / paper prep
 
 ## CI
 
@@ -32,6 +32,7 @@
 | [000.1_AI_CODING_BEST_PRACTICES.md](000.1_AI_CODING_BEST_PRACTICES.md) | Optional AI/agent workflow notes |
 | [005_TODO_REGISTRY.md](005_TODO_REGISTRY.md) | Discrete TODOs tied to code locations |
 | [006_TECHNICAL_DEBT_REGISTRY.md](006_TECHNICAL_DEBT_REGISTRY.md) | Larger follow-ups |
+| [008_PAPER_PREPARATION_FIXED_GENERATION.md](008_PAPER_PREPARATION_FIXED_GENERATION.md) | Claim freeze, theorem↔prose discipline, comparison/boundary checklist for the LaTeX paper |
 | [KEY_LEARNINGS.md](KEY_LEARNINGS.md) | Durable pitfalls and FAQs |
 
 ## Specs and status

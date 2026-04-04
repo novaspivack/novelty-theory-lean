@@ -1,0 +1,422 @@
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{cleveref}
+\usepackage{needspace}
+\usepackage[most]{tcolorbox}
+\usepackage{expl3}
+\usepackage{xparse}
+
+\setlength{\hfuzz}{3pt}
+
+\ExplSyntaxOn
+\tl_new:N \l__ntl_leanref_tl
+\NewDocumentCommand \leanref { m }
+  {
+    \tl_set:Nn \l__ntl_leanref_tl { #1 }
+    \regex_replace_all:nnN { \c{_} } { \c{_} \c{allowbreak} } \l__ntl_leanref_tl
+    \regex_replace_all:nnN { \. } { . \c{allowbreak} } \l__ntl_leanref_tl
+    \regex_replace_all:nnN { ([a-z])([A-Z]) } { \1 \c{allowbreak} \2 } \l__ntl_leanref_tl
+    \regex_replace_all:nnN { ([0-9])([A-Z]) } { \1 \c{allowbreak} \2 } \l__ntl_leanref_tl
+    \texttt{\small \tl_use:N \l__ntl_leanref_tl }
+  }
+\ExplSyntaxOff
+
+\newenvironment{keybox}[1]{%
+  \Needspace*{8\baselineskip}%
+  \begin{tcolorbox}[
+    enhanced, breakable=false,
+    colback=blue!5, colframe=blue!45!black, coltitle=black,
+    colbacktitle=blue!14, boxrule=0.85pt, arc=2.5pt,
+    left=9pt, right=9pt, top=6pt, bottom=6pt,
+    titlerule=0.55pt, fonttitle=\bfseries, title={#1},
+    before upper=\raggedright,
+    before skip=0.9\baselineskip, after skip=0.9\baselineskip
+  ]%
+}{%
+  \end{tcolorbox}%
+}
+
+\definecolor{leanblue}{RGB}{0,0,180}
+\definecolor{leangreen}{RGB}{0,128,0}
+\definecolor{leangray}{RGB}{128,128,128}
+\lstdefinelanguage{Lean4}{
+  keywords={theorem,def,lemma,example,structure,namespace,end,import,
+            open,section,variable,where,by,exact,have,let,show,calc,
+            intro,apply,rw,simp,omega,ring,linarith,native_decide,
+            unfold,obtain,rcases,use,constructor,refine,induction,with},
+  keywordstyle=\color{leanblue}\bfseries,
+  commentstyle=\color{leangray}\itshape,
+  stringstyle=\color{leangreen},
+  morecomment=[l]{--},
+  morecomment=[n]{/-}{-/},
+  sensitive=true,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=flexible,
+  literate={→}{$\to$}1 {←}{$\leftarrow$}1 {∀}{$\forall$}1 {∃}{$\exists$}1
+           {∧}{$\wedge$}1 {∨}{$\vee$}1 {¬}{$\neg$}1 {≤}{$\le$}1
+           {≥}{$\ge$}1 {≠}{$\ne$}1 {∈}{$\in$}1 {ℕ}{$\mathbb{N}$}1
+}
+\lstset{language=Lean4}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\lean}{\textsc{Lean}\,4}
+
+\title{\textbf{novelty-theory-lean}:\\
+  Fixed Generation Without Fixed Explanatory Closure\\
+  {\large Machine-Checked Generative Systems, Stratified Provability, and Generalized Crown Packaging}}
+\hypersetup{
+  pdftitle={novelty-theory-lean: Fixed generation without fixed explanatory closure}
+}
+\author{Nova Spivack\\
+  \small Independent Research}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+There exists a concrete deterministic generative system on $\mathbb{N}$, the library's canonical counter, together with a packaged sentence universe and depth-indexed proof calculus, such that a family of structurally certified sentences exhibits strict proof-theoretic ascent: for each stage $n$, some sentence in the family is provable at depth $n+1$ but not at depth $n$. In the completed crown layer this phenomenon is not left as an existential proof-height curiosity. It is tied to structural sentence predicates, to generator-truth packaging, to bounded-organization obstructions, and to an explicit future-defeat theorem for terminality-style claims on the canonical counter.
+
+The generalized frontier shows that the resulting pattern is not merely a one-model accident. The library transports the crown template across an admissible class of aligned carrier systems, packages a generalized non-finality theorem for structural strata, and proves a non-single-model-artifact theorem for the transfer story. The resulting flagship package is exported by \leanref{NoveltyTheory.Summits.GeneralizedFinalCrownPackage.generalized\_final\_crown\_iterated\_structural\_ascent} and its companion theorems listed in \cref{sec:appendix-map}.
+
+The central conceptual claim is not that deterministic systems are mysterious, nor that explanation fails globally, nor that there is some anti-deterministic metaphysics hiding in the formalization. The claim is narrower and sharper. Fixed generation need not imply fixed explanatory or proof-theoretic closure in the formal classes defined by the library. In particular, the artifact distinguishes generation, explanation, and provability, and proves non-collapse results between them.
+
+The trust boundary is equally important. No literal universal over all raw admissible-interface rows, and no literal infinite paradigm tower for every singleton-within regime family, is claimed or available. Those universal glosses are false under the formalized predicates and are explicitly obstructed by in-library counterexamples. All positive theorems in this paper are therefore scoped to the precise definitions, classes, and summit packages exported by the \lean{} development \cite{noveltyTheoryLean2026}. The packaged library path is zero-\texttt{sorry}, introduces no axioms beyond Mathlib, and builds against the pinned toolchain recorded in the repository \cite{noveltyTheoryLean2026,mathlib4,deMoura2021}.
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+\section{Premises, trust boundary, and what can still be attacked}\label{sec:trust}
+
+\begin{keybox}{What this paper is actually claiming}
+This paper is about a machine-checked theorem family in a specific formal library. Its flagship claim is not ``determinism fails,'' nor ``higher levels are metaphysically independent,'' nor ``every explanatory framework is incomplete.'' It is that the completed \lean{} development exhibits a formally defined class of deterministic generative systems, sentence layers, regime packages, and organization predicates in which fixed generation coexists with strict explanatory and proof-theoretic non-finality.
+\end{keybox}
+
+\begin{keybox}{Where disagreement can live}
+There are four legitimate places for disagreement.
+
+First, one may reject the particular formal notions of sentence, regime, explanation, organization, or terminality used in the library. Second, one may accept the formal theorems while rejecting any philosophical interpretation stronger than those theorems. Third, one may argue that a different proof calculus or carrier class should be formalized next. Fourth, one may attack the relevance of the chosen classes for applications outside the artifact. What one may not honestly do is collapse the formal results into unqualified universal claims that the library itself explicitly refutes.
+\end{keybox}
+
+\noindent
+Throughout the paper we distinguish three levels:
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Generation}: what the deterministic system produces as a trace or output family.
+\item \textbf{Explanation}: what regimes, interfaces, or organization packages adequately capture in the formal sense of the library.
+\item \textbf{Provability and expressibility}: what the sentence calculus can state or prove at a given depth or stage.
+\end{enumerate}
+
+The thesis of the paper sits in the gap between these levels. The artifact proves that these levels are connected, but not coextensive.
+
+\paragraph{Proof-theoretic premises.}
+The concrete proof theory used here is the packaged depth calculus around \texttt{ProvesAt}, together with the sentence constructors and semantic bridges formalized in the library. Claims involving strict ascent, retro revelation, or crown packaging are therefore claims inside that calculus. They are not claims about every proof system or every semantics one could imagine.
+
+\paragraph{Model and class premises.}
+The canonical generator is \texttt{natCounter}; further summit extensions use explicitly aligned carrier constructions and abstract organization packages introduced later in the library. The generalized frontier strengthens the story from ``one witness model'' to ``a nontrivial admissible class,'' but it still does not quantify over all conceivable carriers or all mathematical dynamical systems.
+
+\paragraph{Interpretive premises.}
+The paper uses phrases such as ``fixed generation without fixed explanatory closure,'' ``future defeat,'' and ``structural ascent.'' Those phrases are abbreviations for specific theorem packages, not stand-alone metaphysical slogans. The theorem-to-prose map in \cref{sec:appendix-map} should be read as part of the argumentative spine of the paper.
+
+\section{Introduction}\label{sec:intro}
+
+A familiar reductionist intuition says that if a single deterministic rule generates an entire future, then in principle there must also be a single final explanatory layer in which that future is exhaustively captured. A weaker but still widespread variation says that even if such a layer is hard to use in practice, nothing principled prevents its finality. On that picture, whatever happens at later stages may be surprising, difficult to predict, or organizationally rich, but it remains, in the strongest sense, already explained by the fixed underlying generator.
+
+The library formalized in \texttt{novelty-theory-lean} is designed to test exactly that intuition. It does not do so by denying determinism, nor by appealing to informal emergence rhetoric, nor by blurring metaphysical and proof-theoretic issues. Instead it constructs a ladder of formal notions: generative systems, phase/regime packaging, sentence semantics, depth-indexed provability, bounded-organization predicates, and transfer principles across aligned carriers. Against that background it proves theorem packages showing that fixed generation can coexist with non-finality of explanatory or proof-theoretic strata in the formally admitted classes.
+
+The paper's main contribution is therefore twofold. First, it assembles the completed summit path into one frozen claim surface, centered on the generalized final crown package. Second, it states the trust boundary with equal force: some literal universal glosses that might sound tempting in prose are false in the artifact and are explicitly obstructed. The result is not a sweeping slogan about all deterministic systems. It is a carefully scoped but unusually strong machine-checked theorem family about a class of deterministic generative systems and the formal explanatory/proof-theoretic structures attached to them.
+
+\begin{keybox}{Flagship theorem shape}
+In the generalized crown layer, the library packages an iterated structural-ascent theorem, a no-fixed-structural-stratum theorem, a future-defeat theorem for terminality, a generator-truth linkage theorem, a class-transfer theorem, and a not-a-single-model-artifact theorem. Together these state that the crown phenomenon persists beyond one witness model and beyond one sentence/carrier presentation, while remaining sharply scoped to the formal definitions of the library.
+\end{keybox}
+
+The paper is organized as follows. \Cref{sec:blocked-universals} states the universal glosses that the artifact itself blocks. \Cref{sec:three-levels} isolates the distinction between generation, explanation, and provability. \Cref{sec:anti-collapse} explains why the crown is not merely a dressed-up \texttt{geOutput} or mention-bound phenomenon. \Cref{sec:comparison} situates the work against genotype/phenotype analogies, computational irreducibility, and generic emergence talk. \Cref{sec:formal-overview} gives an informal tour of the formal setting. \Cref{sec:flagship} states the flagship generalized package in prose. \Cref{sec:not-prove} lists what the paper does not prove. \Cref{sec:discussion} marks the next frontier beyond the completed generalized crown.
+
+\section{Blocked universal templates}\label{sec:blocked-universals}
+
+A major strength of the library is that it does not merely prove positive results; it also proves that some stronger-sounding universalizations are not available under the current definitions.
+
+\subsection{Why raw universal diagonals are false}
+
+If one quantifies over all raw admissible interfaces without any soundness or signature discipline, then a trivial interface can simply declare everything explained. In that setting a literal statement of the form
+
+\[
+\forall I \in \mathcal{I}_{\mathrm{raw}}\;\forall n\; \text{the diagonal defeats row } n
+\]
+
+is false. The artifact makes this failure explicit via the obstruction family centered on \leanref{NoveltyTheory.Ridge.SignatureAdmissibleBundle.trivialInterface\_rows\_claim\_everything}. The positive diagonal theorems therefore quantify instead over bundled admissible interfaces or over classes carrying the relevant soundness constraints as data.
+
+This matters rhetorically because the diagonal results are stronger when honestly scoped than when inflated into a false universal. The formal moral is not ``all conceivable interfaces fail.'' It is ``the admissible interfaces formalized here satisfy a diagonal obstruction, and raw unbundled interfaces do not.''
+
+\subsection{Why singleton-within does not force a universal paradigm tower}
+
+A similar issue arises for regime families satisfying singleton-within bounds. It is tempting to say that any such family must generate an infinite paradigm tower. The library proves that this is also false in literal universal form. The obstruction is given by the empty-regime construction, culminating in \leanref{NoveltyTheory.Models.RegimeFamilyObstruction.not\_paradigmShiftSteps\_empty\_tower} and the packaged summit boundary \leanref{NoveltyTheory.Summits.SummitPackages.summit\_singletonWithin\_not\_entails\_paradigm\_steps}.
+
+So again the theoremically correct lesson is not ``every bounded family yields a paradigm tower,'' but rather ``within the structured classes used by the positive constructions, strict-shift and diagonal packages can be established; the raw universal statement is false.''
+
+\subsection{Why these obstructions strengthen the paper}
+
+These boundary results do not weaken the flagship story. They strengthen it. They show that the paper is not hiding scope conditions in prose while silently quantifying over a smaller class in Lean. The artifact itself forces the distinction between admissible positive templates and false raw universalizations. Any serious reader should regard that as a credibility gain.
+
+\section{Generation, explanation, and provability are distinct levels}\label{sec:three-levels}
+
+The artifact becomes conceptually coherent only when three levels are kept separate.
+
+\subsection{Generation}
+
+At the bottom is generation. A generative system determines a trace or output sequence. For the canonical counter, the trace is as simple as possible: it steps through $\mathbb{N}$ in the obvious way. In that sense the generator is not hidden, probabilistic, or dynamically exotic. The theoremic force of the library does not come from some obscure underlying automaton. It comes from what happens when one asks which phase/regime, sentence, organizational, or transfer structures are formally available on top of that generator.
+
+Generation therefore answers the question:
+\[
+\text{What does the system produce?}
+\]
+
+\subsection{Explanation}
+
+Explanation in the library is not synonymous with raw generation. It is mediated by regime notions, explanatory interfaces, organization predicates, and specific packages such as \texttt{explains}, \texttt{regimeUpto}, and the organization layers. This is why the library can prove results like \leanref{NoveltyTheory.Summits.SummitPackages.causal\_generation\_not\_uniform\_explanation}: generation by a fixed system does not automatically collapse to uniform explanation by one fixed admissible layer.
+
+Explanation therefore answers the question:
+\[
+\text{Which formally admissible descriptive or organizational layer captures the relevant structure?}
+\]
+
+\subsection{Provability and expressibility}
+
+Provability and expressibility introduce yet another level. The artifact defines sentences, semantics, and depth-indexed provability. A sentence may hold, but not be provable at a given depth. A sentence may be expressible at a stratum, but not provable there. Strict-ascent theorems live precisely at this level. They show that depth-indexed proof-theoretic access can unfold in stages, even when the underlying generator itself is fixed and deterministic.
+
+Provability therefore answers the question:
+\[
+\text{What can the current formal stratum state or prove?}
+\]
+
+\subsection{The central non-collapse claim}
+
+The point of the project is not that these three levels float apart arbitrarily. The point is that they are linked but non-coextensive. A deterministic generator may determine its trace without there being a fixed final explanatory layer adequate to that trace in the relevant formal class. And even when the generator and explanatory packaging are both fixed, proof-theoretic access to sentences about the generator can still exhibit strict ascent.
+
+That is why the artifact is not merely about emergence in the loose sense. It is about the formal geometry of the gaps between generation, explanation, and provability.
+
+\section{Anti-collapse: what the crown is demonstrably not}\label{sec:anti-collapse}
+
+The strongest objection to the crown is that it might be a thin artifact of one sentence constructor, one height parameter, or one witness model. The library responds to that objection by proving anti-collapse theorems, not by rhetorical insistence.
+
+\subsection{Not only \texttt{geOutput}}
+
+The first worry is that the crown merely packages \texttt{geOutput} again and again. The completed crown and generalized crown explicitly resist that collapse. The structural crown witness results in \leanref{NoveltyTheory.Foundation.StructuralCrownSentence.structural\_crown\_not\_mentionBound\_only}, \leanref{NoveltyTheory.Foundation.StructuralCrownSentence.structural\_crown\_not\_traceEq\_ridge\_only}, and the corresponding summit exports show that the witness family is not simply identical to the bare \texttt{geOutput} pattern. The generalized frontier pushes this further through \leanref{NoveltyTheory.Foundation.StructuralSentenceHierarchyV2.structuralV2\_hist\_not\_geOutput\_only}.
+
+So the correct statement is not that \texttt{geOutput} is irrelevant. It is that the crown package strictly refines the bare existential proof-height gap represented by \texttt{geOutput}.
+
+\subsection{Not only trace-ridge atoms}
+
+A second collapse would be to say that everything ultimately reduces to trace-equality ridge atoms. Again the library blocks this. The anti-collapse theorem \leanref{NoveltyTheory.Summits.StructuralCrownSummit.structural\_crown\_not\_traceEq\_ridge\_only} and its supporting foundation lemmas make explicit that the structural crown witness is not exhausted by that narrow trace-only ridge fragment.
+
+This matters because trace-equality atoms are among the simplest and most direct generator-structural statements. If the crown collapsed entirely to them, the philosophical reading of the summit would be much weaker. The artifact shows that it does not.
+
+\subsection{Not only mention-bound stratification}
+
+A third collapse would say: all of this is merely a reformulation of the current mention-bound discipline. But the library explicitly proves non-uniqueness at the same stratum. The point is not that mention-bound disappears; it remains part of the formal story. The point is that sharing a stratum does not imply identity of sentence or collapse of the structural crown to a single canonical witness type. This is the role of anti-collapse facts such as \leanref{NoveltyTheory.Foundation.StructuralCrownSentence.structural\_crown\_not\_mentionBound\_only} and their v2 successors.
+
+\subsection{Not a single-model artifact}
+
+Even a structurally richer crown could still be dismissed as an artifact of the canonical counter alone. The generalized frontier answers this by transfer. The theorem family around \leanref{NoveltyTheory.Ridge.CrownTransfer.crown\_transfers\_across\_admissible\_class}, \leanref{NoveltyTheory.Ridge.CrownTransfer.exists\_two\_nonisomorphic\_crown\_instances}, and \leanref{NoveltyTheory.Summits.GeneralizedFinalCrownPackage.generalized\_final\_crown\_not\_model\_artifact} shows that the enum-crown gap pattern survives across a constructed admissible class of aligned carrier systems and is not confined to one presentation.
+
+\begin{keybox}{What anti-collapse accomplishes}
+The crown is strongest when read negatively as well as positively. Positively, it gives strict structural ascent and non-finality theorems. Negatively, it proves that those theorems are not reducible to one witness constructor, one mention-bound stratum, one trace-only atom family, or one witness model. Those anti-collapse results are part of the mathematical content, not optional rhetorical support.
+\end{keybox}
+
+\section{Comparison with nearby narratives}\label{sec:comparison}
+
+\subsection{Beyond genotype/phenotype}
+
+A genotype/phenotype analogy can be helpful at the weakest heuristic level: a compact generator may underwrite a richer expressed structure. But that analogy is far too thin to capture the current library. Genotype/phenotype is essentially a two-level manifestation story. The present artifact instead proves a multi-layer theorem family involving regime failure, proof-theoretic ascent, organization obstructions, future defeat, and class transfer.
+
+What the library formalizes is not merely ``small code, rich expression.'' It is that fixed generation does not imply fixed explanatory closure, and that proof-theoretic access to structurally certified sentences can strictly unfold in stages. The positioning note in the repository explicitly records that the project has moved beyond a phase/regime adequacy or genotype/phenotype analogy. The theorem inventory now justifies that claim.
+
+\subsection{Beyond computational irreducibility}
+
+The natural comparison with Wolfram-style computational irreducibility \cite{Wolfram2002} is illuminating but limited. Computational irreducibility concerns the impossibility of shortcutting the generation of future states. By contrast, the present library is centrally concerned with the non-collapse of explanatory and proof-theoretic structure. The relevant formal contrasts are:
+\begin{itemize}[leftmargin=2em]
+\item same observation does not imply explanatory reduction;
+\item trace coupling does not imply back-reduction;
+\item fixed generation does not imply fixed final explanatory stratum;
+\item bounded organizational packages do not totalize the formal future diagrams they target.
+\end{itemize}
+
+Those are not merely claims about computation speed or simulation cost. They are claims about formal explanatory and provability structure.
+
+\subsection{Beyond emergence rhetoric}
+
+The artifact is also not well described by generic emergence talk. Emergence rhetoric often blurs together:
+\begin{itemize}[leftmargin=2em]
+\item causal generation,
+\item descriptive convenience,
+\item explanatory irreducibility,
+\item proof-theoretic unavailability,
+\item and retrospective conceptual reorganization.
+\end{itemize}
+
+The library's contribution is precisely to separate those notions and prove some non-implications between them. If one wants to connect the results to broader philosophical conversations about emergence, that can be done, but only after the formal distinctions are kept intact.
+
+\section{Formal setting (informal tour)}\label{sec:formal-overview}
+
+\subsection{Generative systems and the canonical counter}
+
+The bottom layer formalizes generative systems with step and trace functions. The canonical counter is the simplest witness model: it generates the natural-number trace directly. This simplicity is a feature, not a weakness. It means the interesting mathematics is not hidden in a complicated base dynamics. Instead, the complexity lies in the layered explanatory and proof-theoretic structures built on top of that trace.
+
+\subsection{Sentences, semantics, and depth-indexed provability}
+
+The sentence layer introduces constructors for trace facts, phase membership, output-based claims, finite conjunction patterns, history sequences, and later extensions such as enum-based and modality-shaped forms. Semantics are given by \texttt{HoldsAt}-style predicates; proof-theoretic access is given by the depth-indexed \texttt{ProvesAt} layer. This is where the crown and generalized crown become possible: a fixed generator can coexist with a family of sentences exhibiting strict depth ascent.
+
+\subsection{Regimes, phases, and explanatory packaging}
+
+Independent of provability, the library also formalizes phases, regimes, explanatory interfaces, and organization layers. These include the signature tower, regime truncations such as \texttt{regimeUpto}, bounded organization packages, and abstract organization obstructions. This layer is where the system proves no fixed bounded explanatory stratum totalizes the relevant future patterns in the formal sense defined by the library.
+
+\subsection{Transfer and generalization}
+
+The generalized frontier adds carrier embeddings, structural sentence hierarchy v2, modal/temporal scaffolding, abstract organization obstructions, and aligned-class transfer. This is what moves the project from a crown theorem for one witness setting to a generalized crown theorem for a nontrivial admissible class.
+
+\section{The flagship generalized package}\label{sec:flagship}
+
+The flagship paper claim is the generalized final crown package. Its six theorem anchors are listed in \cref{sec:appendix-map}; here we explain them in prose.
+
+\subsection{Iterated structural ascent}
+
+The first flagship theorem packages a family of structurally certified sentences exhibiting strict ascent across stages. The point is not merely that one can find a sentence with a gap somewhere. The point is that the package gives a uniform family indexed by stage. This is the deepest proof-theoretic spine of the paper.
+
+\subsection{No fixed structural stratum}
+
+The second flagship theorem states, in the formal class defined by the library, that there is no single fixed structural stratum adequate in the relevant sense to close the phenomenon once and for all. This is not a universal claim about all explanatory notions. It is a theorem about the specific regime and organization classes formalized in the artifact.
+
+\subsection{Future defeat of terminality}
+
+The third theorem packages a future-defeat property. Roughly speaking, terminality-style bounded claims on the canonical counter are defeated by later stages. This gives the project a formal anti-finality component that is stronger than merely saying ``some stage misses something.''
+
+\subsection{Generator-truth family}
+
+The fourth theorem ties strict structural ascent back to the generator itself. The package does not merely speak about arbitrary floating sentences. It bundles generator-truth linkage on the canonical counter together with the structural ascent family.
+
+\subsection{Class transfer}
+
+The fifth theorem shows that the phenomenon transfers across an admissible class of aligned carrier systems. This moves the story beyond a single-model existential.
+
+\subsection{Not a single-model artifact}
+
+The sixth theorem seals the transfer story by giving a non-single-model-artifact packaging. Two trace-distinct aligned systems participate in the generalized crown story, so the summit is not merely the shadow of one chosen witness construction.
+
+\begin{keybox}{The paper's central reading}
+The generalized final package shows that, in the formal classes exported by the library, fixed deterministic generation can coexist with iterated structural ascent, scoped non-finality of structural strata, future defeat of terminality, and class-level transfer beyond a single witness model.
+\end{keybox}
+
+\section{What this paper does \emph{not} prove}\label{sec:not-prove}
+
+This section is as important as the headline.
+
+\begin{enumerate}[leftmargin=2em]
+\item The paper does not prove that every deterministic system has the crown phenomenon.
+\item It does not prove that every explanatory or organizational formalism fails globally.
+\item It does not prove metaphysical anti-determinism.
+\item It does not prove backward causation.
+\item It does not prove a universal diagonal over all raw admissible interfaces.
+\item It does not prove an infinite paradigm tower for every singleton-within regime family.
+\item It does not prove that every true sentence about the canonical counter is structurally certified in the strong sense used by the crown.
+\item It does not prove that the current generalized frontier is the last possible summit of the program.
+\end{enumerate}
+
+The paper therefore occupies a specific and defensible position: stronger than toy examples, more disciplined than emergence rhetoric, but still bounded by the exact classes and calculi formalized in the artifact.
+
+\section{Discussion and future frontier}\label{sec:discussion}
+
+The completed generalized crown is a genuine stopping point for this paper, but it is not the end of the research program. The theorem inventory itself marks a further frontier beyond the current closure. The most obvious directions are:
+\begin{itemize}[leftmargin=2em]
+\item richer phase-at-sentence layers beyond the current encodings,
+\item additional modalities beyond the present modal scaffold,
+\item broader carrier patterns beyond the current conservative-transfer constructions,
+\item further strengthening of organization predicates,
+\item and additional generalized classes beyond the ones already transferred.
+\end{itemize}
+
+The important point for the present paper is that these are new programs, not missing repairs. They belong in a subsequent tranche above the completed generalized crown, not in the proof obligations for the current flagship claim.
+
+\paragraph{Philosophical significance.}
+If one wants a philosophical slogan, the safest one is this: in the formal classes defined by the library, fixed generation does not entail fixed explanatory or proof-theoretic closure. That claim is strong enough to matter and narrow enough to be honest.
+
+\paragraph{Methodological significance.}
+The broader methodological lesson is also important. A theorem-driven treatment of explanatory non-collapse is stronger when it includes its own obstructions. By proving both positive summit packages and negative boundary theorems, the artifact makes overstatement harder and interpretation more disciplined.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The library formalized in \texttt{novelty-theory-lean} supports a theorem family that is both ambitious and scoped. Starting from a simple deterministic generator, it builds sentence, regime, organization, retro, and transfer layers culminating in a generalized final crown package. That package proves, in the artifact's formal sense, iterated structural ascent, no fixed structural stratum, future defeat of terminality, generator-truth linkage, class transfer, and non-single-model-artifact packaging.
+
+Just as important, the library makes explicit what it does not prove. Literal universalizations that might sound tempting in prose are blocked by in-library obstructions. The result is therefore not a loose philosophical manifesto but a machine-checked claim surface with a disciplined trust boundary.
+
+For this paper, that is enough. The right next step after publication is not to keep climbing the same proof mountain. It is to open new frontier tranches only where the current generalized crown is genuinely too narrow for the next intended claim.
+
+\paragraph{Reproducibility.}
+The theorem names cited in this paper are taken from the public theorem inventory. The library builds from the repository root with \texttt{lake build}. The theorem-to-prose map and the informal layer DAG included below are intended to make the argumentative surface auditable without forcing the reader to inspect every module line by line on a first pass.
+
+\appendix
+
+\section{Theorem-to-prose map}\label{sec:appendix-map}
+\input{figures/theorem_to_prose_table}
+
+\section{Human-readable dependency layers}\label{sec:appendix-dag}
+\input{figures/layer_dependency}
+
+\section{Appendix-style theorem inventory notes}\label{sec:appendix-inventory}
+
+\subsection{How to read the summit stacks}
+
+The summit layer should be read as a stack, not as a flat list of interchangeable claims. Earlier summit packages establish the basic non-collapse of generation into explanation, no-fixed-\texttt{regimeUpto} phenomena, and the initial crown ascent. The completed crown strengthens these results through structural witnesses, enum and polymorphic phase layers, organization V2, and retro v2 packaging. The generalized frontier then adds carrier/phase alignment, structural sentence hierarchy v2, modal-temporal scaffolding, abstract organization obstruction, class transfer, and non-single-model-artifact packaging.
+
+\subsection{Why the generalized package is the headline}
+
+The paper chooses the generalized final crown package as its headline because it cleanly subsumes the most important earlier layers without pretending that every lower theorem is a coequal flagship. In particular, the generalized package is where the paper's most important rhetorical pressure points are handled:
+\begin{itemize}[leftmargin=2em]
+\item it packages strict structural ascent,
+\item it blocks the fixed-final-stratum reading,
+\item it packages future defeat,
+\item it includes generator-truth linkage,
+\item it proves class transfer,
+\item and it directly answers the one-model-artifact objection.
+\end{itemize}
+
+\subsection{Representative obstruction lemmas}
+
+The reader who wants to audit the trust boundary should especially inspect the obstruction families around:
+\begin{itemize}[leftmargin=2em]
+\item trivial raw interfaces,
+\item empty singleton-within regimes,
+\item same-observation without explanatory reduction,
+\item and bounded organization obstruction.
+\end{itemize}
+
+Those are the places where the library prevents the paper from inflating its formal content into false universal prose.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

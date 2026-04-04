@@ -16,6 +16,7 @@
 | [`NoveltyTheory/Basic.lean`](../NoveltyTheory/Basic.lean) | Default library root module (scaffold) |
 | [`MANIFEST.md`](../MANIFEST.md) | Proof hygiene and artifact inventory |
 | [`specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/`](../specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/) | Active epic and **SPEC_001_ST1** bootstrap |
+| [`paper/`](../paper/README.md) | LaTeX paper bundle (prologue/preamble aligned with ugp-lean + `\leanref`; prep notes in **008**) |
 
 ## Parent repositories
 

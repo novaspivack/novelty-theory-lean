@@ -1,0 +1,46 @@
+% One-page human-readable dependency stack (informal DAG)
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  layer/.style={draw, rounded corners=2pt, align=left,
+    inner sep=8pt, line width=0.6pt},
+  arrow/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[layer, fill=blue!4] (base) {
+  \textbf{Base models (Core / Foundation)}\\
+  Generative systems, phases, regimes, \texttt{HoldsAt},\\
+  \texttt{Sentence}, \texttt{mentionBound},\\
+  \texttt{ProvesAt} (Model~C / \texttt{InvariantTower} bridge)
+};
+\node[layer, fill=green!6, below=0.55cm of base] (ridge) {
+  \textbf{Ridge (obstructions \& interfaces)}\\
+  Diagonal / admissible bundles;\\
+  organizational height obstructions;\\
+  retro-structural gaps;\\
+  signature-scoped soundness
+};
+\node[layer, fill=orange!8, below=0.55cm of ridge] (crown) {
+  \textbf{Crown completion (\texttt{FinalCrownPackage})}\\
+  Structural witness ascent; enum / poly layers;\\
+  org~V2 packaging; retro~v2;\\
+  scoped non-finality + future defeat on \texttt{natCounter}
+};
+\node[layer, fill=purple!7, below=0.55cm of crown] (gen) {
+  \textbf{Generalized frontier (\texttt{GeneralizedFinalCrownPackage})}\\
+  Carrier-phase alignment; structural sentence~v2;\\
+  modal scaffold; abstract bounded org;\\
+  Bool$\times\mathbb{N}$ class transfer;\\
+  non-single-model artifact packaging
+};
+\draw[arrow] (base) -- (ridge);
+\draw[arrow] (ridge) -- (crown);
+\draw[arrow] (crown) -- (gen);
+\end{tikzpicture}
+\caption{Informal dependency layers for the flagship generalized final package.
+Arrows mean ``mathematically depends on (directly or via re-exports).''
+This diagram is for exposition only; precise declaration-level edges live
+in the machine-checked modules.}
+\label{fig:layer-dag}
+\end{figure}
