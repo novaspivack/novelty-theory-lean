@@ -762,7 +762,7 @@ Under the natural-admissibility hypotheses of \Cref{tab:strengthened-lean}, the 
 
 \appendix
 
-\section{Witness systems, proof sketches, and \lean{} anchors}\label{sec:witnesses-proofs}
+\section{Witness systems, proof sketches, and \texorpdfstring{\lean{} anchors}{Lean~4 anchors}}\label{sec:witnesses-proofs}
 
 \medskip
 \noindent\textbf{Code availability.} Lean~4 library \texttt{novelty-theory-lean} (\path{NoveltyTheory/}). Build: \texttt{lake build}. Summit certificates cited in the main text are checked in that source (see tables below for declarations and \lean{} names).
@@ -891,7 +891,7 @@ At $n{+}1$, every pair in the finite \texttt{histSeq} list has time index $<n{+}
   \leanref{NoveltyTheory.Ridge.OrganizationHeightObstruction.no\_finite\_adequate\_organization\_totalizes\_future}
 \end{itemize}
 
-\subsection{$\texttt{Bool}{\times}\mathbb{N}$ carriers, alignment, and class transfer}
+\subsection{\texorpdfstring{$\texttt{Bool}{\times}\mathbb{N}$ carriers, alignment, and class transfer}{Bool x N carriers, alignment, and class transfer}}
 
 \begin{witnessmeta}
 \textbf{At a glance.}\quad Twin laws disagree on a \texttt{Bool} tag at every time, yet each twins the counter after embedding. The same output-enumeration gap survives on the carrier calculus (\texttt{ProvesAtCarrier}). This symmetric pair is the historic \emph{existential} witness for \textbf{class transfer} in \texttt{GeneralizedFinalCrownPackage}; broad transfer across \texttt{NaturalAdmissibleInstance} is the natural-class extension recorded below.
@@ -1019,7 +1019,7 @@ Every theorem statement cited from \texttt{NoveltyTheory/} is checked by the Lea
 \setlength{\extrarowheight}{4pt}
 \renewcommand{\arraystretch}{1.24}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}@{}}
-  \caption{Extended theorem inventory for the generalized crown mathematical spine (\textbf{33} curated rows; the library currently contains \textbf{364} \texttt{theorem} declarations in \texttt{NoveltyTheory/}, so this table is not exhaustive). ``Depends on'' lists immediate named ingredients in the formal proof, not the full transitive closure. Declaration paths in the table and appendix were cross-checked against the repository on \textbf{4 April 2026}.\label{tab:theorem-inventory}} \\
+  \caption{Extended theorem inventory for the generalized crown mathematical spine (\textbf{33} curated rows; the library currently contains \textbf{364} \texttt{theorem} declarations in \texttt{NoveltyTheory/}, so this table is not exhaustive). ``Depends on'' lists immediate named ingredients in the formal proof, not the full transitive closure. Declaration paths in the table and appendix were cross-checked against the repository on \textbf{4 April 2026}.}\label{tab:theorem-inventory} \\
   \toprule
   Layer & \lean{} declaration & Informal content & Immediate dependencies \\
   \midrule
@@ -1185,7 +1185,7 @@ Every theorem statement cited from \texttt{NoveltyTheory/} is checked by the Lea
 \end{longtable}
 }
 
-\section{Dependency reference (\lean{} modules and certificate chains)}
+\section{Dependency reference (\texorpdfstring{\lean{} modules and certificate chains}{Lean~4 modules and certificate chains})}
 
 \subsection{Module import closure at the summit}
 
@@ -1269,7 +1269,7 @@ Transitive imports pull in Mathlib and, among project modules, the following (il
 \end{itemize}
 The complete \texttt{import} graph is machine-readable; this list is a concise index.
 
-\subsection{Certificate chains (summit $\to$ ingredients)}
+\subsection{Certificate chains (\texorpdfstring{summit $\to$ ingredients}{summit -> ingredients})}
 
 Each named summit theorem below unfolds to the listed \lean{} certificates; indented arrows mark parallel immediate dependencies.
 
