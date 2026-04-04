@@ -14,6 +14,7 @@
 ## CI
 
 - [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) — `leanprover/lean-action` (Lean + Lake build)
+- [`scripts/verify_paper_leanrefs.py`](../scripts/verify_paper_leanrefs.py) — optional cross-check of `\leanref{NoveltyTheory…}` in `paper/Final Draft/novelty_theory_generalized_crown.tex`
 
 ## Numbered docs
 

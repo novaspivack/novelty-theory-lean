@@ -74,7 +74,7 @@ _Nodes omit Mathlib transitives._
 
 | Module | Primary imports (high level) |
 |--------|------------------------------|
-| `Ridge.BroadTransfer` | `NaturalAdmissibleClass`, `PhaseGeneralizationFacts`, `ProvabilityFacts`, `NaturalClassExamples`, `OutputEnumCrownFamily`, `SentenceProvability`, `StratifiedFinality` |
+| `Ridge.BroadTransfer` | `NaturalAdmissibleClass`, `GenerativeSystem`, `PhaseGeneralizationFacts`, `ProvabilityFacts`, `NaturalClassExamples`, `OutputEnumCrownFamily`, `SentenceProvability`, `StratifiedFinality` |
 | `Ridge.AdmissibilityNaturality` | Core naturality + admissible-bundle ridge |
 | `Ridge.UnboundedOrganization` | `NaturalOrganization`, `PhaseGeneralizationFacts`, organization ridge |
 | `Ridge.NaturalAntiClosure` | `NaturalAdmissibleClass`, models + foundation facts per file |
@@ -86,4 +86,4 @@ _Nodes omit Mathlib transitives._
 
 ---
 
-_Last updated alongside **EPIC_013** acceptance and [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md)._
+_Last updated with [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md) verification block (**2026-04-04**): `lake build` green; `Ridge.BroadTransfer` import row aligned with [`NoveltyTheory/Ridge/BroadTransfer.lean`](../NoveltyTheory/Ridge/BroadTransfer.lean)._
