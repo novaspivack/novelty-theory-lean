@@ -1,30 +1,32 @@
-Copyright (c) Nova Spivack. All rights reserved.
+MIT License
 
-This license applies to original work in this repository (the Lean library under
-`NoveltyTheory/`, root `NoveltyTheory.lean`, `lakefile.lean`, `lean-toolchain`,
-repository `scripts/`, and other original files), excluding third-party
-dependencies such as Mathlib. Those dependencies remain under their own
-licenses (see Lake / upstream notices).
+Copyright (c) 2026 Nova Spivack
 
-Permission is granted to use this software only as follows:
+The Lean library and other original source in this repository (for example
+`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`) are
+licensed under the terms below.
 
-  • You may clone or download the repository from an authorized source,
-    build it on your own systems with Lean/Lake, run it, and study or modify
-    it for your own personal, educational, or non-commercial research purposes.
+The companion paper under `paper/Final Draft/` (TeX, BibTeX, figures) is **not**
+under the MIT License; it is licensed under CC BY-NC-ND 4.0 — see
+`paper/Final Draft/LICENSE`. Third-party dependencies (e.g. Mathlib) remain
+under their own licenses.
 
-You may not:
+---
 
-  • redistribute this software or any substantial portion of its source
-    (including modified or unmodified copies, mirrors, bundles, or inclusion
-    in another downloadable product or repository for others to obtain);
-  • sublicense or commercially exploit this original work;
-  • remove or alter this notice or other copyright notices in this project.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-There is no warranty. This software is provided “as is,” and the copyright
-holder is not liable for damages arising from use.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Questions about commercial licensing or redistribution arrangements may be
-directed to the copyright holder.
-
-For the license of the companion paper (LaTeX/PDF in `paper/Final Draft/`),
-see `paper/Final Draft/LICENSE`.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -24,18 +24,16 @@ More detail: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
 
 ## Submodule
 
-Embedding this repo as a **`git submodule`** still pulls **this** upstream; do not republish or bundle the sources elsewhere except as permitted in [`LICENSE`](LICENSE).
+Other projects may depend on this repository as a **`git submodule`**; treat this directory as the **library root** (see [`LICENSE`](LICENSE) for terms).
 
 ## Contributing
 
-Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing changes to the **Lean sources**, you grant the copyright holder the rights needed to include your contribution in this project under the same [`LICENSE`](LICENSE) terms (the project itself is **not** open redistribution).
+Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing, you agree your contributions are licensed under the **same MIT terms** as [`LICENSE`](LICENSE) for the library code you touch.
 
 ## License
 
-**MIT and similar OSI licenses allow redistribution.** This library is **not** offered on those terms.
-
 | Material | Terms |
 |----------|--------|
-| **Lean library** (original work: `NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**Proprietary — see `LICENSE`**](LICENSE): you may **use** (clone, build, study, local changes for yourself); you may **not** **redistribute** the code or use it commercially without permission from the copyright holder. **Mathlib and other deps:** their licenses apply to those components only. |
-| **Companion paper** (`paper/Final Draft/`) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — separate terms for the paper only. |
-| **Dependencies** (e.g. Mathlib) | **Upstream licenses** (Mathlib is Apache-2.0). |
+| **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**MIT License**](LICENSE) |
+| **Companion paper** (`paper/Final Draft/`, TeX/Bib/figures) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — not MIT; see that file |
+| **Dependencies** (e.g. Mathlib via Lake) | **Upstream licenses** (Mathlib is Apache-2.0) |
