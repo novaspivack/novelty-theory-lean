@@ -7,22 +7,51 @@
 % Then run: zpo doi inject --artifact <publication-id> --apply
 % With --require-tex-markers, injection fails until this file is \input{} (markers must exist in the resolved .tex).
 %
-% Call \NovaZenodoInAbstract immediately before \end{abstract} (inserted by install_zenodo_doi_placeholders.py
-% or zpo doi inject). While \NovaZenodoDOI is empty, the PDF shows an explicit pending line; after
-% ``zpo doi inject --apply``, recompile to replace it with the real DOI URL.
+% Placement (SPEC / docs: DOI_PROPAGATION.md):
+%   • Primary (recommended for all program papers): \NovaZenodoAfterTitle immediately after \maketitle.
+%   • Optional duplicate: \NovaZenodoInAbstract before \end{abstract} (--abstract-doi-line on inject).
 %
-\providecommand{\NovaZenodoInAbstract}{%
-  \par\smallskip\noindent
-  \if\relax\detokenize\expandafter{\NovaZenodoDOI}\relax
-  \textit{Archival version (Zenodo):} \emph{[DOI pending publication]}%
+% The DOI value is written between % NOVA_ZPO_DOI_BEGIN / END by zpo doi inject (\def\NovaZenodoDOI{...}).
+%
+\makeatletter
+% Expand #1 once, then test emptiness (plain \detokenize{\Macro} does NOT expand \Macro first).
+\providecommand{\NovaZenodoIfDoiEmpty}[1]{%
+  \if\relax\detokenize{#1}\relax
+    \expandafter\@firstoftwo
   \else
-  \textit{Archival version (Zenodo):} %
+    \expandafter\@secondoftwo
+  \fi}
+\makeatother
+%
+\providecommand{\NovaZenodoArchivalLine}{%
+  \expandafter\NovaZenodoIfDoiEmpty\expandafter{\NovaZenodoDOI}%
+  {\textit{Archival version (Zenodo):} \emph{[DOI pending publication]}}%
+  {\textit{Archival version (Zenodo):} %
   \begingroup
   \edef\NovaZenodo@href{\endgroup\noexpand\href{https://doi.org/\NovaZenodoDOI}{https://doi.org/\NovaZenodoDOI}}%
-  \NovaZenodo@href
-  \fi}
+  \NovaZenodo@href}%
+}
+%
+% After \maketitle — canonical visible placement (first page, under title block).
+\providecommand{\NovaZenodoAfterTitle}{%
+  \par\smallskip
+  \begingroup
+  \centering
+  \small
+  \NovaZenodoArchivalLine
+  \par
+  \endgroup
+  \smallskip
+}
+%
+% End of abstract — optional; use when --abstract-doi-line is passed to zpo doi inject.
+\providecommand{\NovaZenodoInAbstract}{%
+  \par\smallskip\noindent
+  \NovaZenodoArchivalLine
+}
 %
 % NOVA_ZPO_DOI_BEGIN
-\providecommand{\NovaZenodoDOI}{10.5281/zenodo.19423547}
-% Use \url{https://doi.org/\NovaZenodoDOI} or \texttt{\NovaZenodoDOI} where you cite the archival record.
+\def\NovaZenodoDOI{10.5281/zenodo.19423547}
+% Use \href{https://doi.org/...}{...} or \texttt{\NovaZenodoDOI} where you cite the archival record
+% (\url{...} does not expand \NovaZenodoDOI under hyperref).
 % NOVA_ZPO_DOI_END
