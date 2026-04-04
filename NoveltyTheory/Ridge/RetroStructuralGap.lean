@@ -30,7 +30,8 @@ open NoveltyTheory.Models.SignatureTower
 theorem histSeqUpto_mem_diag {n : ℕ} :
     (n, n) ∈ List.map (fun i : ℕ => (i, i)) (List.range (n + 1)) := by
   apply mem_map_of_mem
-  simpa [mem_range] using Nat.lt_succ_self n
+  rw [mem_range]
+  exact Nat.lt_succ_self n
 
 theorem histSeqUpto_proves_succ (n : ℕ) : ProvesAt (n + 1) (histSeqUpto n) := by
   simp only [histSeqUpto, ProvesAt]
@@ -65,7 +66,7 @@ theorem retro_truth_sound_about_earlier_segment (n : ℕ) :
   simp only [histSeqUpto, HoldsAt]
   intro p hp
   rcases mem_map.mp hp with ⟨i, hi, rfl⟩
-  simpa [natCounter_trace]
+  simp [natCounter_trace]
 
 theorem retro_truth_not_mentionBound_only (n : ℕ) :
     mentionBound (histSeqUpto n) = mentionBound (Sentence.geOutput n) ∧

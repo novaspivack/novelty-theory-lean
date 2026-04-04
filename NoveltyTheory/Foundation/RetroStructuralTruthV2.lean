@@ -47,7 +47,8 @@ theorem isRetroStructuralV2_histSeqUpto (n : ℕ) : IsRetroStructuralV2 (histSeq
   refine And.intro ?_ (And.intro ?_ ?_)
   · refine List.ne_nil_of_mem (a := (0, 0)) ?_
     refine mem_map_of_mem (f := fun i : ℕ => (i, i)) ?_
-    simpa [mem_range] using Nat.succ_pos n
+    rw [mem_range]
+    exact Nat.succ_pos n
   · intro p hp
     rcases mem_map.mp hp with ⟨i, hi, rfl⟩
     rfl

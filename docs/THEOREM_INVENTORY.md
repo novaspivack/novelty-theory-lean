@@ -291,7 +291,11 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `PhaseSyntaxPolyFacts.provesAt_poly_phase_sound` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — poly soundness from `ProvesAt` |
 | `PhaseSyntaxPolyFacts.exists_poly_phase_provable_gap` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — strict `ProvesAtPoly` gap |
 | `PhaseSyntaxPolyFacts.poly_phase_crown_family` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — `∃G, ∃Φ` poly-phase packaging |
-| `OrganizationV2.IsFiniteHeight` | `Core.OrganizationV2` | `SPEC_045` — finite-height organization predicate |
+| `PhaseSyntaxPolyFacts.phaseSyntaxPoly_embed_nat_faithful_on_enum_crown` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — enum-crown pullback vs `HoldsAt`/`HoldsAtProd` |
+| `PhaseSyntaxPolyFacts.outputEnum_crown_embed_eq` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — injective unpack of poly embed at enum witness |
+| `PhaseSyntaxPolyFacts.poly_phase_gap_at` | `Foundation.PhaseSyntaxPolyFacts` | `SPEC_044` — strict `ProvesAtPoly` gap at embedded witness |
+| `OrganizationV2.IsFiniteHeight` | `Core.OrganizationV2` | `SPEC_045` — finite-height organization predicate (**def**) |
+| `OrganizationV2.separatesStages` | `Core.OrganizationV2` | `SPEC_045` — re-export of bundled separation witness |
 | `OrganizationHeightObstruction.finite_adequate_organization_has_bounded_stage_separation` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — two separated stages within bound |
 | `OrganizationHeightObstruction.no_finite_adequate_organization_totalizes_future` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — bounded org cannot realize all strict `ℕ` pairs |
 | `OrganizationHeightObstruction.organization_cannot_self_certify_total_future` | `Ridge.OrganizationHeightObstruction` | `SPEC_045` — no self-certifying total future package |
