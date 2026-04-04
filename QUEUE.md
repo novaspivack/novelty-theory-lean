@@ -55,7 +55,7 @@
 
 | 9 | **Canonicality / minimality / inevitability** — weak architecture, minimality audit, numeric closure dichotomy, upward-universal attempt, honest paper upgrade | [`EPIC_014_CANONICALITY_MINIMALITY_AND_INEVITABILITY`](specs/INCOMPLETE/IN-PROCESS/EPIC_014_CANONICALITY_MINIMALITY_AND_INEVITABILITY/EPIC_014_MASTER_ORCHESTRATION.md) | **`SPEC_060_CMI1`–`SPEC_064_CMI5`**; `ConservativeSeparationCountermodel`, `UniversalUpwardNecessity` obstruction, [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md) | **Complete** |
 
-**Queue:** rows **1–8** are **Done** in this roll-up; row **9** is **in progress**.
+**Queue:** rows **1–9** are **Done** / **Complete** in this roll-up (last closed: row **9**, **`EPIC_014`**, 2026-04-04).
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 
