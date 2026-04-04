@@ -24,16 +24,18 @@ More detail: [`docs/002_DEVELOPER_SETUP.md`](docs/002_DEVELOPER_SETUP.md).
 
 ## Submodule
 
-Other projects may depend on this repository as a **`git submodule`**; treat this directory as the **library root** (see [`LICENSE`](LICENSE) for terms).
+Other projects may embed this repo as a **`git submodule`** for **noncommercial** research or teaching consistent with [`LICENSE`](LICENSE). **Commercial** packaging, products, or redistribution beyond what that license allows needs **separate permission** from the copyright holder.
 
 ## Contributing
 
-Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing, you agree your contributions are licensed under the **same MIT terms** as [`LICENSE`](LICENSE) for the library code you touch.
+Use **Issues** for build problems, citation questions, or reproducibility. Substantive formal contributions should match the proof standards described in [`MANIFEST.md`](MANIFEST.md) and module docstrings. By contributing, you agree your contributions are licensed under the **same terms** as [`LICENSE`](LICENSE) for the library code you touch.
 
 ## License
 
+This is **not** an OSI “open source” license (those cannot restrict commercial use). The library is **source-available** with **free noncommercial** use: personal work, research, and qualifying institutions are covered by [**PolyForm Noncommercial 1.0.0**](https://polyformproject.org/licenses/noncommercial/1.0.0/) as applied in [`LICENSE`](LICENSE), plus **attribution** when you **distribute** the code or public derivatives (see Required Notice lines there and cite the paper/repo as you would in scholarship).
+
 | Material | Terms |
 |----------|--------|
-| **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**MIT License**](LICENSE) |
-| **Companion paper** (`paper/Final Draft/`, TeX/Bib/figures) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) — not MIT; see that file |
+| **Lean library** (`NoveltyTheory/`, `NoveltyTheory.lean`, `lakefile.lean`, `scripts/`, etc.) | [**PolyForm Noncommercial 1.0.0**](LICENSE) — noncommercial use and sharing; **no** commercial sale or packaging **without permission**; **attribution** when distributing |
+| **Companion paper** (`paper/Final Draft/`, TeX/Bib/figures) | [**CC BY-NC-ND 4.0**](paper/Final%20Draft/LICENSE) |
 | **Dependencies** (e.g. Mathlib via Lake) | **Upstream licenses** (Mathlib is Apache-2.0) |
