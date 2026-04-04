@@ -50,8 +50,9 @@
 | 4 | **Crown iterated ascent** (structural \(\Phi_n\), regimes \(R_n\), strict \(\vdash\) / \(\not\vdash\) ladder) | [`EPIC_009_STRICT_ITERATED_ASCENT`](specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md) | **`SPEC_035_GS1`–`SPEC_037_CR1`**; `CrownIteratedAscentSummit.crown_strict_ascent_sentence_family` | **Done** (2026-04-04) |
 | 5 | **Expressive / organization frontier** (richer syntax, `initial` derivability, modalities, stronger org) | [`EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER`](specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md) | **`SPEC_038_XS1`**–**`SPEC_041_OR1`** | **Done** (2026-04-04) |
 | 6 | **Crown completion** (structural non-`geOutput` witness, enum/finset proof layer, org V2, retro v2, final package) | [`EPIC_011_CROWN_COMPLETION`](specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md) | **`SPEC_042_CG1`**–**`SPEC_047_CG6`**; [`Summits/FinalCrownPackage.lean`](NoveltyTheory/Summits/FinalCrownPackage.lean); crown docs | **Done** (2026-04-03) |
+| 7 | **Generalized crown frontier** (carrier-phase, structural v2, modal scaffold, abstract org, `Bool × ℕ` class transfer, generalized final package) | [`EPIC_012_GENERALIZED_CROWN_FRONTIER`](specs/INCOMPLETE/IN-PROCESS/EPIC_012_GENERALIZED_CROWN_FRONTIER/EPIC_012_MASTER_ORCHESTRATION.md) | **`SPEC_048_GC1`**–**`SPEC_053_GC6`**; [`Summits/GeneralizedFinalCrownPackage.lean`](NoveltyTheory/Summits/GeneralizedFinalCrownPackage.lean); generalized crown docs | **Done** (2026-04-04) |
 
-**Queue:** row **6** (**crown completion v2**) is **Done**. Rows **1–6** are **Done** in this roll-up.
+**Queue:** rows **1–7** are **Done** in this roll-up.
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 

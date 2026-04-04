@@ -27,6 +27,8 @@ The **`FinalCrownPackage`** summit is **scoped**: it **does not** resurrect bloc
 
 See [`CROWN_DEPENDENCY_MAP.md`](CROWN_DEPENDENCY_MAP.md) and the theorem catalog [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md).
 
+**Post-crown carrier / class transfer (`EPIC_012`):** additive layer documented in [`GENERALIZED_CROWN_POSITIONING.md`](GENERALIZED_CROWN_POSITIONING.md) (does not relax the blocked-universal boundaries above).
+
 ---
 
 _Update this file when **`EPIC_011`** acceptance changes or when final crown theorems land._

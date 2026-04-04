@@ -316,6 +316,68 @@ The following subsume many rows below via `Summits.SummitPackages` and peers; th
 | `FinalCrownPackage.final_crown_generator_truth_family` | `Summits.FinalCrownPackage` | `SPEC_047` — generator-truth + structural family |
 | `FinalCrownPackage.final_crown_enum_output_layer_gap` | `Summits.FinalCrownPackage` | `SPEC_047` — enum-layer `ProvesAt` gap export |
 
+### Generalized crown frontier (`EPIC_012` — `SPEC_048_GC1`–`SPEC_053_GC6`)
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `SentenceHierarchyV2.isStructuralGenerator_implies_structuralV2` | `Core.SentenceHierarchyV2` | `SPEC_049` — legacy structural ⊂ **v2** |
+| `SentenceHierarchyV2.isRetroStructuralV2_implies_structuralV2` | `Core.SentenceHierarchyV2` | Retro classified ⊂ **v2** |
+| `SentenceHierarchyV2.isStructuralV2_cases` | `Core.SentenceHierarchyV2` | Def disjunction elimination |
+| `PhaseGeneralizationFacts.carrier_observe_eq` | `Foundation.PhaseGeneralizationFacts` | `SPEC_048` — aligned trace obs |
+| `PhaseGeneralizationFacts.nat_trace_int` | `Foundation.PhaseGeneralizationFacts` | `natCounter` trace lemma |
+| `PhaseGeneralizationFacts.carrier_embed_fwd` | `Foundation.PhaseGeneralizationFacts` | `SPEC_048` — forward embed (`mutual`) |
+| `PhaseGeneralizationFacts.carrier_embed_rev` | `Foundation.PhaseGeneralizationFacts` | `SPEC_048` — reverse embed (`mutual`) |
+| `PhaseGeneralizationFacts.phase_general_embed_faithful` | `Foundation.PhaseGeneralizationFacts` | `HoldsAt` ↔ `carrierHolds` on embed |
+| `PhaseGeneralizationFacts.prod_aligns` | `Foundation.PhaseGeneralizationFacts` | `SPEC_048` — `prod` alignment witness |
+| `PhaseGeneralizationFacts.phase_general_embed_current_faithful` | `Foundation.PhaseGeneralizationFacts` | Current `ℕ` layer pullback |
+| `PhaseGeneralizationFacts.holdsAt_general_phase_sound` | `Foundation.PhaseGeneralizationFacts` | `ProvesAt` ⇒ `HoldsAt` on embed |
+| `PhaseGeneralizationFacts.provesAt_general_phase_sound` | `Foundation.PhaseGeneralizationFacts` | `ProvesAt` ⇒ `carrierHolds` |
+| `PhaseGeneralizationFacts.output_enum_carrier_embed_eq` | `Foundation.PhaseGeneralizationFacts` | Injective unpack at enum witness |
+| `PhaseGeneralizationFacts.general_phase_gap_at` | `Foundation.PhaseGeneralizationFacts` | `ProvesAtCarrier` strict gap at `Bool × ℕ` |
+| `PhaseGeneralizationFacts.exists_general_phase_provable_gap` | `Foundation.PhaseGeneralizationFacts` | Existential gap packaging |
+| `PhaseGeneralizationFacts.general_phase_crown_family` | `Foundation.PhaseGeneralizationFacts` | `∃G, ∃Φ` carrier crown |
+| `PhaseGeneralizationFacts.current_crown_embeds_into_general_phase_layer` | `Foundation.PhaseGeneralizationFacts` | Pullback compatibility |
+| `StructuralSentenceHierarchyV2.isStructuralV2_implies_structural` | `Foundation.StructuralSentenceHierarchyV2` | Naming bridge |
+| `StructuralSentenceHierarchyV2.exists_structuralV2_sentence_provable_succ_not_at` | `Foundation.StructuralSentenceHierarchyV2` | Pointwise **v2** gap |
+| `StructuralSentenceHierarchyV2.structuralV2_hist_not_geOutput_only` | `Foundation.StructuralSentenceHierarchyV2` | Anti-collapse vs `geOutput`-only |
+| `StructuralSentenceHierarchyV2.structuralV2_hist_not_traceEq_only` | `Foundation.StructuralSentenceHierarchyV2` | Anti-collapse vs trace-only |
+| `StructuralSentenceHierarchyV2.structuralV2_not_mentionBound_only` | `Foundation.StructuralSentenceHierarchyV2` | Mention stratum non-uniqueness |
+| `StructuralSentenceHierarchyV2.structuralV2_crown_family` | `Foundation.StructuralSentenceHierarchyV2` | `∃ Φ, ∀ n` **v2** strict gap |
+| `ModalTemporalFacts.modal_sound_next` | `Foundation.ModalTemporalFacts` | `SPEC_050` — `StageNext` sound |
+| `ModalTemporalFacts.modal_sound_future` | `Foundation.ModalTemporalFacts` | Bounded future modal sound |
+| `ModalTemporalFacts.modal_sound_pastSegment` | `Foundation.ModalTemporalFacts` | Listed past segment sound |
+| `ModalTemporalFacts.exists_modal_sentence_strict_gap` | `Foundation.ModalTemporalFacts` | Modal-shaped strict gap |
+| `ModalTemporalFacts.future_defeat_modalized` | `Foundation.ModalTemporalFacts` | Necessity packaging |
+| `ModalTemporalFacts.retro_revelation_modalized` | `Foundation.ModalTemporalFacts` | Next-stage retro bundle |
+| `OrganizationAbstractObstruction.abstractOrganization_sound` | `Ridge.OrganizationAbstractObstruction` | `SPEC_051` — trivial soundness anchor |
+| `OrganizationAbstractObstruction.abstractOrganization_nontrivial` | `Ridge.OrganizationAbstractObstruction` | Certified separation |
+| `OrganizationAbstractObstruction.bounded_abstractOrganization_has_obstruction` | `Ridge.OrganizationAbstractObstruction` | Stage separation bound |
+| `OrganizationAbstractObstruction.no_bounded_abstractOrganization_totalizes_future` | `Ridge.OrganizationAbstractObstruction` | ¬ total future map |
+| `OrganizationAbstractObstruction.organization_obstruction_supports_generalized_crown` | `Ridge.OrganizationAbstractObstruction` | Supports generalized stratum packaging |
+| `OrganizationAbstractObstruction.organization_cannot_certify_its_own_finality` | `Ridge.OrganizationAbstractObstruction` | ¬ self-certifying finality |
+| `CrownTransfer.trueBoolProdNat_trace` | `Ridge.CrownTransfer` | `SPEC_052` — tagged trace |
+| `CrownTransfer.altBoolProdNat_trace` | `Ridge.CrownTransfer` | Alt tag trace |
+| `CrownTransfer.true_bool_aligns` | `Ridge.CrownTransfer` | Alignment witness |
+| `CrownTransfer.alt_bool_aligns` | `Ridge.CrownTransfer` | Alt alignment |
+| `CrownTransfer.trace_true_vs_alt` | `Ridge.CrownTransfer` | Global trace disequality |
+| `CrownTransfer.phase_general_embed_true_faithful` | `Ridge.CrownTransfer` | Faithfulness on **true** class |
+| `CrownTransfer.phase_general_embed_alt_faithful` | `Ridge.CrownTransfer` | Faithfulness on **alt** class |
+| `CrownTransfer.admissibleClass_preserves_soundness` | `Ridge.CrownTransfer` | `ProvesAt` ⇒ both `carrierHolds` |
+| `CrownTransfer.true_general_phase_gap_at` | `Ridge.CrownTransfer` | Enum gap at **true** section |
+| `CrownTransfer.alt_general_phase_gap_at` | `Ridge.CrownTransfer` | Enum gap at **alt** section |
+| `CrownTransfer.admissibleClass_preserves_gap_structure` | `Ridge.CrownTransfer` | Parallel **succ / not** |
+| `CrownTransfer.crown_transfers_across_admissible_class` | `Ridge.CrownTransfer` | Gap + trace mismatch |
+| `CrownTransfer.witnessOutput_true_of_trueEmbed` | `Ridge.CrownTransfer` | `Bool` head on embedded witness |
+| `CrownTransfer.witnessOutput_false_of_altEmbed` | `Ridge.CrownTransfer` | Alt `Bool` head |
+| `CrownTransfer.exists_two_nonisomorphic_crown_instances` | `Ridge.CrownTransfer` | Distinct carrier sentences |
+| `CrownTransfer.generalized_crown_not_single_model_artifact` | `Ridge.CrownTransfer` | Two aligned generators |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_iterated_structural_ascent` | `Summits.GeneralizedFinalCrownPackage` | `SPEC_053` — **v2** ascent |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_no_fixed_structural_stratum` | `Summits.GeneralizedFinalCrownPackage` | Stratum + abstract org |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_future_defeat_of_terminality` | `Summits.GeneralizedFinalCrownPackage` | `FutureDefeat` export |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_generator_truth_family` | `Summits.GeneralizedFinalCrownPackage` | Generator truth ∧ **v2** |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_class_transfer` | `Summits.GeneralizedFinalCrownPackage` | Class transfer re-export |
+| `GeneralizedFinalCrownPackage.generalized_final_crown_not_model_artifact` | `Summits.GeneralizedFinalCrownPackage` | Non-singleton model |
+
 *(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
 
 ---
@@ -328,7 +390,7 @@ A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted
 
 ## Still research-grade open (extensions)
 
-Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; extra modalities; carriers beyond the current conservative poly embed pattern; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Crown completion** (**`SPEC_042_CG1`**–**`SPEC_047_CG6`**) — [`EPIC_011`](../specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); Lean packaging includes structural crown (**042**), enum / poly / org V2 / retro v2 / final package rows above.
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; extra modalities; carriers beyond the current conservative poly embed pattern; **etc.** Crown ascent (**`SPEC_035_GS1`**–**`SPEC_037_CR1`**) — see [`EPIC_009`](../specs/INCOMPLETE/IN-PROCESS/EPIC_009_STRICT_ITERATED_ASCENT/EPIC_009_MASTER_ORCHESTRATION.md). Expressive frontier v1 (**`SPEC_038_XS1`**–**`SPEC_041_OR1`**) — see [`EPIC_010`](../specs/INCOMPLETE/IN-PROCESS/EPIC_010_EXPRESSIVE_ORGANIZATION_FRONTIER/EPIC_010_MASTER_ORCHESTRATION.md). **Crown completion** (**`SPEC_042_CG1`**–**`SPEC_047_CG6`**) — [`EPIC_011`](../specs/INCOMPLETE/IN-PROCESS/EPIC_011_CROWN_COMPLETION/EPIC_011_MASTER_ORCHESTRATION.md); Lean packaging includes structural crown (**042**), enum / poly / org V2 / retro v2 / final package rows above. **Post-crown generalization** (**`SPEC_048_GC1`**–**`SPEC_053_GC6`**) — [`EPIC_012`](../specs/INCOMPLETE/IN-PROCESS/EPIC_012_GENERALIZED_CROWN_FRONTIER/EPIC_012_MASTER_ORCHESTRATION.md); see also [`GENERALIZED_CROWN_POSITIONING.md`](GENERALIZED_CROWN_POSITIONING.md).
 
 ---
 

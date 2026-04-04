@@ -88,6 +88,18 @@ Summits.FinalCrownPackage
   ← OutputEnumCrownFamily (extra `ProvesAt` gap export)
 ```
 
+### Post-crown generalization (`EPIC_012` — `SPEC_048_GC1`–`SPEC_053_GC6`)
+
+See **[`GENERALIZED_CROWN_DEPENDENCY_MAP.md`](GENERALIZED_CROWN_DEPENDENCY_MAP.md)** for the full **`EPIC_012`** thread. Headline sink:
+
+```
+Summits.GeneralizedFinalCrownPackage
+  ← Foundation.PhaseGeneralizationFacts / Ridge.CrownTransfer
+  ← Foundation.StructuralSentenceHierarchyV2
+  ← Ridge.OrganizationAbstractObstruction
+  ← Summits.FinalCrownPackage
+```
+
 ---
 
 _Reconcile this DAG when crown phases change; keep it honest about **direct** mathematical dependencies, not PR narrative._
