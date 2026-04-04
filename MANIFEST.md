@@ -16,7 +16,7 @@
 | Core | `NoveltyTheory/Core/` — generative systems, phases, regimes, reductions, paradigm shifts, tower, reducers, `Explains` |
 | Foundation | `NoveltyTheory/Foundation/` — trajectory and conservative-history lemmas |
 | Core (glue) | `NoveltyTheory/Core/Explains.lean` — `explainsTowerStage`, `regimeExplainsTowerStage` |
-| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C), `ReducerDiagonal` (B), `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase` |
+| Models | `NoveltyTheory/Models/` — `SignatureTower` (A), `InvariantTower` (C), `ReducerDiagonal` (B), `BoundedRegimeDiagonal`, `CausalExplanatoryOrders`, `GenCertPhase`, `SimulationVersusExplanation` |
 | Ridge | `NoveltyTheory/Ridge/` — `ShiftWitness`, `DiagonalNat`, `InterfaceAlignment` |
 | Summits | `NoveltyTheory/Summits/` — `CausalExplanatorySeparation`, `SummitPackages` |
 

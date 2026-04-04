@@ -30,6 +30,14 @@ def PhaseRegimeTower.paradigmShiftSteps (T : PhaseRegimeTower X) : Prop :=
     ParadigmShift (T.regime n) (T.regime (n + 1))
       ((List.range (n + 1)).map fun i => T.phase i) (T.phase (n + 1))
 
+/-- Ridge/spec phrasing: the standard finite-prefix paradigm chain (`SPEC_008_PSH`). -/
+abbrev PhaseRegimeTower.IsParadigmChain (T : PhaseRegimeTower X) : Prop :=
+  T.paradigmShiftSteps
+
+@[simp] theorem PhaseRegimeTower.paradigmShiftSteps_eq_isChain (T : PhaseRegimeTower X) :
+    T.paradigmShiftSteps ↔ T.IsParadigmChain :=
+  Iff.rfl
+
 end Core
 
 end NoveltyTheory

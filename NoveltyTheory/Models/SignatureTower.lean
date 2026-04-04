@@ -59,6 +59,13 @@ theorem natCounter_generated (k : ℕ) : (phaseSingleton k).generatedBy natCount
   rw [hx, GenerativeSystem.mem_reachSet_iff]
   exact ⟨k, natCounter_trace k⟩
 
+theorem natCounter_mem_reachSet (x : ℕ) : x ∈ natCounter.reachSet := by
+  rw [GenerativeSystem.mem_reachSet_iff]
+  exact ⟨x, natCounter_trace x⟩
+
+theorem natCounter_reachSet_univ : natCounter.reachSet = (Set.univ : Set ℕ) :=
+  Set.eq_univ_iff_forall.2 natCounter_mem_reachSet
+
 /-- Regime that **exactly** names outputs `0 … n` via `Fin (n + 1)`. -/
 def regimeUpto (n : ℕ) : ExplanatoryRegime ℕ where
   Desc := Fin (n + 1)

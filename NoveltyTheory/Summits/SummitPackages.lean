@@ -1,3 +1,4 @@
+import Mathlib.Data.List.Basic
 import NoveltyTheory.Core.Tower
 import NoveltyTheory.Core.Explains
 import NoveltyTheory.Models.SignatureTower
@@ -6,6 +7,7 @@ import NoveltyTheory.Models.BoundedRegimeDiagonal
 import NoveltyTheory.Models.ReducerDiagonal
 import NoveltyTheory.Models.CausalExplanatoryOrders
 import NoveltyTheory.Models.GenCertPhase
+import NoveltyTheory.Models.SimulationVersusExplanation
 import NoveltyTheory.Ridge.DiagonalNat
 
 /-!
@@ -20,7 +22,7 @@ namespace NoveltyTheory
 
 namespace Summits
 
-open Core Models SignatureTower InvariantTower Ridge
+open Core GenerativeSystem Models SignatureTower InvariantTower Ridge
 open Models.ReducerDiagonal Models.CausalExplanatoryOrders Models.BoundedRegimeDiagonal
 open Models.GenCertPhase
 
@@ -57,6 +59,24 @@ theorem upwardExplanatoryNecessity_counterfact (n : ℕ) :
     provesAtDepth (n + 1) (CounterFact.geOutput n) ∧
       ¬ provesAtDepth n (CounterFact.geOutput n) :=
   upward_derivability_gap n
+
+/--
+**Cross-depth retro template (`SPEC_003_NXT` S7):** fixed index `k`, proof available at depth `n > k`
+but not at `k`.
+-/
+theorem retroactive_derivability_crossDepth {k n : ℕ} (hk : k < n) :
+    provesAtDepth n (CounterFact.geOutput k) ∧ ¬ provesAtDepth k (CounterFact.geOutput k) :=
+  retro_derivability hk
+
+/--
+**Observable coincidence vs reduction (`SPEC_003_NXT` S9):** identical `reachSet`s need not support
+regime-wise back-reduction along historical prefixes.
+-/
+theorem observational_equivalence_but_not_reducible (n : ℕ) :
+    observationalEquivalence natCounter natCounter ∧
+      NotReducible (regimeUpto (n + 1)) (regimeUpto n)
+        (List.map phaseSingleton (List.range (n + 1)) ++ [phaseSingleton (n + 1)]) :=
+  SimulationVersusExplanation.observational_eq_but_irreducible n
 
 /-- Interface diagonal: row-wise soundness forces each row to miss the next singleton stage. -/
 theorem no_uniform_row_at_next_stage {υ : Type} (E : Core.AdmissibleInterface ℕ υ ℕ)

@@ -45,7 +45,7 @@
 | # | Outcome | Owner / epic | Spec / files | Status |
 |---|---------|----------------|--------------|--------|
 | 1 | Close **SPEC_001_ST1** (Lake manifest, `lake build`, docs) | `EPIC_001_NOVELTY_THEORY_LEAN` | `specs/INCOMPLETE/IN-PROCESS/EPIC_001_NOVELTY_THEORY_LEAN/` | Done |
-| 2 | Strengthenings beyond model scope: global `𝓔_adm`, nontrivial Model B enumerations, Wave 2 S7–S9 (**`SPEC_003_NXT`**) | `EPIC_002_SELF_TRANSCENDING_GENERATORS` | `specs/INCOMPLETE/IN-PROCESS/EPIC_002_SELF_TRANSCENDING_GENERATORS/`, [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md) | Open (models A/B/C + summits I–IV + ADR glue done in Lean) |
+| 2 | Strengthenings beyond model scope: global `𝓔_adm`, nontrivial Model B enumerations, deeper Wave 2 (**`SPEC_003_NXT`**: beyond S7/S9 templates now in `InvariantTower` / `SimulationVersusExplanation`) | `EPIC_002_SELF_TRANSCENDING_GENERATORS` | `specs/INCOMPLETE/IN-PROCESS/EPIC_002_SELF_TRANSCENDING_GENERATORS/`, [`docs/THEOREM_INVENTORY.md`](docs/THEOREM_INVENTORY.md) | Open (models A/B/C + summits I–IV + ADR glue + NXT S7/S9 packaging in Lean) |
 
 _Add rows: each row must be executable without re-deriving context. Mark **Done**, **Blocked** (unblocker in Notes), or **Dropped** (reason)._
 

@@ -55,6 +55,12 @@ theorem mem_reachSet_iff (G : GenerativeSystem S X) (x : X) :
     x ∈ G.reachSet ↔ ∃ n : ℕ, G.trace n = x :=
   Set.mem_range
 
+/--
+Same **set of observable outputs** realized along the trace (comparison layer for **`SPEC_003_NXT`** S9).
+-/
+abbrev observationalEquivalence (G1 G2 : GenerativeSystem S X) : Prop :=
+  G1.reachSet = G2.reachSet
+
 end GenerativeSystem
 
 end Core

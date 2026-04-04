@@ -25,7 +25,7 @@ NoveltyTheory/
   Basic.lean               # thin shim importing All
   Core/                    # definitions (generative system, phase, regime, reduction, shift, tower)
   Foundation/              # small lemmas
-  Models/                  # SignatureTower, InvariantTower, ReducerDiagonal, BoundedRegimeDiagonal, …
+  Models/                  # SignatureTower, InvariantTower, ReducerDiagonal, BoundedRegimeDiagonal, SimulationVersusExplanation, …
   Ridge/                   # ShiftWitness, DiagonalNat, InterfaceAlignment
   Summits/                 # summit packaging
 MANIFEST.md                # proof hygiene + module roll-up

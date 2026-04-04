@@ -65,6 +65,15 @@ theorem upward_derivability_gap (n : ℕ) :
       ¬ provesAtDepth n (CounterFact.geOutput n) :=
   ⟨proves_succ_ge n, not_proves_self n⟩
 
+/--
+**Retroactive / cross-depth gap (`SPEC_003_NXT` S7 template):** at lower depth `k` one cannot prove
+`geOutput k`, yet at any strictly greater depth `n` one can. The sentence is *about* the fixed
+index `k`; only the proof budget (`n`) changes.
+-/
+theorem retro_derivability {k n : ℕ} (hk : k < n) :
+    provesAtDepth n (CounterFact.geOutput k) ∧ ¬ provesAtDepth k (CounterFact.geOutput k) :=
+  ⟨⟨⟨k, hk⟩, rfl⟩, not_proves_self k⟩
+
 /-- Monotonicity in depth: larger `n` weakens the guard `k < n`, so every shallow proof lifts (`SPEC_010_UEN`). -/
 theorem proves_mono {m n : ℕ} (hmn : m ≤ n) {f : CounterFact} (h : provesAtDepth m f) :
     provesAtDepth n f := by
