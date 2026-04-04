@@ -1,47 +1,257 @@
 # Theorem inventory (novelty-theory-lean)
 
-**Purpose:** Headline declarations aligned with **`SPEC_011_SPK`** and ridge/model layers. For proof hygiene defaults see [`MANIFEST.md`](../MANIFEST.md).
+**Purpose:** Catalog of **public `theorem` / `lemma`** declarations under `NoveltyTheory/` (excluding Mathlib). Use this as the theorem index for papers and dependency maps. Proof hygiene defaults: [`MANIFEST.md`](../MANIFEST.md).
 
-| Layer | Informal statement | Lean name | Module | Key dependencies |
-|-------|-------------------|-----------|--------|-------------------|
-| **ADR / explains** | Interface explains tower stage = generated ∧ some row witnesses | `AdmissibleInterface.explainsTowerStage`, `explainsTowerStageAt` | `Core.Explains` | `rowExplains`, `generatedBy` |
-| **ADR / explains** | Regime at `n` explains phase at `n`, on trace | `regimeExplainsTowerStage` | `Core.Explains` | `ExplanatoryRegime.explains` |
-| **Canonical regime** | `regimeUpto n` explains stage `n` of `canonicalTower` on `natCounter` | `canonical_regime_explains_each_stage` | `Summits.SummitPackages` | `regimeUpto_explains_singleton` |
-| Summit I | Each signature level `k` fails on some generated phase | `causal_generation_not_uniform_explanation` | `Summits.SummitPackages` | `natCounter_generated`, `not_explains_regime_singleton_succ` |
-| Summit II | Infinite paradigm shifts + one generator | `infinite_paradigm_tower` | `Summits.SummitPackages` | `canonicalTower_paradigmSteps` |
-| Summit III | No `regimeUpto k` explains every phase | `noFinalInternalTheory_signature_family` | `Summits.SummitPackages` | `not_explains_regime_singleton_succ` |
-| Summit IV | Depth-strict `provesAtDepth` gap + soundness + monotonicity (**`geOutput`**, **`traceEq`**, **`phaseSingletonMem`**) | `upwardExplanatoryNecessity_counterfact`, `proves_sound`, `proves_mono`, `upward_trace_derivability_gap`, `upward_phase_derivability_gap` | `Models.InvariantTower` | `upward_derivability_gap` |
-| **NXT S7 (template)** | Fixed index `k`, proof at depth `n>k` but not at `k`; semantic stable, licensing shifts | `retro_derivability`, `retroactive_derivability_crossDepth`, `retro_revelation_derivability_package`, `retro_revelation_sound`, `summit_retro_revelation_derivability`, `summit_retro_revelation_sound` | `InvariantTower`, `Summits` | `proves_sound` |
-| **NXT S10 (template)** | No `regimeUpto k` explains **all** singleton phases (`ExplainsEntireSingletonLadder`) | `not_explainsEntireSingletonLadder_regimeUpto`, `finite_signature_cannot_organize_full_ladder`, `summit_finite_signature_not_total_ladder` | `SignatureTower`, `Summits` | `not_explains_regime_singleton_succ` |
-| **Global admissible (`𝓔_adm`)** | Diagonal for **every** bundled row-sound interface (hypothesis in the **type**) | `SignatureAdmissibleInterface`, `diagonal_every_admissible`, `summit_diagonal_all_bundled_admissible` | `Ridge.SignatureAdmissibleBundle` | `RowSoundForSignature` |
-| **Diagonal needs class** | Unsound rows can claim everything | `trivialAdmissibleInterface`, `trivialInterface_rows_claim_everything` | `Ridge.SignatureAdmissibleBundle` | definitional |
-| **SingletonWithin limit** | Bound **≠** paradigm chain; empty descriptors obstruct | `emptyRegime`, `emptyRegime_family_singletonWithin`, `not_paradigmShiftSteps_empty_tower`, `summit_singletonWithin_not_entails_paradigm_steps` | `Models.RegimeFamilyObstruction`, `Summits` | vacuous adequacy |
-| **NXT S9** | Same `reachSet` / trace coupling does not imply regime back-reduction | `traceCoupled`, `observationalEquivalence`, `trace_coupled_prod_not_reducible`, `trace_coupled_distinct_carrier_not_reducible`, `observational_eq_but_irreducible` | `GenerativeSystem`, `SignatureTower`, `SimulationVersusExplanation`, `Summits` | `not_reducible_succ`, `natCounterProd` |
-| **NXT S6** | From height `n`, some `m>n` admits a `ParadigmShift` witness | `exists_future_paradigmShift`, `every_stage_admits_future_paradigmShift` | `SignatureTower`, `Summits` | `paradigmShift_succ` |
-| **NXT S8 (template)** | Fixed regime height misses a generated singleton phase | `tower_phase_not_explained_by_fixed_regime`, `explanatory_incompleteness_fixed_signature_height` | `SignatureTower`, `Summits` | `not_explains_regime_singleton_succ` |
-| **Model B off-axis** | `RegimeFamilySingletonWithin` + shifts + diagonal, but `¬ EnumAgreesUpto` | `dupRegime`, `modelB_dup_singleton_bound_package`, `summit_nontrivial_modelB_singleton_family` | `DupRegimeTower`, `Summits` | `Fintype.card_congr`, paradigm packaging |
-| **Generator facts** | `natCounter` realizes every `ℕ` in `reachSet` | `natCounter_reachSet_univ`, `natCounter_mem_reachSet` | `Models.SignatureTower` | `natCounter_trace` |
-| **Tower phrasing** | `paradigmShiftSteps` packaged as “paradigm chain” | `PhaseRegimeTower.IsParadigmChain`, `paradigmShiftSteps_eq_isChain` | `Core.Tower` | definitional |
-| Diagonal | Row-sound interface misses `phaseSingleton (i+1)` at row `i` | `diagonal_stage_defeats_row`, `no_uniform_row_at_next_stage` | `Ridge.DiagonalNat`, `Summits` | `RowSoundForSignature` |
-| **Alignment** | Biconditional with `regimeUpto` rows ⇒ soundness ⇒ diagonal | `SignatureInterfaceAgrees`, `rowSound_of_agrees`, `not_rowExplains_succ_of_agrees` | `Ridge.InterfaceAlignment` | `RowSoundForSignature` |
-| **Abstract diagonal** | Singleton-within bound at height `n` ⇒ no explain `phaseSingleton (n+1)` | `not_explains_singleton_succ_of_within`, `family_diagonal_of_singletonWithin`, `summit_bounded_regime_family_diagonal` | `BoundedRegimeDiagonal`, `Summits` | singleton adequacy bound |
-| **Model B** | Agreed enumeration inherits shifts + diagonal + generation | `modelB_enumerated_diagonal_package`, `summit_modelB_enumerated_diagonal` | `ReducerDiagonal` | `EnumAgreesUpto`, `singletonWithin_of_enum_agrees` |
-| **Orders (NXT)** | Strict causal vs explanatory orders differ | `causal_explanatory_orders_diverge`, `causal_explanatory_order_divergence` | `CausalExplanatoryOrders`, `Summits` | definitional |
-| **Phase link** | Causal step can **lower** summed tag `phaseTag` | `causal_strict_but_tag_decreases`, `gen_cert_causal_strict_but_lower_phase_tag` | `GenCertPhase`, `Summits` | `phaseSingleton` |
-| Model A pack | Tower + generator + shifts | `model_causal_paradigm_tower` | `Summits.CausalExplanatorySeparation` | `canonicalTower` |
-| **Sentence / semantics (`SPEC_013`–`014`)** | Inductive **`Sentence`** (incl. **`histSeq`**, **`not`**, **`natPhaseTagMem`**, **`finConj`**) on **`NatPhaseTag`**, compositional **`HoldsAt`** | `Core.Sentence`, `Core.NatPhaseTag`, `Core.HoldsAt` | `Core.Sentence`, `Core.SentenceSemantics` | `Phase` / `GenerativeSystem` |
-| **Expressibility / provability (`SPEC_014`–`016`)** | Structural **`mentionBound`**, **`ExpressibleAt`**, **`ExpressibleAtHeight`**, **`ProvesAt`** (Model C atoms + **`histSeq`** + singleton **`phaseMem`** + **`natPhaseTagMem.sing`** / **`initial` unavailable** + **`finConj`** + genuine `∨`), non-collapse witnesses | `mentionBound`, `ExpressibleAt`, `expressibleAt_regimeUpto_iff`, `ExpressibleAtHeight`, `SentenceProvability.ProvesAt`, `Foundation.SentenceFacts.proves_implies_expressible_regime`, `StratifiedSentenceModel.exists_sentence_expressible_succ_not_at`, `exists_sentence_provable_succ_not_at`, `exists_sentence_trace_provable_succ_not_at`, `exists_sentence_phase_provable_succ_not_at`, `exists_histSeq_nonempty_provable_succ_not_at` | `Core.SentenceExpressibility`, `Core.SentenceRegime`, `Core.Expressibility`, `Models.SentenceProvability`, `Models.StratifiedSentenceModel`, `Foundation.SentenceFacts` | `InvariantTower` (`CounterFact`, `Pf`), `SignatureTower.regimeUpto` |
-| **Counterfact embed (`SPEC_015`)** | **`sentenceOfCounterFact`**: **`geOutput`**, **`traceEq`**, **`phaseSingletonMem`**; **`HoldsAt ↔ factHolds`** | `sentenceOfCounterFact_holds_iff`, `proves_sentence_sound` | `Foundation.ProvabilityFacts` | `InvariantTower`, `SignatureTower.natCounter` |
-| **Generator truth (`SPEC_017`)** | Structural trace equalities and matching singleton / tag atoms **`HoldsAt natCounter`** | `holdsAt_natCounter_traceEq_self`, `holdsAt_natCounter_phaseMem_singleton`, `holdsAt_natCounter_natPhaseTagMem_sing` | `Core.GeneratorTruth` | `natCounter_trace`, `NatPhaseTag.mem_sing_iff` |
-| **Upward necessity (`SPEC_018`)** | Sentence-level strict gap | `UpwardNecessity.upward_necessity_geOutput`, `UnfoldingNecessitySummit.exists_strict_provable_gap` | `Foundation.UpwardNecessity`, `Summits.UnfoldingNecessitySummit` | `upward_derivability_gap` |
-| **Organization / proof height (`SPEC_020`–`023`)** | Abstract org records + nontrivial carriers + diagonal / proof-height repackage | `adequateNatParity`, `totalFutureOnNat`, `OrganizationSummit.universal_sentence_proof_height_gap` | `Core.Organization`, `Summits.OrganizationSummit` | `BoundedRegimeDiagonal` |
-| **Finality layer (`SPEC_024`–`026`)** | **`FutureDefeat`**, **`SelfCertificationObstruction`**, satisfiable **`TerminalityPredicate`** witness | `natCounter_futureDefeat`, `self_certification_obstruction`, `terminality_eq_zero`, `terminality_natCounter_eq_zero` | `Models.StratifiedFinality`, `Summits.NecessityStratifiedFinalitySummit` | `not_proves_self`, `GenerativeSystem` |
-| **Retro structural (`SPEC_027`–`029`)** | Recursive **`IsRetroStructural`** (`and` / `or` / **`finConj`** closure) + strict gap summit | `isRetroStructural_finConj`, `exists_retro_sentence_expressible_gap`, `StrongRetroCausationSummit.retro_strict_expressibility` | `Models.RetroStructuralTruth`, `Summits.StrongRetroCausationSummit` | `ExpressibleAtHeight` |
-| **Explanatory vs support (`SPEC_019`)** | Equal singleton supports from **`phaseOf` force equal **`phaseTag`** | `phaseTag_eq_of_phaseOf_outputSet_eq` | `Core.ExplanatoryOrder` | `GenCertPhase.phaseOf_output` |
-| **Abstract simulation (`SPEC_030`–`032`)** | Observational equivalence **does not** imply trace coupling | `observational_equiv_not_implies_trace_coupled`, `not_traceCoupled_altParity_counterexample` | `Core.SimulationVersusExplanationAbstract`, `Summits.SimulationVersusExplanationAbstractSummit` | `traceCoupled`, `observationalEquivalence` |
+**Convention:** Names are given as in Lean (including namespaces where disambiguating, e.g. `CounterFact.geOutput_inj`).
 
-**Not achievable in the literal form from prose (and now obstructed in Lean):** a **uniform** diagonal for **all** raw `AdmissibleInterface` values (**refuted** by `trivialAdmissibleInterface`); an **infinite paradigm chain** for **every** `RegimeFamilySingletonWithin` family (**refuted** by `emptyRegime` / `not_paradigmShiftSteps_empty_tower`). What **is** honest: quantify over **`SignatureAdmissibleInterface`** (soundness carried as **data**), or keep **`RowSoundForSignature`** as an explicit hypothesis.
+**See also:** [007 — Library positioning](007_LIBRARY_POSITIONING_ASSESSMENT.md) (how this catalog reframes Wave 2 and crown targets).
 
-**Still research-grade open** (extensions only; normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)). **Richer phase** / **set** atoms beyond singleton **`phaseMem`** and **`NatPhaseTag`** (e.g. full **`Phase.outputSet`**-valued atoms without encoding as **`Set ℕ`**); **`NatPhaseTag.initial`** at the **derivability** fringe (currently semantic-only in **`HoldsAt`**, **`ProvesAt`** stays **`False`**); modalities; **polymorphic `Phase`** / higher-universe typing at sentence level; strengthen **`AdequateOrganization`** / **`TerminalityPredicate`**; a **single** universal organization class that matches prose “only infinite internal hierarchy explains all futures” without trivial counterexamples.
+---
 
-_Update this table whenever summits or ridge theorems change._
+## Spine (headline packaging)
+
+The following subsume many rows below via `Summits.SummitPackages` and peers; they match **`SPEC_011_SPK`** / NXT template naming.
+
+| Layer | Informal | Lean anchors | Primary module |
+|-------|----------|--------------|----------------|
+| Summit I–IV + NXT hooks | Causal/explanatory separation, paradigm tower, no final `regimeUpto`, Model C gap, S6–S10 templates, retro revelation, **etc.** | `causal_generation_not_uniform_explanation`, `infinite_paradigm_tower`, `noFinalInternalTheory_signature_family`, `upwardExplanatoryNecessity_counterfact`, `every_stage_admits_future_paradigmShift`, `explanatory_incompleteness_fixed_signature_height`, `summit_finite_signature_not_total_ladder`, `summit_diagonal_all_bundled_admissible`, `summit_bounded_regime_family_diagonal`, **etc.** | `Summits.SummitPackages` |
+| Sentence + Model C bridge | Strata, soundness, non-collapse | `ProvesAt`, `proves_sentence_sound`, `mentionBound_le_of_proves`, `exists_sentence_*` (Stratified), `expressibleAt_regimeUpto_iff` | `Core.*Sentence*`, `Models.SentenceProvability`, `Foundation.*` |
+| Obstructions | Trivial interface; empty regime | `trivialInterface_rows_claim_everything`, `not_paradigmShiftSteps_empty_tower`, `summit_singletonWithin_not_entails_paradigm_steps` | `Ridge.SignatureAdmissibleBundle`, `Models.RegimeFamilyObstruction`, `Summits` |
+
+---
+
+## `NoveltyTheory/` — complete theorem list
+
+### Root
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `library_root_import_ok` | `NoveltyTheory.Basic` | Aggregate import smoke test |
+
+### Core
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `GenerativeSystem.step_succ` | `Core.GenerativeSystem` | `step (n+1) = τ (step n)` |
+| `GenerativeSystem.trace_succ` | `Core.GenerativeSystem` | Trace recursion |
+| `GenerativeSystem.mem_reachSet_iff` | `Core.GenerativeSystem` | `reachSet` characterization |
+| `GenerativeSystem.reachSet_eq_of_traceCoupled` | `Core.GenerativeSystem` | Trace coupling ⇒ equal `reachSet` |
+| `GenerativeSystem.observationalEquivalence_of_traceCoupled` | `Core.GenerativeSystem` | Trace coupling ⇒ observational equivalence |
+| `NatPhaseTag.mem_sing_iff` | `Core.NatPhaseTag` | Membership in singleton tag |
+| `NatPhaseTag.mem_initial_iff` | `Core.NatPhaseTag` | Membership in initial-segment tag |
+| `GeneratorTruth.isGeneratorStructural_traceEq` | `Core.GeneratorTruth` | `traceEq n n` is structural |
+| `GeneratorTruth.holdsAt_natCounter_traceEq_self` | `Core.GeneratorTruth` | `HoldsAt natCounter (traceEq n n)` |
+| `GeneratorTruth.holdsAt_natCounter_phaseMem_singleton` | `Core.GeneratorTruth` | Singleton phase atom holds on `natCounter` |
+| `GeneratorTruth.holdsAt_natCounter_natPhaseTagMem_sing` | `Core.GeneratorTruth` | Singular tag atom holds on `natCounter` |
+| `SentenceExpressibility.expressibleAtHeight_iff` | `Core.SentenceExpressibility` | Height strata ↔ `mentionBound` |
+| `SentenceExpressibility.mentionBound_not` | `Core.SentenceExpressibility` | `mentionBound` under negation |
+| `SentenceExpressibility.mentionBound_histSeq` | `Core.SentenceExpressibility` | `mentionBound` for `histSeq` |
+| `SentenceExpressibility.mentionBound_finConj` | `Core.SentenceExpressibility` | `mentionBound` for `finConj` |
+| `SentenceExpressibility.mentionBound_natPhaseTagMem` | `Core.SentenceExpressibility` | `mentionBound` for phase tags |
+| `SentenceRegime.expressibleAt_regimeUpto_iff` | `Core.SentenceRegime` | Expressibility vs `regimeUpto` |
+| `SentenceRegime.expressibleAtHeight_iff_expressible_regime` | `Core.SentenceRegime` | Height vs regime formulation |
+| `ExplanatoryOrder.phaseTag_eq_of_phaseOf_outputSet_eq` | `Core.ExplanatoryOrder` | Equal supports ⇒ equal `phaseTag` |
+| `ExplanatoryOrder.orders_strict_diverge` | `Core.ExplanatoryOrder` | Causal vs explanatory strict orders differ |
+| `ExplanatoryOrder.causal_step_lowers_summed_phase_tag` | `Core.ExplanatoryOrder` | Tag can drop under causal step |
+| `SimulationVersusExplanationAbstract.simulatesTracePrefix_zero` | `Core.SimulationVersusExplanationAbstract` | Vacuous prefix simulation at `0` |
+| `SimulationVersusExplanationAbstract.observationalEquiv_altParity_pair` | `Core.SimulationVersusExplanationAbstract` | Parity pair: observational equivalence |
+| `SimulationVersusExplanationAbstract.not_traceCoupled_altParity_counterexample` | `Core.SimulationVersusExplanationAbstract` | Same observations, not trace coupled |
+| `SimulationVersusExplanationAbstract.observational_equiv_not_implies_trace_coupled` | `Core.SimulationVersusExplanationAbstract` | Global non-implication (types over `GenerativeSystem`) |
+| `SimulationVersusExplanationAbstract.simulatesTracePrefix_self` | `Core.SimulationVersusExplanationAbstract` | Self-prefix simulation |
+
+### Foundation
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `Trajectory.trace_mem_reachSet` | `Foundation.Trajectory` | Trace values lie in `reachSet` |
+| `ConservativeHistory.conservativeOver_tail_of_conservativeOver` | `Foundation.ConservativeHistory` | Conservativity restricted to tail |
+| `SentenceFacts.list_fold_trace_pair_bound_aux` | `Foundation.SentenceFacts` | Aux for list-fold `mentionBound` on pairs |
+| `SentenceFacts.list_fold_trace_pair_bound` | `Foundation.SentenceFacts` | `histSeq` mention bound from list |
+| `SentenceFacts.list_fold_mention_bound_aux` | `Foundation.SentenceFacts` | Aux for `finConj` fold |
+| `SentenceFacts.list_fold_mention_bound` | `Foundation.SentenceFacts` | `finConj` mention bound |
+| `SentenceFacts.expressible_mono` | `Foundation.SentenceFacts` | Monotonicity of `ExpressibleAtHeight` |
+| `SentenceFacts.mentionBound_le_of_proves` | `Foundation.SentenceFacts` | `ProvesAt m φ ⇒ mentionBound φ ≤ m` |
+| `SentenceFacts.proves_implies_expressible` | `Foundation.SentenceFacts` | Provable ⇒ expressible at height |
+| `SentenceFacts.proves_implies_expressible_regime` | `Foundation.SentenceFacts` | Provable ⇒ `ExpressibleAt (regimeUpto m)` |
+| `ProvabilityFacts.sentenceOfCounterFact_ge` | `Foundation.ProvabilityFacts` | `simp` embed ge |
+| `ProvabilityFacts.sentenceOfCounterFact_trace` | `Foundation.ProvabilityFacts` | `simp` embed trace |
+| `ProvabilityFacts.sentenceOfCounterFact_phase` | `Foundation.ProvabilityFacts` | `simp` embed phase |
+| `ProvabilityFacts.sentenceOfCounterFact_holds_iff` | `Foundation.ProvabilityFacts` | `HoldsAt` ↔ `factHolds` for embed |
+| `ProvabilityFacts.proves_sentence_sound` | `Foundation.ProvabilityFacts` | `ProvesAt` ⇒ `HoldsAt natCounter` |
+| `UpwardNecessity.upward_necessity_geOutput` | `Foundation.UpwardNecessity` | Sentence-level strict gap for `geOutput` |
+
+### Models
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `InvariantTower.CounterFact.geOutput_inj` | `Models.InvariantTower` | Injectivity of `geOutput` constructor |
+| `InvariantTower.CounterFact.traceEq_inj` | `Models.InvariantTower` | Injectivity of `traceEq` |
+| `InvariantTower.CounterFact.phaseSingletonMem_inj` | `Models.InvariantTower` | Injectivity of `phaseSingletonMem` |
+| `InvariantTower.proves_succ_ge` | `Models.InvariantTower` | One-step proof of `geOutput n` |
+| `InvariantTower.proves_succ_trace` | `Models.InvariantTower` | One-step proof of diagonal trace fact |
+| `InvariantTower.proves_succ_phase` | `Models.InvariantTower` | One-step proof of phase singleton mem |
+| `InvariantTower.not_proves_self` | `Models.InvariantTower` | Strict gap: not at own depth |
+| `InvariantTower.not_proves_trace_diag` | `Models.InvariantTower` | Strict gap: trace diagonal |
+| `InvariantTower.not_proves_phase` | `Models.InvariantTower` | Strict gap: phase mem |
+| `InvariantTower.upward_derivability_gap` | `Models.InvariantTower` | Bundled gap for `geOutput` |
+| `InvariantTower.upward_trace_derivability_gap` | `Models.InvariantTower` | Bundled gap for trace |
+| `InvariantTower.upward_phase_derivability_gap` | `Models.InvariantTower` | Bundled gap for phase |
+| `InvariantTower.retro_derivability` | `Models.InvariantTower` | Cross-depth for `geOutput` |
+| `InvariantTower.retro_derivability_trace` | `Models.InvariantTower` | Cross-depth for trace |
+| `InvariantTower.retro_derivability_phase` | `Models.InvariantTower` | Cross-depth for phase |
+| `InvariantTower.proves_mono` | `Models.InvariantTower` | Monotonicity of `provesAtDepth` |
+| `InvariantTower.provesAtDepth_le_factIndexBound` | `Models.InvariantTower` | Index bound from proof |
+| `InvariantTower.provesAtDepth_maxIndex_le` | `Models.InvariantTower` | Max trace index from proof |
+| `InvariantTower.factHolds_geOutput` | `Models.InvariantTower` | Semantic content of `geOutput` |
+| `InvariantTower.factHolds_diag_trace` | `Models.InvariantTower` | Semantic content of diagonal trace |
+| `InvariantTower.factHolds_phaseSingletonMem` | `Models.InvariantTower` | Semantic content of phase singleton |
+| `InvariantTower.proves_sound` | `Models.InvariantTower` | Soundness: `provesAtDepth` ⇒ `factHolds` |
+| `InvariantTower.retro_revelation_derivability_package` | `Models.InvariantTower` | Semantic + proof separation package |
+| `InvariantTower.retro_revelation_sound` | `Models.InvariantTower` | Retro soundness slice |
+| `InvariantTower.no_finite_depth_proves_all` | `Models.InvariantTower` | No finite depth proves all facts |
+| `SignatureTower.phaseSingleton_output` | `Models.SignatureTower` | Output set of `phaseSingleton` |
+| `SignatureTower.natCounter_trace` | `Models.SignatureTower` | Identity trace for `natCounter` |
+| `SignatureTower.natCounter_generated` | `Models.SignatureTower` | Phases generated by `natCounter` |
+| `SignatureTower.natCounter_mem_reachSet` | `Models.SignatureTower` | Reachability on `ℕ` |
+| `SignatureTower.natCounter_reachSet_univ` | `Models.SignatureTower` | Full `reachSet` |
+| `SignatureTower.natCounterProd_step` | `Models.SignatureTower` | Product model step |
+| `SignatureTower.natCounterProd_trace_eq` | `Models.SignatureTower` | Product trace |
+| `SignatureTower.natCounterProd_trace` | `Models.SignatureTower` | Trace equality vs `natCounter` |
+| `SignatureTower.traceCoupled_natCounter_prod` | `Models.SignatureTower` | Trace coupling with product |
+| `SignatureTower.observationalEquiv_natCounter_prod` | `Models.SignatureTower` | Observational equivalence with product |
+| `SignatureTower.regimeUpto_adequate_iff` | `Models.SignatureTower` | Adequacy in truncated regime |
+| `SignatureTower.regimeUpto_explains_singleton` | `Models.SignatureTower` | Regime explains low singletons |
+| `SignatureTower.not_explains_regime_singleton_succ` | `Models.SignatureTower` | Fails on next singleton |
+| `SignatureTower.not_explainsEntireSingletonLadder_regimeUpto` | `Models.SignatureTower` | S10: not entire ladder |
+| `SignatureTower.mem_history_range` | `Models.SignatureTower` | History membership |
+| `SignatureTower.conservative_castSucc` | `Models.SignatureTower` | Conservativity along cast |
+| `SignatureTower.conservativeOver_castSucc` | `Models.SignatureTower` | `ConservativeOver` along cast |
+| `SignatureTower.adequateWitness_succ` | `Models.SignatureTower` | Witness adequacy at successor |
+| `SignatureTower.later_explains_witness` | `Models.SignatureTower` | Later regime explains witness |
+| `SignatureTower.witness_mem_tail` | `Models.SignatureTower` | Witness in extended history |
+| `SignatureTower.not_reducible_succ` | `Models.SignatureTower` | Non-reducibility step |
+| `SignatureTower.paradigmShift_succ` | `Models.SignatureTower` | `ParadigmShift` between heights |
+| `SignatureTower.tower_phase_not_explained_by_fixed_regime` | `Models.SignatureTower` | Fixed height incompleteness |
+| `SignatureTower.finite_signature_cannot_organize_full_ladder` | `Models.SignatureTower` | Organization template |
+| `SignatureTower.exists_future_paradigmShift` | `Models.SignatureTower` | S6 existence |
+| `SignatureTower.canonicalTower_paradigmSteps` | `Models.SignatureTower` | Canonical tower shifts |
+| `SignatureTower.canonicalTower_generated` | `Models.SignatureTower` | Canonical tower generation |
+| `BoundedRegimeDiagonal.not_explains_singleton_succ_of_within` | `Models.BoundedRegimeDiagonal` | Within-bound ⇒ not next singleton |
+| `BoundedRegimeDiagonal.family_diagonal_of_singletonWithin` | `Models.BoundedRegimeDiagonal` | Family diagonal from bound |
+| `BoundedRegimeDiagonal.regimeUpto_adequate_singletonWithin` | `Models.BoundedRegimeDiagonal` | `regimeUpto` satisfies within |
+| `BoundedRegimeDiagonal.regimeFamily_singletonWithin_upto` | `Models.BoundedRegimeDiagonal` | Family instance for ladder |
+| `ReducerDiagonal.enum_diagonal_step` | `Models.ReducerDiagonal` | Enumerated diagonal step |
+| `ReducerDiagonal.diagonalTower_generatedThroughout` | `Models.ReducerDiagonal` | Generation for diagonal tower |
+| `ReducerDiagonal.diagonalTower_paradigmShiftSteps_of_agrees` | `Models.ReducerDiagonal` | Paradigm steps from enumeration |
+| `ReducerDiagonal.canonicalEnum_agrees` | `Models.ReducerDiagonal` | Canonical enum agrees |
+| `ReducerDiagonal.singletonWithin_of_enum_agrees` | `Models.ReducerDiagonal` | Singleton-within from agreement |
+| `ReducerDiagonal.modelB_enumerated_diagonal_package` | `Models.ReducerDiagonal` | Model B package |
+| `DupRegimeTower.dupRegime_ne_regimeUpto` | `Models.DupRegimeTower` | Dup ≠ canonical |
+| `DupRegimeTower.not_enum_agrees_dup` | `Models.DupRegimeTower` | Enumeration disagreement |
+| `DupRegimeTower.dup_singletonWithin` | `Models.DupRegimeTower` | Within bound at dup |
+| `DupRegimeTower.dup_regime_family_singletonWithin` | `Models.DupRegimeTower` | Family bound |
+| `DupRegimeTower.not_explains_dup_singleton_succ` | `Models.DupRegimeTower` | Diagonal at dup |
+| `DupRegimeTower.dup_conservative` | `Models.DupRegimeTower` | Conservativity fragment |
+| `DupRegimeTower.dup_adequate_witness` | `Models.DupRegimeTower` | Witness adequacy |
+| `DupRegimeTower.dup_later_explains` | `Models.DupRegimeTower` | Later explains stage |
+| `DupRegimeTower.not_reducible_dup_succ` | `Models.DupRegimeTower` | Non-reducibility |
+| `DupRegimeTower.paradigmShift_dup_succ` | `Models.DupRegimeTower` | Paradigm shift |
+| `DupRegimeTower.dupDiagonalTower_paradigmSteps` | `Models.DupRegimeTower` | Dup tower shifts |
+| `DupRegimeTower.dupDiagonalTower_generated` | `Models.DupRegimeTower` | Dup tower generation |
+| `DupRegimeTower.dup_diagonalTower_eq` | `Models.DupRegimeTower` | Tower equality |
+| `DupRegimeTower.modelB_dup_singleton_bound_package` | `Models.DupRegimeTower` | Bundled Model B off-axis |
+| `RegimeFamilyObstruction.emptyRegime_singletonWithin` | `Models.RegimeFamilyObstruction` | Empty regime meets bound |
+| `RegimeFamilyObstruction.emptyRegime_family_singletonWithin` | `Models.RegimeFamilyObstruction` | Family `SingletonWithin` |
+| `RegimeFamilyObstruction.not_explains_emptyRegime` | `Models.RegimeFamilyObstruction` | Explains nothing |
+| `RegimeFamilyObstruction.not_paradigmShift_empty_step` | `Models.RegimeFamilyObstruction` | No shift on empty |
+| `RegimeFamilyObstruction.not_paradigmShiftSteps_empty_tower` | `Models.RegimeFamilyObstruction` | No infinite shift chain |
+| `CausalExplanatoryOrders.causal_explanatory_orders_diverge` | `Models.CausalExplanatoryOrders` | Order divergence witness |
+| `GenCertPhase.phaseOf_output` | `Models.GenCertPhase` | `phaseOf` singleton support |
+| `GenCertPhase.causal_strict_but_tag_decreases` | `Models.GenCertPhase` | Causal strict vs tag |
+| `SimulationVersusExplanation.observational_eq_but_irreducible` | `Models.SimulationVersusExplanation` | Obs equiv but not reducible |
+| `SimulationVersusExplanation.trace_coupled_prod_not_reducible` | `Models.SimulationVersusExplanation` | Trace-coupled + irreducible |
+| `SentenceProvability.ProvesAt_geOutput_iff` | `Models.SentenceProvability` | `ProvesAt` ↔ depth for `geOutput` |
+| `SentenceProvability.proves_mono_sentence` | `Models.SentenceProvability` | Monotonicity of `ProvesAt` |
+| `StratifiedSentenceModel.exists_sentence_expressible_succ_not_at` | `Models.StratifiedSentenceModel` | Expressibility gap witness |
+| `StratifiedSentenceModel.exists_sentence_provable_succ_not_at` | `Models.StratifiedSentenceModel` | `geOutput` provability gap |
+| `StratifiedSentenceModel.exists_sentence_trace_provable_succ_not_at` | `Models.StratifiedSentenceModel` | Trace provability gap |
+| `StratifiedSentenceModel.exists_sentence_phase_provable_succ_not_at` | `Models.StratifiedSentenceModel` | Phase provability gap |
+| `StratifiedSentenceModel.exists_histSeq_nonempty_provable_succ_not_at` | `Models.StratifiedSentenceModel` | `histSeq` gap |
+| `StratifiedSentenceModel.universal_no_sentence_proof_at_own_bound` | `Models.StratifiedSentenceModel` | Universal proof-height obstruction |
+| `StratifiedFinality.natCounter_futureDefeat` | `Models.StratifiedFinality` | Unbounded trace |
+| `StratifiedFinality.terminality_eq_zero` | `Models.StratifiedFinality` | Satisfiable terminality |
+| `StratifiedFinality.terminality_impossible_strict_output_rise` | `Models.StratifiedFinality` | Terminality vs strict rise |
+| `RetroStructuralTruth.isRetroStructural_traceEq` | `Models.RetroStructuralTruth` | Retro classification |
+| `RetroStructuralTruth.isRetroStructural_histSeq` | `Models.RetroStructuralTruth` | Retro `histSeq` |
+| `RetroStructuralTruth.isRetroStructural_geOutput` | `Models.RetroStructuralTruth` | Retro `geOutput` |
+| `RetroStructuralTruth.isRetroStructural_and` | `Models.RetroStructuralTruth` | Retro closure `and` |
+| `RetroStructuralTruth.isRetroStructural_or` | `Models.RetroStructuralTruth` | Retro closure `or` |
+| `RetroStructuralTruth.isRetroStructural_finConj` | `Models.RetroStructuralTruth` | Retro closure `finConj` |
+| `RetroStructuralTruth.exists_retro_sentence_expressible_gap` | `Models.RetroStructuralTruth` | Retro expressibility gap |
+
+### Ridge
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `DiagonalNat.not_explains_stage_singleton_succ_of_rowSound` | `Ridge.DiagonalNat` | Row-sound ⇒ not explain next |
+| `DiagonalNat.diagonal_stage_defeats_row` | `Ridge.DiagonalNat` | Diagonal at row |
+| `InterfaceAlignment.rowSound_of_reflects` | `Ridge.InterfaceAlignment` | Reflects signature ⇒ sound |
+| `InterfaceAlignment.reflects_of_agrees` | `Ridge.InterfaceAlignment` | Agreement ⇒ reflects |
+| `InterfaceAlignment.rowSound_of_agrees` | `Ridge.InterfaceAlignment` | Agreement ⇒ sound |
+| `InterfaceAlignment.not_rowExplains_succ_of_agrees` | `Ridge.InterfaceAlignment` | Agreement ⇒ diagonal |
+| `SignatureAdmissibleBundle.diagonal_every_admissible` | `Ridge.SignatureAdmissibleBundle` | Bundled diagonal |
+| `SignatureAdmissibleBundle.trivialInterface_rows_claim_everything` | `Ridge.SignatureAdmissibleBundle` | Trivial obstruction |
+| `ShiftWitness.signatureParadigmShift` | `Ridge.ShiftWitness` | Bridge `paradigmShift_succ` to generic `ParadigmShift` |
+
+### Summits
+
+| Declaration | Module | Role |
+|-------------|--------|------|
+| `CausalExplanatorySeparation.model_causal_paradigm_tower` | `Summits.CausalExplanatorySeparation` | Model A pack |
+| `SummitPackages.causal_generation_not_uniform_explanation` | `Summits.SummitPackages` | Summit I |
+| `SummitPackages.infinite_paradigm_tower` | `Summits.SummitPackages` | Summit II |
+| `SummitPackages.noFinalInternalTheory_signature_family` | `Summits.SummitPackages` | Summit III |
+| `SummitPackages.upwardExplanatoryNecessity_counterfact` | `Summits.SummitPackages` | Summit IV |
+| `SummitPackages.retroactive_derivability_crossDepth` | `Summits.SummitPackages` | S7 template |
+| `SummitPackages.observational_equivalence_but_not_reducible` | `Summits.SummitPackages` | S9 template |
+| `SummitPackages.trace_coupled_distinct_carrier_not_reducible` | `Summits.SummitPackages` | S9 sharpened |
+| `SummitPackages.every_stage_admits_future_paradigmShift` | `Summits.SummitPackages` | S6 |
+| `SummitPackages.explanatory_incompleteness_fixed_signature_height` | `Summits.SummitPackages` | S8 |
+| `SummitPackages.summit_nontrivial_modelB_singleton_family` | `Summits.SummitPackages` | Model B off-axis summit |
+| `SummitPackages.no_uniform_row_at_next_stage` | `Summits.SummitPackages` | Hypothesized diagonal |
+| `SummitPackages.summit_diagonal_all_bundled_admissible` | `Summits.SummitPackages` | Bundled diagonal summit |
+| `SummitPackages.summit_singletonWithin_not_entails_paradigm_steps` | `Summits.SummitPackages` | SingletonWithin does not imply paradigm chain |
+| `SummitPackages.summit_finite_signature_not_total_ladder` | `Summits.SummitPackages` | S10 |
+| `SummitPackages.summit_retro_revelation_derivability` | `Summits.SummitPackages` | Retro revelation bundle |
+| `SummitPackages.summit_retro_revelation_sound` | `Summits.SummitPackages` | Retro revelation sound |
+| `SummitPackages.canonical_regime_explains_each_stage` | `Summits.SummitPackages` | Canonical explains stage |
+| `SummitPackages.summit_modelB_enumerated_diagonal` | `Summits.SummitPackages` | Enumerated Model B |
+| `SummitPackages.causal_explanatory_order_divergence` | `Summits.SummitPackages` | Order packaging |
+| `SummitPackages.summit_bounded_regime_family_diagonal` | `Summits.SummitPackages` | Bounded family diagonal |
+| `SummitPackages.gen_cert_causal_strict_but_lower_phase_tag` | `Summits.SummitPackages` | GenCert tag packaging |
+| `OrganizationSummit.no_finite_singleton_bound_explains_next` | `Summits.OrganizationSummit` | Org + diagonal |
+| `OrganizationSummit.universal_sentence_proof_height_gap` | `Summits.OrganizationSummit` | `ProvesAt` height gap |
+| `NecessityStratifiedFinalitySummit.self_certification_obstruction` | `Summits.NecessityStratifiedFinalitySummit` | Finite-depth obstruction |
+| `NecessityStratifiedFinalitySummit.nat_counter_future_defeat` | `Summits.NecessityStratifiedFinalitySummit` | Future defeat export |
+| `NecessityStratifiedFinalitySummit.terminality_natCounter_eq_zero` | `Summits.NecessityStratifiedFinalitySummit` | Terminality export |
+| `StrongRetroCausationSummit.retro_strict_expressibility` | `Summits.StrongRetroCausationSummit` | Retro summit |
+| `UnfoldingNecessitySummit.upward_necessity_sentence` | `Summits.UnfoldingNecessitySummit` | Sentence upward necessity |
+| `UnfoldingNecessitySummit.exists_strict_provable_gap` | `Summits.UnfoldingNecessitySummit` | Strict gap packaging |
+
+*(Summit-only re-exports in `GeneratorTruthRidge` / `SimulationVersusExplanationAbstractSummit` point into Core; no additional theorems there.)*
+
+---
+
+## Not achievable (literal universal forms)
+
+A **uniform** diagonal for **all** raw `AdmissibleInterface` values is **refuted** by `trivialAdmissibleInterface` / `trivialInterface_rows_claim_everything`. An **infinite paradigm chain** for **every** `RegimeFamilySingletonWithin` family is **refuted** by `emptyRegime` / `not_paradigmShiftSteps_empty_tower`. Honest quantification uses **`SignatureAdmissibleInterface`** or explicit **`RowSoundForSignature`**.
+
+---
+
+## Still research-grade open (extensions)
+
+Extensions beyond normative closure (normative **`EPIC_002`** closed per [`SPEC_034_R2B`](../specs/INCOMPLETE/IN-PROCESS/SPEC_034_R2B_EPIC002_SCOPE_CLOSURE.md)): richer phase-at-sentence without `Set ℕ` encoding; `NatPhaseTag.initial` at **derivability** fringe; modalities; polymorphic phase syntax; stronger organization predicates; **etc.**
+
+---
+
+_Add new rows in the **same change** as new `theorem` / `lemma` declarations. If this list drifts, re-audit `NoveltyTheory/**/*.lean` for declaration sites—include lines after attributes (e.g. `@[simp] theorem`), not only lines that start with `theorem` / `lemma`._

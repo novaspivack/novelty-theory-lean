@@ -9,7 +9,7 @@
 3. [`NOTES/PROJECT_SEED.md`](../NOTES/PROJECT_SEED.md)
 4. [`CODING_PROTOCOLS.md`](../CODING_PROTOCOLS.md) — Lean proof quality + execution discipline
 5. [`.cursorrules`](../.cursorrules) / [`.cursor/rules/stub-agent-contract.mdc`](../.cursor/rules/stub-agent-contract.mdc)
-6. This index — **001** overview, **002** setup, **004** library layout
+6. This index — **001** overview, **002** setup, **004** layout, **007** positioning vs inventory
 
 ## CI
 
@@ -23,7 +23,8 @@
 | [002_DEVELOPER_SETUP.md](002_DEVELOPER_SETUP.md) | Elan, `lake build`, bump process |
 | [003_LEAN_TOOLCHAIN_PIN.md](003_LEAN_TOOLCHAIN_PIN.md) | Canonical Lean 4 RC (`v4.29.0-rc6`) |
 | [004_LEAN_LIBRARY_LAYOUT.md](004_LEAN_LIBRARY_LAYOUT.md) | Lake, `NoveltyTheory/`, manifest |
-| [THEOREM_INVENTORY.md](THEOREM_INVENTORY.md) | Headline theorems (Summit I–IV, ridge, models) |
+| [THEOREM_INVENTORY.md](THEOREM_INVENTORY.md) | Full catalog of public `theorem` / `lemma` under `NoveltyTheory/` |
+| [007_LIBRARY_POSITIONING_ASSESSMENT.md](007_LIBRARY_POSITIONING_ASSESSMENT.md) | How the inventory reframes the library (Wave 2, beyond genotype/phenotype, crown targets) |
 | [000.1_AI_CODING_BEST_PRACTICES.md](000.1_AI_CODING_BEST_PRACTICES.md) | Optional AI/agent workflow notes |
 | [005_TODO_REGISTRY.md](005_TODO_REGISTRY.md) | Discrete TODOs tied to code locations |
 | [006_TECHNICAL_DEBT_REGISTRY.md](006_TECHNICAL_DEBT_REGISTRY.md) | Larger follow-ups |
