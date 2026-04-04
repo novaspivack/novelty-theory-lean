@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPER = ROOT / "paper/Final Draft/novelty_theory_generalized_crown.tex"
+PAPER = ROOT / "paper/Final Draft/Self-Transcending_Generators.tex"
 
 
 def collect_leanrefs(tex: str) -> list[str]:

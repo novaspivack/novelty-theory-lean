@@ -34,4 +34,4 @@ Claims are **not** “for every deterministic system.” They are scoped to **pr
 
 ---
 
-_Last aligned with `lake build`, [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md) verification (**2026-04-04**), and [`paper/Final Draft/novelty_theory_generalized_crown.tex`](../paper/Final%20Draft/novelty_theory_generalized_crown.tex) `\leanref` cross-check (`scripts/verify_paper_leanrefs.py`)._
+_Last aligned with `lake build`, [`THEOREM_INVENTORY.md`](THEOREM_INVENTORY.md) verification (**2026-04-04**), and [`paper/Final Draft/Self-Transcending_Generators.tex`](../paper/Final%20Draft/Self-Transcending_Generators.tex) `\leanref` cross-check (`scripts/verify_paper_leanrefs.py`)._

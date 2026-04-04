@@ -3,4 +3,4 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE"
-exec latexmk -pdf -interaction=nonstopmode -halt-on-error novelty_theory_generalized_crown.tex
+exec latexmk -pdf -interaction=nonstopmode -halt-on-error Self-Transcending_Generators.tex

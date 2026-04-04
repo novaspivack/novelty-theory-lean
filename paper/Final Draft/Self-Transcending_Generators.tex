@@ -1,14 +1,14 @@
 % !TEX program = latexmk
 % Build: run ./build-paper.sh in this directory, or read COMPILE.md (wrong cwd breaks refs.bib and aux).
 \documentclass[11pt,a4paper]{article}
-\input{../nova_zenodo_doi_placeholder}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{microtype}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+% Zenodo DOI macros use \href — load after hyperref (see templates/latex/nova_zenodo_doi_placeholder.tex).
+\input{../nova_zenodo_doi_placeholder}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}

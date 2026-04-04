@@ -63,11 +63,11 @@ paper/**/*.synctex.gz
 paper/**/*.dvi
 
 # Stray LaTeX artifacts at repo root (build cwd mistakes)
-/novelty_theory_generalized_crown.aux
-/novelty_theory_generalized_crown.bbl
-/novelty_theory_generalized_crown.blg
-/novelty_theory_generalized_crown.fdb_latexmk
-/novelty_theory_generalized_crown.fls
-/novelty_theory_generalized_crown.out
-/novelty_theory_generalized_crown.toc
-/novelty_theory_generalized_crown.pdf
+/Self-Transcending_Generators.aux
+/Self-Transcending_Generators.bbl
+/Self-Transcending_Generators.blg
+/Self-Transcending_Generators.fdb_latexmk
+/Self-Transcending_Generators.fls
+/Self-Transcending_Generators.out
+/Self-Transcending_Generators.toc
+/Self-Transcending_Generators.pdf
