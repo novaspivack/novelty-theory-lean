@@ -1,5 +1,7 @@
 # Closure / non-closure dependency map (EPIC_014)
 
+**Epic status:** baseline closed — numeric dichotomy, conservative-separation witness, and universal-`FutureDefeat` obstruction are in-tree; **regime-level** lifts remain open below.
+
 ## Numeric observation layer (landed)
 
 ```
@@ -25,6 +27,24 @@ Core.ClosureDichotomy.ExistsBoundedNumericTrace
 - `Summits.ClosureDichotomySummit.closure_dichotomy_numeric_trace`
 - `Summits.ClosureDichotomySummit.finality_boundary_iff_bounded`
 
+## Universal upward necessity — numeric obstruction (landed)
+
+Not every lawful `GenerativeSystem S ℕ` satisfies `FutureDefeat`; a constant numeric trace is a counterexample. Formal refutation:
+
+- `Ridge.UniversalUpwardNecessity.upward_necessity_universal_obstruction`
+- `Summits.UniversalUpwardNecessitySummit.upward_necessity_universal_obstruction`
+
+(Contrast: `Models.StratifiedFinality.natCounter_futureDefeat` and crown re-exports for **witness** systems.)
+
+## Paradigm packaging — conservativity load-bearing (landed)
+
+Packaged `ParadigmShift` is equivalent to a weak step **and** `ConservativeOver` on the same history; the weak conjuncts **without** conservativity need not yield a packaged shift:
+
+- `Core.MinimalHypotheses.paradigmShift_iff_weak_and_conservative`
+- `Ridge.ConservativeSeparationCountermodel.countermodel_without_history_conservativity`
+
+See also [`NoveltyTheory/docs/MINIMALITY_AUDIT.md`](../NoveltyTheory/docs/MINIMALITY_AUDIT.md).
+
 ---
 
-_Update alongside new lemmas in `Ridge/ClosureCollapseBoundary.lean` and epic **`SPEC_062_CMI3`**._
+_Update alongside new lemmas in `Ridge/ClosureCollapseBoundary.lean`, `Ridge/UniversalUpwardNecessity.lean`, `Ridge/ConservativeSeparationCountermodel.lean`, and spec **`SPEC_062_CMI3`** / **`SPEC_063_CMI4`**._

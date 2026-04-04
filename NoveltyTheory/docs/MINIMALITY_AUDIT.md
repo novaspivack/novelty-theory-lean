@@ -30,7 +30,7 @@ This document tracks **which assumptions are load-bearing** for flagship theorem
 
 | Assumption | Role | Notes |
 |------------|------|--------|
-| `outputEnumMem` / list-content vs depth coupling | **R** | Drives strict `ProvesAt` gap; weakening is **EPIC_014** work (`summit_nonfinality_under_weakened_assumptions`). |
+| `outputEnumMem` / list-content vs depth coupling | **R** | Drives strict `ProvesAt` gap; named summit weakening target (`summit_nonfinality_under_weakened_assumptions`) not yet packaged. |
 | Nontrivial alignment / twin carriers (`Ridge.CrownTransfer`) | **R** | Class transfer uses aligned `Bool × ℕ` twins; minimality of **alignment** predicates is open beyond current lemmas. |
 
 ## Naturality-aware ridge (`NaturalAdmissibleInstance`, `BroadTransfer`, etc.)
@@ -38,7 +38,7 @@ This document tracks **which assumptions are load-bearing** for flagship theorem
 | Assumption | Role | Notes |
 |------------|------|--------|
 | `NaturalAdmissibleInstance` constraints | **R** | Documented in [`../../docs/STRENGTHENED_CLAIM_SURFACE.md`](../../docs/STRENGTHENED_CLAIM_SURFACE.md). |
-| `NaturalBoundedOrganization` / `NaturalNumericSystem` | **R** | Organization / anti-closure packaging; **minimality** = Phase B/C of EPIC_014. |
+| `NaturalBoundedOrganization` / `NaturalNumericSystem` | **R** | Organization / anti-closure packaging; finer minimality profiles beyond **`EPIC_014`** baseline are open. |
 
 ## Operational rule
 

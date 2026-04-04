@@ -33,7 +33,7 @@
 | [STRENGTHENED_CLAIM_SURFACE.md](STRENGTHENED_CLAIM_SURFACE.md) | Claim ↔ Lean table + trust boundary for **`EPIC_013`** (naturality / broad transfer / anti-closure) |
 | [STRENGTHENED_DEPENDENCY_MAP.md](STRENGTHENED_DEPENDENCY_MAP.md) | Import / summit DAG for **`EPIC_013`** modules |
 | [CANONICALITY_POSITIONING.md](CANONICALITY_POSITIONING.md) | Claim ledger for **`EPIC_014`** (canonicality / minimality / inevitability; epic complete) |
-| [CLOSURE_DICHOTOMY_MAP.md](CLOSURE_DICHOTOMY_MAP.md) | Numeric `FutureDefeat` ↔ bounded-trace boundary + open lifts (**`EPIC_014`**) |
+| [CLOSURE_DICHOTOMY_MAP.md](CLOSURE_DICHOTOMY_MAP.md) | `EPIC_014` boundary map: numeric dichotomy, `FutureDefeat` obstruction, conservativity witness; open lifts noted |
 | [000.1_AI_CODING_BEST_PRACTICES.md](000.1_AI_CODING_BEST_PRACTICES.md) | Optional AI/agent workflow notes |
 | [005_TODO_REGISTRY.md](005_TODO_REGISTRY.md) | Discrete TODOs tied to code locations |
 | [006_TECHNICAL_DEBT_REGISTRY.md](006_TECHNICAL_DEBT_REGISTRY.md) | Larger follow-ups |
