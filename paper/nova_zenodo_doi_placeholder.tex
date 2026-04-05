@@ -1,5 +1,5 @@
 % nova-publishing / zpo doi inject — standard anchor for Zenodo paper DOI (NEMS and other suites).
-% Add once to the paper preamble (after \documentclass), e.g.:
+% Add after \documentclass. Prefer **after** \usepackage{hyperref} when this file uses \href in macros.
 %   \input{nova_zenodo_doi_placeholder}
 % or with a path if this file lives with your suite preamble:
 %   \input{path/to/nova_zenodo_doi_placeholder}
@@ -12,6 +12,8 @@
 %   • Optional duplicate: \NovaZenodoInAbstract before \end{abstract} (--abstract-doi-line on inject).
 %
 % The DOI value is written between % NOVA_ZPO_DOI_BEGIN / END by zpo doi inject (\def\NovaZenodoDOI{...}).
+% Optional program hub / catalog DOI: % NOVA_ZPO_HUB_DOI_BEGIN / END (\def\NovaZenodoHubDOI{...}); inject via
+% ``zpo doi inject --hub-doi ...`` or ``--hub-artifact nems-program-catalog``.
 %
 \makeatletter
 % Expand #1 once, then test emptiness (plain \detokenize{\Macro} does NOT expand \Macro first).
@@ -32,6 +34,15 @@
   \NovaZenodo@href}%
 }
 %
+\providecommand{\NovaZenodoHubArchivalLine}{%
+  \expandafter\NovaZenodoIfDoiEmpty\expandafter{\NovaZenodoHubDOI}%
+  {}%
+  {\textit{NEMS program hub (Zenodo):} %
+  \begingroup
+  \edef\NovaZenodo@hrefhub{\endgroup\noexpand\href{https://doi.org/\NovaZenodoHubDOI}{https://doi.org/\NovaZenodoHubDOI}}%
+  \NovaZenodo@hrefhub}%
+}
+%
 % After \maketitle — canonical visible placement (first page, under title block).
 \providecommand{\NovaZenodoAfterTitle}{%
   \par\smallskip
@@ -39,6 +50,8 @@
   \centering
   \small
   \NovaZenodoArchivalLine
+  \par
+  \NovaZenodoHubArchivalLine
   \par
   \endgroup
   \smallskip
@@ -51,7 +64,11 @@
 }
 %
 % NOVA_ZPO_DOI_BEGIN
-\def\NovaZenodoDOI{10.5281/zenodo.19423547}
+\def\NovaZenodoDOI{}
 % Use \href{https://doi.org/...}{...} or \texttt{\NovaZenodoDOI} where you cite the archival record
 % (\url{...} does not expand \NovaZenodoDOI under hyperref).
 % NOVA_ZPO_DOI_END
+%
+% NOVA_ZPO_HUB_DOI_BEGIN
+\def\NovaZenodoHubDOI{}
+% NOVA_ZPO_HUB_DOI_END
