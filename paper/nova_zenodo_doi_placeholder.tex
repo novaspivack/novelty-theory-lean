@@ -10,6 +10,10 @@
 % Placement (SPEC / docs: DOI_PROPAGATION.md):
 %   • Primary (recommended for all program papers): \NovaZenodoAfterTitle immediately after \maketitle.
 %   • Optional duplicate: \NovaZenodoInAbstract before \end{abstract} (--abstract-doi-line on inject).
+% Preprint notice: \NovaZenodoPreprintMark is included at the top of \NovaZenodoAfterTitle (first page, under
+%   the title block). Override with \renewcommand{\NovaZenodoPreprintMark}{...} or {} if a journal version
+%   must omit it. For a banner *above* \maketitle, call \NovaZenodoPreprintMark once there and \renewcommand
+%   to empty before \NovaZenodoAfterTitle to avoid duplicating.
 %
 % The DOI value is written between % NOVA_ZPO_DOI_BEGIN / END by zpo doi inject (\def\NovaZenodoDOI{...}).
 % Optional program hub / catalog DOI: % NOVA_ZPO_HUB_DOI_BEGIN / END (\def\NovaZenodoHubDOI{...}); inject via
@@ -24,6 +28,11 @@
     \expandafter\@secondoftwo
   \fi}
 \makeatother
+%
+% First-page disclosure (Zenodo preprints / working papers). Keep concise for title-page metadata.
+\providecommand{\NovaZenodoPreprintMark}{%
+  \textbf{Preprint.}%
+}
 %
 \providecommand{\NovaZenodoArchivalLine}{%
   \expandafter\NovaZenodoIfDoiEmpty\expandafter{\NovaZenodoDOI}%
@@ -49,6 +58,8 @@
   \begingroup
   \centering
   \small
+  \NovaZenodoPreprintMark
+  \par\smallskip
   \NovaZenodoArchivalLine
   \par
   \NovaZenodoHubArchivalLine
@@ -64,11 +75,12 @@
 }
 %
 % NOVA_ZPO_DOI_BEGIN
-\def\NovaZenodoDOI{}
-% Use \href{https://doi.org/...}{...} or \texttt{\NovaZenodoDOI} where you cite the archival record
-% (\url{...} does not expand \NovaZenodoDOI under hyperref).
+\def\NovaZenodoDOI{10.5281/zenodo.19423148}
+% Use \href{...} or \texttt{\NovaZenodoDOI}.
+
 % NOVA_ZPO_DOI_END
 %
 % NOVA_ZPO_HUB_DOI_BEGIN
-\def\NovaZenodoHubDOI{}
+\def\NovaZenodoHubDOI{10.5281/zenodo.19429270}
+
 % NOVA_ZPO_HUB_DOI_END

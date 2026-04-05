@@ -42,3 +42,6 @@ This is **not** an OSI “open source” license (those cannot restrict commerci
 <!-- NOVA_ZPO_ZENODO_PAPER_BEGIN -->
 **Archival paper (Zenodo preprint) (Zenodo):** https://doi.org/10.5281/zenodo.19423547
 <!-- NOVA_ZPO_ZENODO_PAPER_END -->
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_BEGIN -->
+**Archival software (Zenodo):** https://doi.org/10.5281/zenodo.19423148
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_END -->
