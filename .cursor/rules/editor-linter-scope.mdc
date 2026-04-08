@@ -1,0 +1,25 @@
+---
+description: Scope VS Code/Cursor linters to this repo only (Pylance include roots, exclude deps).
+alwaysApply: true
+---
+
+# Editor and linter scope (mandatory for stub-derived repos)
+
+## Requirement
+
+Every repository instantiated from **Default-repo-stub** must ship **`.vscode/settings.json`** so language servers and linters **do not treat the whole machine or arbitrary parent workspaces** as the analysis root.
+
+## What “scoped” means
+
+1. **Python / Pylance (Pyright):** Set **`python.analysis.include`** to **only** deliberate source roots in **this** repository (default template: `src`, `tests`, `experiments`, `scripts`). When you add another top-level package directory (e.g. `packages/foo`, `numerical/`), **append it to `include`** in the same change. Keep **`python.analysis.exclude`** covering virtualenvs, **`.lake`**, **`node_modules`**, caches, and build outputs.
+2. **Watchers / search:** Keep **`files.watcherExclude`** and **`search.exclude`** aligned so dependency trees (`.lake`, `.venv`, etc.) are not continuously indexed for editor features.
+3. **Ruff:** Use **`ruff.configurationPreference": "filesystemFirst"`** so config comes from **this** repo’s `pyproject.toml` / `ruff.toml` when present.
+4. **ESLint (if JavaScript/TypeScript is added):** Use **`eslint.workingDirectories": [{ "mode": "auto" }]`** so ESLint resolves the correct project root instead of a parent folder.
+
+## When copying the stub
+
+Copy **`.vscode/settings.json`** together with this rule. Do **not** drop the Python `include` list “because there is no Python yet”; empty or missing dirs are fine until code lands.
+
+## Lean-only repos
+
+Keep the same file: Python settings are harmless before a `pyproject.toml` exists; **`.lake`** exclusions still prevent noisy indexing.
