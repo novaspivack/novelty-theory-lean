@@ -10,7 +10,7 @@ This directory **is** the **novelty-theory-lean** library. Lean sources, `lakefi
 
 | File | Role |
 |------|------|
-| [`lean-toolchain`](../lean-toolchain) | Pin to `leanprover/lean4:v4.29.0-rc6` — see [`003_LEAN_TOOLCHAIN_PIN.md`](003_LEAN_TOOLCHAIN_PIN.md) |
+| [`lean-toolchain`](../lean-toolchain) | Pin to `leanprover/lean4:v4.29.1` — see [`003_LEAN_TOOLCHAIN_PIN.md`](003_LEAN_TOOLCHAIN_PIN.md) |
 | [`lakefile.lean`](../lakefile.lean) | Package `«novelty-theory-lean»`, Mathlib **last**, `lean_lib «NoveltyTheory»` indexed from root **[`NoveltyTheory.lean`](../NoveltyTheory.lean)** |
 | [`lake-manifest.json`](../lake-manifest.json) | Locked dependency revisions (commit after `lake update` / successful build) |
 

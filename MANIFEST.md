@@ -4,7 +4,7 @@
 
 | Item | Status |
 |------|--------|
-| **Toolchain** | `leanprover/lean4:v4.29.0-rc6` ([`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)); Mathlib pin `v4.29.0-rc6` (see [`lakefile.lean`](lakefile.lean), aligned with `ugp-lean`) |
+| **Toolchain** | `leanprover/lean4:v4.29.1` ([`docs/003_LEAN_TOOLCHAIN_PIN.md`](docs/003_LEAN_TOOLCHAIN_PIN.md)); Mathlib pin `v4.29.1` (see [`lakefile.lean`](lakefile.lean), aligned with `ugp-lean`) |
 | **`sorry` / `admit`** | None in default library |
 | **Axioms** | None beyond Mathlib |
 | **Theorem / lemma count** | **422** declarations in [`NoveltyTheory/`](NoveltyTheory/) (line parse: optional attributes, optional `private`/`protected`, leading `theorem`/`lemma`); audited **2026-04-03** |

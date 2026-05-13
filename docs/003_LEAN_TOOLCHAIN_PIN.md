@@ -7,7 +7,7 @@
 The single line in each nested repo’s **`lean-toolchain`** file must be:
 
 ```text
-leanprover/lean4:v4.29.0-rc6
+leanprover/lean4:v4.29.1
 ```
 
 ## Source of truth (verification)
@@ -25,7 +25,7 @@ When you bump the RC across your libraries, **update this doc** and every nested
 
 ## Mathlib and dependencies
 
-Libraries that **`require mathlib`** should pin Mathlib in **`lakefile.lean`** to the tag that matches this Lean version (see upstream Mathlib release notes for **`v4.29.0-rc6`**). **novelty-theory-lean** pins Mathlib at **`v4.29.0-rc6`** in [`lakefile.lean`](../lakefile.lean).
+Libraries that **`require mathlib`** should pin Mathlib in **`lakefile.lean`** to the tag that matches this Lean version (see upstream Mathlib release notes for **`v4.29.1`**). **novelty-theory-lean** pins Mathlib at **`v4.29.1`** in [`lakefile.lean`](../lakefile.lean).
 
 ---
 

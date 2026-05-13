@@ -6,8 +6,8 @@
 
 ## Toolchain
 
-- **Lean:** `v4.29.0-rc6` — [`003_LEAN_TOOLCHAIN_PIN.md`](003_LEAN_TOOLCHAIN_PIN.md)
-- **Mathlib:** `v4.29.0-rc6` (pinned in [`lakefile.lean`](../lakefile.lean))
+- **Lean:** `v4.29.1` — [`003_LEAN_TOOLCHAIN_PIN.md`](003_LEAN_TOOLCHAIN_PIN.md)
+- **Mathlib:** `v4.29.1` (pinned in [`lakefile.lean`](../lakefile.lean))
 
 ## Entry points
 
